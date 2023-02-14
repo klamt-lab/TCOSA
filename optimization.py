@@ -9,8 +9,8 @@ from typing import Any, Dict, List, Tuple
 
 ## CONSTANTS ##
 SOLVER = "CPLEX_PY"
-TIMELIMIT = 60
-IS_VERBOSE = False
+TIMELIMIT = 120
+IS_VERBOSE = True
 WARMSTART = False
 
 
@@ -201,8 +201,8 @@ def solve_current_problem(base_problem: pulp.LpProblem) -> pulp.LpProblem:
     # base_problem.solve(solver)
     solver = pulp.CPLEX_PY()
     solver.buildSolverModel(base_problem)
-    solver.solverModel.parameters.mip.display.set(0)
-    solver.solverModel.parameters.paramdisplay.set(0)
+    solver.solverModel.parameters.mip.display.set(1)
+    solver.solverModel.parameters.paramdisplay.set(1)
     solver.solverModel.parameters.simplex.tolerances.feasibility.set(1e-9)
     # solver.solverModel.parameters.simplex.tolerances.optimality.set(1e-6)
     solver.solverModel.parameters.emphasis.numerical.set(1)
