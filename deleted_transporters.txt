@@ -1,0 +1,934 @@
+SUCCt2_2pp | -5.683349509194247 kJ/mol | Succinate transport via proton symport (2 H) (periplasm) | 2.0 h_p + succ_p --> 2.0 h_c + succ_c
+SUCptspp | -36.59986354969134 kJ/mol | Sucrose transport via PEP:Pyr  (periplasm) | pep_c + sucr_p --> pyr_c + suc6p_c
+SULabcpp | -0.2731142713349506 kJ/mol | Sulfate transport via ABC system (periplasm) | atp_c + h2o_c + so4_p --> adp_c + h_c + pi_c + so4_c
+TSULabcpp | -15.467113133718627 kJ/mol | Thiosulfate transport via ABC system (periplasm) | atp_c + h2o_c + tsul_p --> adp_c + h_c + pi_c + tsul_c
+TAURabcpp | -29.264850200352427 kJ/mol | Taurine transport via ABC system (periplasm) | atp_c + h2o_c + taur_p --> adp_c + h_c + pi_c + taur_c
+THMDt2pp_copy1 | -1.4483802666178107 kJ/mol | Thymidine transport in via proton symport (periplasm) | h_p + thymd_p --> h_c + thymd_c
+Kt2pp | -31.797972922453503 kJ/mol | Potassium transport in via proton symport (periplasm) | h_p + k_p --> h_c + k_c
+XYLt2pp | -17.325727268924233 kJ/mol | D-xylose transport in via proton symport (periplasm) | h_p + xyl__D_p --> h_c + xyl__D_c
+FACOAL160t2pp | -17.720083719927047 kJ/mol | Fatty-acid-CoA ligase (hexadecanoate transport via vectoral Co-A coupling) | atp_c + coa_c + h_p + hdca_p --> amp_c + h_c + pmtcoa_c + ppi_c
+FACOAL180t2pp | -16.640972467930283 kJ/mol | Fatty-acid-CoA ligase (octadecanoate transport via vectoral Co-A coupling) | atp_c + coa_c + h_p + ocdca_p --> amp_c + h_c + ppi_c + stcoa_c
+THMabcpp | -43.688724530689356 kJ/mol | Thiamine transport via ABC system (periplasm) | atp_c + h2o_c + thm_p --> adp_c + h_c + pi_c + thm_c
+THRabcpp | -29.317858912922233 kJ/mol | L-threonine transport via ABC system (periplasm) | atp_c + h2o_c + thr__L_p --> adp_c + h_c + pi_c + thr__L_c
+TREptspp | -46.908069808701605 kJ/mol | Trehalose transport via PEP:Pyr PTS (periplasm) | pep_c + tre_p --> pyr_c + tre6p_c
+URIt2pp_copy1 | -1.5880384563539067 kJ/mol | Uridine transport in via proton symport (periplasm) | h_p + uri_p --> h_c + uri_c
+VALabcpp | -29.244216200731614 kJ/mol | L-valine transport via ABC system (periplasm) | atp_c + h2o_c + val__L_p --> adp_c + h_c + pi_c + val__L_c
+XYLabcpp | -29.21912225892401 kJ/mol | D-xylose transport via ABC system (periplasm) | atp_c + h2o_c + xyl__D_p --> adp_c + h_c + pi_c + xyl__D_c
+THRt4pp | -14.247919230062076 kJ/mol | L-threonine  via sodium symport (periplasm) | na1_p + thr__L_p --> na1_c + thr__L_c
+FEOXAMabcpp | -29.218617912453276 kJ/mol | Ferroxamine transport via ABC system (periplasm) | atp_c + feoxam_p + h2o_c --> adp_c + feoxam_c + h_c + pi_c
+CBL1abcpp | -40.39738852144118 kJ/mol | Cob(1)alamin transport via ABC system (periplasm) | atp_c + cbl1_p + h2o_c --> adp_c + cbl1_c + h_c + pi_c
+ACGAptspp | -36.58480708324284 kJ/mol | N-Acetyl-D-glucosamine transport via PEP:Pyr PTS  (periplasm) | acgam_p + pep_c --> acgam6p_c + pyr_c
+ACMANAptspp | -38.16594345454134 kJ/mol | N-acetyl-D-mannosamine transport via PTS  (periplasm) | acmana_p + pep_c --> acmanap_c + pyr_c
+ACNAMt2pp | -2.8125591752029067 kJ/mol | N-acetylneuraminate proton symport (periplasm) | acnam_p + h_p --> acnam_c + h_c
+FEENTERabcpp | -12.346891049536389 kJ/mol | Fe-enterobactin transport via ABC system (periplasm) | atp_c + feenter_p + h2o_c --> adp_c + feenter_c + h_c + pi_c
+FECRMabcpp | 45.57170554156987 kJ/mol | Ferrichrome transport via ABC system (periplasm) | atp_c + fecrm_p + h2o_c --> adp_c + fecrm_c + h_c + pi_c
+DAPabcpp | -29.280046547065318 kJ/mol | M-diaminopimelic acid ABC transport (periplasm) | 26dap__M_p + atp_c + h2o_c --> 26dap__M_c + adp_c + h_c + pi_c
+ACt4pp | 0.3270957039404898 kJ/mol | Na+/Acetate symport (periplasm) | ac_p + na1_p --> ac_c + na1_c
+ARGabcpp | -43.73134079697854 kJ/mol | L-arginine transport via ABC system (periplasm) | arg__L_p + atp_c + h2o_c --> adp_c + arg__L_c + h_c + pi_c
+ADNt2pp_copy1 | -17.32378478268396 kJ/mol | Adenosine transport in via proton symport (periplasm) | adn_p + h_p --> adn_c + h_c
+ALAabcpp | -29.252326774449884 kJ/mol | L-alanine transport via ABC system (periplasm) | ala__L_p + atp_c + h2o_c --> adp_c + ala__L_c + h_c + pi_c
+ALLabcpp | -29.219134007640726 kJ/mol | D-allose transport via ABC system (periplasm) | all__D_p + atp_c + h2o_c --> adp_c + all__D_c + h_c + pi_c
+ARBabcpp | -29.218664988267783 kJ/mol | L-arabinose transport via ABC system (periplasm) | arab__L_p + atp_c + h2o_c --> adp_c + arab__L_c + h_c + pi_c
+ASCBptspp | -39.16728394982401 kJ/mol | L-ascorbate transport via PEP:Pyr PTS (periplasm) | ascb__L_p + pep_c --> ascb6p_c + pyr_c
+ASPabcpp | -14.813095636175767 kJ/mol | L-aspartate transport via ABC system (periplasm) | asp__L_p + atp_c + h2o_c --> adp_c + asp__L_c + h_c + pi_c
+ASPt2pp | -2.9197006461759933 kJ/mol | L-aspartate transport in via proton symport (periplasm) | asp__L_p + h_p --> asp__L_c + h_c
+ASPt2_2pp | -20.244923568629495 kJ/mol | Aspartate transport via proton symport (2 H) (periplasm) | asp__L_p + 2.0 h_p --> asp__L_c + 2.0 h_c
+NACtpp | 14.474109351488341 kJ/mol | Nicotinic acid uptake (periplasm) | nac_p --> nac_c
+ASPt2_3pp | -37.570146491082994 kJ/mol | L-asparate transport via proton symport (3 H) (periplasm) | asp__L_p + 3.0 h_p --> asp__L_c + 3.0 h_c
+GLCtex_copy1 | 0.0 kJ/mol | Glucose transport via diffusion (extracellular to periplasm) | glc__D_e --> glc__D_p
+CHLabcpp | -43.69136848649998 kJ/mol | Choline transport via ABC system (periplasm) | atp_c + chol_p + h2o_c --> adp_c + chol_c + h_c + pi_c
+DGSNt2pp | -17.32353742729657 kJ/mol | Deoxyguanosine transport in via proton symport (periplasm) | dgsn_p + h_p --> dgsn_c + h_c
+DINSt2pp | -17.325437274696917 kJ/mol | Deoxyinosine transport in via proton symport (periplasm) | din_p + h_p --> din_c + h_c
+DURIt2pp | -1.3685063103504334 kJ/mol | Deoxyuridine transport in via proton symport (periplasm) | duri_p + h_p --> duri_c + h_c
+FE2abcpp | -58.164117912453335 kJ/mol | Iron (II) transport via ABC system (periplasm) | atp_c + fe2_p + h2o_c --> adp_c + fe2_c + h_c + pi_c
+FRUptspp | -42.61984665824401 kJ/mol | D-fructose transport via PEP:Pyr PTS (periplasm) | fru_p + pep_c --> f1p_c + pyr_c
+ABUTt2pp | -17.3257052121007 kJ/mol | 4-aminobutyrate transport in via proton symport (periplasm) | 4abut_p + h_p --> 4abut_c + h_c
+CSNt2pp | -17.325235367473553 kJ/mol | Cytosine transport in via proton symport (periplasm) | csn_p + h_p --> csn_c + h_c
+CYNTt2pp | -17.325222922453516 kJ/mol | Cyanate transport via proton symport (periplasm) | cynt_p + h_p --> cynt_c + h_c
+CYSabcpp | -29.30823275116755 kJ/mol | L-cysteine uptake via ABC system (periplasm) | atp_c + cys__L_p + h2o_c --> adp_c + cys__L_c + h_c + pi_c
+SBTptspp | -45.12292357551447 kJ/mol | D-sorbitol transport via PEP:Pyr PTS (periplasm) | pep_c + sbt__D_p --> pyr_c + sbt6p_c
+CYTDt2pp_copy1 | -17.264163208534853 kJ/mol | Cytidine transport in via proton symport (periplasm) | cytd_p + h_p --> cytd_c + h_c
+DCYTt2pp | -17.18230822198319 kJ/mol | Deoxycytidine transport in via proton symport (periplasm) | dcyt_p + h_p --> dcyt_c + h_c
+MALTTRtexi | 0.0 kJ/mol | Maltotriose transport via diffusion (extracellular to periplasm) irreversible | malttr_e --> malttr_p
+MALTTTRtexi | 0.0 kJ/mol | MaltotetraoseMaltotriose transport via diffusion (extracellular to periplasm) irreversible | maltttr_e --> maltttr_p
+MALTPTtexi | 0.0 kJ/mol | MaltopentaoseMaltotriose transport via diffusion (extracellular to periplasm) irreversible | maltpt_e --> maltpt_p
+CYSabc2pp | -29.129003073738957 kJ/mol | L-cysteine export via ABC system (cytoplasm to periplasm) | atp_c + cys__L_c + h2o_c --> adp_c + cys__L_p + h_c + pi_c
+BUTSO3abcpp | -29.218617912453276 kJ/mol | Butanesulfonate transport via ABC system (periplasm) | atp_c + butso3_p + h2o_c --> adp_c + butso3_c + h_c + pi_c
+ETHSO3abcpp | -14.745867912453285 kJ/mol | Ethanesulfonate transport via ABC system (periplasm) | atp_c + ethso3_p + h2o_c --> adp_c + ethso3_c + h_c + pi_c
+CADVtpp | -2.8681912891032653 kJ/mol | Lysine/Cadaverine antiporter (periplasm) | 15dap_c + h_p + lys__L_p --> 15dap_p + h_c + lys__L_c
+PTRCt2pp | -46.27423090747875 kJ/mol | Putrescine transport in via proton symport | h_p + ptrc_p --> h_c + ptrc_c
+SULFACabcpp | -0.2730788977036518 kJ/mol | Sulfoacetate transport via ABC system (periplasm) | atp_c + h2o_c + sulfac_p --> adp_c + h_c + pi_c + sulfac_c
+FORtppi | -14.474375113463449 kJ/mol | Formate transport via diffusion (cytoplasm to periplasm) | for_c --> for_p
+PHEMEabcpp | -58.169381572353615 kJ/mol | Protoheme transport via ABC system (periplasm) | atp_c + h2o_c + pheme_c --> adp_c + h_c + pheme_p + pi_c
+METSOX1abcpp | -29.29615401853681 kJ/mol | L-methionine S-oxide transport via ABC system (periplasm) | atp_c + h2o_c + metsox_S__L_p --> adp_c + h_c + metsox_S__L_c + pi_c
+LIPAabcpp | -116.06263163696006 kJ/mol | Lipid A transport via ABC system (periplasm) | atp_c + h2o_c + lipa_c --> adp_c + h_c + lipa_p + pi_c
+LIPACabcpp | -116.06263163696109 kJ/mol | Lipid (cold) A transport via ABC system (periplasm) | atp_c + h2o_c + lipa_cold_c --> adp_c + h_c + lipa_cold_p + pi_c
+CU1abcpp | -15.069939682860216 kJ/mol | Copper (Cu +1) ABC transporter (periplasm) | atp_c + cu_c + h2o_c --> adp_c + cu_p + h_c + pi_c
+HG2abcpp | -0.838687777113595 kJ/mol | Mercury (Hg+2) ABC transporter (periplasm) | atp_c + h2o_c + hg2_c --> adp_c + h_c + hg2_p + pi_c
+CRNt8pp | -3.684681360027753e-08 kJ/mol | L-carnitine/D-carnitine antiporter (periplasm) | crn__D_c + crn_p --> crn__D_p + crn_c
+LIPOt2pp | -2.8495581853996654 kJ/mol | Lipoate transport via proton symport (periplasm) | h_p + lipoate_p --> h_c + lipoate_c
+ISETACabcpp | -14.745867912453285 kJ/mol | Isethionate transport via ABC system (periplasm) | atp_c + h2o_c + isetac_p --> adp_c + h_c + isetac_c + pi_c
+INOSTt4pp | -14.148731050098585 kJ/mol | Na+/myo-inositol symporter (periplasm) | inost_p + na1_p --> inost_c + na1_c
+PHEMEtiex | -28.9455 kJ/mol | Protoheme transport irreversible out via diffusion (periplasm to extracellular) | pheme_p --> pheme_e
+METSOX2abcpp | -29.29615401853681 kJ/mol | L-methionine R-oxide transport via ABC system (periplasm) | atp_c + h2o_c + metsox_R__L_p --> adp_c + h_c + metsox_R__L_c + pi_c
+MSO3abcpp | -14.745867912453285 kJ/mol | Methanesulfonate transport via ABC system (periplasm) | atp_c + h2o_c + mso3_p --> adp_c + h_c + mso3_c + pi_c
+4PEPTabcpp | -29.218617912453276 kJ/mol | Tetrapeptide (LalaDgluMdapDala) transport via ABC system (periplasm) | LalaDgluMdapDala_p + atp_c + h2o_c --> LalaDgluMdapDala_c + adp_c + h_c + pi_c
+AGM3Pt2pp | -17.325222922453506 kJ/mol | GlcNAc-anhMurNAc tripeptide transport in via proton symport (periplasm) | anhgm3p_p + h_p --> anhgm3p_c + h_c
+AGM4Pt2pp | -17.325222922453506 kJ/mol | GlcNAc-anhMurNAc tetrapeptide transport in via proton symport (periplasm) | anhgm4p_p + h_p --> anhgm4p_c + h_c
+CD2t3pp | 11.054707212886198 kJ/mol | Cadmium (Cd+2) transport out via proton antiport (periplasm) | cd2_c + h_p --> cd2_p + h_c
+ZNabcpp | -57.598548047792974 kJ/mol | Zinc (Zn+2) transport via ABC system (periplasm) | atp_c + h2o_c + zn2_p --> adp_c + h_c + pi_c + zn2_c
+SKMt2pp | -2.8517768668912638 kJ/mol | Shikimate transport in via proton symport (periplasm) | h_p + skm_p --> h_c + skm_c
+FE2t2pp | -46.2707229224535 kJ/mol | Iron (II) transport in via proton symport (periplasm) | fe2_p + h_p --> fe2_c + h_c
+Kabcpp | -43.69136791245327 kJ/mol | Potassium ABC transporter (periplasm) | atp_c + h2o_c + k_p --> adp_c + h_c + k_c + pi_c
+LEUabcpp | -29.249344242777582 kJ/mol | L-leucine transport via ABC system (periplasm) | atp_c + h2o_c + leu__L_p --> adp_c + h_c + leu__L_c + pi_c
+MALTabcpp | -29.219197008643953 kJ/mol | Maltose transport via ABC system (periplasm) | atp_c + h2o_c + malt_p --> adp_c + h_c + malt_c + pi_c
+MALTHXabcpp | -29.219347041906758 kJ/mol | Maltohexaose transport via ABC system (periplasm) | atp_c + h2o_c + malthx_p --> adp_c + h_c + malthx_c + pi_c
+MALTPTabcpp | -29.219314208813614 kJ/mol | Maltopentaose transport via ABC system (periplasm) | atp_c + h2o_c + maltpt_p --> adp_c + h_c + maltpt_c + pi_c
+MALTTRabcpp | -29.219238455343586 kJ/mol | Maltotriose transport via ABC system (periplasm) | atp_c + h2o_c + malttr_p --> adp_c + h_c + malttr_c + pi_c
+MALTTTRabcpp | -29.219282850501813 kJ/mol | Maltotetraose transport via ABC system (periplasm) | atp_c + h2o_c + maltttr_p --> adp_c + h_c + maltttr_c + pi_c
+MAN6Pt6_2pp | -29.32119094978771 kJ/mol | Mannose-6-phosphate transport via phosphate antiport (periplasm) | man6p_p + 2.0 pi_c --> man6p_c + 2.0 pi_p
+FACOAL80t2pp | -16.630383359991775 kJ/mol | Fatty-acid-CoA ligase (octanoate transport via vectoral Co-A coupling) | atp_c + coa_c + h_p + octa_p --> amp_c + h_c + occoa_c + ppi_c
+CPGNabcpp | 45.43091742541769 kJ/mol | Coprogen transport via ABC system (periplasm) | atp_c + cpgn_p + h2o_c --> adp_c + cpgn_c + h_c + pi_c
+MANGLYCptspp | -27.879418497000685 kJ/mol | 2-O-alpha-mannosyl-D-glycerate transport via PEP:Pyr PTS (periplasm) | manglyc_p + pep_c --> man6pglyc_c + pyr_c
+MELIBt2pp | -17.325802024454255 kJ/mol | Melibiose transport in via symport (periplasm) | h_p + melib_p --> h_c + melib_c
+CBIuabcpp | -53.658588283183505 kJ/mol | Cobinamide transport via ABC system (uptake, periplasm) | atp_c + cbi_p + h2o_c --> adp_c + cbi_c + h_c + pi_c
+METabcpp | -29.25073533524494 kJ/mol | L-methionine transport via ABC system (periplasm) | atp_c + h2o_c + met__L_p --> adp_c + h_c + met__L_c + pi_c
+HDCAtexi | 14.47275 kJ/mol | Hexadecanoate transport via facilitated irreversible diffusion (extracellular to periplasm) | hdca_e --> hdca_p
+RMNtpp | -17.325273365134528 kJ/mol | L-rhamnose transport via proton symport (periplasm) | h_p + rmn_p --> h_c + rmn_c
+SERt4pp | -14.264539604567878 kJ/mol | L-serine via sodium symport (periplasm) | na1_p + ser__L_p --> na1_c + ser__L_c
+SUCCt2_3pp | -23.008572431647757 kJ/mol | Succintate transport via proton symport (3 H) (periplasm) | 3.0 h_p + succ_p --> 3.0 h_c + succ_c
+MNLptspp | -42.33820847333046 kJ/mol | Mannitol transport via PEP:Pyr PTS (periplasm) | mnl_p + pep_c --> mnl1p_c + pyr_c
+NAt3_1p5pp | -23.678312308174334 kJ/mol | Sodium proton antiporter (H:NA is 1.5) (periplasm) | 3.0 h_p + 2.0 na1_c --> 3.0 h_c + 2.0 na1_p
+NAt3_2pp | -20.50176761531392 kJ/mol | Sodium proton antiporter (H:NA is 2) (periplasm) | 2.0 h_p + na1_c --> 2.0 h_c + na1_p
+NMNPtpp | 14.828703025661541 kJ/mol | NMN permease (periplasm) | nmn_p --> nmn_c
+NO3t7pp | 14.472750000000012 kJ/mol | Nitrate transport in via nitrite antiport (periplasm) | no2_c + no3_p --> no2_p + no3_c
+ORNabcpp | -43.71061880513269 kJ/mol | Ornithine transport via ABC system (periplasm) | atp_c + h2o_c + orn_p --> adp_c + h_c + orn_c + pi_c
+PIuabcpp | -0.04671536355832373 kJ/mol | Phosphate transport via ABC system (uptake, periplasm) | atp_c + h2o_c + pi_p --> adp_c + h_c + 2.0 pi_c
+PNTOt4pp | 0.3346560610170073 kJ/mol | Pantothenate sodium symporter (periplasm) | na1_p + pnto__R_p --> na1_c + pnto__R_c
+METDabcpp | -29.25072296721646 kJ/mol | D-methionine transport via ABC system (periplasm) | atp_c + h2o_c + met__D_p --> adp_c + h_c + met__D_c + pi_c
+ILEabcpp | -29.249417779909734 kJ/mol | L-isoleucine transport via ABC system (periplasm) | atp_c + h2o_c + ile__L_p --> adp_c + h_c + ile__L_c + pi_c
+INDOLEt2pp | 17.32522292245354 kJ/mol | Indole transport via proton symport, irreversible (periplasm) | h_c + indole_c --> h_p + indole_p
+INSt2pp | -17.32547495023953 kJ/mol | Inosine transport in via proton symport (periplasm) | h_p + ins_p --> h_c + ins_c
+PROabcpp | -29.21908811429232 kJ/mol | L-proline transport via ABC system (periplasm) | atp_c + h2o_c + pro__L_p --> adp_c + h_c + pi_c + pro__L_c
+PROt4pp | -14.149148431432161 kJ/mol | Na+/Proline-L symporter (periplasm) | na1_p + pro__L_p --> na1_c + pro__L_c
+PTRCabcpp | -58.167625897478544 kJ/mol | Putrescine transport via ABC system (periplasm) | atp_c + h2o_c + ptrc_p --> adp_c + h_c + pi_c + ptrc_c
+LYXt2pp | -17.325727268924233 kJ/mol | L-Lyxose transport via proton symport (periplasm) | h_p + lyx__L_p --> h_c + lyx__L_c
+OCDCEAtexi | 14.47275 kJ/mol | Octadecenoate (n-C18:1) transport via facilitated irreversible diffusion (extracellular to periplasm) | ocdcea_e --> ocdcea_p
+TUNGSabcpp | -29.218617912453297 kJ/mol | Tungstate transport via ABC system (periplasm) | atp_c + h2o_c + tungs_p --> adp_c + h_c + pi_c + tungs_c
+MOBDabcpp | -29.218617912453276 kJ/mol | Molybdate transport via ABC system (periplasm) | atp_c + h2o_c + mobd_p --> adp_c + h_c + mobd_c + pi_c
+NI2uabcpp | -57.59854804779299 kJ/mol | Nickel transport via ABC system (uptake, periplasm) | atp_c + h2o_c + ni2_p --> adp_c + h_c + ni2_c + pi_c
+ADOCBLabcpp | -40.39738852144118 kJ/mol | Adenosylcobalamin transport via ABC system (periplasm) | adocbl_p + atp_c + h2o_c --> adocbl_c + adp_c + h_c + pi_c
+CRNabcpp | -29.215939823592826 kJ/mol | L-carnitine transport via ABC system (periplasm) | atp_c + crn_p + h2o_c --> adp_c + crn_c + h_c + pi_c
+CRNDabcpp | -29.21593978674607 kJ/mol | D-carnitine transport via ABC system (periplasm) | atp_c + crn__D_p + h2o_c --> adp_c + crn__D_c + h_c + pi_c
+CTBTabcpp | -29.215243045584415 kJ/mol | Crotonobetaine transport via ABC system (periplasm) | atp_c + ctbt_p + h2o_c --> adp_c + ctbt_c + h_c + pi_c
+RIBabcpp | -29.219122256109067 kJ/mol | D-ribose transport via ABC system (periplasm) | atp_c + h2o_c + rib__D_p --> adp_c + h_c + pi_c + rib__D_c
+ECAtpp | 0.0 kJ/mol | Enterobacterial common antigen transferase (flippase, cytoplasm to periplasm) | unagamuf_c --> unagamuf_p
+O16AUNDtpp | 0.0 kJ/mol | O16 antigen (flippase, cytoplasm to periplasm) | o16aund_c --> o16aund_p
+CU2abcpp | -0.838687777113595 kJ/mol | Copper (Cu+2) ABC transporter (periplasm) | atp_c + cu2_c + h2o_c --> adp_c + cu2_p + h_c + pi_c
+COBALT2abcpp | -0.838687777113595 kJ/mol | Cobalt (Co+2) ABC transporter (periplasm) | atp_c + cobalt2_c + h2o_c --> adp_c + cobalt2_p + h_c + pi_c
+NI2abcpp | -0.838687777113595 kJ/mol | Nickle (Ni+2) ABC transporter (periplasm) | atp_c + h2o_c + ni2_c --> adp_c + h_c + ni2_p + pi_c
+MG2uabcpp | -58.16411791245321 kJ/mol | Magnesium (Mg+2) ABC transporter (ubtake, periplasm) | atp_c + h2o_c + mg2_p --> adp_c + h_c + mg2_c + pi_c
+GLYBabcpp | -29.218309882728875 kJ/mol | Glycine betaine transport via ABC system (periplasm) | atp_c + glyb_p + h2o_c --> adp_c + glyb_c + h_c + pi_c
+GLYC3Pt6pp | -0.09091160858500658 kJ/mol | Glycerol-3-phosphate : phosphate antiporter (periplasm) | glyc3p_p + pi_c --> glyc3p_c + pi_p
+MMETt2pp | -31.81859143108748 kJ/mol | S-methylmethionine permease (periplasm) | h_p + mmet_p --> h_c + mmet_c
+GLYCLTt4pp | 0.32436115952558353 kJ/mol | Glycolate transport via sodium symport (periplasm) | glyclt_p + na1_p --> glyclt_c + na1_c
+GLNabcpp | -29.24876863512332 kJ/mol | L-glutamine transport via ABC system (periplasm) | atp_c + gln__L_p + h2o_c --> adp_c + gln__L_c + h_c + pi_c
+GLUabcpp | -14.802802839926194 kJ/mol | L-glutamate transport via ABC system (periplasm) | atp_c + glu__L_p + h2o_c --> adp_c + glu__L_c + h_c + pi_c
+HISabcpp | -29.1399127669343 kJ/mol | L-histidine transport via ABC system (periplasm) | atp_c + h2o_c + his__L_p --> adp_c + h_c + his__L_c + pi_c
+GLUt4pp | 0.2671368429340326 kJ/mol | Na+/glutamate symport (periplasm) | glu__L_p + na1_p --> glu__L_c + na1_c
+LYSabcpp | -43.710594264128474 kJ/mol | L-lysine transport via ABC system (periplasm) | atp_c + h2o_c + lys__L_p --> adp_c + h_c + lys__L_c + pi_c
+ARBt3ipp | -17.325175846639006 kJ/mol | L-arabinose transport via proton antiport (periplasm) | arab__L_c + h_p --> arab__L_p + h_c
+GALTptspp | -43.072619913541494 kJ/mol | Galactitol transport via PEP:Pyr PTS (periplasm) | galt_p + pep_c --> galt1p_c + pyr_c
+ZN2abcpp | -0.838687777113595 kJ/mol | Zinc (Zn+2) ABC transporter, efflux (periplasm) | atp_c + h2o_c + zn2_c --> adp_c + h_c + pi_c + zn2_p
+GLCptspp | -45.08377546078669 kJ/mol | D-glucose transport via PEP:Pyr PTS (periplasm) | glc__D_p + pep_c --> g6p_c + pyr_c
+GLCt2pp | -17.32573901764095 kJ/mol | D-glucose transport in via proton symport (periplasm) | glc__D_p + h_p --> glc__D_c + h_c
+GLYC3Pabcpp | -0.13762697214334807 kJ/mol | Sn-Glycerol 3-phosphate transport via ABC system (periplasm) | atp_c + glyc3p_p + h2o_c --> adp_c + glyc3p_c + h_c + pi_c
+ACMUMptspp | -27.823451095324792 kJ/mol | N-acetylmuramate transport via PEP:Pyr PTS (periplasm) | acmum_p + pep_c --> acmum6p_c + pyr_c
+SPMDabcpp | -72.73576693742716 kJ/mol | Spermidine transport via ABC system (periplasm) | atp_c + h2o_c + spmd_p --> adp_c + h_c + pi_c + spmd_c
+GALabcpp | -29.219134007640726 kJ/mol | D-galactose transport via ABC system (periplasm) | atp_c + gal_p + h2o_c --> adp_c + gal_c + h_c + pi_c
+GUAt2pp | -17.335145347737623 kJ/mol | Guanine transport in via proton symport (periplasm) | gua_p + h_p --> gua_c + h_c
+ARBTNabcpp | 45.57329118665338 kJ/mol | Aerobactin transport via ABC system (periplasm) | arbtn_fe3_p + atp_c + h2o_c --> adp_c + arbtn_fe3_c + h_c + pi_c
+H2St1pp | -14.472749999999987 kJ/mol | H2s transport (periplasm) | h2s_c --> h2s_p
+FORt2pp | -2.850847808990056 kJ/mol | Formate transport via proton symport (uptake only, periplasm) | for_p + h_p --> for_c + h_c
+MANptspp | -40.167035960968185 kJ/mol | D-mannose transport via PEP:Pyr PTS (periplasm) | man_p + pep_c --> man6p_c + pyr_c
+MALTptspp | -38.77606296156488 kJ/mol | Maltose transport via PEP:Pyr PTS (periplasm) | malt_p + pep_c --> malt6p_c + pyr_c
+CYSDabcpp | -29.308122439790267 kJ/mol | D-cysteine uptake via ABC system (periplasm) | atp_c + cys__D_p + h2o_c --> adp_c + cys__D_c + h_c + pi_c
+CD2abcpp | -0.838687777113595 kJ/mol | Cadmium (Cd+2) ABC transporter (periplasm) | atp_c + cd2_c + h2o_c --> adp_c + cd2_p + h_c + pi_c
+ZN2t3pp | 11.054707212886198 kJ/mol | Zinc (Zn+2) transport out via proton antiport (periplasm) | h_p + zn2_c --> h_c + zn2_p
+MNt2pp | -45.705153057793204 kJ/mol | Manganese (Mn+2) transport in via proton symport (periplasm) | h_p + mn2_p --> h_c + mn2_c
+GLCabcpp | -29.219134007640726 kJ/mol | D-glucose transport via ABC system (periplasm) | atp_c + glc__D_p + h2o_c --> adp_c + glc__D_c + h_c + pi_c
+Kt3pp | -2.8524729224535057 kJ/mol | Potassium transport out via proton antiport (periplasm) | h_p + k_c --> h_c + k_p
+HOMt2pp | -17.255783679921706 kJ/mol | L-homoserineserine efflux via proton symport | h_p + hom__L_c --> h_c + hom__L_p
+CYStpp | 0.08961483871432208 kJ/mol | L-cysteine export via facilitated transport | cys__L_c --> cys__L_p
+ACSERtpp | 0.23576499592364542 kJ/mol | O-Acetyl-L-serine export via facilitated transport | acser_c --> acser_p
+2AGPE120tipp | 0.0 kJ/mol | 2-Acyl-sn-glycero-3-phosphoethanolamine (n-C12:0) transporter via facilitated diffusion (periplasm) | 2agpe120_p --> 2agpe120_c
+G3PGabcpp | -14.74587012213702 kJ/mol | Sn-glycerol-3-phosphoglycerol transport via ABC system (periplasm) | atp_c + g3pg_p + h2o_c --> adp_c + g3pg_c + h_c + pi_c
+G3PIabcpp | -14.745952456766638 kJ/mol | Sn-glycerol-3-phosphoethanolamine transport via ABC system (periplasm) | atp_c + g3pi_p + h2o_c --> adp_c + g3pi_c + h_c + pi_c
+G3PSabcpp | -14.825835823434126 kJ/mol | Sn-glycerol-3-phosphoserine transport via ABC system (periplasm) | atp_c + g3ps_p + h2o_c --> adp_c + g3ps_c + h_c + pi_c
+2AGPG180tipp | 0.0 kJ/mol | 2-Acyl-sn-glycero-3-phosphoglycerol (n-C18:0) transporter via facilitated diffusion (periplasm) | 2agpg180_p --> 2agpg180_c
+PG161abcpp | -29.218617912453276 kJ/mol | Phosphatidylglycerol transport via ABC system (n-C16:1, periplasm) | atp_c + h2o_c + pg161_c --> adp_c + h_c + pg161_p + pi_c
+PGP161abcpp | -29.218617912453276 kJ/mol | Phosphatidylglycerophosphate transport via ABC system (n-C16:1, periplasm) | atp_c + h2o_c + pgp161_c --> adp_c + h_c + pgp161_p + pi_c
+URAt2pp | -17.325520078967436 kJ/mol | Uracil transport in via proton symport (periplasm) | h_p + ura_p --> h_c + ura_c
+PA160abcpp | -58.26065478856903 kJ/mol | Phosphatidate transport via ABC system (n-C16:0, periplasm) | atp_c + h2o_c + pa160_c --> adp_c + h_c + pa160_p + pi_c
+ALAALAabcpp | -29.242075651561727 kJ/mol | D-alanyl-D-alanine (DalaDala) transport via ABC system (periplasm) | alaala_p + atp_c + h2o_c --> adp_c + alaala_c + h_c + pi_c
+G3PEabcpp | -29.22886355697036 kJ/mol | Sn-glycerol-3-phosphoethanolamine transport via ABC system (periplasm) | atp_c + g3pe_p + h2o_c --> adp_c + g3pe_c + h_c + pi_c
+G3PCabcpp | -29.218607999016044 kJ/mol | Sn-glycerol-3-phosphocholine transport via ABC system (periplasm) | atp_c + g3pc_p + h2o_c --> adp_c + g3pc_c + h_c + pi_c
+PROGLYabcpp | -29.233793330163742 kJ/mol | L-Prolinylglycine (Pro-Gly) transport via ABC system (periplasm) | atp_c + h2o_c + progly_p --> adp_c + h_c + pi_c + progly_c
+GTHRDabcpp | -14.774132661491862 kJ/mol | Reduced glutathione via ABC system (periplasm) | atp_c + gthrd_p + h2o_c --> adp_c + gthrd_c + h_c + pi_c
+2AGPG140tipp | 0.0 kJ/mol | 2-Acyl-sn-glycero-3-phosphoglycerol (n-C14:0) transporter via facilitated diffusion (periplasm) | 2agpg140_p --> 2agpg140_c
+2AGPG160tipp | 0.0 kJ/mol | 2-Acyl-sn-glycero-3-phosphoglycerol (n-C16:0) transporter via facilitated diffusion (periplasm) | 2agpg160_p --> 2agpg160_c
+PG160abcpp | -43.691370217143294 kJ/mol | Phosphatidylglycerol transport via ABC system (n-C16:0, periplasm) | atp_c + h2o_c + pg160_c --> adp_c + h_c + pg160_p + pi_c
+FRUpts2pp | -39.15090737964841 kJ/mol | Fructose transport via PEP:Pyr PTS (f6p generating) (periplasm) | fru_p + pep_c --> f6p_c + pyr_c
+G6Pt6_2pp | -29.32615848884331 kJ/mol | Glucose-6-phosphate transport via phosphate antiport (periplasm) | g6p_p + 2.0 pi_c --> g6p_c + 2.0 pi_p
+MALTHXtexi | 0.0 kJ/mol | Maltohexaose transport via diffusion (extracellular to periplasm) irreversible | malthx_e --> malthx_p
+GAMptspp | -50.62549381571915 kJ/mol | D-glucosamine transport via PEP:Pyr PTS (periplasm) | gam_p + pep_c --> gam6p_c + pyr_c
+GSNt2pp | -17.32452987681421 kJ/mol | Guanosine transport in via proton symport (periplasm) | gsn_p + h_p --> gsn_c + h_c
+HG2t3pp | 11.054707212886198 kJ/mol | Mercury (Hg+2) transport out via proton antiport (periplasm) | h_p + hg2_c --> h_c + hg2_p
+UDCPPtppi | 29.21119867527013 kJ/mol | Undecaprenyl phosphate transport (cytoplasm to periplasm) | udcpp_p --> udcpp_c
+MELIBt3ipp | -17.32464382045275 kJ/mol | Melibiose transport in via antiport (periplasm) | h_p + melib_c --> h_c + melib_p
+NAt3pp | -3.176544692860414 kJ/mol | Sodium transport out via proton antiport (cytoplasm to periplasm) | h_p + na1_c --> h_c + na1_p
+MINOHPtexi | 173.67299999999997 kJ/mol | Myo-inositol phosphate transport via diffusion (extracellular to periplasm) | minohp_e --> minohp_p
+K2L4Aabcpp | -116.06263163695853 kJ/mol | KDO(2)-lipid IV A transport via ABC system (periplasm) | atp_c + h2o_c + kdo2lipid4_c --> adp_c + h_c + kdo2lipid4_p + pi_c
+COLIPAabcpp | -29.218617912453276 kJ/mol | Core oligosaccharide lipid A transport via ABC system (periplasm) | atp_c + colipa_c + h2o_c --> adp_c + colipa_p + h_c + pi_c
+PE160abcpp | -29.20837230399522 kJ/mol | Phosphatidylethanolamine transport via ABC system (n-C16:0, periplasm) | atp_c + h2o_c + pe160_c --> adp_c + h_c + pe160_p + pi_c
+PG140abcpp | -29.218617912453276 kJ/mol | Phosphatidylglycerol transport via ABC system (n-C14:0, periplasm) | atp_c + h2o_c + pg140_c --> adp_c + h_c + pg140_p + pi_c
+PG180abcpp | -29.218617912453276 kJ/mol | Phosphatidylglycerol transport via ABC system (n-C18:0, periplasm) | atp_c + h2o_c + pg180_c --> adp_c + h_c + pg180_p + pi_c
+PGP160abcpp | -29.218617912453276 kJ/mol | Phosphatidylglycerophosphate transport via ABC system (n-C16:0, periplasm) | atp_c + h2o_c + pgp160_c --> adp_c + h_c + pgp160_p + pi_c
+PGP180abcpp | -29.218617912453276 kJ/mol | Phosphatidylglycerophosphate transport via ABC system (n-C18:0, periplasm) | atp_c + h2o_c + pgp180_c --> adp_c + h_c + pgp180_p + pi_c
+PA140abcpp | -58.26065478856928 kJ/mol | Phosphatidate transport via ABC system (n-C14:0, periplasm) | atp_c + h2o_c + pa140_c --> adp_c + h_c + pa140_p + pi_c
+2AGPE140tipp | 0.0 kJ/mol | 2-Acyl-sn-glycero-3-phosphoethanolamine (n-C14:0) transporter via facilitated diffusion (periplasm) | 2agpe140_p --> 2agpe140_c
+2AGPE160tipp | -0.010245608458021138 kJ/mol | 2-Acyl-sn-glycero-3-phosphoethanolamine (n-C16:0) transporter via facilitated diffusion (periplasm) | 2agpe160_p --> 2agpe160_c
+2AGPE180tipp | -0.010245608457836397 kJ/mol | 2-Acyl-sn-glycero-3-phosphoethanolamine (n-C18:0) transporter via facilitated diffusion (periplasm) | 2agpe180_p --> 2agpe180_c
+PA180abcpp | -58.260654788569 kJ/mol | Phosphatidate transport via ABC system (n-C18:0, periplasm) | atp_c + h2o_c + pa180_c --> adp_c + h_c + pa180_p + pi_c
+PE180abcpp | -29.208372303994025 kJ/mol | Phosphatidylethanolamine transport via ABC system (n-C18:0, periplasm) | atp_c + h2o_c + pe180_c --> adp_c + h_c + pe180_p + pi_c
+CGLYabcpp | -29.294174527544037 kJ/mol | L-Cysteinylglycine (Cys-Gly) transport via ABC system (periplasm) | atp_c + cgly_p + h2o_c --> adp_c + cgly_c + h_c + pi_c
+GTHRDabc2pp | -43.663103163414476 kJ/mol | Glutathione export via ABC system (cytoplasm to periplasm) | atp_c + gthrd_c + h2o_c --> adp_c + gthrd_p + h_c + pi_c
+ZN2tpp | -28.379930135339706 kJ/mol | Zinc transport in via permease (no H+) | zn2_p --> zn2_c
+NI2tpp | -28.379930135339706 kJ/mol | Nickel (+2) transport in via permease (no H+) | ni2_p --> ni2_c
+COBALT2t3pp | 11.054707212886198 kJ/mol | Cobalt (Co+2) transport out via proton antiport (periplasm) | cobalt2_c + h_p --> cobalt2_p + h_c
+23DAPPAt2pp | -16.825118987229494 kJ/mol | 2,3-diaminopropionate transport in via proton symport | 23dappa_p + h_p --> 23dappa_c + h_c
+GLYBt2pp | -17.324914892729097 kJ/mol | Glycine betaine transport via proton symport (periplasm) | glyb_p + h_p --> glyb_c + h_c
+GALCTNt2pp | -2.8523075160642364 kJ/mol | D-galactonate transport via proton symport (periplasm) | galctn__D_p + h_p --> galctn__D_c + h_c
+DSERt2pp | -17.441029982062354 kJ/mol | D-serine transport in via proton symport (periplasm) | h_p + ser__D_p --> h_c + ser__D_c
+ALAt4pp | -14.182387091589659 kJ/mol | L-alanine transport in via sodium symport (periplasm) | ala__L_p + na1_p --> ala__L_c + na1_c
+LYSt3pp | -2.833246570778364 kJ/mol | L-lysine transport out via proton antiport (cytoplasm to periplasm) | h_p + lys__L_c --> h_c + lys__L_p
+CA2t3pp | 11.620277077546493 kJ/mol | Calcium (Ca+2) transport out via proton antiport (periplasm) | ca2_c + h_p --> ca2_p + h_c
+ARGt3pp | -2.8125000379282383 kJ/mol | L-arginine transport out via proton antiport (cytoplasm to periplasm) | arg__L_c + h_p --> arg__L_p + h_c
+OROTt2_2pp | -20.176372220341555 kJ/mol | Orotate transport via proton symport (2 H) (periplasm) | 2.0 h_p + orot_p --> 2.0 h_c + orot_c
+MALDt2_2pp | -5.698880560304136 kJ/mol | D-Malate transport via proton symport (2 H) (periplasm) | 2.0 h_p + mal__D_p --> 2.0 h_c + mal__D_c
+CHLt2pp | -31.79797349650026 kJ/mol | Choline transport via proton symport (periplasm) | chol_p + h_p --> chol_c + h_c
+GLYt4pp | -14.23525016082354 kJ/mol | Glycine transport in via sodium symport (periplasm) | gly_p + na1_p --> gly_c + na1_c
+LYSt2pp | -31.817199274128637 kJ/mol | L-lysine transport in via proton symport (periplasm) | h_p + lys__L_p --> h_c + lys__L_c
+COBALT2tpp | -28.379930135339706 kJ/mol | Cobalt transport in via permease (no H+) | cobalt2_p --> cobalt2_c
+GLYt2pp | -17.411794853683958 kJ/mol | Glycine transport in via proton symport (periplasm) | gly_p + h_p --> gly_c + h_c
+ALAt2pp | -17.3589317844501 kJ/mol | L-alanine transport in via proton symport (periplasm) | ala__L_p + h_p --> ala__L_c + h_c
+BALAt2pp | -17.32857772636239 kJ/mol | Beta-alanine transport in via proton symport (periplasm) | ala_B_p + h_p --> ala_B_c + h_c
+DALAt2pp | -17.35893362256936 kJ/mol | D-alanine transport in via proton symport (periplasm) | ala__D_p + h_p --> ala__D_c + h_c
+FE2tpp | -28.9455 kJ/mol | Iron (+2) transport in via permease (no H+) | fe2_p --> fe2_c
+MN2tpp | -28.379930135339706 kJ/mol | Manganese transport in via permease (no H+) | mn2_p --> mn2_c
+MG2tpp | -28.9455 kJ/mol | Magnesium (+2) transport in via diffusion | mg2_p --> mg2_c
+NI2t3pp | 11.054707212886198 kJ/mol | Nickle (Ni+2) transport out via proton antiport (periplasm) | h_p + ni2_c --> h_c + ni2_p
+GALCTNLt2pp | -2.8523075160642364 kJ/mol | L-galactonate transport via proton symport (periplasm) | galctn__L_p + h_p --> galctn__L_c + h_c
+THYMt3pp | -17.325093146451408 kJ/mol | Thymine transport out via proton antiport (periplasm) | h_p + thym_c --> h_c + thym_p
+CLt3_2pp | 46.2707229224535 kJ/mol | Chloride transport out via proton antiport (2:1) (periplasm) | 2.0 cl_p + h_c --> 2.0 cl_c + h_p
+CU2tpp | -28.379930135339706 kJ/mol | Copper transport in via permease (no H+) | cu2_p --> cu2_c
+FE2t3pp | 11.620277077546493 kJ/mol | Iron (Fe+2) transport out via proton antiport (periplasm) | fe2_c + h_p --> fe2_p + h_c
+MN2t3pp | 11.054707212886198 kJ/mol | Manganese (Mn+2) transport out via proton antiport (periplasm) | h_p + mn2_c --> h_c + mn2_p
+CD2tpp | -28.379930135339706 kJ/mol | Cadmium (+2) transport in via permease (no H+) | cd2_p --> cd2_c
+ETHAt2pp | -31.81298389179432 kJ/mol | Ethanolamine transport in via proton symport | etha_p + h_p --> etha_c + h_c
+FE3abcpp | -72.63686791245327 kJ/mol | Iron (III) transport via ABC system (periplasm to cytoplasm) | atp_c + fe3_p + h2o_c --> adp_c + fe3_c + h_c + pi_c
+LALALGLUtpp | -2.901487849989813 kJ/mol | L-alanyl-L-glutamate transport in via proton symport (periplasm) | LalaLglu_p + h_p --> LalaLglu_c + h_c
+5MTRtpp | 17.325265856056312 kJ/mol | 5-Methylthio-D-ribose transport via proton symport (periplasm) | 5mtr_c + h_c --> 5mtr_p + h_p
+LALADGLUtpp | -2.901487849989813 kJ/mol | L-alanyl-D-glutamate transport in via proton symport (periplasm) | LalaDglu_p + h_p --> LalaDglu_c + h_c
+3HPPtpp | 2.851078088698788 kJ/mol | 3-hydroxypropionate transport via proton symport (periplasm) | 3hpp_c + h_c --> 3hpp_p + h_p
+ALAtpp | 0.033708861996597506 kJ/mol | L-alanine export via facilited diffusion | ala__L_c --> ala__L_p
+BTNt2ipp | -2.85125705513493 kJ/mol | Biotin transport via proton symport (periplasm) | btn_p + h_p --> btn_c + h_c
+2DGLCptspp | -39.12504279679889 kJ/mol | 2-Deoxy-D-glucose transport via PEP:Pyr PTS (periplasm) | 2dglc_p + pep_c --> 2doxg6p_c + pyr_c
+ARBTptspp | -39.19924932629757 kJ/mol | Arbutin transport via PEP:Pyr PTS (periplasm) | arbt_p + pep_c --> arbt6p_c + pyr_c
+ARBTtex | 0.0 kJ/mol | Arbutin transport via diffusion (extracellular to periplasm) | arbt_e --> arbt_p
+PYDXtpp | -0.7767488163579941 kJ/mol | Pyridoxal import | pydx_p --> pydx_c
+23DOGULNt4pp | 0.32396210072138487 kJ/mol | Na+/ 2,3-Dioxo-L-gulonate symport (periplasm) | 23doguln_p + na1_p --> 23doguln_c + na1_c
+PYDXNtpp | 0.022486642998050144 kJ/mol | Pyridoxine import | pydxn_p --> pydxn_c
+PYDAMtpp | -15.112352169774448 kJ/mol | Pyridoxamine import | pydam_p --> pydam_c
+CHLt3pp | -2.8524723484067493 kJ/mol | Choline transport via proton antiport (periplasm) | chol_c + h_p --> chol_p + h_c
+TARTt2_3pp | -23.027380876914314 kJ/mol | D-tartrate transport via proton symport (3 H) (periplasm) | 3.0 h_p + tartr__D_p --> 3.0 h_c + tartr__D_c
+GLYBt3pp | -17.325530952177914 kJ/mol | Glycine betaine transport via proton antiport (periplasm) | glyb_c + h_p --> glyb_p + h_c
+AI2tpp | 0.06947987900075958 kJ/mol | Quorum signal AI-2 exporter | mththf_c --> mththf_p
+TRPtipp | 0.04963947131057722 kJ/mol | L-tryptophan transport out (periplasm) | trp__L_c --> trp__L_p
+TYRtipp | 0.07398571261182596 kJ/mol | L-tyrosine transport out (periplasm) | tyr__L_c --> tyr__L_p
+SPMDt3pp | 26.19192610252038 kJ/mol | Spermidine transport out via proton antiport (periplasm) | h_p + spmd_c --> h_c + spmd_p
+PHEtipp | 0.03985082717371924 kJ/mol | L-phenylalanine transport out (periplasm) | phe__L_c --> phe__L_p
+CITt3pp | -60.74496760690114 kJ/mol | Citrate transport out via proton antiport (periplasm) | cit_c + h_p --> cit_p + h_c
+GLYC2Pabcpp | -0.20705298542415207 kJ/mol | Sn-Glycerol 2-phosphate transport via ABC system (periplasm) | atp_c + glyc2p_p + h2o_c --> adp_c + glyc2p_c + h_c + pi_c
+SELabcpp | -0.2731150202093424 kJ/mol | Selenatenate transport via ABC system (periplasm) | atp_c + h2o_c + sel_p --> adp_c + h_c + pi_c + sel_c
+CYSItpp | 0.18655888458335568 kJ/mol | Cystine efflux transport | cysi__L_c --> cysi__L_p
+FADt | -43.417411783946825 kJ/mol | FAD transporter, periplasm | fad_c --> fad_p
+PIt2rpp | 11.84667962644145 kJ/mol | Phosphate reversible transport via symport (periplasm) | h_p + pi_p --> h_c + pi_c
+AI2abcpp | -29.288097791454042 kJ/mol | Autoinducer-2 ABC transporter | atp_c + h2o_c + mththf_p --> adp_c + h_c + mththf_c + pi_c
+4HBZt3pp | -31.75833168609512 kJ/mol | 4-hydroxybenzoate transport out via antiporter | 4hbz_c + h_p --> 4hbz_p + h_c
+LEUt2rpp | -17.35594925277786 kJ/mol | L-leucine reversible transport via proton symport (periplasm) | h_p + leu__L_p --> h_c + leu__L_c
+ILEt3pp | -17.29442305499711 kJ/mol | L-isoleucine transport out via proton antiport (periplasm) | h_p + ile__L_c --> h_c + ile__L_p
+METt3pp | -17.29310549966185 kJ/mol | L-methionine tranport out via proton antiport (periplasm) | h_p + met__L_c --> h_c + met__L_p
+GSNt3pp | -17.3259159680928 kJ/mol | Guanosine transport out via proton antiport (periplasm) | gsn_c + h_p --> gsn_p + h_c
+CLtipp | 14.47275 kJ/mol | Chloride ion transport in via diffusion (periplasm) | cl_p --> cl_c
+PItpp | -29.171902548894955 kJ/mol | Phosphate export via facillated diffusion (periplasm) | pi_c --> pi_p
+LEUt3pp | -17.29449659212915 kJ/mol | L-leucine transport out via proton antiport (periplasm) | h_p + leu__L_c --> h_c + leu__L_p
+INSt3pp | -17.324970894667487 kJ/mol | Inosine transport out via proton antiport (perisplasm) | h_p + ins_c --> h_c + ins_p
+INDOLEt2rpp | -17.32522292245354 kJ/mol | Indole transport via proton symport, reversible (periplasm) | h_p + indole_p --> h_c + indole_c
+ILEt2rpp | -17.3560227899099 kJ/mol | L-isoleucine reversible transport via proton symport (periplasm) | h_p + ile__L_p --> h_c + ile__L_c
+CH4t2pp | 4.796163466380676e-14 kJ/mol | Methane Transport(periplasm) | ch4_c --> ch4_p
+CUt2pp | 14.148678229593092 kJ/mol | Copper transport out via permease (no H+) | cu_c --> cu_p
+SERtpp | 0.1158613749748092 kJ/mol | L-serine export via facilitated transport | ser__L_c --> ser__L_p
+SERt2rpp | -17.44108429742831 kJ/mol | L-serine reversible transport via proton symport (periplasm) | h_p + ser__L_p --> h_c + ser__L_c
+URATEtpp | -17.325222922453506 kJ/mol | Uric acid transporter | h_p + urate_p --> h_c + urate_c
+URAtpp | 0.000297156513928698 kJ/mol | Uracil export via facillitated diffusion (periplasm) | ura_c --> ura_p
+SLNTabcpp | -0.012867263287727582 kJ/mol | Selenite ABC transporter (periplasm) | atp_c + h2o_c + slnt_p --> adp_c + h_c + pi_c + slnt_c
+VALt2rpp | -17.350821210731837 kJ/mol | L-valine reversible transport via proton symport (periplasm) | h_p + val__L_p --> h_c + val__L_c
+VALt3pp | -17.299624634175174 kJ/mol | L-valine transport out via proton antiport (periplasm) | h_p + val__L_c --> h_c + val__L_p
+MN2tipp | 28.379930135339706 kJ/mol | Manganese transport in via permease (no H+) | mn2_c --> mn2_p
+26DAHtex_FWD | 0.0 kJ/mol | Meso-2,6-Diaminoheptanedioate transport via diffusion (extracellular to periplasm) | 26dap__M_e --> 26dap__M_p
+26DAHtex_REV | 0.0 kJ/mol | Meso-2,6-Diaminoheptanedioate transport via diffusion (extracellular to periplasm) | 26dap__M_p --> 26dap__M_e
+HPPPNtex_FWD | 14.47275 kJ/mol | 3-(3-hydroxyphenyl)propionate transport via diffusion (extracellular to periplasm) | 3hpppn_e --> 3hpppn_p
+HPPPNtex_REV | -14.47275 kJ/mol | 3-(3-hydroxyphenyl)propionate transport via diffusion (extracellular to periplasm) | 3hpppn_p --> 3hpppn_e
+ACtex_FWD | 14.47275 kJ/mol | Acetate transport via diffusion (extracellular to periplasm) | ac_e --> ac_p
+ACtex_REV | -14.47275 kJ/mol | Acetate transport via diffusion (extracellular to periplasm) | ac_p --> ac_e
+ACMANAtex_FWD | 0.0 kJ/mol | N-acetyl-D-mannosamine transport via diffusion (extracellular to periplasm) | acmana_e --> acmana_p
+ACMANAtex_REV | 0.0 kJ/mol | N-acetyl-D-mannosamine transport via diffusion (extracellular to periplasm) | acmana_p --> acmana_e
+SUCFUMtpp_FWD | -0.0208456389395808 kJ/mol | Succinate:fumarate antiporter (periplasm) | fum_p + succ_c --> fum_c + succ_p
+SUCFUMtpp_REV | 0.020845638939595013 kJ/mol | Succinate:fumarate antiporter (periplasm) | fum_c + succ_p --> fum_p + succ_c
+TARTRt7pp_FWD | -0.018808445266557783 kJ/mol | Tartrate/succinate antiporter (periplasm) | succ_c + tartr__L_p --> succ_p + tartr__L_c
+TARTRt7pp_REV | 0.018808445266557783 kJ/mol | Tartrate/succinate antiporter (periplasm) | succ_p + tartr__L_c --> succ_c + tartr__L_p
+GLUtex_FWD | 14.47275 kJ/mol | L-glutamate transport via diffusion (extracellular to periplasm) | glu__L_e --> glu__L_p
+GLUtex_REV | -14.47275 kJ/mol | L-glutamate transport via diffusion (extracellular to periplasm) | glu__L_p --> glu__L_e
+GLYtex_FWD | 0.0 kJ/mol | Glycine transport via diffusion (extracellular to periplasm) | gly_e --> gly_p
+GLYtex_REV | 0.0 kJ/mol | Glycine transport via diffusion (extracellular to periplasm) | gly_p --> gly_e
+GLYALDtex_FWD | 0.0 kJ/mol | Glyceraldehyde transport via diffusion (extracellular to periplasm) | glyald_e --> glyald_p
+GLYALDtex_REV | 0.0 kJ/mol | Glyceraldehyde transport via diffusion (extracellular to periplasm) | glyald_p --> glyald_e
+AKGt2rpp_FWD | 11.62060188260291 kJ/mol | 2-oxoglutarate reversible transport via symport (periplasm) | akg_p + h_p --> akg_c + h_c
+AKGt2rpp_REV | -11.62060188260291 kJ/mol | 2-oxoglutarate reversible transport via symport (periplasm) | akg_c + h_c --> akg_p + h_p
+GLYBtex_FWD | 0.0 kJ/mol | Glycine betaine transport via diffusion (extracellular to periplasm) | glyb_e --> glyb_p
+GLYBtex_REV | 0.0 kJ/mol | Glycine betaine transport via diffusion (extracellular to periplasm) | glyb_p --> glyb_e
+GLYCtex_FWD | 0.0 kJ/mol | Glycerol transport via diffusion (extracellular to periplasm) | glyc_e --> glyc_p
+GLYCtex_REV | 0.0 kJ/mol | Glycerol transport via diffusion (extracellular to periplasm) | glyc_p --> glyc_e
+GLYC3Ptex_FWD | 28.9455 kJ/mol | Glycerol-3-phosphate transport via diffusion (extracellular to periplasm) | glyc3p_e --> glyc3p_p
+GLYC3Ptex_REV | -28.9455 kJ/mol | Glycerol-3-phosphate transport via diffusion (extracellular to periplasm) | glyc3p_p --> glyc3p_e
+GLYCLTtex_FWD | 14.47275 kJ/mol | Glycolate transport via diffusion (extracellular to periplasm) | glyclt_e --> glyclt_p
+GLYCLTtex_REV | -14.47275 kJ/mol | Glycolate transport via diffusion (extracellular to periplasm) | glyclt_p --> glyclt_e
+GTPtex_FWD | 57.891 kJ/mol | GTP transport via diffusion (extracellular to periplasm) | gtp_e --> gtp_p
+GTPtex_REV | -57.891 kJ/mol | GTP transport via diffusion (extracellular to periplasm) | gtp_p --> gtp_e
+GUAtex_FWD | 0.0 kJ/mol | Guanine transport via diffusion (extracellular to periplasm) | gua_e --> gua_p
+GUAtex_REV | 0.0 kJ/mol | Guanine transport via diffusion (extracellular to periplasm) | gua_p --> gua_e
+Htex_FWD | -14.47275 kJ/mol | Proton transport via diffusion (extracellular to periplasm) | h_e --> h_p
+Htex_REV | 14.47275 kJ/mol | Proton transport via diffusion (extracellular to periplasm) | h_p --> h_e
+H2tex_FWD | 0.0 kJ/mol | Hydrogen transport via diffusion (extracellular to periplasm) | h2_e --> h2_p
+H2tex_REV | 0.0 kJ/mol | Hydrogen transport via diffusion (extracellular to periplasm) | h2_p --> h2_e
+H2Otex_FWD | 0.0 kJ/mol | H2O transport via diffusion (extracellular to periplasm) | h2o_e --> h2o_p
+H2Otex_REV | 0.0 kJ/mol | H2O transport via diffusion (extracellular to periplasm) | h2o_p --> h2o_e
+O2tpp_FWD | 0.0 kJ/mol | O2 transport via diffusion (periplasm) | o2_p --> o2_c
+O2tpp_REV | 0.0 kJ/mol | O2 transport via diffusion (periplasm) | o2_c --> o2_p
+PYRt2rpp_FWD | -2.852412709377523 kJ/mol | Pyruvate reversible transport via proton symport (periplasm) | h_p + pyr_p --> h_c + pyr_c
+PYRt2rpp_REV | 2.852412709377523 kJ/mol | Pyruvate reversible transport via proton symport (periplasm) | h_c + pyr_c --> h_p + pyr_p
+THMDt2pp_copy2_FWD | -1.4483802666178107 kJ/mol | Thymidine transport in via proton symport (periplasm) | h_p + thymd_p --> h_c + thymd_c
+THMDt2pp_copy2_REV | 1.4483802666178107 kJ/mol | Thymidine transport in via proton symport (periplasm) | h_c + thymd_c --> h_p + thymd_p
+DAPtex_FWD | -28.9455 kJ/mol | 1,5-Diaminopentane transport via diffusion (extracellular to periplasm) | 15dap_e --> 15dap_p
+DAPtex_REV | 28.9455 kJ/mol | 1,5-Diaminopentane transport via diffusion (extracellular to periplasm) | 15dap_p --> 15dap_e
+TRPt2rpp_FWD | -17.374862393764083 kJ/mol | L-tryptophan reversible transport via proton symport (periplasm) | h_p + trp__L_p --> h_c + trp__L_c
+TRPt2rpp_REV | 17.374862393764083 kJ/mol | L-tryptophan reversible transport via proton symport (periplasm) | h_c + trp__L_c --> h_p + trp__L_p
+TYRt2rpp_FWD | -17.399208635065335 kJ/mol | L-tyrosine reversible transport via proton symport (periplasm) | h_p + tyr__L_p --> h_c + tyr__L_c
+TYRt2rpp_REV | 17.399208635065335 kJ/mol | L-tyrosine reversible transport via proton symport (periplasm) | h_c + tyr__L_c --> h_p + tyr__L_p
+URIt2pp_copy2_FWD | -1.5880384563539067 kJ/mol | Uridine transport in via proton symport (periplasm) | h_p + uri_p --> h_c + uri_c
+URIt2pp_copy2_REV | 1.5880384563539067 kJ/mol | Uridine transport in via proton symport (periplasm) | h_c + uri_c --> h_p + uri_p
+12PPDStex_FWD | 0.0 kJ/mol | (S)-Propane-1,2-diol transport via diffusion (extracellular to periplasm) | 12ppd__S_e --> 12ppd__S_p
+12PPDStex_REV | 0.0 kJ/mol | (S)-Propane-1,2-diol transport via diffusion (extracellular to periplasm) | 12ppd__S_p --> 12ppd__S_e
+DDGLCNtex_FWD | 14.47275 kJ/mol | 2-dehydro-3-deoxy-D-gluconate transport via diffusion (extracellular to periplasm) | 2ddglcn_e --> 2ddglcn_p
+DDGLCNtex_REV | -14.47275 kJ/mol | 2-dehydro-3-deoxy-D-gluconate transport via diffusion (extracellular to periplasm) | 2ddglcn_p --> 2ddglcn_e
+XTSNt2rpp_FWD | -17.32589199654739 kJ/mol | Xanthosine transport via proton symport (periplasm) | h_p + xtsn_p --> h_c + xtsn_c
+XTSNt2rpp_REV | 17.32589199654739 kJ/mol | Xanthosine transport via proton symport (periplasm) | h_c + xtsn_c --> h_p + xtsn_p
+ACACt2pp_FWD | -2.8515520568199726 kJ/mol | Acetoacetate transport via proton symport  (periplasm) | acac_p + h_p --> acac_c + h_c
+ACACt2pp_REV | 2.8515520568199726 kJ/mol | Acetoacetate transport via proton symport  (periplasm) | acac_c + h_c --> acac_p + h_p
+GALCTtex_FWD | 28.9455 kJ/mol | D-galactarte transport via diffusion (extracellular to periplasm) | galct__D_e --> galct__D_p
+GALCTtex_REV | -28.9455 kJ/mol | D-galactarte transport via diffusion (extracellular to periplasm) | galct__D_p --> galct__D_e
+GALCTNtex_FWD | 14.47275 kJ/mol | D-galactonate transport via diffusion (extracellular to periplasm) | galctn__D_e --> galctn__D_p
+GALCTNtex_REV | -14.47275 kJ/mol | D-galactonate transport via diffusion (extracellular to periplasm) | galctn__D_p --> galctn__D_e
+GALTtex_FWD | 0.0 kJ/mol | Galactitol transport via diffusion (extracellular to periplasm) | galt_e --> galt_p
+GALTtex_REV | 0.0 kJ/mol | Galactitol transport via diffusion (extracellular to periplasm) | galt_p --> galt_e
+GAMtex_FWD | -14.47275 kJ/mol | D-glucosamine transport via diffusion (extracellular to periplasm) | gam_e --> gam_p
+GAMtex_REV | 14.47275 kJ/mol | D-glucosamine transport via diffusion (extracellular to periplasm) | gam_p --> gam_e
+GBBTNtex_FWD | 0.0 kJ/mol | Gamma-butyrobetaine transport via diffusion (extracellular to periplasm) | gbbtn_e --> gbbtn_p
+GBBTNtex_REV | 0.0 kJ/mol | Gamma-butyrobetaine transport via diffusion (extracellular to periplasm) | gbbtn_p --> gbbtn_e
+INDOLEtex_FWD | 0.0 kJ/mol | Indole transport via diffusion (extracellular to periplasm) | indole_e --> indole_p
+INDOLEtex_REV | 0.0 kJ/mol | Indole transport via diffusion (extracellular to periplasm) | indole_p --> indole_e
+ARBt2rpp_FWD | -17.325269998268006 kJ/mol | L-arabinose transport via proton symport (periplasm) | arab__L_p + h_p --> arab__L_c + h_c
+ARBt2rpp_REV | 17.325269998268006 kJ/mol | L-arabinose transport via proton symport (periplasm) | arab__L_c + h_c --> arab__L_p + h_p
+L_LACtex_FWD | 14.47275 kJ/mol | L-lactate transport via diffusion (extracellular to periplasm) | lac__L_e --> lac__L_p
+L_LACtex_REV | -14.47275 kJ/mol | L-lactate transport via diffusion (extracellular to periplasm) | lac__L_p --> lac__L_e
+ADEt2rpp_FWD | -17.345338401905522 kJ/mol | Adenine transport via proton symport (reversible) (periplasm) | ade_p + h_p --> ade_c + h_c
+ADEt2rpp_REV | 17.345338401905522 kJ/mol | Adenine transport via proton symport (reversible) (periplasm) | ade_c + h_c --> ade_p + h_p
+CO2tpp_FWD | 0.0 kJ/mol | CO2 transporter via diffusion (periplasm) | co2_p --> co2_c
+CO2tpp_REV | 0.0 kJ/mol | CO2 transporter via diffusion (periplasm) | co2_c --> co2_p
+DHAtpp_FWD | -3.2568870302895903e-06 kJ/mol | Dihydroxyacetone transport via facilitated diffusion (periplasm) | dha_p --> dha_c
+DHAtpp_REV | 3.2568870302895903e-06 kJ/mol | Dihydroxyacetone transport via facilitated diffusion (periplasm) | dha_c --> dha_p
+ADNt2pp_copy2_FWD | -17.32378478268396 kJ/mol | Adenosine transport in via proton symport (periplasm) | adn_p + h_p --> adn_c + h_c
+ADNt2pp_copy2_REV | 17.32378478268396 kJ/mol | Adenosine transport in via proton symport (periplasm) | adn_c + h_c --> adn_p + h_p
+ALLTNt2rpp_FWD | -16.56769144158121 kJ/mol | Allantoin transport in via proton symport (periplasm) | alltn_p + h_p --> alltn_c + h_c
+ALLTNt2rpp_REV | 16.56769144158121 kJ/mol | Allantoin transport in via proton symport (periplasm) | alltn_c + h_c --> alltn_p + h_p
+ARGAGMt7pp_FWD | 14.437393652981925 kJ/mol | Arginine/agmatine antiport (periplasm) | agm_c + arg__L_p --> agm_p + arg__L_c
+ARGAGMt7pp_REV | -14.437393652981925 kJ/mol | Arginine/agmatine antiport (periplasm) | agm_p + arg__L_c --> agm_c + arg__L_p
+ASNt2rpp_FWD | -17.35882569174938 kJ/mol | L-asparagine reversible transport via proton symport (periplasm) | asn__L_p + h_p --> asn__L_c + h_c
+ASNt2rpp_REV | 17.35882569174938 kJ/mol | L-asparagine reversible transport via proton symport (periplasm) | asn__L_c + h_c --> asn__L_p + h_p
+GUAtpp_FWD | -0.009922425284113245 kJ/mol | Guanine transport via diffusion (periplasm) | gua_p --> gua_c
+GUAtpp_REV | 0.009922425284113245 kJ/mol | Guanine transport via diffusion (periplasm) | gua_c --> gua_p
+HYXNtpp_FWD | -1.4461735311395696 kJ/mol | Hypoxanthine transport (periplasm) | hxan_p --> hxan_c
+HYXNtpp_REV | 1.4461735311395696 kJ/mol | Hypoxanthine transport (periplasm) | hxan_c --> hxan_p
+HXAtex_FWD | 14.47275 kJ/mol | Hexanoate transport via diffusion (extracellular to periplasm) | hxa_e --> hxa_p
+HXAtex_REV | -14.47275 kJ/mol | Hexanoate transport via diffusion (extracellular to periplasm) | hxa_p --> hxa_e
+HYXNtex_FWD | 0.0 kJ/mol | Hypoxanthine transport via diffusion (extracellular to periplasm) | hxan_e --> hxan_p
+HYXNtex_REV | 0.0 kJ/mol | Hypoxanthine transport via diffusion (extracellular to periplasm) | hxan_p --> hxan_e
+IDONtex_FWD | 14.47275 kJ/mol | L-idonate transport via diffusion (extracellular to periplasm) | idon__L_e --> idon__L_p
+IDONtex_REV | -14.47275 kJ/mol | L-idonate transport via diffusion (extracellular to periplasm) | idon__L_p --> idon__L_e
+ILEtex_FWD | 0.0 kJ/mol | L-isoleucine transport via diffusion (extracellular to periplasm) | ile__L_e --> ile__L_p
+ILEtex_REV | 0.0 kJ/mol | L-isoleucine transport via diffusion (extracellular to periplasm) | ile__L_p --> ile__L_e
+INSTtex_FWD | 0.0 kJ/mol | Inositol transport via diffusion (extracellular to periplasm) | inost_e --> inost_p
+INSTtex_REV | 0.0 kJ/mol | Inositol transport via diffusion (extracellular to periplasm) | inost_p --> inost_e
+INStex_FWD | 0.0 kJ/mol | Inosine transport via diffusion (extracellular to periplasm) | ins_e --> ins_p
+INStex_REV | 0.0 kJ/mol | Inosine transport via diffusion (extracellular to periplasm) | ins_p --> ins_e
+Ktex_FWD | -14.47275 kJ/mol | Potassium transport via diffusion (extracellular to periplasm) | k_e --> k_p
+Ktex_REV | 14.47275 kJ/mol | Potassium transport via diffusion (extracellular to periplasm) | k_p --> k_e
+GLCRtex_FWD | 28.9455 kJ/mol | D-glucarate transport via diffusion (extracellular to periplasm) | glcr_e --> glcr_p
+GLCRtex_REV | -28.9455 kJ/mol | D-glucarate transport via diffusion (extracellular to periplasm) | glcr_p --> glcr_e
+GLCNtex_FWD | 14.47275 kJ/mol | D-gluconate transport via diffusion (extracellular to periplasm) | glcn_e --> glcn_p
+GLCNtex_REV | -14.47275 kJ/mol | D-gluconate transport via diffusion (extracellular to periplasm) | glcn_p --> glcn_e
+GLCURtex_FWD | 14.47275 kJ/mol | D-glucuronat transport via diffusion (extracellular to periplasm) | glcur_e --> glcur_p
+GLCURtex_REV | -14.47275 kJ/mol | D-glucuronat transport via diffusion (extracellular to periplasm) | glcur_p --> glcur_e
+GLNtex_FWD | 0.0 kJ/mol | L-glutamine transport via diffusion (extracellular to periplasm) | gln__L_e --> gln__L_p
+GLNtex_REV | 0.0 kJ/mol | L-glutamine transport via diffusion (extracellular to periplasm) | gln__L_p --> gln__L_e
+O2tex_FWD | 0.0 kJ/mol | Oxygen transport via diffusion (extracellular to periplasm) | o2_e --> o2_p
+O2tex_REV | 0.0 kJ/mol | Oxygen transport via diffusion (extracellular to periplasm) | o2_p --> o2_e
+OCTAtex_FWD | 14.47275 kJ/mol | Octanoate transport via diffusion (extracellular to periplasm) | octa_e --> octa_p
+OCTAtex_REV | -14.47275 kJ/mol | Octanoate transport via diffusion (extracellular to periplasm) | octa_p --> octa_e
+D_LACtex_FWD | 14.47275 kJ/mol | D-lactate transport via diffusion (extracellular to periplasm) | lac__D_e --> lac__D_p
+D_LACtex_REV | -14.47275 kJ/mol | D-lactate transport via diffusion (extracellular to periplasm) | lac__D_p --> lac__D_e
+ORNtex_FWD | -14.47275 kJ/mol | Ornithine transport via diffusion (extracellular to periplasm) | orn_e --> orn_p
+ORNtex_REV | 14.47275 kJ/mol | Ornithine transport via diffusion (extracellular to periplasm) | orn_p --> orn_e
+FUCtpp_FWD | -17.32573901655922 kJ/mol | L-fucose transport via proton symport (periplasm) | fuc__L_p + h_p --> fuc__L_c + h_c
+FUCtpp_REV | 17.32573901655922 kJ/mol | L-fucose transport via proton symport (periplasm) | fuc__L_c + h_c --> fuc__L_p + h_p
+GALCTt2rpp_FWD | 11.62034040435895 kJ/mol | D-galactarte transport via proton symport, reversible (periplasm) | galct__D_p + h_p --> galct__D_c + h_c
+GALCTt2rpp_REV | -11.62034040435895 kJ/mol | D-galactarte transport via proton symport, reversible (periplasm) | galct__D_c + h_c --> galct__D_p + h_p
+ASPtex_FWD | 14.47275 kJ/mol | L-aspartate transport via diffusion (extracellular to periplasm) | asp__L_e --> asp__L_p
+ASPtex_REV | -14.47275 kJ/mol | L-aspartate transport via diffusion (extracellular to periplasm) | asp__L_p --> asp__L_e
+PHEtex_FWD | 0.0 kJ/mol | L-phenylalanine transport via diffusion (extracellular to periplasm) | phe__L_e --> phe__L_p
+PHEtex_REV | 0.0 kJ/mol | L-phenylalanine transport via diffusion (extracellular to periplasm) | phe__L_p --> phe__L_e
+PItex_FWD | 28.9455 kJ/mol | Phosphate transport via diffusion (extracellular to periplasm) | pi_e --> pi_p
+PItex_REV | -28.9455 kJ/mol | Phosphate transport via diffusion (extracellular to periplasm) | pi_p --> pi_e
+CYTDt2pp_copy2_FWD | -17.264163208534853 kJ/mol | Cytidine transport in via proton symport (periplasm) | cytd_p + h_p --> cytd_c + h_c
+CYTDt2pp_copy2_REV | 17.264163208534853 kJ/mol | Cytidine transport in via proton symport (periplasm) | cytd_c + h_c --> cytd_p + h_p
+ACt2rpp_FWD | -2.8494489889199226 kJ/mol | Acetate reversible transport via proton symport (periplasm) | ac_p + h_p --> ac_c + h_c
+ACt2rpp_REV | 2.8494489889199226 kJ/mol | Acetate reversible transport via proton symport (periplasm) | ac_c + h_c --> ac_p + h_p
+DDGLCNt2rpp_FWD | -2.8524113171302403 kJ/mol | 2-dehydro-3-deoxy-D-gluconate transport via proton symport, reversible (periplasm) | 2ddglcn_p + h_p --> 2ddglcn_c + h_c
+DDGLCNt2rpp_REV | 2.8524113171302403 kJ/mol | 2-dehydro-3-deoxy-D-gluconate transport via proton symport, reversible (periplasm) | 2ddglcn_c + h_c --> 2ddglcn_p + h_p
+RMNtex_FWD | 0.0 kJ/mol | L-rhamnose transport via diffusion (extracellular to periplasm) | rmn_e --> rmn_p
+RMNtex_REV | 0.0 kJ/mol | L-rhamnose transport via diffusion (extracellular to periplasm) | rmn_p --> rmn_e
+LEUtex_FWD | 0.0 kJ/mol | L-leucine transport via diffusion (extracellular to periplasm) | leu__L_e --> leu__L_p
+LEUtex_REV | 0.0 kJ/mol | L-leucine transport via diffusion (extracellular to periplasm) | leu__L_p --> leu__L_e
+LYStex_FWD | -14.47275 kJ/mol | L-lysine transport via diffusion (extracellular to periplasm) | lys__L_e --> lys__L_p
+LYStex_REV | 14.47275 kJ/mol | L-lysine transport via diffusion (extracellular to periplasm) | lys__L_p --> lys__L_e
+LYXtex_FWD | 0.0 kJ/mol | L-Lyxose transport via diffusion (extracellular to periplasm) | lyx__L_e --> lyx__L_p
+LYXtex_REV | 0.0 kJ/mol | L-Lyxose transport via diffusion (extracellular to periplasm) | lyx__L_p --> lyx__L_e
+MAN6Ptex_FWD | 28.9455 kJ/mol | Mannose 6-phosphate transport via diffusion (extracellular to periplasm) | man6p_e --> man6p_p
+MAN6Ptex_REV | -28.9455 kJ/mol | Mannose 6-phosphate transport via diffusion (extracellular to periplasm) | man6p_p --> man6p_e
+MELIBtex_FWD | 0.0 kJ/mol | Melibiose transport via diffusion (extracellular to periplasm) | melib_e --> melib_p
+MELIBtex_REV | 0.0 kJ/mol | Melibiose transport via diffusion (extracellular to periplasm) | melib_p --> melib_e
+DMSOtex_FWD | 0.0 kJ/mol | Dimethyl sulfoxide transport via diffusion (extracellular to periplasm) | dmso_e --> dmso_p
+DMSOtex_REV | 0.0 kJ/mol | Dimethyl sulfoxide transport via diffusion (extracellular to periplasm) | dmso_p --> dmso_e
+DURItex_FWD | 0.0 kJ/mol | Deoxyuridine transport via diffusion (extracellular to periplasm) | duri_e --> duri_p
+DURItex_REV | 0.0 kJ/mol | Deoxyuridine transport via diffusion (extracellular to periplasm) | duri_p --> duri_e
+FUCtex_FWD | 0.0 kJ/mol | L-fucose transport via diffusion (extracellular to periplasm) | fuc__L_e --> fuc__L_p
+FUCtex_REV | 0.0 kJ/mol | L-fucose transport via diffusion (extracellular to periplasm) | fuc__L_p --> fuc__L_e
+FE2tex_FWD | -28.9455 kJ/mol | Iron (II) transport via diffusion (extracellular to periplasm) | fe2_e --> fe2_p
+FE2tex_REV | 28.9455 kJ/mol | Iron (II) transport via diffusion (extracellular to periplasm) | fe2_p --> fe2_e
+NMNtex_FWD | 14.47275 kJ/mol | NMN transport via diffusion (extracellular to periplasm) | nmn_e --> nmn_p
+NMNtex_REV | -14.47275 kJ/mol | NMN transport via diffusion (extracellular to periplasm) | nmn_p --> nmn_e
+NO2tex_FWD | 0.0 kJ/mol | Nitrite transport via diffusion (extracellular to periplasm) | no2_e --> no2_p
+NO2tex_REV | 0.0 kJ/mol | Nitrite transport via diffusion (extracellular to periplasm) | no2_p --> no2_e
+23CAMPtex_FWD | 14.47275 kJ/mol | 23cAMP transport via diffusion (extracellular to periplasm) | 23camp_e --> 23camp_p
+23CAMPtex_REV | -14.47275 kJ/mol | 23cAMP transport via diffusion (extracellular to periplasm) | 23camp_p --> 23camp_e
+23CCMPtex_FWD | 14.47275 kJ/mol | 23cCMP transport via diffusion (extracellular to periplasm) | 23ccmp_e --> 23ccmp_p
+23CCMPtex_REV | -14.47275 kJ/mol | 23cCMP transport via diffusion (extracellular to periplasm) | 23ccmp_p --> 23ccmp_e
+23CUMPtex_FWD | 28.9455 kJ/mol | 23cUMP transport via diffusion (extracellular to periplasm) | 23cump_e --> 23cump_p
+23CUMPtex_REV | -28.9455 kJ/mol | 23cUMP transport via diffusion (extracellular to periplasm) | 23cump_p --> 23cump_e
+23CGMPtex_FWD | 14.47275 kJ/mol | 23cGMP transport via diffusion (extracellular to periplasm) | 23cgmp_e --> 23cgmp_p
+23CGMPtex_REV | -14.47275 kJ/mol | 23cGMP transport via diffusion (extracellular to periplasm) | 23cgmp_p --> 23cgmp_e
+3AMPtex_FWD | 28.9455 kJ/mol | 3AMP transport via diffusion (extracellular to periplasm) | 3amp_e --> 3amp_p
+3AMPtex_REV | -28.9455 kJ/mol | 3AMP transport via diffusion (extracellular to periplasm) | 3amp_p --> 3amp_e
+3CMPtex_FWD | 28.9455 kJ/mol | 3CMP transport via diffusion (extracellular to periplasm) | 3cmp_e --> 3cmp_p
+3CMPtex_REV | -28.9455 kJ/mol | 3CMP transport via diffusion (extracellular to periplasm) | 3cmp_p --> 3cmp_e
+TMAtex_FWD | -14.47275 kJ/mol | Trimethylamine transport via diffusion (extracellular to periplasm) | tma_e --> tma_p
+TMAtex_REV | 14.47275 kJ/mol | Trimethylamine transport via diffusion (extracellular to periplasm) | tma_p --> tma_e
+TMAOtex_FWD | 0.0 kJ/mol | Trimethylamine N-oxide transport via diffusion (extracellular to periplasm) | tmao_e --> tmao_p
+TMAOtex_REV | 0.0 kJ/mol | Trimethylamine N-oxide transport via diffusion (extracellular to periplasm) | tmao_p --> tmao_e
+TREtex_FWD | 0.0 kJ/mol | Trehalose transport via diffusion (extracellular to periplasm) | tre_e --> tre_p
+TREtex_REV | 0.0 kJ/mol | Trehalose transport via diffusion (extracellular to periplasm) | tre_p --> tre_e
+TRPtex_FWD | 0.0 kJ/mol | L-tryptophan transport via diffusion (extracellular to periplasm) | trp__L_e --> trp__L_p
+TRPtex_REV | 0.0 kJ/mol | L-tryptophan transport via diffusion (extracellular to periplasm) | trp__L_p --> trp__L_e
+PNTOtex_FWD | 14.47275 kJ/mol | Pantothenate transport via diffusion (extracellular to periplasm) | pnto__R_e --> pnto__R_p
+PNTOtex_REV | -14.47275 kJ/mol | Pantothenate transport via diffusion (extracellular to periplasm) | pnto__R_p --> pnto__R_e
+TSULtex_FWD | 14.47275 kJ/mol | Thiosulfate transport via diffusion (extracellular to periplasm) | tsul_e --> tsul_p
+TSULtex_REV | -14.47275 kJ/mol | Thiosulfate transport via diffusion (extracellular to periplasm) | tsul_p --> tsul_e
+TYRtex_FWD | 0.0 kJ/mol | L-tyrosine transport via diffusion (extracellular to periplasm) | tyr__L_e --> tyr__L_p
+TYRtex_REV | 0.0 kJ/mol | L-tyrosine transport via diffusion (extracellular to periplasm) | tyr__L_p --> tyr__L_e
+URAtex_FWD | 0.0 kJ/mol | Uracil transport via diffusion (extracellular to periplasm) | ura_e --> ura_p
+URAtex_REV | 0.0 kJ/mol | Uracil transport via diffusion (extracellular to periplasm) | ura_p --> ura_e
+UREAtex_FWD | 0.0 kJ/mol | Urea transport via diffusion (extracellular to periplasm) | urea_e --> urea_p
+UREAtex_REV | 0.0 kJ/mol | Urea transport via diffusion (extracellular to periplasm) | urea_p --> urea_e
+URItex_FWD | 0.0 kJ/mol | Uridine transport via diffusion (extracellular to periplasm) | uri_e --> uri_p
+URItex_REV | 0.0 kJ/mol | Uridine transport via diffusion (extracellular to periplasm) | uri_p --> uri_e
+ETHSO3tex_FWD | 14.47275 kJ/mol | Ethanesulfonate transport via diffusion (extracellular to periplasm) | ethso3_e --> ethso3_p
+ETHSO3tex_REV | -14.47275 kJ/mol | Ethanesulfonate transport via diffusion (extracellular to periplasm) | ethso3_p --> ethso3_e
+BUTSO3tex_FWD | 0.0 kJ/mol | Butanesulfonate transport via diffusion (extracellular to periplasm) | butso3_e --> butso3_p
+BUTSO3tex_REV | 0.0 kJ/mol | Butanesulfonate transport via diffusion (extracellular to periplasm) | butso3_p --> butso3_e
+LIPOtex_FWD | 14.47275 kJ/mol | Lipoate transport via diffusion (extracellular to periplasm) | lipoate_e --> lipoate_p
+LIPOtex_REV | -14.47275 kJ/mol | Lipoate transport via diffusion (extracellular to periplasm) | lipoate_p --> lipoate_e
+VALtex_FWD | 0.0 kJ/mol | L-valine transport via diffusion (extracellular to periplasm) | val__L_e --> val__L_p
+VALtex_REV | 0.0 kJ/mol | L-valine transport via diffusion (extracellular to periplasm) | val__L_p --> val__L_e
+XYLtex_FWD | 0.0 kJ/mol | D-xylose transport via diffusion (extracellular to periplasm) | xyl__D_e --> xyl__D_p
+XYLtex_REV | 0.0 kJ/mol | D-xylose transport via diffusion (extracellular to periplasm) | xyl__D_p --> xyl__D_e
+ABUTtex_FWD | 0.0 kJ/mol | 4-aminobutyrate transport via diffusion (extracellular to periplasm) | 4abut_e --> 4abut_p
+ABUTtex_REV | 0.0 kJ/mol | 4-aminobutyrate transport via diffusion (extracellular to periplasm) | 4abut_p --> 4abut_e
+PPTtex_FWD | 14.47275 kJ/mol | Phosphonate transport via diffusion (extracellular to periplasm) | ppt_e --> ppt_p
+PPTtex_REV | -14.47275 kJ/mol | Phosphonate transport via diffusion (extracellular to periplasm) | ppt_p --> ppt_e
+GALBDtex_FWD | 0.0 kJ/mol | Beta D-galactose transport via diffusion (extracellular to periplasm) | gal_bD_e --> gal_bD_p
+GALBDtex_REV | 0.0 kJ/mol | Beta D-galactose transport via diffusion (extracellular to periplasm) | gal_bD_p --> gal_bD_e
+PTRCtex_FWD | -28.9455 kJ/mol | Putrescine transport via diffusion (extracellular to periplasm) | ptrc_e --> ptrc_p
+PTRCtex_REV | 28.9455 kJ/mol | Putrescine transport via diffusion (extracellular to periplasm) | ptrc_p --> ptrc_e
+PYRtex_FWD | 14.47275 kJ/mol | Pyruvate transport via diffusion (extracellular to periplasm) | pyr_e --> pyr_p
+PYRtex_REV | -14.47275 kJ/mol | Pyruvate transport via diffusion (extracellular to periplasm) | pyr_p --> pyr_e
+SULFACtex_FWD | 28.9455 kJ/mol | Sulfoaceate transport via diffusion (extracellular to periplasm) | sulfac_e --> sulfac_p
+SULFACtex_REV | -28.9455 kJ/mol | Sulfoaceate transport via diffusion (extracellular to periplasm) | sulfac_p --> sulfac_e
+DSERtex_FWD | 0.0 kJ/mol | D-serine transport via diffusion (extracellular to periplasm) | ser__D_e --> ser__D_p
+DSERtex_REV | 0.0 kJ/mol | D-serine transport via diffusion (extracellular to periplasm) | ser__D_p --> ser__D_e
+SERtex_FWD | 0.0 kJ/mol | L-serine transport via diffusion (extracellular to periplasm) | ser__L_e --> ser__L_p
+SERtex_REV | 0.0 kJ/mol | L-serine transport via diffusion (extracellular to periplasm) | ser__L_p --> ser__L_e
+NOtex_FWD | 0.0 kJ/mol | Nitric oxide transport via diffusion (extracellular to periplasm) | no_e --> no_p
+NOtex_REV | 0.0 kJ/mol | Nitric oxide transport via diffusion (extracellular to periplasm) | no_p --> no_e
+NOtpp_FWD | 0.0 kJ/mol | NO transport (diffusion) | no_p --> no_c
+NOtpp_REV | 0.0 kJ/mol | NO transport (diffusion) | no_c --> no_p
+N2Otpp_FWD | 0.0 kJ/mol | Nitrious oxide transport (diffusion) | n2o_p --> n2o_c
+N2Otpp_REV | 0.0 kJ/mol | Nitrious oxide transport (diffusion) | n2o_c --> n2o_p
+N2Otex_FWD | 0.0 kJ/mol | Nitrious oxide transport via diffusion (extracellular to periplasm) | n2o_e --> n2o_p
+N2Otex_REV | 0.0 kJ/mol | Nitrious oxide transport via diffusion (extracellular to periplasm) | n2o_p --> n2o_e
+CRNt2rpp_FWD | -17.3225448335931 kJ/mol | L-carnitine outward transport (H+ antiport) | crn_p + h_p --> crn_c + h_c
+CRNt2rpp_REV | 17.3225448335931 kJ/mol | L-carnitine outward transport (H+ antiport) | crn_c + h_c --> crn_p + h_p
+CTBTt2rpp_FWD | -17.321848055584667 kJ/mol | Cronobetaine outward transport (H+ antiport) | ctbt_p + h_p --> ctbt_c + h_c
+CTBTt2rpp_REV | 17.321848055584667 kJ/mol | Cronobetaine outward transport (H+ antiport) | ctbt_c + h_c --> ctbt_p + h_p
+PACALDt2rpp_FWD | -17.325222922453598 kJ/mol | Phenylacetaldehyde reversible transport via proton symport (periplasm) | h_p + pacald_p --> h_c + pacald_c
+PACALDt2rpp_REV | 17.325222922453598 kJ/mol | Phenylacetaldehyde reversible transport via proton symport (periplasm) | h_c + pacald_c --> h_p + pacald_p
+PEAMNtex_FWD | -14.47275 kJ/mol | Phenethylamine transport via diffusion (extracellular to periplasm) | peamn_e --> peamn_p
+PEAMNtex_REV | 14.47275 kJ/mol | Phenethylamine transport via diffusion (extracellular to periplasm) | peamn_p --> peamn_e
+PACALDtex_FWD | 0.0 kJ/mol | Phenethylacetaldehyde transport via diffusion (extracellular to periplasm) | pacald_e --> pacald_p
+PACALDtex_REV | 0.0 kJ/mol | Phenethylacetaldehyde transport via diffusion (extracellular to periplasm) | pacald_p --> pacald_e
+ACGAL1Ptex_FWD | 28.9455 kJ/mol | N-acetyl-D-galactosamine 1-phosphate transport via diffusion (extracellular to periplasm) | acgal1p_e --> acgal1p_p
+ACGAL1Ptex_REV | -28.9455 kJ/mol | N-acetyl-D-galactosamine 1-phosphate transport via diffusion (extracellular to periplasm) | acgal1p_p --> acgal1p_e
+ACGALtex_FWD | 0.0 kJ/mol | N-acetyl-D-galactosamine transport via diffusion (extracellular to periplasm) | acgal_e --> acgal_p
+ACGALtex_REV | 0.0 kJ/mol | N-acetyl-D-galactosamine transport via diffusion (extracellular to periplasm) | acgal_p --> acgal_e
+GLCUR1Ptex_FWD | 43.41824999999999 kJ/mol | D-glucuronate 1-phosphate transport via diffusion (extracellular to periplasm) | glcur1p_e --> glcur1p_p
+GLCUR1Ptex_REV | -43.41824999999999 kJ/mol | D-glucuronate 1-phosphate transport via diffusion (extracellular to periplasm) | glcur1p_p --> glcur1p_e
+UDPGLCURtex_FWD | 57.891 kJ/mol | UDP-D-glucuronate transport via diffusion (extracellular to periplasm) | udpglcur_e --> udpglcur_p
+UDPGLCURtex_REV | -57.891 kJ/mol | UDP-D-glucuronate transport via diffusion (extracellular to periplasm) | udpglcur_p --> udpglcur_e
+ISETACtex_FWD | 14.47275 kJ/mol | Isethionate transport via diffusion (extracellular to periplasm) | isetac_e --> isetac_p
+ISETACtex_REV | -14.47275 kJ/mol | Isethionate transport via diffusion (extracellular to periplasm) | isetac_p --> isetac_e
+UDPGtex_FWD | 43.41824999999999 kJ/mol | UDPglucose transport via diffusion (extracellular to periplasm) | udpg_e --> udpg_p
+UDPGtex_REV | -43.41824999999999 kJ/mol | UDPglucose transport via diffusion (extracellular to periplasm) | udpg_p --> udpg_e
+UDPGALtex_FWD | 43.41824999999999 kJ/mol | UDPgalactose transport via diffusion (extracellular to periplasm) | udpgal_e --> udpgal_p
+UDPGALtex_REV | -43.41824999999999 kJ/mol | UDPgalactose transport via diffusion (extracellular to periplasm) | udpgal_p --> udpgal_e
+ACGAM1Ptex_FWD | 0.0 kJ/mol | N-acetyl-D-glucosamine 1-phosphate transport via diffusion (extracellular to periplasm) | acgam1p_e --> acgam1p_p
+ACGAM1Ptex_REV | 0.0 kJ/mol | N-acetyl-D-glucosamine 1-phosphate transport via diffusion (extracellular to periplasm) | acgam1p_p --> acgam1p_e
+UACGAMtex_FWD | 43.41824999999999 kJ/mol | UDP-N-acetyl-D-glucosamine transport via diffusion (extracellular to periplasm) | uacgam_e --> uacgam_p
+UACGAMtex_REV | -43.41824999999999 kJ/mol | UDP-N-acetyl-D-glucosamine transport via diffusion (extracellular to periplasm) | uacgam_p --> uacgam_e
+UDPACGALtex_FWD | 43.41824999999999 kJ/mol | UDP-N-acetyl-D-galactosamine transport via diffusion (extracellular to periplasm) | udpacgal_e --> udpacgal_p
+UDPACGALtex_REV | -43.41824999999999 kJ/mol | UDP-N-acetyl-D-galactosamine transport via diffusion (extracellular to periplasm) | udpacgal_p --> udpacgal_e
+CYANtex_FWD | 0.0 kJ/mol | Cyanide transport via diffusion (extracellular to periplasm) | cyan_e --> cyan_p
+CYANtex_REV | 0.0 kJ/mol | Cyanide transport via diffusion (extracellular to periplasm) | cyan_p --> cyan_e
+SO3tex_FWD | 28.9455 kJ/mol | Sulfite transport via diffusion (extracellular to periplasm) | so3_e --> so3_p
+SO3tex_REV | -28.9455 kJ/mol | Sulfite transport via diffusion (extracellular to periplasm) | so3_p --> so3_e
+TCYNTtex_FWD | 14.47275 kJ/mol | Thiocyanate transport via diffusion (extracellular to periplasm) | tcynt_e --> tcynt_p
+TCYNTtex_REV | -14.47275 kJ/mol | Thiocyanate transport via diffusion (extracellular to periplasm) | tcynt_p --> tcynt_e
+METSOX1tex_FWD | 0.0 kJ/mol | L-methionine S-oxide diffusion (extracellular) | metsox_S__L_e --> metsox_S__L_p
+METSOX1tex_REV | 0.0 kJ/mol | L-methionine S-oxide diffusion (extracellular) | metsox_S__L_p --> metsox_S__L_e
+METSOX2tex_FWD | 0.0 kJ/mol | L-methionine R-oxide diffusion (extracellular) | metsox_R__L_e --> metsox_R__L_p
+METSOX2tex_REV | 0.0 kJ/mol | L-methionine R-oxide diffusion (extracellular) | metsox_R__L_p --> metsox_R__L_e
+3UMPtex_FWD | 43.41824999999999 kJ/mol | 3UMP transport via diffusion (extracellular to periplasm) | 3ump_e --> 3ump_p
+3UMPtex_REV | -43.41824999999999 kJ/mol | 3UMP transport via diffusion (extracellular to periplasm) | 3ump_p --> 3ump_e
+MSO3tex_FWD | 14.47275 kJ/mol | Methanesulfonate transport via diffusion (extracellular to periplasm) | mso3_e --> mso3_p
+MSO3tex_REV | -14.47275 kJ/mol | Methanesulfonate transport via diffusion (extracellular to periplasm) | mso3_p --> mso3_e
+3GMPtex_FWD | 28.9455 kJ/mol | 3GMP transport via diffusion (extracellular to periplasm) | 3gmp_e --> 3gmp_p
+3GMPtex_REV | -28.9455 kJ/mol | 3GMP transport via diffusion (extracellular to periplasm) | 3gmp_p --> 3gmp_e
+FALDtpp_FWD | -2.398081733190338e-14 kJ/mol | Formaldehyde transport via diffusion (periplasm) | fald_p --> fald_c
+FALDtpp_REV | 2.398081733190338e-14 kJ/mol | Formaldehyde transport via diffusion (periplasm) | fald_c --> fald_p
+DOPAtex_FWD | -14.47275 kJ/mol | Dopamine transport via diffusion (extracellular to periplasm) | dopa_e --> dopa_p
+DOPAtex_REV | 14.47275 kJ/mol | Dopamine transport via diffusion (extracellular to periplasm) | dopa_p --> dopa_e
+SPMDtex_FWD | -43.41824999999999 kJ/mol | Spermidine transport via diffusion (extracellular to periplasm) | spmd_e --> spmd_p
+SPMDtex_REV | 43.41824999999999 kJ/mol | Spermidine transport via diffusion (extracellular to periplasm) | spmd_p --> spmd_e
+ETHAtex_FWD | -14.47275 kJ/mol | Ethanolamine transport via diffusion (extracellular) | etha_e --> etha_p
+ETHAtex_REV | 14.47275 kJ/mol | Ethanolamine transport via diffusion (extracellular) | etha_p --> etha_e
+G3PStex_FWD | 14.47275 kJ/mol | Glycerophosphserine transport via diffusion (extracellular to periplasm) | g3ps_e --> g3ps_p
+G3PStex_REV | -14.47275 kJ/mol | Glycerophosphserine transport via diffusion (extracellular to periplasm) | g3ps_p --> g3ps_e
+SUCCtex_FWD | 28.9455 kJ/mol | Succinate transport via diffusion (extracellular to periplasm) | succ_e --> succ_p
+SUCCtex_REV | -28.9455 kJ/mol | Succinate transport via diffusion (extracellular to periplasm) | succ_p --> succ_e
+SUCRtex_FWD | 0.0 kJ/mol | Sucrose transport transport via diffusion (extracellular to periplasm) | sucr_e --> sucr_p
+SUCRtex_REV | 0.0 kJ/mol | Sucrose transport transport via diffusion (extracellular to periplasm) | sucr_p --> sucr_e
+GLYC2Ptex_FWD | 28.9455 kJ/mol | Glycerol-2-phosphate transport via diffusion (extracellular to periplasm) | glyc2p_e --> glyc2p_p
+GLYC2Ptex_REV | -28.9455 kJ/mol | Glycerol-2-phosphate transport via diffusion (extracellular to periplasm) | glyc2p_p --> glyc2p_e
+PSERtex_FWD | 28.9455 kJ/mol | Phospho-L-serine transport via diffusion (extracellular to periplasm) | pser__L_e --> pser__L_p
+PSERtex_REV | -28.9455 kJ/mol | Phospho-L-serine transport via diffusion (extracellular to periplasm) | pser__L_p --> pser__L_e
+TARTRtex_FWD | 28.9455 kJ/mol | Tartrate transport via diffusion (extracellular to periplasm) | tartr__L_e --> tartr__L_p
+TARTRtex_REV | -28.9455 kJ/mol | Tartrate transport via diffusion (extracellular to periplasm) | tartr__L_p --> tartr__L_e
+R5Ptex_FWD | 0.0 kJ/mol | Ribose 5-phosphate transport via diffusion (extracellular to periplasm) | r5p_e --> r5p_p
+R5Ptex_REV | 0.0 kJ/mol | Ribose 5-phosphate transport via diffusion (extracellular to periplasm) | r5p_p --> r5p_e
+THRPtex_FWD | 28.9455 kJ/mol | Phospho-L-threonine transport via diffusion (extracellular to periplasm) | thrp_e --> thrp_p
+THRPtex_REV | -28.9455 kJ/mol | Phospho-L-threonine transport via diffusion (extracellular to periplasm) | thrp_p --> thrp_e
+TYRPtex_FWD | 28.9455 kJ/mol | Phopho-L-tyrosine transport via diffusion (extracellular to periplasm) | tyrp_e --> tyrp_p
+TYRPtex_REV | -28.9455 kJ/mol | Phopho-L-tyrosine transport via diffusion (extracellular to periplasm) | tyrp_p --> tyrp_e
+TAURtex_FWD | 0.0 kJ/mol | Taurine transport via diffusion (extracellular to periplasm) | taur_e --> taur_p
+TAURtex_REV | 0.0 kJ/mol | Taurine transport via diffusion (extracellular to periplasm) | taur_p --> taur_e
+L_LACt2rpp_FWD | -2.8519429014278366 kJ/mol | L-lactate reversible transport via proton symport (periplasm) | h_p + lac__L_p --> h_c + lac__L_c
+L_LACt2rpp_REV | 2.8519429014278366 kJ/mol | L-lactate reversible transport via proton symport (periplasm) | h_c + lac__L_c --> h_p + lac__L_p
+THMDtex_FWD | 0.0 kJ/mol | Thymidine transport via diffusion (extracellular to periplasm) | thymd_e --> thymd_p
+THMDtex_REV | 0.0 kJ/mol | Thymidine transport via diffusion (extracellular to periplasm) | thymd_p --> thymd_e
+CITtex_FWD | 43.41824999999999 kJ/mol | Citrate transport via diffusion (extracellular to periplasm) | cit_e --> cit_p
+CITtex_REV | -43.41824999999999 kJ/mol | Citrate transport via diffusion (extracellular to periplasm) | cit_p --> cit_e
+ACGAtex_FWD | 0.0 kJ/mol | N-Acetyl-D-glucosamine transport via diffusion (extracellular to periplasm) | acgam_e --> acgam_p
+ACGAtex_REV | 0.0 kJ/mol | N-Acetyl-D-glucosamine transport via diffusion (extracellular to periplasm) | acgam_p --> acgam_e
+METDtex_FWD | 0.0 kJ/mol | D-methionine transport via diffusion (extracellular to periplasm) | met__D_e --> met__D_p
+METDtex_REV | 0.0 kJ/mol | D-methionine transport via diffusion (extracellular to periplasm) | met__D_p --> met__D_e
+NH4tpp_FWD | -14.544999870865354 kJ/mol | Ammonia reversible transport (periplasm) | nh4_p --> nh4_c
+NH4tpp_REV | 14.544999870865354 kJ/mol | Ammonia reversible transport (periplasm) | nh4_c --> nh4_p
+METtex_FWD | 0.0 kJ/mol | L-methionine transport via diffusion (extracellular to periplasm) | met__L_e --> met__L_p
+METtex_REV | 0.0 kJ/mol | L-methionine transport via diffusion (extracellular to periplasm) | met__L_p --> met__L_e
+NO2t2rpp_FWD | -17.325222922453516 kJ/mol | Nitrite transport in via proton symport, reversible (periplasm) | h_p + no2_p --> h_c + no2_c
+NO2t2rpp_REV | 17.325222922453516 kJ/mol | Nitrite transport in via proton symport, reversible (periplasm) | h_c + no2_c --> h_p + no2_p
+IDONt2rpp_FWD | -2.8523075160642364 kJ/mol | L-idonate transport via proton symport, reversible (periplasm) | h_p + idon__L_p --> h_c + idon__L_c
+IDONt2rpp_REV | 2.8523075160642364 kJ/mol | L-idonate transport via proton symport, reversible (periplasm) | h_c + idon__L_c --> h_p + idon__L_p
+PROt2rpp_FWD | -17.325693124292542 kJ/mol | L-proline reversible transport via proton symport (periplasm) | h_p + pro__L_p --> h_c + pro__L_c
+PROt2rpp_REV | 17.325693124292542 kJ/mol | L-proline reversible transport via proton symport (periplasm) | h_c + pro__L_c --> h_p + pro__L_p
+MNLtex_FWD | 0.0 kJ/mol | Mannitol transport via diffusion (extracellular to periplasm) | mnl_e --> mnl_p
+MNLtex_REV | 0.0 kJ/mol | Mannitol transport via diffusion (extracellular to periplasm) | mnl_p --> mnl_e
+G6Ptex_FWD | 28.9455 kJ/mol | Glucose 6-phosphate transport via diffusion (extracellular to periplasm) | g6p_e --> g6p_p
+G6Ptex_REV | -28.9455 kJ/mol | Glucose 6-phosphate transport via diffusion (extracellular to periplasm) | g6p_p --> g6p_e
+NAtex_FWD | -14.47275 kJ/mol | Sodium transport via diffusion (extracellular to periplasm) | na1_e --> na1_p
+NAtex_REV | 14.47275 kJ/mol | Sodium transport via diffusion (extracellular to periplasm) | na1_p --> na1_e
+MOBDtex_FWD | 0.0 kJ/mol | Molybdate transport via diffusion (extracellular to periplasm) | mobd_e --> mobd_p
+MOBDtex_REV | 0.0 kJ/mol | Molybdate transport via diffusion (extracellular to periplasm) | mobd_p --> mobd_e
+NI2tex_FWD | -28.9455 kJ/mol | Nickel transport via diffusion (extracellular to periplasm) | ni2_e --> ni2_p
+NI2tex_REV | 28.9455 kJ/mol | Nickel transport via diffusion (extracellular to periplasm) | ni2_p --> ni2_e
+NACtex_FWD | 14.47275 kJ/mol | Nicotinic acid transport via diffusion (extracellular to periplasm) | nac_e --> nac_p
+NACtex_REV | -14.47275 kJ/mol | Nicotinic acid transport via diffusion (extracellular to periplasm) | nac_p --> nac_e
+NH4tex_FWD | -14.47275 kJ/mol | Ammonia transport via diffusion (extracellular to periplasm) | nh4_e --> nh4_p
+NH4tex_REV | 14.47275 kJ/mol | Ammonia transport via diffusion (extracellular to periplasm) | nh4_p --> nh4_e
+H2O2tex_FWD | 0.0 kJ/mol | Hydrogen peroxide transport via diffusion (external) | h2o2_e --> h2o2_p
+H2O2tex_REV | 0.0 kJ/mol | Hydrogen peroxide transport via diffusion (external) | h2o2_p --> h2o2_e
+ADEtex_FWD | 0.0 kJ/mol | Adenine transport via diffusion (extracellular to periplasm) | ade_e --> ade_p
+ADEtex_REV | 0.0 kJ/mol | Adenine transport via diffusion (extracellular to periplasm) | ade_p --> ade_e
+ADNtex_FWD | 0.0 kJ/mol | Adenosine transport via diffusion (extracellular to periplasm) | adn_e --> adn_p
+ADNtex_REV | 0.0 kJ/mol | Adenosine transport via diffusion (extracellular to periplasm) | adn_p --> adn_e
+ASO3tex_FWD | 14.47275 kJ/mol | Arsenite transport via diffusion (extracellular to periplasm) | aso3_e --> aso3_p
+ASO3tex_REV | -14.47275 kJ/mol | Arsenite transport via diffusion (extracellular to periplasm) | aso3_p --> aso3_e
+AGMtex_FWD | -28.9455 kJ/mol | Agmatine transport via diffusion (extracellular to periplasm) | agm_e --> agm_p
+AGMtex_REV | 28.9455 kJ/mol | Agmatine transport via diffusion (extracellular to periplasm) | agm_p --> agm_e
+ALAtex_FWD | 0.0 kJ/mol | L-alanine transport via diffusion (extracellular to periplasm) | ala__L_e --> ala__L_p
+ALAtex_REV | 0.0 kJ/mol | L-alanine transport via diffusion (extracellular to periplasm) | ala__L_p --> ala__L_e
+BALAtex_FWD | 0.0 kJ/mol | Beta-alanine transport via diffusion (extracellular to periplasm) | ala_B_e --> ala_B_p
+BALAtex_REV | 0.0 kJ/mol | Beta-alanine transport via diffusion (extracellular to periplasm) | ala_B_p --> ala_B_e
+DALAtex_FWD | 0.0 kJ/mol | D-Alanine transport via diffusion (extracellular to periplasm) | ala__D_e --> ala__D_p
+DALAtex_REV | 0.0 kJ/mol | D-Alanine transport via diffusion (extracellular to periplasm) | ala__D_p --> ala__D_e
+MANGLYCtex_FWD | 14.47275 kJ/mol | 2-O-alpha-mannosyl-D-glycerate transport via diffusion (extracellular to periplasm) | manglyc_e --> manglyc_p
+MANGLYCtex_REV | -14.47275 kJ/mol | 2-O-alpha-mannosyl-D-glycerate transport via diffusion (extracellular to periplasm) | manglyc_p --> manglyc_e
+FRUURt2rpp_FWD | -2.862501720242271 kJ/mol | D-fructuronate transport via proton symport, reversible (periplasm) | fruur_p + h_p --> fruur_c + h_c
+FRUURt2rpp_REV | 2.862501720242271 kJ/mol | D-fructuronate transport via proton symport, reversible (periplasm) | fruur_c + h_c --> fruur_p + h_p
+FRUURtex_FWD | 14.47275 kJ/mol | D-fructuronate transport via diffusion (extracellular) | fruur_e --> fruur_p
+FRUURtex_REV | -14.47275 kJ/mol | D-fructuronate transport via diffusion (extracellular) | fruur_p --> fruur_e
+ARBtex_FWD | 0.0 kJ/mol | L-arabinose transport via diffusion (extracellular to periplasm) | arab__L_e --> arab__L_p
+ARBtex_REV | 0.0 kJ/mol | L-arabinose transport via diffusion (extracellular to periplasm) | arab__L_p --> arab__L_e
+ARGtex_FWD | -14.47275 kJ/mol | L-arginine transport via diffusion (extracellular to periplasm) | arg__L_e --> arg__L_p
+ARGtex_REV | 14.47275 kJ/mol | L-arginine transport via diffusion (extracellular to periplasm) | arg__L_p --> arg__L_e
+ASCBtex_FWD | 0.0 kJ/mol | L-ascorbate transport via diffusion (extracellular to periplasm) | ascb__L_e --> ascb__L_p
+ASCBtex_REV | 0.0 kJ/mol | L-ascorbate transport via diffusion (extracellular to periplasm) | ascb__L_p --> ascb__L_e
+GLYCAt2rpp_FWD | -2.852251830150724 kJ/mol | D-glycerate transport via proton symport, reversible (periplasm) | glyc__R_p + h_p --> glyc__R_c + h_c
+GLYCAt2rpp_REV | 2.852251830150724 kJ/mol | D-glycerate transport via proton symport, reversible (periplasm) | glyc__R_c + h_c --> glyc__R_p + h_p
+GLYCAtex_FWD | 14.47275 kJ/mol | D-glycerate transport via diffusion (extracellular to periplasm) | glyc__R_e --> glyc__R_p
+GLYCAtex_REV | -14.47275 kJ/mol | D-glycerate transport via diffusion (extracellular to periplasm) | glyc__R_p --> glyc__R_e
+CHLtex_FWD | -14.47275 kJ/mol | Choline transport via diffusion (extracellular to periplasm) | chol_e --> chol_p
+CHLtex_REV | 14.47275 kJ/mol | Choline transport via diffusion (extracellular to periplasm) | chol_p --> chol_e
+MMETtex_FWD | -14.47275 kJ/mol | S-methyl-L-methionine transport via diffusion (extracellular to periplasm) | mmet_e --> mmet_p
+MMETtex_REV | 14.47275 kJ/mol | S-methyl-L-methionine transport via diffusion (extracellular to periplasm) | mmet_p --> mmet_e
+FE3tex_FWD | -43.41824999999999 kJ/mol | Iron (III) transport via diffusion (extracellular to periplasm) | fe3_e --> fe3_p
+FE3tex_REV | 43.41824999999999 kJ/mol | Iron (III) transport via diffusion (extracellular to periplasm) | fe3_p --> fe3_e
+MG2tex_FWD | -28.9455 kJ/mol | Magnesium (Mg+2) transport via diffusion (extracellular to periplasm) | mg2_e --> mg2_p
+MG2tex_REV | 28.9455 kJ/mol | Magnesium (Mg+2) transport via diffusion (extracellular to periplasm) | mg2_p --> mg2_e
+Zn2tex_FWD | -28.9455 kJ/mol | Zinc (Zn+2) transport via diffusion (extracellular to periplasm) | zn2_e --> zn2_p
+Zn2tex_REV | 28.9455 kJ/mol | Zinc (Zn+2) transport via diffusion (extracellular to periplasm) | zn2_p --> zn2_e
+CD2tex_FWD | -28.9455 kJ/mol | Cadmium (Cd+2) transport via diffusion (extracellular to periplasm) | cd2_e --> cd2_p
+CD2tex_REV | 28.9455 kJ/mol | Cadmium (Cd+2) transport via diffusion (extracellular to periplasm) | cd2_p --> cd2_e
+GLYCtpp_FWD | 2.5281500306562066e-06 kJ/mol | Glycerol transport via channel (periplasm) | glyc_c --> glyc_p
+GLYCtpp_REV | -2.5281500306562066e-06 kJ/mol | Glycerol transport via channel (periplasm) | glyc_p --> glyc_c
+H2Otpp_FWD | -2.398081733190338e-14 kJ/mol | H2O transport via diffusion (periplasm) | h2o_p --> h2o_c
+H2Otpp_REV | 2.398081733190338e-14 kJ/mol | H2O transport via diffusion (periplasm) | h2o_c --> h2o_p
+CO2tex_FWD | 0.0 kJ/mol | CO2 transport via diffusion (extracellular to periplasm) | co2_e --> co2_p
+CO2tex_REV | 0.0 kJ/mol | CO2 transport via diffusion (extracellular to periplasm) | co2_p --> co2_e
+GLUt2rpp_FWD | -2.90940784992641 kJ/mol | L-glutamate transport via proton symport, reversible (periplasm) | glu__L_p + h_p --> glu__L_c + h_c
+GLUt2rpp_REV | 2.90940784992641 kJ/mol | L-glutamate transport via proton symport, reversible (periplasm) | glu__L_c + h_c --> glu__L_p + h_p
+GLYALDtpp_FWD | -1.4886778703981918e-05 kJ/mol | Glyceraldehyde facilitated diffusion (periplasm) | glyald_p --> glyald_c
+GLYALDtpp_REV | 1.4886778703981918e-05 kJ/mol | Glyceraldehyde facilitated diffusion (periplasm) | glyald_c --> glyald_p
+CRNtex_FWD | 0.0 kJ/mol | L-carnitine transport via diffusion (extracellular to periplasm) | crn_e --> crn_p
+CRNtex_REV | 0.0 kJ/mol | L-carnitine transport via diffusion (extracellular to periplasm) | crn_p --> crn_e
+COBALT2tex_FWD | -28.9455 kJ/mol | Cobalt (Co+2) transport via diffusion (extracellular to periplasm) | cobalt2_e --> cobalt2_p
+COBALT2tex_REV | 28.9455 kJ/mol | Cobalt (Co+2) transport via diffusion (extracellular to periplasm) | cobalt2_p --> cobalt2_e
+DINStex_FWD | 0.0 kJ/mol | Deoxyinosine transport via diffusion (extracellular to periplasm) | din_e --> din_p
+DINStex_REV | 0.0 kJ/mol | Deoxyinosine transport via diffusion (extracellular to periplasm) | din_p --> din_e
+DIMPtex_FWD | 28.9455 kJ/mol | DIMP transport via diffusion (extracellular to periplasm) | dimp_e --> dimp_p
+DIMPtex_REV | -28.9455 kJ/mol | DIMP transport via diffusion (extracellular to periplasm) | dimp_p --> dimp_e
+DMStex_FWD | 0.0 kJ/mol | Dimethyl sulfide transport via diffusion (extracellular to periplasm) | dms_e --> dms_p
+DMStex_REV | 0.0 kJ/mol | Dimethyl sulfide transport via diffusion (extracellular to periplasm) | dms_p --> dms_e
+CSNtex_FWD | 0.0 kJ/mol | Cytosine transport via diffusion (extracellular to periplasm) | csn_e --> csn_p
+CSNtex_REV | 0.0 kJ/mol | Cytosine transport via diffusion (extracellular to periplasm) | csn_p --> csn_e
+GLCNt2rpp_FWD | -2.8523098749022964 kJ/mol | D-gluconate transport via proton symport, reversible (periplasm) | glcn_p + h_p --> glcn_c + h_c
+GLCNt2rpp_REV | 2.8523098749022964 kJ/mol | D-gluconate transport via proton symport, reversible (periplasm) | glcn_c + h_c --> glcn_p + h_p
+GLCRt2rpp_FWD | 11.62034040435895 kJ/mol | D-glucarate transport via proton symport, reversible (periplasm) | glcr_p + h_p --> glcr_c + h_c
+GLCRt2rpp_REV | -11.62034040435895 kJ/mol | D-glucarate transport via proton symport, reversible (periplasm) | glcr_c + h_c --> glcr_p + h_p
+UREAtpp_FWD | 6.001710151082307e-07 kJ/mol | Urea transport via facilitate diffusion (periplasm) | urea_p --> urea_c
+UREAtpp_REV | -6.001710151082307e-07 kJ/mol | Urea transport via facilitate diffusion (periplasm) | urea_c --> urea_p
+PTRCORNt7pp_FWD | -14.45700709234579 kJ/mol | Putrescine/ornithine antiporter (periplasm) | orn_c + ptrc_p --> orn_p + ptrc_c
+PTRCORNt7pp_REV | 14.45700709234579 kJ/mol | Putrescine/ornithine antiporter (periplasm) | orn_p + ptrc_c --> orn_c + ptrc_p
+GLCURt2rpp_FWD | -2.8532994478117573 kJ/mol | D-glucuronate transport via proton symport, reversible (periplasm) | glcur_p + h_p --> glcur_c + h_c
+GLCURt2rpp_REV | 2.8532994478117573 kJ/mol | D-glucuronate transport via proton symport, reversible (periplasm) | glcur_c + h_c --> glcur_p + h_p
+CYNTtex_FWD | 0.0 kJ/mol | Cyanate transport via diffusion (extracellular to periplasm) | cynt_e --> cynt_p
+CYNTtex_REV | 0.0 kJ/mol | Cyanate transport via diffusion (extracellular to periplasm) | cynt_p --> cynt_e
+HG2tex_FWD | -28.9455 kJ/mol | Mercury (Hg+2) transport via diffusion (extracellular to periplasm) | hg2_e --> hg2_p
+HG2tex_REV | 28.9455 kJ/mol | Mercury (Hg+2) transport via diffusion (extracellular to periplasm) | hg2_p --> hg2_e
+XTSNtex_FWD | 0.0 kJ/mol | Xanthosine transport via diffusion (extracellular to periplasm) | xtsn_e --> xtsn_p
+XTSNtex_REV | 0.0 kJ/mol | Xanthosine transport via diffusion (extracellular to periplasm) | xtsn_p --> xtsn_e
+CYStex_FWD | 0.0 kJ/mol | L-cysteine transport via diffusion (extracellular to periplasm) | cys__L_e --> cys__L_p
+CYStex_REV | 0.0 kJ/mol | L-cysteine transport via diffusion (extracellular to periplasm) | cys__L_p --> cys__L_e
+CYTDtex_FWD | 0.0 kJ/mol | Cytidine transport via diffusion (extracellular to periplasm) | cytd_e --> cytd_p
+CYTDtex_REV | 0.0 kJ/mol | Cytidine transport via diffusion (extracellular to periplasm) | cytd_p --> cytd_e
+4PEPTtex_FWD | 0.0 kJ/mol | LalaDgluMdapDala (pentapeptide) transport via diffusion (extracellular to periplasm) | LalaDgluMdapDala_e --> LalaDgluMdapDala_p
+4PEPTtex_REV | 0.0 kJ/mol | LalaDgluMdapDala (pentapeptide) transport via diffusion (extracellular to periplasm) | LalaDgluMdapDala_p --> LalaDgluMdapDala_e
+DHAtex_FWD | 0.0 kJ/mol | Dihydroxyacetone transport via diffusion (extracellular to periplasm) | dha_e --> dha_p
+DHAtex_REV | 0.0 kJ/mol | Dihydroxyacetone transport via diffusion (extracellular to periplasm) | dha_p --> dha_e
+ETOHtex_FWD | 0.0 kJ/mol | Ethanol transport via diffusion (extracellular to periplasm) | etoh_e --> etoh_p
+ETOHtex_REV | 0.0 kJ/mol | Ethanol transport via diffusion (extracellular to periplasm) | etoh_p --> etoh_e
+GLYCLTt2rpp_FWD | -2.852183533334829 kJ/mol | Glycolate transport via proton symport, reversible (periplasm) | glyclt_p + h_p --> glyclt_c + h_c
+GLYCLTt2rpp_REV | 2.852183533334829 kJ/mol | Glycolate transport via proton symport, reversible (periplasm) | glyclt_c + h_c --> glyclt_p + h_p
+HPPPNt2rpp_FWD | -2.916435077646888 kJ/mol | 3-(3-hydroxyphenyl)propionate transport via proton symport, reversible (periplasm) | 3hpppn_p + h_p --> 3hpppn_c + h_c
+HPPPNt2rpp_REV | 2.916435077646888 kJ/mol | 3-(3-hydroxyphenyl)propionate transport via proton symport, reversible (periplasm) | 3hpppn_c + h_c --> 3hpppn_p + h_p
+DCYTtex_FWD | 0.0 kJ/mol | Deoxycytidine transport via diffusion (extracellular to periplasm) | dcyt_e --> dcyt_p
+DCYTtex_REV | 0.0 kJ/mol | Deoxycytidine transport via diffusion (extracellular to periplasm) | dcyt_p --> dcyt_e
+ACACtex_FWD | 14.47275 kJ/mol | Acetoacetate transport via diffusion (extracellular to periplasm) | acac_e --> acac_p
+ACACtex_REV | -14.47275 kJ/mol | Acetoacetate transport via diffusion (extracellular to periplasm) | acac_p --> acac_e
+ACNAMtex_FWD | 14.47275 kJ/mol | N-acetylneuraminate transport via diffusion (extracellular to periplasm) | acnam_e --> acnam_p
+ACNAMtex_REV | -14.47275 kJ/mol | N-acetylneuraminate transport via diffusion (extracellular to periplasm) | acnam_p --> acnam_e
+DGSNtex_FWD | 0.0 kJ/mol | Deoxyguanosine transport via diffusion (extracellular to periplasm) | dgsn_e --> dgsn_p
+DGSNtex_REV | 0.0 kJ/mol | Deoxyguanosine transport via diffusion (extracellular to periplasm) | dgsn_p --> dgsn_e
+H2Stex_FWD | 14.47275 kJ/mol | H2s transport via diffusion (extracellular to periplasm) | h2s_e --> h2s_p
+H2Stex_REV | -14.47275 kJ/mol | H2s transport via diffusion (extracellular to periplasm) | h2s_p --> h2s_e
+TYMtex_FWD | -14.47275 kJ/mol | Tyramine transport via diffusion (extracellular to periplasm) | tym_e --> tym_p
+TYMtex_REV | 14.47275 kJ/mol | Tyramine transport via diffusion (extracellular to periplasm) | tym_p --> tym_e
+ARGORNt7pp_FWD | -0.02072199184579926 kJ/mol | Arginine/ornithine antiporter (periplasm) | arg__L_p + orn_c --> arg__L_c + orn_p
+ARGORNt7pp_REV | 0.02072199184579926 kJ/mol | Arginine/ornithine antiporter (periplasm) | arg__L_c + orn_p --> arg__L_p + orn_c
+CMPtex_FWD | 28.9455 kJ/mol | CMP transport via diffusion (extracellular to periplasm) | cmp_e --> cmp_p
+CMPtex_REV | -28.9455 kJ/mol | CMP transport via diffusion (extracellular to periplasm) | cmp_p --> cmp_e
+DUMPtex_FWD | 43.41824999999999 kJ/mol | DUMP transport via diffusion (extracellular to periplasm) | dump_e --> dump_p
+DUMPtex_REV | -43.41824999999999 kJ/mol | DUMP transport via diffusion (extracellular to periplasm) | dump_p --> dump_e
+FALDtex_FWD | 0.0 kJ/mol | Formaldehyde transport via diffusion (extracellular to periplasm) | fald_e --> fald_p
+FALDtex_REV | 0.0 kJ/mol | Formaldehyde transport via diffusion (extracellular to periplasm) | fald_p --> fald_e
+CU2tex_FWD | -28.9455 kJ/mol | Copper (Cu+2) transport via diffusion (extracellular to periplasm) | cu2_e --> cu2_p
+CU2tex_REV | 28.9455 kJ/mol | Copper (Cu+2) transport via diffusion (extracellular to periplasm) | cu2_p --> cu2_e
+CLtex_FWD | 14.47275 kJ/mol | Chloride (Cl-1) transport via diffusion (extracellular to periplasm) | cl_e --> cl_p
+CLtex_REV | -14.47275 kJ/mol | Chloride (Cl-1) transport via diffusion (extracellular to periplasm) | cl_p --> cl_e
+CYSDtex_FWD | 0.0 kJ/mol | D-cysteine transport via diffusion (extracellular to periplasm) | cys__D_e --> cys__D_p
+CYSDtex_REV | 0.0 kJ/mol | D-cysteine transport via diffusion (extracellular to periplasm) | cys__D_p --> cys__D_e
+GMPtex_FWD | 28.9455 kJ/mol | GMP transport via diffusion (extracellular to periplasm) | gmp_e --> gmp_p
+GMPtex_REV | -28.9455 kJ/mol | GMP transport via diffusion (extracellular to periplasm) | gmp_p --> gmp_e
+IMPtex_FWD | 28.9455 kJ/mol | IMP transport via diffusion (extracellular to periplasm) | imp_e --> imp_p
+IMPtex_REV | -28.9455 kJ/mol | IMP transport via diffusion (extracellular to periplasm) | imp_p --> imp_e
+G3PGtex_FWD | 14.47275 kJ/mol | Glycerophoglycerol transport via diffusion (extracellular to periplasm) | g3pg_e --> g3pg_p
+G3PGtex_REV | -14.47275 kJ/mol | Glycerophoglycerol transport via diffusion (extracellular to periplasm) | g3pg_p --> g3pg_e
+G3PEtex_FWD | 0.0 kJ/mol | Glycero-3-phosphoethanolamine transport via diffusion (extracellular to periplasm) | g3pe_e --> g3pe_p
+G3PEtex_REV | 0.0 kJ/mol | Glycero-3-phosphoethanolamine transport via diffusion (extracellular to periplasm) | g3pe_p --> g3pe_e
+G3PCtex_FWD | 0.0 kJ/mol | Glycero-3-phosphocholine transport via diffusion (extracellular to periplasm) | g3pc_e --> g3pc_p
+G3PCtex_REV | 0.0 kJ/mol | Glycero-3-phosphocholine transport via diffusion (extracellular to periplasm) | g3pc_p --> g3pc_e
+UMPtex_FWD | 43.41824999999999 kJ/mol | UMP transport via diffusion (extracellular to periplasm) | ump_e --> ump_p
+UMPtex_REV | -43.41824999999999 kJ/mol | UMP transport via diffusion (extracellular to periplasm) | ump_p --> ump_e
+SKMtex_FWD | 14.47275 kJ/mol | Shikimate transport via diffusion (extracellular to periplasm) | skm_e --> skm_p
+SKMtex_REV | -14.47275 kJ/mol | Shikimate transport via diffusion (extracellular to periplasm) | skm_p --> skm_e
+MNtex_FWD | -28.9455 kJ/mol | Manganese (Mn+2) transport via diffusion (extracellular to periplasm) | mn2_e --> mn2_p
+MNtex_REV | 28.9455 kJ/mol | Manganese (Mn+2) transport via diffusion (extracellular to periplasm) | mn2_p --> mn2_e
+GAL1Ptex_FWD | 28.9455 kJ/mol | D-galactose 1-phosphate transport via diffusion (extracellular to periplasm) | gal1p_e --> gal1p_p
+GAL1Ptex_REV | -28.9455 kJ/mol | D-galactose 1-phosphate transport via diffusion (extracellular to periplasm) | gal1p_p --> gal1p_e
+O2Stex_FWD | 14.47275 kJ/mol | Superoxide anion transport via diffusion (extracellular to periplasm) | o2s_e --> o2s_p
+O2Stex_REV | -14.47275 kJ/mol | Superoxide anion transport via diffusion (extracellular to periplasm) | o2s_p --> o2s_e
+HOMtex_FWD | 0.0 kJ/mol | L-homoserine transport via diffusion (extracellular to periplasm) | hom__L_e --> hom__L_p
+HOMtex_REV | 0.0 kJ/mol | L-homoserine transport via diffusion (extracellular to periplasm) | hom__L_p --> hom__L_e
+SO2tex_FWD | 0.0 kJ/mol | SO2 transport via diffusion (extracellular to periplasm) | so2_e --> so2_p
+SO2tex_REV | 0.0 kJ/mol | SO2 transport via diffusion (extracellular to periplasm) | so2_p --> so2_e
+SO2tpp_FWD | 0.0 kJ/mol | SO2 transport via diffusion (periplasm) | so2_p --> so2_c
+SO2tpp_REV | 0.0 kJ/mol | SO2 transport via diffusion (periplasm) | so2_c --> so2_p
+DAMPtex_FWD | 28.9455 kJ/mol | DAMP transport via diffusion (extracellular to periplasm) | damp_e --> damp_p
+DAMPtex_REV | -28.9455 kJ/mol | DAMP transport via diffusion (extracellular to periplasm) | damp_p --> damp_e
+DCMPtex_FWD | 28.9455 kJ/mol | DCMP transport via diffusion (extracellular to periplasm) | dcmp_e --> dcmp_p
+DCMPtex_REV | -28.9455 kJ/mol | DCMP transport via diffusion (extracellular to periplasm) | dcmp_p --> dcmp_e
+DGMPtex_FWD | 28.9455 kJ/mol | DGMP transport via diffusion (extracellular to periplasm) | dgmp_e --> dgmp_p
+DGMPtex_REV | -28.9455 kJ/mol | DGMP transport via diffusion (extracellular to periplasm) | dgmp_p --> dgmp_e
+DTMPtex_FWD | 43.41824999999999 kJ/mol | DTMP transport via diffusion (extracellular to periplasm) | dtmp_e --> dtmp_p
+DTMPtex_REV | -43.41824999999999 kJ/mol | DTMP transport via diffusion (extracellular to periplasm) | dtmp_p --> dtmp_e
+ACSERtex_FWD | 0.0 kJ/mol | O-Acetyl-L-serine transport via diffusion (extracellular to periplasm) | acser_e --> acser_p
+ACSERtex_REV | 0.0 kJ/mol | O-Acetyl-L-serine transport via diffusion (extracellular to periplasm) | acser_p --> acser_e
+ALAALAtex_FWD | 0.0 kJ/mol | D-alanyl-D-alanine (DalaDala) transport via diffusion (extracellular to periplasm) | alaala_e --> alaala_p
+ALAALAtex_REV | 0.0 kJ/mol | D-alanyl-D-alanine (DalaDala) transport via diffusion (extracellular to periplasm) | alaala_p --> alaala_e
+NO3tex_FWD | 14.47275 kJ/mol | Nitrate transport via diffusion (extracellular to periplasm) | no3_e --> no3_p
+NO3tex_REV | -14.47275 kJ/mol | Nitrate transport via diffusion (extracellular to periplasm) | no3_p --> no3_e
+HEXt2rpp_FWD | -2.841687551797868 kJ/mol | Hexanoate transport via proton symport, reversible (periplasm) | h_p + hxa_p --> h_c + hxa_c
+HEXt2rpp_REV | 2.841687551797868 kJ/mol | Hexanoate transport via proton symport, reversible (periplasm) | h_c + hxa_c --> h_p + hxa_p
+D_LACt2pp_FWD | -2.8519542012562944 kJ/mol | D-lactate transport via proton symport (periplasm) | h_p + lac__D_p --> h_c + lac__D_c
+D_LACt2pp_REV | 2.8519542012562944 kJ/mol | D-lactate transport via proton symport (periplasm) | h_c + lac__D_c --> h_p + lac__D_p
+RIBtex_FWD | 0.0 kJ/mol | Ribose transport via diffusion (extracellular to periplasm) | rib__D_e --> rib__D_p
+RIBtex_REV | 0.0 kJ/mol | Ribose transport via diffusion (extracellular to periplasm) | rib__D_p --> rib__D_e
+THMtex_FWD | -14.47275 kJ/mol | Thiamine transport via diffusion (extracellular to periplasm) | thm_e --> thm_p
+THMtex_REV | 14.47275 kJ/mol | Thiamine transport via diffusion (extracellular to periplasm) | thm_p --> thm_e
+ALLtex_FWD | 0.0 kJ/mol | Allose transport via diffusion (extracellular to periplasm) | all__D_e --> all__D_p
+ALLtex_REV | 0.0 kJ/mol | Allose transport via diffusion (extracellular to periplasm) | all__D_p --> all__D_e
+34dhpactex_FWD | 0.0 kJ/mol | Dihydroxyphenylacetaldehyde transport via diffusion (extracellular to periplasm) | 34dhpac_e --> 34dhpac_p
+34dhpactex_REV | 0.0 kJ/mol | Dihydroxyphenylacetaldehyde transport via diffusion (extracellular to periplasm) | 34dhpac_p --> 34dhpac_e
+12PPDStpp_FWD | -9.592326932761353e-14 kJ/mol | (S)-Propane-1,2-diol facilitated transport (periplasm) | 12ppd__S_p --> 12ppd__S_c
+12PPDStpp_REV | 9.592326932761353e-14 kJ/mol | (S)-Propane-1,2-diol facilitated transport (periplasm) | 12ppd__S_c --> 12ppd__S_p
+PROtex_FWD | 0.0 kJ/mol | L-proline transport via diffusion (extracellular to periplasm) | pro__L_e --> pro__L_p
+PROtex_REV | 0.0 kJ/mol | L-proline transport via diffusion (extracellular to periplasm) | pro__L_p --> pro__L_e
+H2tpp_FWD | -2.398081733190338e-14 kJ/mol | Hydrogen transport diffusion (periplasm) | h2_p --> h2_c
+H2tpp_REV | 2.398081733190338e-14 kJ/mol | Hydrogen transport diffusion (periplasm) | h2_c --> h2_p
+23DAPPAtex_FWD | 0.0 kJ/mol | 2,3-diaminopropionate transport via diffusion | 23dappa_e --> 23dappa_p
+23DAPPAtex_REV | 0.0 kJ/mol | 2,3-diaminopropionate transport via diffusion | 23dappa_p --> 23dappa_e
+GSNtex_FWD | 0.0 kJ/mol | Guanosine transport via diffusion (extracellular to periplasm) | gsn_e --> gsn_p
+GSNtex_REV | 0.0 kJ/mol | Guanosine transport via diffusion (extracellular to periplasm) | gsn_p --> gsn_e
+SBTtex_FWD | 0.0 kJ/mol | D-sorbitol transport via diffusion (extracellular to periplasm) | sbt__D_e --> sbt__D_p
+SBTtex_REV | 0.0 kJ/mol | D-sorbitol transport via diffusion (extracellular to periplasm) | sbt__D_p --> sbt__D_e
+FORtex_FWD | 14.47275 kJ/mol | Formate transport via diffusion (extracellular to periplasm) | for_e --> for_p
+FORtex_REV | -14.47275 kJ/mol | Formate transport via diffusion (extracellular to periplasm) | for_p --> for_e
+PHEt2rpp_FWD | -17.36507374962723 kJ/mol | L-phenylalanine reversible transport via proton symport (periplasm) | h_p + phe__L_p --> h_c + phe__L_c
+PHEt2rpp_REV | 17.36507374962723 kJ/mol | L-phenylalanine reversible transport via proton symport (periplasm) | h_c + phe__L_c --> h_p + phe__L_p
+GLCtex_copy2_FWD | 0.0 kJ/mol | Glucose transport via diffusion (extracellular to periplasm) | glc__D_e --> glc__D_p
+GLCtex_copy2_REV | 0.0 kJ/mol | Glucose transport via diffusion (extracellular to periplasm) | glc__D_p --> glc__D_e
+12PPDRtpp_FWD | -9.592326932761353e-14 kJ/mol | (R)-Propane-1,2-diol facilitated transport (periplasm) | 12ppd__R_p --> 12ppd__R_c
+12PPDRtpp_REV | 9.592326932761353e-14 kJ/mol | (R)-Propane-1,2-diol facilitated transport (periplasm) | 12ppd__R_c --> 12ppd__R_p
+AKGtex_FWD | 28.9455 kJ/mol | Alpha-ketoglutarate transport via diffusion (extracellular to periplasm) | akg_e --> akg_p
+AKGtex_REV | -28.9455 kJ/mol | Alpha-ketoglutarate transport via diffusion (extracellular to periplasm) | akg_p --> akg_e
+ALLTNtex_FWD | 0.0 kJ/mol | Allantoin transport via diffusion (extracellular to periplasm) | alltn_e --> alltn_p
+ALLTNtex_REV | 0.0 kJ/mol | Allantoin transport via diffusion (extracellular to periplasm) | alltn_p --> alltn_e
+ASNtex_FWD | 0.0 kJ/mol | L-asparagine transport via diffusion (extracellular to periplasm) | asn__L_e --> asn__L_p
+ASNtex_REV | 0.0 kJ/mol | L-asparagine transport via diffusion (extracellular to periplasm) | asn__L_p --> asn__L_e
+PPALtpp_FWD | 3.552713678800501e-15 kJ/mol | Propanal transport via channel (periplasm) | ppal_c --> ppal_p
+PPALtpp_REV | -3.552713678800501e-15 kJ/mol | Propanal transport via channel (periplasm) | ppal_p --> ppal_c
+PPALtex_FWD | 0.0 kJ/mol | Propanal transport via diffusion (extracellular to periplasm) | ppal_e --> ppal_p
+PPALtex_REV | 0.0 kJ/mol | Propanal transport via diffusion (extracellular to periplasm) | ppal_p --> ppal_e
+CA2tex_FWD | -28.9455 kJ/mol | Calcium (Ca+2) transport via diffusion (extracellular to periplasm) | ca2_e --> ca2_p
+CA2tex_REV | 28.9455 kJ/mol | Calcium (Ca+2) transport via diffusion (extracellular to periplasm) | ca2_p --> ca2_e
+CUtex_FWD | -14.47275 kJ/mol | Copper (Cu+1) transport via diffusion (extracellular to periplasm) | cu_e --> cu_p
+CUtex_REV | 14.47275 kJ/mol | Copper (Cu+1) transport via diffusion (extracellular to periplasm) | cu_p --> cu_e
+12PPDRtex_FWD | 0.0 kJ/mol | (R)-Propane-1,2-diol transport via diffusion (extracellular to periplasm) | 12ppd__R_e --> 12ppd__R_p
+12PPDRtex_REV | 0.0 kJ/mol | (R)-Propane-1,2-diol transport via diffusion (extracellular to periplasm) | 12ppd__R_p --> 12ppd__R_e
+PROGLYtex_FWD | 0.0 kJ/mol | L-Prolinylglycine transport via diffusion (extracellular to periplasm) | progly_e --> progly_p
+PROGLYtex_REV | 0.0 kJ/mol | L-Prolinylglycine transport via diffusion (extracellular to periplasm) | progly_p --> progly_e
+GAMAN6Ptex_FWD | 14.47275 kJ/mol | D-glucosamine 6-phosphate transport via diffusion (extracellular to periplasm) | gam6p_e --> gam6p_p
+GAMAN6Ptex_REV | -14.47275 kJ/mol | D-glucosamine 6-phosphate transport via diffusion (extracellular to periplasm) | gam6p_p --> gam6p_e
+CGLYtex_FWD | 0.0 kJ/mol | L-Cysteinylglycine transport via diffusion (extracellular to periplasm) | cgly_e --> cgly_p
+CGLYtex_REV | 0.0 kJ/mol | L-Cysteinylglycine transport via diffusion (extracellular to periplasm) | cgly_p --> cgly_e
+GTHRDtex_FWD | 14.47275 kJ/mol | Glutathione transport via diffusion (extracellular to periplasm) | gthrd_e --> gthrd_p
+GTHRDtex_REV | -14.47275 kJ/mol | Glutathione transport via diffusion (extracellular to periplasm) | gthrd_p --> gthrd_e
+CAt6pp_FWD | 14.796821770406908 kJ/mol | Calcium / sodium antiporter (1:1) | ca2_c + na1_p --> ca2_p + na1_c
+CAt6pp_REV | -14.796821770406908 kJ/mol | Calcium / sodium antiporter (1:1) | ca2_p + na1_c --> ca2_c + na1_p
+5DGLCNt2rpp_FWD | -2.8524536486677263 kJ/mol | 5-Dehydro-D-gluconate transport via proton symport, reversible (periplasm) | 5dglcn_p + h_p --> 5dglcn_c + h_c
+5DGLCNt2rpp_REV | 2.8524536486677263 kJ/mol | 5-Dehydro-D-gluconate transport via proton symport, reversible (periplasm) | 5dglcn_c + h_c --> 5dglcn_p + h_p
+GALCTNLtex_FWD | 14.47275 kJ/mol | L-galactonate transport via diffusion (extracellular to periplasm) | galctn__L_e --> galctn__L_p
+GALCTNLtex_REV | -14.47275 kJ/mol | L-galactonate transport via diffusion (extracellular to periplasm) | galctn__L_p --> galctn__L_e
+MALDtex_FWD | 28.9455 kJ/mol | D-Malate transport via diffusion (extracellular to periplasm) | mal__D_e --> mal__D_p
+MALDtex_REV | -28.9455 kJ/mol | D-Malate transport via diffusion (extracellular to periplasm) | mal__D_p --> mal__D_e
+OROTtex_FWD | 14.47275 kJ/mol | Orotate transport via diffusion (extracellular to periplasm) | orot_e --> orot_p
+OROTtex_REV | -14.47275 kJ/mol | Orotate transport via diffusion (extracellular to periplasm) | orot_p --> orot_e
+5DGLCNtex_FWD | 14.47275 kJ/mol | 5-Dehydro-D-gluconate transport via diffusion (extracellular to periplasm) | 5dglcn_e --> 5dglcn_p
+5DGLCNtex_REV | -14.47275 kJ/mol | 5-Dehydro-D-gluconate transport via diffusion (extracellular to periplasm) | 5dglcn_p --> 5dglcn_e
+TUNGStex_FWD | 0.0 kJ/mol | Tungstate transport via diffusion (extracellular to periplasm) | tungs_e --> tungs_p
+TUNGStex_REV | 0.0 kJ/mol | Tungstate transport via diffusion (extracellular to periplasm) | tungs_p --> tungs_e
+5MTRtex_FWD | 0.0 kJ/mol | 5-Methylthio-D-ribose transport via proton diffusion (extracellular to periplasm) | 5mtr_e --> 5mtr_p
+5MTRtex_REV | 0.0 kJ/mol | 5-Methylthio-D-ribose transport via proton diffusion (extracellular to periplasm) | 5mtr_p --> 5mtr_e
+THYMtex_FWD | 0.0 kJ/mol | Thymine transport via diffusion (extracellular to periplasm) | thym_e --> thym_p
+THYMtex_REV | 0.0 kJ/mol | Thymine transport via diffusion (extracellular to periplasm) | thym_p --> thym_e
+MG2t3_2pp_FWD | 5.704945844907011 kJ/mol | Magnesium (Mg+2) transport in/out via proton antiport (periplasm) | 2.0 h_c + mg2_p --> 2.0 h_p + mg2_c
+MG2t3_2pp_REV | -5.704945844907011 kJ/mol | Magnesium (Mg+2) transport in/out via proton antiport (periplasm) | 2.0 h_p + mg2_c --> 2.0 h_c + mg2_p
+LALADGLUtex_FWD | 14.47275 kJ/mol | L-alanyl-D-glutamate transport via diffusion (extracellular to periplasm) | LalaDglu_e --> LalaDglu_p
+LALADGLUtex_REV | -14.47275 kJ/mol | L-alanyl-D-glutamate transport via diffusion (extracellular to periplasm) | LalaDglu_p --> LalaDglu_e
+3HPPtex_FWD | 14.47275 kJ/mol | 3-hydroxypropionate transport via diffusion (extracellular to periplasm) | 3hpp_e --> 3hpp_p
+3HPPtex_REV | -14.47275 kJ/mol | 3-hydroxypropionate transport via diffusion (extracellular to periplasm) | 3hpp_p --> 3hpp_e
+RFAMPtex_FWD | 0.0 kJ/mol | Rifampin transport via diffusion (extracellular to periplasm) | rfamp_e --> rfamp_p
+RFAMPtex_REV | 0.0 kJ/mol | Rifampin transport via diffusion (extracellular to periplasm) | rfamp_p --> rfamp_e
+MINCYCtex_FWD | 0.0 kJ/mol | Minocycline transport via diffusion (extracellular to periplasm) | mincyc_e --> mincyc_p
+MINCYCtex_REV | 0.0 kJ/mol | Minocycline transport via diffusion (extracellular to periplasm) | mincyc_p --> mincyc_e
+MEOHtrpp_FWD | -4.796163466380676e-14 kJ/mol | Methanol reversible transport via diffusion (periplasm) | meoh_p --> meoh_c
+MEOHtrpp_REV | 4.796163466380676e-14 kJ/mol | Methanol reversible transport via diffusion (periplasm) | meoh_c --> meoh_p
+DOXRBCNtex_FWD | -14.47275 kJ/mol | Doxorubicin transport via diffusion (extracellular to periplasm) | doxrbcn_e --> doxrbcn_p
+DOXRBCNtex_REV | 14.47275 kJ/mol | Doxorubicin transport via diffusion (extracellular to periplasm) | doxrbcn_p --> doxrbcn_e
+SELtex_FWD | 28.9455 kJ/mol | Selenate transport via diffusion (extracellular to periplasm) | sel_e --> sel_p
+SELtex_REV | -28.9455 kJ/mol | Selenate transport via diffusion (extracellular to periplasm) | sel_p --> sel_e
+ETOHtrpp_FWD | -3.552713678800501e-15 kJ/mol | Ethanol reversible transport via diffusion (periplasm) | etoh_p --> etoh_c
+ETOHtrpp_REV | 3.552713678800501e-15 kJ/mol | Ethanol reversible transport via diffusion (periplasm) | etoh_c --> etoh_p
+MEOHtex_FWD | 0.0 kJ/mol | Methanol transport via diffusion (extracellular to periplasm) | meoh_e --> meoh_p
+MEOHtex_REV | 0.0 kJ/mol | Methanol transport via diffusion (extracellular to periplasm) | meoh_p --> meoh_e
+TTRCYCtex_FWD | 0.0 kJ/mol | Tetracycline transport via diffusion (extracellular to periplasm) | ttrcyc_e --> ttrcyc_p
+TTRCYCtex_REV | 0.0 kJ/mol | Tetracycline transport via diffusion (extracellular to periplasm) | ttrcyc_p --> ttrcyc_e
+CMtex_FWD | 0.0 kJ/mol | Chloramphenicol transport via diffusion (extracellular to periplasm) | cm_e --> cm_p
+CMtex_REV | 0.0 kJ/mol | Chloramphenicol transport via diffusion (extracellular to periplasm) | cm_p --> cm_e
+LALALGLUtex_FWD | 14.47275 kJ/mol | L-alanyl-L-glutamate transport via diffusion (extracellular to periplasm) | LalaLglu_e --> LalaLglu_p
+LALALGLUtex_REV | -14.47275 kJ/mol | L-alanyl-L-glutamate transport via diffusion (extracellular to periplasm) | LalaLglu_p --> LalaLglu_e
+SLNTtex_FWD | 28.9455 kJ/mol | Selenite transport via diffusion (extracellular to periplasm) | slnt_e --> slnt_p
+SLNTtex_REV | -28.9455 kJ/mol | Selenite transport via diffusion (extracellular to periplasm) | slnt_p --> slnt_e
+CH4tex_FWD | 0.0 kJ/mol | Methane Transport(extracellular via diffusion) | ch4_e --> ch4_p
+CH4tex_REV | 0.0 kJ/mol | Methane Transport(extracellular via diffusion) | ch4_p --> ch4_e
+TARTRDtex_FWD | 28.9455 kJ/mol | D-tartrate transport via diffusion (extracellular to periplasm) | tartr__D_e --> tartr__D_p
+TARTRDtex_REV | -28.9455 kJ/mol | D-tartrate transport via diffusion (extracellular to periplasm) | tartr__D_p --> tartr__D_e
+BTNtex_FWD | 14.47275 kJ/mol | Biotin transport via diffusion (extracellular to periplasm) | btn_e --> btn_p
+BTNtex_REV | -14.47275 kJ/mol | Biotin transport via diffusion (extracellular to periplasm) | btn_p --> btn_e
+DMSOtpp_FWD | -3.552713678800501e-15 kJ/mol | Dimethyl sulfoxide transport via diffusion (periplasm) | dmso_p --> dmso_c
+DMSOtpp_REV | 3.552713678800501e-15 kJ/mol | Dimethyl sulfoxide transport via diffusion (periplasm) | dmso_c --> dmso_p
+PYDXtex_FWD | 0.0 kJ/mol | Pyridoxal transport via diffusion (extracellular) | pydx_e --> pydx_p
+PYDXtex_REV | 0.0 kJ/mol | Pyridoxal transport via diffusion (extracellular) | pydx_p --> pydx_e
+SUCASPtpp_FWD | -14.561574059435248 kJ/mol | Succinate:aspartate antiporter (periplasm) | asp__L_p + succ_c --> asp__L_c + succ_p
+SUCASPtpp_REV | 14.561574059435248 kJ/mol | Succinate:aspartate antiporter (periplasm) | asp__L_c + succ_p --> asp__L_p + succ_c
+SUCMALtpp_FWD | -0.015517961058918672 kJ/mol | Succinate:malate antiporter (periplasm) | mal__L_p + succ_c --> mal__L_c + succ_p
+SUCMALtpp_REV | 0.015517961058918672 kJ/mol | Succinate:malate antiporter (periplasm) | mal__L_c + succ_p --> mal__L_p + succ_c
+PYDXNtex_FWD | 0.0 kJ/mol | Pyridoxine transport via diffusion (extracellular) | pydxn_e --> pydxn_p
+PYDXNtex_REV | 0.0 kJ/mol | Pyridoxine transport via diffusion (extracellular) | pydxn_p --> pydxn_e
+PYDAMtex_FWD | -14.47275 kJ/mol | Pyridoxamine transport via diffusion (extracellular) | pydam_e --> pydam_p
+PYDAMtex_REV | 14.47275 kJ/mol | Pyridoxamine transport via diffusion (extracellular) | pydam_p --> pydam_e
+SUCTARTtpp_FWD | -0.018808445266557783 kJ/mol | Succinate:D-tartrate antiporter (periplasm) | succ_c + tartr__D_p --> succ_p + tartr__D_c
+SUCTARTtpp_REV | 0.018808445266557783 kJ/mol | Succinate:D-tartrate antiporter (periplasm) | succ_p + tartr__D_c --> succ_c + tartr__D_p
+QUIN2tpp_FWD | 14.472984670155581 kJ/mol | Quinate transport (periplasm) | quin_p --> quin_c
+QUIN2tpp_REV | -14.472984670155581 kJ/mol | Quinate transport (periplasm) | quin_c --> quin_p
+FADtex_FWD | -43.41824999999999 kJ/mol | FAD transport, outer membrane | fad_p --> fad_e
+FADtex_REV | 43.41824999999999 kJ/mol | FAD transport, outer membrane | fad_e --> fad_p
+2DGLCtex_FWD | 0.0 kJ/mol | 2-Deoxy-D-glucose transport via diffusion (extracellular) | 2dglc_e --> 2dglc_p
+2DGLCtex_REV | 0.0 kJ/mol | 2-Deoxy-D-glucose transport via diffusion (extracellular) | 2dglc_p --> 2dglc_e
+GLYtpp_FWD | 0.08657193123044848 kJ/mol | Glycine transport via facillitated diffusion | gly_c --> gly_p
+GLYtpp_REV | -0.08657193123044848 kJ/mol | Glycine transport via facillitated diffusion | gly_p --> gly_c
+URATEtex_FWD | 0.0 kJ/mol | Uric acid transport | urate_e --> urate_p
+URATEtex_REV | 0.0 kJ/mol | Uric acid transport | urate_p --> urate_e
+AI2tex_FWD | 0.0 kJ/mol | Ai2 transport, outer membrane | mththf_e --> mththf_p
+AI2tex_REV | 0.0 kJ/mol | Ai2 transport, outer membrane | mththf_p --> mththf_e
+CYSItex_FWD | 0.0 kJ/mol | L cystine transport via diffusion extracellular to periplasm  | cysi__L_e --> cysi__L_p
+CYSItex_REV | 0.0 kJ/mol | L cystine transport via diffusion extracellular to periplasm  | cysi__L_p --> cysi__L_e
+ASPtpp_FWD | 14.405522276277514 kJ/mol | L-aspartate uptake via facillitated diffusion | asp__L_p --> asp__L_c
+ASPtpp_REV | -14.405522276277514 kJ/mol | L-aspartate uptake via facillitated diffusion | asp__L_c --> asp__L_p
+SUCCt1pp_FWD | 28.967096335712768 kJ/mol | Succinate transport via diffusion in (periplasm) | succ_p --> succ_c
+SUCCt1pp_REV | -28.967096335712768 kJ/mol | Succinate transport via diffusion in (periplasm) | succ_c --> succ_p
+FUSAtex_FWD | 14.47275 kJ/mol | Fusidic acid transport via diffusion (extracellular to periplasm) | fusa_e --> fusa_p
+FUSAtex_REV | -14.47275 kJ/mol | Fusidic acid transport via diffusion (extracellular to periplasm) | fusa_p --> fusa_e
+NOVBCNtex_FWD | 14.47275 kJ/mol | Novobiocin transport via diffusion (extracellular to periplasm) | novbcn_e --> novbcn_p
+NOVBCNtex_REV | -14.47275 kJ/mol | Novobiocin transport via diffusion (extracellular to periplasm) | novbcn_p --> novbcn_e
+QUIN2tex_FWD | 14.47275 kJ/mol | Quinate transport via diffusion (extracellular to periplasm) | quin_e --> quin_p
+QUIN2tex_REV | -14.47275 kJ/mol | Quinate transport via diffusion (extracellular to periplasm) | quin_p --> quin_e

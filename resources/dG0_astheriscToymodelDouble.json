@@ -1,0 +1,74 @@
+{
+    "S_to_A_strain1": {
+        "dG0": 4,
+        "uncertainty": 0
+    },
+    "S_to_A_strain2": {
+        "dG0": 4,
+        "uncertainty": 0
+    },
+    "A_to_B_strain1": {
+        "dG0": -5,
+        "uncertainty": 0
+    },
+    "A_to_B_strain2": {
+        "dG0": -5,
+        "uncertainty": 0
+    },
+    "B_to_C_strain1": {
+        "dG0": -5,
+        "uncertainty": 0
+    },
+    "B_to_C_strain2": {
+        "dG0": -5,
+        "uncertainty": 0
+    },
+    "C_to_P_strain1": {
+        "dG0": 4,
+        "uncertainty": 0
+    },
+    "C_to_P_strain2": {
+        "dG0": 4,
+        "uncertainty": 0
+    },
+    "EXCHG_strain1_A_c_to_A": {
+        "dG0": 0,
+        "uncertainty": 0
+    },
+    "EXCHG_strain1_C_c_to_C": {
+        "dG0": 0,
+        "uncertainty": 0
+    },
+    "EXCHG_strain1_P_c_to_P": {
+        "dG0": 0,
+        "uncertainty": 0
+    },
+    "EXCHG_strain1_S_c_to_S": {
+        "dG0": 0,
+        "uncertainty": 0
+    },
+    "EXCHG_strain1_B_c_to_B": {
+        "dG0": 0,
+        "uncertainty": 0
+    },
+    "EXCHG_strain2_A_c_to_A": {
+        "dG0": 0,
+        "uncertainty": 0
+    },
+    "EXCHG_strain2_C_c_to_C": {
+        "dG0": 0,
+        "uncertainty": 0
+    },
+    "EXCHG_strain2_P_c_to_P": {
+        "dG0": 0,
+        "uncertainty": 0
+    },
+    "EXCHG_strain2_S_c_to_S": {
+        "dG0": 0,
+        "uncertainty": 0
+    },
+    "EXCHG_strain2_B_c_to_B": {
+        "dG0": 0,
+        "uncertainty": 0
+    }
+}

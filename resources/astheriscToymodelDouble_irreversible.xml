@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:fbc="http://www.sbml.org/sbml/level3/version1/fbc/version2" metaid="meta_" sboTerm="SBO:0000624" level="3" version="1" fbc:required="false">
+  <model metaid="meta_toy_model" id="toy_model" fbc:strict="true">
+    <listOfUnitDefinitions>
+      <unitDefinition id="mmol_per_gDW_per_hr">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
+          <unit kind="gram" exponent="-1" scale="0" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="c" constant="true"/>
+      <compartment id="exchange" constant="true"/>
+      <compartment id="exchg" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="M_S_c_strain1" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_A_c_strain1" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_X_c_strain1" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_B_c_strain1" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_C_c_strain1" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_P_c_strain1" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_A_c_strain2" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_X_c_strain2" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_S_c_strain2" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_B_c_strain2" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_C_c_strain2" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_P_c_strain2" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_S_exchg" name="Exchange compartment metabolite S" compartment="exchange" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_A_exchg" name="Exchange compartment metabolite A" compartment="exchange" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_C_exchg" name="Exchange compartment metabolite C" compartment="exchange" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_B_exchg" name="Exchange compartment metabolite B" compartment="exchange" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_P_exchg" name="Exchange compartment metabolite P" compartment="exchange" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_community_biomass" name="Mock community biomass metabolite for ASTHERISC package species recognition" compartment="exchg" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_community_biomass_strain1" name="Mock community biomass metabolite for ASTHERISC package species recognition" compartment="exchg" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+      <species id="M_community_biomass_strain2" name="Mock community biomass metabolite for ASTHERISC package species recognition" compartment="exchg" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter sboTerm="SBO:0000626" id="cobra_default_lb" value="0" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="cobra_default_ub" value="INF" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="cobra_0_bound" value="0" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="minus_inf" value="-INF" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="plus_inf" value="INF" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="R_S_to_A_strain1" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_S_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_A_c_strain1" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_X_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_A_to_B_strain1" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_A_c_strain1" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_X_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_B_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_B_to_C_strain1" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_B_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_C_c_strain1" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_X_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_C_to_P_strain1" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_C_c_strain1" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_X_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_P_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_S_to_A_strain2" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_S_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_A_c_strain2" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_X_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_A_to_B_strain2" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_A_c_strain2" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_X_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_B_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_B_to_C_strain2" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_B_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_C_c_strain2" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_X_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_C_to_P_strain2" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_C_c_strain2" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_X_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_P_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EX_C_S_exchg_REV" name="Community exchange for S" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfProducts>
+          <speciesReference species="M_S_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EX_C_A_exchg_FWD" name="Community exchange for A" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_A_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_C_A_exchg_REV" name="Community exchange for A" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfProducts>
+          <speciesReference species="M_A_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EX_C_C_exchg_FWD" name="Community exchange for C" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_C_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_C_C_exchg_REV" name="Community exchange for C" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfProducts>
+          <speciesReference species="M_C_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EX_C_B_exchg_FWD" name="Community exchange for B" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_B_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_C_B_exchg_REV" name="Community exchange for B" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfProducts>
+          <speciesReference species="M_B_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EX_C_P_exchg_FWD" name="Community exchange for P" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_P_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_C_P_exchg_REV" name="Community exchange for P" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfProducts>
+          <speciesReference species="M_P_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain1_A_c_to_A_FWD" name="Exchange for A_c_strain1 from single species strain1 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_A_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_A_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain1_A_c_to_A_REV" name="Exchange for A_c_strain1 from single species strain1 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_A_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_A_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain1_C_c_to_C_FWD" name="Exchange for C_c_strain1 from single species strain1 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_C_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_C_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain1_C_c_to_C_REV" name="Exchange for C_c_strain1 from single species strain1 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_C_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_C_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain1_P_c_to_P_FWD" name="Exchange for P_c_strain1 from single species strain1 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_P_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_P_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain1_P_c_to_P_REV" name="Exchange for P_c_strain1 from single species strain1 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_P_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_P_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain1_S_c_to_S_REV" name="Exchange for S_c_strain1 from single species strain1 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_S_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_S_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain1_B_c_to_B_FWD" name="Exchange for B_c_strain1 from single species strain1 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_B_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_B_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain1_B_c_to_B_REV" name="Exchange for B_c_strain1 from single species strain1 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_B_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_B_c_strain1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain2_A_c_to_A_FWD" name="Exchange for A_c_strain2 from single species strain2 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_A_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_A_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain2_A_c_to_A_REV" name="Exchange for A_c_strain2 from single species strain2 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_A_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_A_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain2_C_c_to_C_FWD" name="Exchange for C_c_strain2 from single species strain2 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_C_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_C_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain2_C_c_to_C_REV" name="Exchange for C_c_strain2 from single species strain2 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_C_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_C_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain2_P_c_to_P_FWD" name="Exchange for P_c_strain2 from single species strain2 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_P_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_P_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain2_P_c_to_P_REV" name="Exchange for P_c_strain2 from single species strain2 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_P_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_P_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain2_S_c_to_S_REV" name="Exchange for S_c_strain2 from single species strain2 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="plus_inf">
+        <listOfReactants>
+          <speciesReference species="M_S_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_S_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain2_B_c_to_B_FWD" name="Exchange for B_c_strain2 from single species strain2 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_B_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_B_exchg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EXCHG_strain2_B_c_to_B_REV" name="Exchange for B_c_strain2 from single species strain2 to exchange compartment" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_B_exchg" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_B_c_strain2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+    </listOfReactions>
+    <fbc:listOfObjectives fbc:activeObjective="obj">
+      <fbc:objective fbc:id="obj" fbc:type="maximize"/>
+    </fbc:listOfObjectives>
+  </model>
+</sbml>

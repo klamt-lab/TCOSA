@@ -1,0 +1,30 @@
+NO3R1bpp | 8.460989965424318 kJ/mol | Nitrate reductase (Ubiquinol-8) | no3_p + q8h2_c --> h2o_p + no2_p + q8_c
+NO3R2pp | -79.26214817888435 kJ/mol | Nitrate reductase (Menaquinol-8) (periplasm) | 2.0 h_c + mql8_c + no3_c --> h2o_c + 2.0 h_p + mqn8_c + no2_c
+NO3R2bpp | -99.43984402379144 kJ/mol | Nitrate reductase (Menaquinol-8) (periplasm) | mql8_c + no3_p --> h2o_p + mqn8_c + no2_p
+TMAOR1pp | -218.35116694625157 kJ/mol | Trimethylamine N-oxide reductase (menaquinol 8) (periplasm) | h_p + mql8_c + tmao_p --> h2o_p + mqn8_c + tma_p
+TMAOR2pp | -195.91109942523377 kJ/mol | Trimethylamine N-oxide reductase (demethylmenaquinol 8) (periplasm) | 2dmmql8_c + h_p + tmao_p --> 2dmmq8_c + h2o_p + tma_p
+DMSOR1pp | -224.14026694623678 kJ/mol | Dimethyl sulfoxide reductase (Menaquinol 8) (periplasm) | dmso_p + mql8_c --> dms_p + h2o_p + mqn8_c
+GLCDpp | -169.03679200624032 kJ/mol | Glucose dehydrogenase (ubiquinone-8 as acceptor) (periplasm) | glc__D_p + h2o_p + q8_c --> glcn_p + h_p + q8h2_c
+HYD2pp | -27.83257478480951 kJ/mol | Hydrogenase (menaquinone8: 2 protons) (periplasm) | h2_c + 2.0 h_c + mqn8_c --> 2.0 h_p + mql8_c
+CYTBDpp | -58.91378711205439 kJ/mol | Cytochrome oxidase bd (ubiquinol-8: 2 protons) (periplasm) | 2.0 h_c + 0.5 o2_c + q8h2_c --> h2o_c + 2.0 h_p + q8_c
+CYTBD2pp | -166.8146211012701 kJ/mol | Cytochrome oxidase bd (menaquinol-8: 2 protons) (periplasm) | 2.0 h_c + mql8_c + 0.5 o2_c --> h2o_c + 2.0 h_p + mqn8_c
+FECRMUtpp | -17.325222922453506 kJ/mol | Ferrichrome (minus Fe) secretion (to periplasm) | fecrm_un_c + h_p --> fecrm_un_p + h_c
+NTRIR4pp | -327.2566800100984 kJ/mol | Nitrite Reductase (Menaquinole-8, periplasm) | 2.0 h_p + 3.0 mql8_c + no2_p --> 2.0 h2o_p + 3.0 mqn8_c + nh4_p
+NTRIR3pp | -3.5541780424508786 kJ/mol | Nitrite Reductase (Ubiquinole-8, periplasm) | 2.0 h_p + no2_p + 3.0 q8h2_c --> 2.0 h2o_p + nh4_p + 3.0 q8_c
+ASO3t8pp | -44.18500548684068 kJ/mol | Arsenite efflux via ATP hydrolysis (periplasm) | aso3_c + atp_c + h2o_c --> adp_c + aso3_p + h_c + pi_c
+DMSOR2pp | -201.70019942521898 kJ/mol | Dimethyl sulfoxide reductase (Demethylmenaquinol 8) (periplasm) | 2dmmql8_c + dmso_p --> 2dmmq8_c + dms_p + h2o_p
+HYD3pp | -50.272642305827304 kJ/mol | Hydrogenase (Demethylmenaquinone-8: 2 protons) (periplasm) | 2dmmq8_c + h2_c + 2.0 h_c --> 2dmmql8_c + 2.0 h_p
+NO3R1pp | 28.63868581033111 kJ/mol | Nitrate reductase (Ubiquinol-8) (periplasm) | 2.0 h_c + no3_c + q8h2_c --> h2o_c + 2.0 h_p + no2_c + q8_c
+HYD1pp | -135.7334087740252 kJ/mol | Hydrogenase (ubiquinone-8: 2 protons) (periplasm) | h2_c + 2.0 h_c + q8_c --> 2.0 h_p + q8h2_c
+CYTBO3_4pp | -24.263341267147382 kJ/mol | Cytochrome oxidase bo3 (ubiquinol-8: 4 protons) (periplasm) | 4.0 h_c + 0.5 o2_c + q8h2_c --> h2o_c + 4.0 h_p + q8_c
+FDH4pp | -114.35600328884397 kJ/mol | Formate dehydrogenase (quinone-8) (periplasm) | for_p + 2.0 h_c + q8_c --> co2_p + h_p + q8h2_c
+FDH5pp | -6.45516929962821 kJ/mol | Formate Dehydrogenase (menaquinone-8) (periplasm) | for_p + 2.0 h_c + mqn8_c --> co2_p + h_p + mql8_c
+ATPS4rpp_FWD | -40.08227377736068 kJ/mol | ATP synthase (four protons for one ATP) (periplasm) | adp_c + 4.0 h_p + pi_c --> atp_c + h2o_c + 3.0 h_c
+ATPS4rpp_REV | 40.08227377736075 kJ/mol | ATP synthase (four protons for one ATP) (periplasm) | atp_c + h2o_c + 3.0 h_c --> adp_c + 4.0 h_p + pi_c
+THD2pp | -35.10954537950019 kJ/mol | NAD(P) transhydrogenase (periplasm) | 2.0 h_p + nadh_tcosa_c + nadp_tcosa_c --> 2.0 h_c + nad_tcosa_c + nadph_tcosa_c
+NADH16pp_ORIGINAL_NAD_TCOSA | -79.95394219095436 kJ/mol | NADH dehydrogenase (ubiquinone-8 & 3 protons) (periplasm) | 4.0 h_c + nadh_tcosa_c + q8_c --> 3.0 h_p + nad_tcosa_c + q8h2_c
+NADH16pp_VARIANT_NADP_TCOSA | -79.95394219095436 kJ/mol | NADH dehydrogenase (ubiquinone-8 & 3 protons) (periplasm) | 4.0 h_c + nadph_tcosa_c + q8_c --> 3.0 h_p + nadp_tcosa_c + q8h2_c
+NADH18pp_ORIGINAL_NAD_TCOSA | 5.506824277244732 kJ/mol | NADH dehydrogenase (demethylmenaquinone-8 & 3 protons) (periplasm) | 2dmmq8_c + 4.0 h_c + nadh_tcosa_c --> 2dmmql8_c + 3.0 h_p + nad_tcosa_c
+NADH18pp_VARIANT_NADP_TCOSA | 5.506824277244732 kJ/mol | NADH dehydrogenase (demethylmenaquinone-8 & 3 protons) (periplasm) | 2dmmq8_c + 4.0 h_c + nadph_tcosa_c --> 2dmmql8_c + 3.0 h_p + nadp_tcosa_c
+NADH17pp_ORIGINAL_NAD_TCOSA | 27.946891798261504 kJ/mol | NADH dehydrogenase (menaquinone-8 & 3 protons) (periplasm) | 4.0 h_c + mqn8_c + nadh_tcosa_c --> 3.0 h_p + mql8_c + nad_tcosa_c
+NADH17pp_VARIANT_NADP_TCOSA | 27.946891798261504 kJ/mol | NADH dehydrogenase (menaquinone-8 & 3 protons) (periplasm) | 4.0 h_c + mqn8_c + nadph_tcosa_c --> 3.0 h_p + mql8_c + nadp_tcosa_c

@@ -1,0 +1,18 @@
+name: tcosa
+channels:
+  - conda-forge
+  - defaults
+  - IBMDecisionOptimization
+dependencies:
+  - pytest
+  - pylint
+  - mypy
+  - autopep8
+  - matplotlib-base
+  - pip
+  - numpy
+  - python=3.8
+  - cobra=0.22
+  - pulp
+  - cplex
+  - equilibrator-api=0.4
