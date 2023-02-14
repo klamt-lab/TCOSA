@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Tuple
 
 ## CONSTANTS ##
 SOLVER = "CPLEX_PY"
-TIMELIMIT = 120
+TIMELIMIT = 180
 IS_VERBOSE = True
 WARMSTART = False
 

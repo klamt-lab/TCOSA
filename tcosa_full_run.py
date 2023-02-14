@@ -26,7 +26,6 @@
 # and the figures for this analysis are also generated.
 import cosa_random_sampling
 
-input("X")
 # Run the ratio range variability analysis and generate its figures.
 import cosa_ratio_test
 
