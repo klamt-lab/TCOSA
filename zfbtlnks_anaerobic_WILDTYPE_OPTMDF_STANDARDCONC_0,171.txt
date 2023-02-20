@@ -1,0 +1,30 @@
+===BOTTLENECK REPORT===
+>Number of bottleneck reactions: 3
+>Original OptMDF: 7.93300517820856 kJ/mol
+>Bottleneck reaction no. 1:
+ *ID: PTAr_FWD
+ *ΔG'°: 9.9992 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.9655 kJ/mol
+ *Reaction string: accoa_c + pi_c --> actp_c + coa_c
+>Bottleneck reaction no. 2:
+ *ID: ACKr_REV
+ *ΔG'°: -15.0853 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.9655 kJ/mol
+ *Reaction string: actp_c + adp_c --> ac_c + atp_c
+>Bottleneck reaction no. 3:
+ *ID: ATPS4rpp_REV
+ *ΔG'°: 40.0823 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.9655 kJ/mol
+ *Reaction string: atp_c + h2o_c + 3.0 h_c --> adp_c + 4.0 h_p + pi_c
+>Reaction-connecting metabolites:
+ *Metabolite no. 1: pi_c
+  in reactions: PTAr_FWD, ATPS4rpp_REV
+ *Metabolite no. 2: actp_c
+  in reactions: PTAr_FWD, ACKr_REV
+ *Metabolite no. 3: adp_c
+  in reactions: ACKr_REV, ATPS4rpp_REV
+ *Metabolite no. 4: atp_c
+  in reactions: ACKr_REV, ATPS4rpp_REV
+>Metabolite-connected reaction clusters:
+*Cluster no. 1:
+ ACKr_REV, ATPS4rpp_REV, PTAr_FWD

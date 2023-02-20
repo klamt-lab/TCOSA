@@ -1,0 +1,21 @@
+===BOTTLENECK REPORT===
+>Number of bottleneck reactions: 2
+>Original OptMDF: 7.965541426561433 kJ/mol
+>Bottleneck reaction no. 1:
+ *ID: ACONTb_FWD
+ *ΔG'°: -1.176 kJ/mol
+ *Reached OptMDF without this bottleneck: 9.7379 kJ/mol
+ *Reaction string: acon_C_c + h2o_c --> icit_c
+>Bottleneck reaction no. 2:
+ *ID: ACONTa_FWD
+ *ΔG'°: 9.7939 kJ/mol
+ *Reached OptMDF without this bottleneck: 9.7379 kJ/mol
+ *Reaction string: cit_c --> acon_C_c + h2o_c
+>Reaction-connecting metabolites:
+ *Metabolite no. 1: acon_C_c
+  in reactions: ACONTb_FWD, ACONTa_FWD
+ *Metabolite no. 2: h2o_c
+  in reactions: ACONTb_FWD, ACONTa_FWD
+>Metabolite-connected reaction clusters:
+*Cluster no. 1:
+ ACONTa_FWD, ACONTb_FWD

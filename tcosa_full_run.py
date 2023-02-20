@@ -24,10 +24,10 @@
 # Perform the random sampling where the in vivo distribution
 # is compared with random distributions. Here, the CSV tables
 # and the figures for this analysis are also generated.
-import cosa_random_sampling
+# import cosa_random_sampling
 
 # Run the ratio range variability analysis and generate its figures.
-import cosa_ratio_test
+# import cosa_ratio_test
 
 # Run the ratio ratio range variability analysis and generate its figures.
 import cosa_ratio_ratio_test

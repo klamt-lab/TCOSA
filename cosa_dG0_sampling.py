@@ -63,7 +63,7 @@ def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_
         [f"RANDOM_FLEXIBLE_{k}" for k in range(num_samplings)]
     print(nadx_scenarios)
     original_used_growth = used_growth
-    for concentration_scenario in ("VIVOCONC",): # "STANDARDCONC",
+    for concentration_scenario in ("VIVOCONC", "STANDARDCONC"):
         if concentration_scenario == "STANDARDCONC":
             dG0_values = copy.deepcopy(standardconc_dG0_values)
             used_concentration_values = concentration_values_free

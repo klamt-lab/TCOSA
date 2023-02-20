@@ -44,11 +44,11 @@ def cosa_find_bottlenecks(anaerobic: bool, expanded: bool, growth_epsilon: float
             dG0_values = copy.deepcopy(paperconc_dG0_values)
             used_concentration_values = concentration_values_paper
 
-        for target in ("OPTMDF", "OPTSUBMDF"):
+        for target in ("OPTSUBMDF",):  # "OPTMDF",
             print(f"TARGET: {target}")
             print(f"===OPTIMIZATION TARGET: {target}===")
 
-            for distribution in ("WILDTYPE", "FLEXIBLE"): #, "SINGLE_COFACTOR"):
+            for distribution in ("WILDTYPE",): #, "FLEXIBLE"): #, "SINGLE_COFACTOR"):
                 print(f"DISTRIBUTION: {distribution}")
                 print(f"cosa/results{suffix}/runs/{target}_{concentrations}_{distribution}.json")
                 jsondata_invivo = json_zip_load(f"cosa/results{suffix}/runs/{target}_{concentrations}_{distribution}.json")
@@ -80,6 +80,8 @@ def cosa_find_bottlenecks(anaerobic: bool, expanded: bool, growth_epsilon: float
 
                     if (not anaerobic) and (growth_rate_float < 0.4):
                         continue
+                    if (anaerobic) and (growth_rate_float > 0.3):
+                        continue
 
                     optmdfpathway_base_variables[biomass_reaction_id].bounds(
                         growth_rate_float-growth_epsilon,
@@ -89,7 +91,7 @@ def cosa_find_bottlenecks(anaerobic: bool, expanded: bool, growth_epsilon: float
                     if target == "OPTMDF":
                         min_target = jsondata_invivo[growth_rate]["values"]["var_B"] + 0.1
                         optmdfpathway_base_variables["var_B"].bounds(
-                            min_target,
+                            min_target-1e6,
                             1e12,
                         )
                         result_target = "var_B"
@@ -100,7 +102,7 @@ def cosa_find_bottlenecks(anaerobic: bool, expanded: bool, growth_epsilon: float
                             1e12,
                         )
                         optmdfpathway_base_variables["var_B2"].bounds(
-                            min_target,
+                            min_target-1e6,
                             1e12,
                         )
                         result_target = "var_B2"
@@ -113,12 +115,13 @@ def cosa_find_bottlenecks(anaerobic: bool, expanded: bool, growth_epsilon: float
                         result_target,
                     )
 
-
+                    aerobic = "anaerobic" if anaerobic else "aerobic"
+                    print(f"./zfbtlnks_{aerobic}_{distribution}_{target}_{concentrations}_{growth_rate}.txt")
+                    print(optmdfpathway_result)
                     thermodynamic_bottleneck_ids, bottleneck_report = get_thermodynamic_bottlenecks(
                         cobra_model=cobra_model,
                         optmdfpathway_base_problem=optmdfpathway_base_problem,
                         optmdfpathway_result=optmdfpathway_result
                     )
-                    aerobic = "anaerobic" if anaerobic else "aerobic"
                     with open(f"./zfbtlnks_{aerobic}_{distribution}_{target}_{concentrations}_{growth_rate}.txt", "w", encoding="utf-8") as f:
                         f.write(bottleneck_report)

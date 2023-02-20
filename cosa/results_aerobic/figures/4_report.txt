@@ -1,0 +1,224 @@
+=CONCENTRATION RANGES: PAPERCONCS=
+===OPTIMIZATION TARGET: OptSubMDF===
+@ µ of 0.868 1/h and minimal OptSubMDF of 12.32715428129923 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_PDH_VARIANT_NADP_TCOSA_error
+@ µ of 0.818 1/h and minimal OptSubMDF of 18.565239457776944 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.768 1/h and minimal OptSubMDF of 29.013703466514826 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 2.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+ *z_G6PDH2r_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.718 1/h and minimal OptSubMDF of 29.01370346651475 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 2.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+ *z_G6PDH2r_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.668 1/h and minimal OptSubMDF of 29.013703466514798 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.618 1/h and minimal OptSubMDF of 29.013703466514826 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.568 1/h and minimal OptSubMDF of 29.013703466514826 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.518 1/h and minimal OptSubMDF of 29.01370346651475 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.468 1/h and minimal OptSubMDF of 29.013703466514823 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.418 1/h and minimal OptSubMDF of 29.013703466514812 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.368 1/h and minimal OptSubMDF of 29.013703466514812 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.318 1/h and minimal OptSubMDF of 29.01370346651479 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.268 1/h and minimal OptSubMDF of 29.013703466514812 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.218 1/h and minimal OptSubMDF of 29.013703466514812 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.168 1/h and minimal OptSubMDF of 29.013703466514812 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.118 1/h and minimal OptSubMDF of 29.013703466514812 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.068 1/h and minimal OptSubMDF of 29.013703466514812 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.05 1/h and minimal OptSubMDF of 29.01370346651475 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.03 1/h and minimal OptSubMDF of 29.013703466514794 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+
+===OPTIMIZATION TARGET: OptMDF===
+@ µ of 0.868 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_SHK3Dr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.818 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.768 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.718 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.668 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.618 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.568 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.518 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.468 1/h and minimal OptMDF of 1.8751420335768112 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.418 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.368 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.318 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.268 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.218 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.168 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.118 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.068 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.05 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.03 1/h and minimal OptMDF of 1.875142033476818 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+
+=CONCENTRATION RANGES: STANDARDCONCS=
+===OPTIMIZATION TARGET: OptSubMDF===
+@ µ of 0.868 1/h and minimal OptSubMDF of 18.619159211815713 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 2.0
+  Affected reactions:
+ *z_PDH_VARIANT_NADP_TCOSA_error
+ *z_MTHFD_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.818 1/h and minimal OptSubMDF of 28.560955884397437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 3.0
+  Affected reactions:
+ *z_AKGDH_VARIANT_NADP_TCOSA_error
+ *z_PDH_VARIANT_NADP_TCOSA_error
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.768 1/h and minimal OptSubMDF of 29.013703466513988 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 2.0
+  Affected reactions:
+ *z_PDH_VARIANT_NADP_TCOSA_error
+ *z_ICDHyr_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.718 1/h and minimal OptSubMDF of 29.013703466513988 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 2.0
+  Affected reactions:
+ *z_MTHFR2_VARIANT_NADP_TCOSA_error
+ *z_G6PDH2r_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.668 1/h and minimal OptSubMDF of 29.013703466513967 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 1.0
+  Affected reactions:
+ *z_G6PDH2r_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.618 1/h and minimal OptSubMDF of 29.01370346651396 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.568 1/h and minimal OptSubMDF of 29.013703466513956 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.518 1/h and minimal OptSubMDF of 29.013703466513967 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.468 1/h and minimal OptSubMDF of 29.013703466513988 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.418 1/h and minimal OptSubMDF of 29.013703466513988 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.368 1/h and minimal OptSubMDF of 29.013703466513988 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.318 1/h and minimal OptSubMDF of 29.013703466513913 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.268 1/h and minimal OptSubMDF of 29.013703466513913 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.218 1/h and minimal OptSubMDF of 29.013703466513988 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.168 1/h and minimal OptSubMDF of 29.013703466513988 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.118 1/h and minimal OptSubMDF of 29.013703466513988 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.068 1/h and minimal OptSubMDF of 29.013703466513988 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.05 1/h and minimal OptSubMDF of 29.013703466513988 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.03 1/h and minimal OptSubMDF of 29.013703466513988 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+
+===OPTIMIZATION TARGET: OptMDF===
+@ µ of 0.868 1/h and minimal OptMDF of 7.829966432699902 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 6.0
+  Affected reactions:
+ *z_PDH_VARIANT_NADP_TCOSA_error
+ *z_HACD6_FWD_VARIANT_NADP_TCOSA_error
+ *z_HACD4_FWD_VARIANT_NADP_TCOSA_error
+ *z_HACD1_FWD_VARIANT_NADP_TCOSA_error
+ *z_HACD2_FWD_VARIANT_NADP_TCOSA_error
+ *z_MTHFD_FWD_VARIANT_NAD_TCOSA_error
+@ µ of 0.818 1/h and minimal OptMDF of 7.96554142656144 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.768 1/h and minimal OptMDF of 7.965541426561442 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.718 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.668 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.618 1/h and minimal OptMDF of 7.9655414265614395 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.568 1/h and minimal OptMDF of 7.9655414265614395 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.518 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.468 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.418 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.368 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.318 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.268 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.218 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.168 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.118 1/h and minimal OptMDF of 7.96554142656144 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.068 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.05 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+@ µ of 0.03 1/h and minimal OptMDF of 7.965541426561437 kJ/mol:
+  Minimal number of NADX/Y changes compared to in vivo distribution is 0.0
+

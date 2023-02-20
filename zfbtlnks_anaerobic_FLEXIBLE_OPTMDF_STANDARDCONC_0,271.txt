@@ -1,0 +1,97 @@
+===BOTTLENECK REPORT===
+>Number of bottleneck reactions: 12
+>Original OptMDF: 7.549449356751511 kJ/mol
+>Bottleneck reaction no. 1:
+ *ID: PFK_3
+ *ΔG'°: -15.4009 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.8104 kJ/mol
+ *Reaction string: atp_c + s7p_c --> adp_c + h_c + s17bp_c
+>Bottleneck reaction no. 2:
+ *ID: GLU5K
+ *ΔG'°: 30.0435 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.8475 kJ/mol
+ *Reaction string: atp_c + glu__L_c --> adp_c + glu5p_c
+>Bottleneck reaction no. 3:
+ *ID: ENO_FWD
+ *ΔG'°: -3.9596 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.9655 kJ/mol
+ *Reaction string: 2pg_c --> h2o_c + pep_c
+>Bottleneck reaction no. 4:
+ *ID: PGI_FWD
+ *ΔG'°: 7.1056 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.83 kJ/mol
+ *Reaction string: g6p_c --> f6p_c
+>Bottleneck reaction no. 5:
+ *ID: PGK_REV
+ *ΔG'°: -19.2277 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.9655 kJ/mol
+ *Reaction string: 13dpg_c + adp_c --> 3pg_c + atp_c
+>Bottleneck reaction no. 6:
+ *ID: TALA_REV
+ *ΔG'°: -3.4198 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.83 kJ/mol
+ *Reaction string: e4p_c + f6p_c --> g3p_c + s7p_c
+>Bottleneck reaction no. 7:
+ *ID: FBA3_FWD
+ *ΔG'°: 20.8801 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.83 kJ/mol
+ *Reaction string: s17bp_c --> dhap_c + e4p_c
+>Bottleneck reaction no. 8:
+ *ID: PGM_REV
+ *ΔG'°: 4.1261 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.9655 kJ/mol
+ *Reaction string: 3pg_c --> 2pg_c
+>Bottleneck reaction no. 9:
+ *ID: TPI_FWD
+ *ΔG'°: 5.706 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.9655 kJ/mol
+ *Reaction string: dhap_c --> g3p_c
+>Bottleneck reaction no. 10:
+ *ID: HACD6_REV_ORIGINAL_NAD_TCOSA
+ *ΔG'°: 15.7911 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.83 kJ/mol
+ *Reaction string: 3htdcoa_c + nad_tcosa_c --> 3otdcoa_c + h_c + nadh_tcosa_c
+>Bottleneck reaction no. 11:
+ *ID: ASAD_REV_ORIGINAL_NADP_TCOSA
+ *ΔG'°: 24.316 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.83 kJ/mol
+ *Reaction string: 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+>Bottleneck reaction no. 12:
+ *ID: GAPD_FWD_ORIGINAL_NAD_TCOSA
+ *ΔG'°: 0.2816 kJ/mol
+ *Reached OptMDF without this bottleneck: 7.9655 kJ/mol
+ *Reaction string: g3p_c + nad_tcosa_c + pi_c --> 13dpg_c + h_c + nadh_tcosa_c
+>Reaction-connecting metabolites:
+ *Metabolite no. 1: atp_c
+  in reactions: PFK_3, GLU5K, PGK_REV
+ *Metabolite no. 2: s7p_c
+  in reactions: PFK_3, TALA_REV
+ *Metabolite no. 3: adp_c
+  in reactions: PFK_3, GLU5K, PGK_REV
+ *Metabolite no. 4: h_c
+  in reactions: PFK_3, HACD6_REV_ORIGINAL_NAD_TCOSA, ASAD_REV_ORIGINAL_NADP_TCOSA, GAPD_FWD_ORIGINAL_NAD_TCOSA
+ *Metabolite no. 5: s17bp_c
+  in reactions: PFK_3, FBA3_FWD
+ *Metabolite no. 6: 2pg_c
+  in reactions: ENO_FWD, PGM_REV
+ *Metabolite no. 7: f6p_c
+  in reactions: PGI_FWD, TALA_REV
+ *Metabolite no. 8: 13dpg_c
+  in reactions: PGK_REV, GAPD_FWD_ORIGINAL_NAD_TCOSA
+ *Metabolite no. 9: 3pg_c
+  in reactions: PGK_REV, PGM_REV
+ *Metabolite no. 10: e4p_c
+  in reactions: TALA_REV, FBA3_FWD
+ *Metabolite no. 11: g3p_c
+  in reactions: TALA_REV, TPI_FWD, GAPD_FWD_ORIGINAL_NAD_TCOSA
+ *Metabolite no. 12: dhap_c
+  in reactions: FBA3_FWD, TPI_FWD
+ *Metabolite no. 13: nad_tcosa_c
+  in reactions: HACD6_REV_ORIGINAL_NAD_TCOSA, GAPD_FWD_ORIGINAL_NAD_TCOSA
+ *Metabolite no. 14: nadh_tcosa_c
+  in reactions: HACD6_REV_ORIGINAL_NAD_TCOSA, GAPD_FWD_ORIGINAL_NAD_TCOSA
+ *Metabolite no. 15: pi_c
+  in reactions: ASAD_REV_ORIGINAL_NADP_TCOSA, GAPD_FWD_ORIGINAL_NAD_TCOSA
+>Metabolite-connected reaction clusters:
+*Cluster no. 1:
+ ASAD_REV_ORIGINAL_NADP_TCOSA, ENO_FWD, FBA3_FWD, GAPD_FWD_ORIGINAL_NAD_TCOSA, GLU5K, HACD6_REV_ORIGINAL_NAD_TCOSA, PFK_3, PGI_FWD, PGK_REV, PGM_REV, TALA_REV, TPI_FWD
