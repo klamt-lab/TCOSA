@@ -109,7 +109,7 @@ def cosa_single_swap_analysis(anaerobic: bool):
             swap_results[reaction.id] = {}
 
             for growth_rate_str in growth_rates:
-                growth_rate = optmdf_json[growth_rate_str]["values"][biomass_reaction_id] - 1e-6
+                growth_rate = float(growth_rate_str.replace(",", "."))
 
                 if (not anaerobic) and (growth_rate < 0.4):
                     continue
