@@ -114,8 +114,8 @@ for mode in ("GREATER_THAN", "LOWER_THAN"):
             id_optmdf_at_one = list(set(make_base(id_optmdf_at_one)))
             id_optsubmdf_at_one = list(set(make_base(id_optsubmdf_at_one)))
 
-            print(f"OptMDF at all (n={len(id_optmdf_at_all)}): {id_optmdf_at_all}")
-            print(f"OptSubMDF at all (n={len(id_optsubmdf_at_all)}): {id_optsubmdf_at_all}")
+            # print(f"OptMDF at all (n={len(id_optmdf_at_all)}): {id_optmdf_at_all}")
+            # print(f"OptSubMDF at all (n={len(id_optsubmdf_at_all)}): {id_optsubmdf_at_all}")
             print(f"OptMDF at >= 1 (n={len(id_optmdf_at_one)}): {id_optmdf_at_one}")
             print(f"OptSubMDF at >= 1 (n={len(id_optsubmdf_at_one)}): {id_optsubmdf_at_one}")
 

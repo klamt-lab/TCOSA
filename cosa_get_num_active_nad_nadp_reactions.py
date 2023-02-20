@@ -31,7 +31,15 @@ for json_path in json_paths:
             flux = results[growth_rate]["values"][reaction_id]
             if flux > 1e-6:
                 if reaction_id not in active_reactions:
-                    active_reactions.append(reaction_id)
+                    active_reactions.append(
+                        reaction_id
+                            .replace("_ORIGINAL_NADP_TCOSA", "")
+                            .replace("_ORIGINAL_NAD_TCOSA", "")
+                            .replace("_VARIANT_NAD_TCOSA", "")
+                            .replace("_VARIANT_NADP_TCOSA", "")
+                            .replace("_FWD", "")
+                            .replace("_REV", "")
+                    )
 print(active_reactions)
 active_reactions = list(set(active_reactions))
 print(f"Num  active reactions:", len(active_reactions))
