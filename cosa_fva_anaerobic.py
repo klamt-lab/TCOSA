@@ -2,7 +2,6 @@ from cosa_fva import cosa_single_swap_test
 import ray
 ray.init(log_to_driver=False)
 
-"""
 cosa_single_swap_test(
     anaerobic=True,
     reac_id="TEST_0_371",
@@ -49,30 +48,5 @@ cosa_single_swap_test(
     anaerobic=True,
     reac_id="TEST_0_05",
     mu=0.05,
-    base_nadx_scenario="WILDTYPE"
-)
-"""
-cosa_single_swap_test(
-    anaerobic=False,
-    reac_id="TEST_0_168",
-    mu=0.168,
-    base_nadx_scenario="WILDTYPE"
-)
-cosa_single_swap_test(
-    anaerobic=False,
-    reac_id="TEST_0_118",
-    mu=0.118,
-    base_nadx_scenario="WILDTYPE"
-)
-cosa_single_swap_test(
-    anaerobic=False,
-    reac_id="TEST_0_068",
-    mu=0.068,
-    base_nadx_scenario="WILDTYPE"
-)
-cosa_single_swap_test(
-    anaerobic=False,
-    reac_id="TEST_0_050",
-    mu=0.050,
     base_nadx_scenario="WILDTYPE"
 )

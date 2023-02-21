@@ -187,7 +187,7 @@ def cosa_ratio_ratio_test(anaerobic: bool, expanded: bool, growth_epsilon: float
         plt.close()
 
 
-def cosa_create_full_ratio_ratio_test_figure():
+def cosa_create_full_ratio_ratio_test_figure_two_panels():
     ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic/ratio_ratio_test_data.json")
     ratio_ratio_test_data_anaerobic = json_load("cosa/results_anaerobic/ratio_ratio_test_data.json")
     concentrations = ("STANDARDCONC", "VIVOCONC")
@@ -251,18 +251,109 @@ def cosa_create_full_ratio_ratio_test_figure():
                     axs[axs_index].set_ylim(-.2, max(max_ratios[::-1])+.2)
                 axs[axs_index].set_xlabel("Growth rate [1/h]")
                 axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=13)
-                # axs[axs_index].set_ylabel(r"$\frac{[NADH]:[NAD^{+}]}{[NADPH]:[NADP^{+}]}$", fontsize=13)
-                # axs[axs_index].set_xlim(min(plotted_growth_rates), max(plotted_growth_rates))
             fig.legend(loc="upper center", ncol=2)
-            # for ax in fig.get_axes():
-            #     ax.label_outer()
-            # plt.xlabel("Growth rate [1/h]")
-            # plt.ylabel("OptSubMDF [kJ/mol]" if "OPTSUBMDF" in figurename else "OptMDF [kJ/mol]")
-            #
+
             fig.savefig(f"./cosa/full_ratio_ratio_test_figure_{target}_{concentration}.png", bbox_inches='tight', pad_inches=0.05)
             plt.close()
 
 
-cosa_ratio_ratio_test(anaerobic=False, expanded=False)
-cosa_ratio_ratio_test(anaerobic=True, expanded=False)
-cosa_create_full_ratio_ratio_test_figure()
+def get_latex_scientific_notation(x: float):
+    in_notation = str('{:.1E}'.format(x))
+    print(in_notation)
+    if "E-" in in_notation:
+        base = in_notation.split("E-")[0]
+        exponent = in_notation.split("E-")[1]
+        return r"$\mathrm{"+f"{int(float(base))} "+r" \cdot "+" 10^"+"{-"+f"{int(exponent)}"+"}"+r"}$"
+    else:
+        return "0.0"
+
+
+def cosa_create_full_ratio_ratio_test_figure_four_panels():
+    ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic/ratio_ratio_test_data.json")
+    ratio_ratio_test_data_anaerobic = json_load("cosa/results_anaerobic/ratio_ratio_test_data.json")
+    concentrations = ("STANDARDCONC", "VIVOCONC")
+    for concentration in concentrations:
+        figurenames_to_plots = {
+            ("Aerobic", "OptMDF", "A", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (0, 0),
+            ("Aerobic", "OptSubMDF", "B", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (0, 1),
+            ("Anaerobic", "OptMDF", "C", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (1, 0),
+            ("Anaerobic", "OptSubMDF", "D", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (1, 1),
+        }
+        first = True
+
+        fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(11, 6)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+        fig.tight_layout(pad=3.75)
+        for figurename_tuple in figurenames_to_plots.keys():
+            if figurename_tuple[0] == "Aerobic":
+                ratio_ratio_test_data = ratio_ratio_test_data_aerobic
+                is_aerobic = True
+            else:
+                ratio_ratio_test_data = ratio_ratio_test_data_anaerobic
+                is_aerobic = False
+
+            if first:
+                min_label = "Minimal ratio"
+                max_label = "Maximal ratio"
+                first = False
+            else:
+                min_label = None
+                max_label = None
+
+            title = f"{figurename_tuple[2]} {figurename_tuple[0]}, {figurename_tuple[1]}"
+
+            figurename = figurename_tuple[3]
+            if is_aerobic:
+                plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"][:10]
+                axs_index = figurenames_to_plots[figurename_tuple]
+                min_ratios = ratio_ratio_test_data[figurename]["min_ratios"][:10]
+                max_ratios = ratio_ratio_test_data[figurename]["max_ratios"][:10]
+            else:
+                plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"]
+                axs_index = figurenames_to_plots[figurename_tuple]
+                min_ratios = ratio_ratio_test_data[figurename]["min_ratios"]
+                max_ratios = ratio_ratio_test_data[figurename]["max_ratios"]
+            axs[axs_index].plot(
+                plotted_growth_rates[::-1], # x
+                min_ratios[::-1], # y
+                "bo",
+                label=min_label,
+                linewidth=1.0,
+            )
+            axs[axs_index].plot(
+                plotted_growth_rates[::-1], # x
+                max_ratios[::-1], # y
+                "ro",
+                label=max_label,
+                linewidth=1.0,
+            )
+            import matplotlib
+            axs[axs_index].set_title(title, loc="left", fontweight="bold")
+            if figurename_tuple[2] == "A":
+                axs[axs_index].set_ylim(-.000003, 0.00005)
+                axs[axs_index].yaxis.set_major_formatter(
+                    matplotlib.ticker.FuncFormatter(lambda x, p: '{:.0E}'.format(x))
+                )
+            elif figurename_tuple[2] == "B":
+                axs[axs_index].set_ylim(-.0000004, 0.000005)
+                axs[axs_index].yaxis.set_major_formatter(
+                    matplotlib.ticker.FuncFormatter(lambda x, p: '{:.0E}'.format(x))
+                )
+            elif figurename_tuple[2] == "C":
+                axs[axs_index].set_ylim(-.003, 0.05)
+                axs[axs_index].yaxis.set_major_formatter(
+                    matplotlib.ticker.FuncFormatter(lambda x, p: round(x, 2))
+                )
+            elif figurename_tuple[2] == "D":
+                axs[axs_index].set_ylim(-.04, 1.0)
+            axs[axs_index].set_xlabel("Growth rate [1/h]")
+            axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=13)
+        fig.legend(loc="upper center", ncol=2)
+
+        fig.savefig(f"./cosa/full_ratio_ratio_test_figure_{concentration}.png", bbox_inches='tight', pad_inches=0.05)
+        plt.close()
+
+
+# cosa_ratio_ratio_test(anaerobic=False, expanded=False)
+# cosa_ratio_ratio_test(anaerobic=True, expanded=False)
+# cosa_create_full_ratio_ratio_test_figure_two_panels()
+cosa_create_full_ratio_ratio_test_figure_four_panels()
