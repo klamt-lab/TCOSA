@@ -1,5 +1,0 @@
-===BOTTLENECK REPORT===
->Number of bottleneck reactions: 0
->Original OptMDF: 7.965541426561437 kJ/mol
->Reaction-connecting metabolites:
->Metabolite-connected reaction clusters:

@@ -79,7 +79,7 @@ for concentration_ranges in ("STANDARDCONC", "VIVOCONC"):
         anaerobic = aerobicity == "anaerobic"
         axs[axs_row].set_title(title, loc="left", fontweight="bold")
         axs[axs_row].set_xlabel("Growth rate [1/h]")
-        axs[axs_row].set_ylabel(r"MDF [kJ/mol]", fontsize=13)
+        axs[axs_row].set_ylabel(r"MDF [kJ/mol]")
         axs[axs_row].set_xlim(min(growth_rates), max(growth_rates))
         axs[axs_row].set_ylim(0.0, 30)
 
