@@ -49,6 +49,7 @@ for key1 in can_be_active.keys():
         print(key1, key2, ":")
         print(len(can_be_active[key1][key2]))
         all_active += can_be_active[key1][key2]
+print(all_active)
 all_active = list(set(all_active))
 print("ALL:", len(all_active))
 print("NADK" in all_active)

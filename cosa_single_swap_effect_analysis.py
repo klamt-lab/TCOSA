@@ -86,7 +86,7 @@ def cosa_single_swap_analysis(anaerobic: bool):
             if (reaction.id) not in dG0_values.keys():
                 continue
 
-            if (reaction.id in swap_results.keys()):
+            if (reaction.id not in swap_results.keys()):
                 continue
 
             if reaction.id.endswith("_ORIGINAL_NAD_TCOSA"):
@@ -111,7 +111,7 @@ def cosa_single_swap_analysis(anaerobic: bool):
             for growth_rate_str in growth_rates:
                 growth_rate = float(growth_rate_str.replace(",", "."))
 
-                if (not anaerobic) and (growth_rate < 0.4):
+                if (not anaerobic) and (growth_rate > 0.4):
                     continue
                 swap_results[reaction.id][growth_rate_str] = {}
 
