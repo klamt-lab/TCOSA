@@ -187,6 +187,77 @@ def cosa_ratio_ratio_test(anaerobic: bool, expanded: bool, growth_epsilon: float
         plt.close()
 
 
+def cosa_create_full_ratio_ratio_test_figure_one_panel():
+    ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic/ratio_ratio_test_data.json")
+    ratio_ratio_test_data_anaerobic = json_load("cosa/results_anaerobic/ratio_ratio_test_data.json")
+    concentrations = ("VIVOCONC",) # "STANDARDCONC",
+    for target in ("OPTMDF", "OPTSUBMDF"):
+        for concentration in concentrations:
+            figurenames_to_plots = {
+                ("aerobic", f"2C_NADH_to_NAD___to___NADPH_to_nadp_{target}_{concentration}.jpg"): 0,
+                # ("anaerobic", f"2C_NADH_to_NAD___to___NADPH_to_nadp_{target}_{concentration}.jpg"): 0,
+            }
+            first = True
+
+            fig, axs = plt.subplots(nrows=1, ncols=1, dpi=500, figsize=(7, 4)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+            fig.tight_layout(pad=3.75)
+            for figurename_tuple in figurenames_to_plots.keys():
+                if figurename_tuple[0] == "aerobic":
+                    ratio_ratio_test_data = ratio_ratio_test_data_aerobic
+                    is_aerobic = True
+                else:
+                    ratio_ratio_test_data = ratio_ratio_test_data_anaerobic
+                    is_aerobic = False
+
+                if first:
+                    min_label = "Minimal ratio"
+                    max_label = "Maximal ratio"
+                    title = ""
+                    first = False
+                else:
+                    title = ""
+                    min_label = None
+                    max_label = None
+
+                figurename = figurename_tuple[1]
+                if is_aerobic:
+                    plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"][:10]
+                    axs_index = figurenames_to_plots[figurename_tuple]
+                    min_ratios = ratio_ratio_test_data[figurename]["min_ratios"][:10]
+                    max_ratios = ratio_ratio_test_data[figurename]["max_ratios"][:10]
+                else:
+                    plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"]
+                    axs_index = figurenames_to_plots[figurename_tuple]
+                    min_ratios = ratio_ratio_test_data[figurename]["min_ratios"]
+                    max_ratios = ratio_ratio_test_data[figurename]["max_ratios"]
+                axs.plot(
+                    plotted_growth_rates[::-1], # x
+                    min_ratios[::-1], # y
+                    "bo",
+                    label=min_label,
+                    linewidth=1.0,
+                )
+                axs.plot(
+                    plotted_growth_rates[::-1], # x
+                    max_ratios[::-1], # y
+                    "ro",
+                    label=max_label,
+                    linewidth=1.0,
+                )
+                axs.set_title(title, loc="left", fontweight="bold")
+                if ((target == "OPTSUBMDF") and (figurename_tuple[0] == "aerobic")):
+                    axs.set_ylim(-.0005, 0.01)
+                else:
+                    axs.set_ylim(-.2, max(max_ratios[::-1])+.2)
+                axs.set_xlabel("Growth rate [1/h]")
+                axs.set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=13)
+                fig.legend(loc="upper center", ncol=2)
+
+                fig.savefig(f"./cosa/full_ratio_ratio_test_figure_{target}_{concentration}_{figurename_tuple[0]}.png", bbox_inches='tight', pad_inches=0.05)
+                plt.close()
+
+
+
 def cosa_create_full_ratio_ratio_test_figure_two_panels():
     ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic/ratio_ratio_test_data.json")
     ratio_ratio_test_data_anaerobic = json_load("cosa/results_anaerobic/ratio_ratio_test_data.json")
@@ -353,7 +424,8 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
         plt.close()
 
 
-# cosa_ratio_ratio_test(anaerobic=False, expanded=False)
-# cosa_ratio_ratio_test(anaerobic=True, expanded=False)
-# cosa_create_full_ratio_ratio_test_figure_two_panels()
+cosa_ratio_ratio_test(anaerobic=False, expanded=False)
+cosa_ratio_ratio_test(anaerobic=True, expanded=False)
+cosa_create_full_ratio_ratio_test_figure_one_panel()
+cosa_create_full_ratio_ratio_test_figure_two_panels()
 cosa_create_full_ratio_ratio_test_figure_four_panels()

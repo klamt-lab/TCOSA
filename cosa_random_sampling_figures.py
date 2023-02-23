@@ -63,7 +63,7 @@ def create_cosa_figures(data_path: str, figures_path: str, anaerobic: bool) -> N
             if header == growth_rate_id:
                 continue
             elif header == best_id:
-                label = "Flexible (theoretical maximum)"
+                label = "Flexible specificity"
                 linestyle = "--"
                 color = "yellowgreen"
                 linewidth = 2.0
