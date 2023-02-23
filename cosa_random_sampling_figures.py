@@ -19,9 +19,9 @@ def create_cosa_figures(data_path: str, figures_path: str, anaerobic: bool) -> N
 
     table_paths = [
         f"{data_path}optmdf_table_STANDARDCONC.csv",
-        # f"{data_path}optmdf_table_VIVOCONC.csv",
+        f"{data_path}optmdf_table_VIVOCONC.csv",
         f"{data_path}optsubmdf_table_STANDARDCONC.csv",
-        # f"{data_path}optsubmdf_table_VIVOCONC.csv",
+        f"{data_path}optsubmdf_table_VIVOCONC.csv",
     ]
     for table_path in table_paths:
         table = pandas.read_csv(
@@ -96,7 +96,7 @@ def create_cosa_figures(data_path: str, figures_path: str, anaerobic: bool) -> N
                 linewidth=linewidth,
             )
         plt.legend(loc="lower left")
-        plt.title(title+titleaddition)
+        plt.title("")  # title+titleaddition
         plt.xlabel("Growth rate [1/h]")
         plt.ylabel(ylabel)
         plt.xlim(min(growth_rates), max(growth_rates))

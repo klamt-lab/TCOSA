@@ -26,13 +26,16 @@ for file in get_files("cosa"):
             lb = element[1] if element[1] != float("NaN") else 0
             ub = element[2] if element[2] != float("NaN") else 0
 
-            if lb < 1e-9:
+            if lb < 1e-7:
                 lb = 0
-            if ub < 1e-9:
+            if ub < 1e-7:
                 ub = 0
 
             if (lb <= 0.0) and (ub <= 0.0):
                 continue
+
+            # if (lb <= 0.0):
+            #     continue
 
             base_id = name.replace("_ORIGINAL_NADP_TCOSA", "")\
                     .replace("_ORIGINAL_NAD_TCOSA", "")\
