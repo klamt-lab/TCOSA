@@ -426,6 +426,6 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
 
 cosa_ratio_ratio_test(anaerobic=False, expanded=False)
 cosa_ratio_ratio_test(anaerobic=True, expanded=False)
-cosa_create_full_ratio_ratio_test_figure_one_panel()
-cosa_create_full_ratio_ratio_test_figure_two_panels()
+# cosa_create_full_ratio_ratio_test_figure_one_panel()
+# cosa_create_full_ratio_ratio_test_figure_two_panels()
 cosa_create_full_ratio_ratio_test_figure_four_panels()

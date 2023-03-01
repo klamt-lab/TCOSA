@@ -63,5 +63,4 @@ print("nad_to_nadh",   round(mean(nad_to_nadh), 3),   round(median(nad_to_nadh),
 print("nadh_to_nad",   round(mean(nadh_to_nad), 3),   round(median(nadh_to_nad), 3), len(nadh_to_nad))
 print("nadp_to_nadph", round(mean(nadp_to_nadph), 3), round(median(nadp_to_nadph), 3), len(nadp_to_nadph))
 print("nadph_to_nadp", round(mean(nadph_to_nadp), 3), round(median(nadph_to_nadp), 3), len(nadph_to_nadp))
-print("num_with_nad_or_nadp",
-        num_with_nad_or_nadp)
+print("num_with_nad_or_nadp", num_with_nad_or_nadp)

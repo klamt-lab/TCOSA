@@ -9,22 +9,25 @@
 
 # Create an irreversible and cleaned-up version of iML which
 # will be later converted to a TCOSA model.
-# import model_create_irreversible_cleaned_iML
+import model_create_irreversible_cleaned_iML
 
-# Calculate the ΔG° values using the eQuilibrator
-# import model_get_iML_dG0_data
+# Calculate the ΔG'° values using the eQuilibrator
+import model_get_iML_dG0_data
+
+# Get ΔG'° statistics (these are implicitly used later already)
+import cosa_dG0_TCOSA_reaction_statistics
 
 # Transform the concentration data form Bennett et al., 2009
 # into a machine-readable format.
-# import model_in_vivo_concentration_data_setup
+import model_in_vivo_concentration_data_setup
 
 # Create the actual TCOSA models, including iML1515_TCOSA.
-# import cosa_create_model_and_data
+import cosa_create_model_and_data
 
 # Perform the random sampling where the in vivo distribution
 # is compared with random distributions. Here, the CSV tables
 # and the figures for this analysis are also generated.
-# import cosa_random_sampling
+import cosa_random_sampling
 
 # Run the ratio range variability analysis and generate its figures.
 # import cosa_ratio_test
@@ -46,6 +49,7 @@ import cosa_create_extended_model_figure
 import cosa_single_swap_effect_analysis_aerobic
 import cosa_single_swap_effect_analysis_anaerobic
 
-# Create CNApy scenarios out of calculated flux distributions, as visualized
-# with CNApy in the TCOSA publication.
-# import cosa_create_cnapy_scenarios
+# Thermodynamic Flux Variability Analyses to find out minimal and maximal active reactions
+import cosa_fva_aerobic
+import cosa_fva_anaerobic
+import cosa_fva_statistics
