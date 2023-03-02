@@ -1,0 +1,1135 @@
+ @ µ [1/h] of 0.868 and min OPTSUBMDF of 13.312630553914166 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IMPD_ORIGINAL_NAD_TCOSA | 16.755 kJ/mol | h2o_c + imp_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xmp_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* THRD_ORIGINAL_NAD_TCOSA | 22.302 kJ/mol | nad_tcosa_c + thr__L_c --> 2aobut_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* DMPPS_ORIGINAL_NAD_TCOSA | -62.981 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> dmpp_c + h2o_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* TRDR_ORIGINAL_NADP_TCOSA | -7.448 kJ/mol | h_c + nadph_tcosa_c + trdox_c --> nadp_tcosa_c + trdrd_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* AKGDH_ORIGINAL_NAD_TCOSA | -29.763 kJ/mol | akg_c + coa_c + nad_tcosa_c --> co2_c + nadh_tcosa_c + succoa_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* GND_ORIGINAL_NADP_TCOSA | 10.192 kJ/mol | 6pgc_c + nadp_tcosa_c --> co2_c + nadph_tcosa_c + ru5p__D_c
+* PDH_ORIGINAL_NAD_TCOSA | -34.367 kJ/mol | coa_c + nad_tcosa_c + pyr_c --> accoa_c + co2_c + nadh_tcosa_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* PGCD_ORIGINAL_NAD_TCOSA | 30.479 kJ/mol | 3pg_c + nad_tcosa_c --> 3php_c + h_c + nadh_tcosa_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* NADH16pp_ORIGINAL_NAD_TCOSA | -79.954 kJ/mol | 4.0 h_c + nadh_tcosa_c + q8_c --> 3.0 h_p + nad_tcosa_c + q8h2_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* OPHHXy_ORIGINAL_NADP_TCOSA | -439.434 kJ/mol | 2oph_c + h_c + nadph_tcosa_c + o2_c --> 2ohph_c + h2o_c + nadp_tcosa_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* MDH_FWD_ORIGINAL_NAD_TCOSA | 26.564 kJ/mol | mal__L_c + nad_tcosa_c --> h_c + nadh_tcosa_c + oaa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* HACD6_FWD_ORIGINAL_NAD_TCOSA | -15.791 kJ/mol | 3otdcoa_c + h_c + nadh_tcosa_c --> 3htdcoa_c + nad_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* HACD4_FWD_ORIGINAL_NAD_TCOSA | -15.791 kJ/mol | 3odcoa_c + h_c + nadh_tcosa_c --> 3hdcoa_c + nad_tcosa_c
+* HACD5_FWD_ORIGINAL_NAD_TCOSA | -15.791 kJ/mol | 3oddcoa_c + h_c + nadh_tcosa_c --> 3hddcoa_c + nad_tcosa_c
+* HACD7_FWD_ORIGINAL_NAD_TCOSA | -15.791 kJ/mol | 3ohdcoa_c + h_c + nadh_tcosa_c --> 3hhdcoa_c + nad_tcosa_c
+* G3PD2_REV_ORIGINAL_NADP_TCOSA | -22.375 kJ/mol | dhap_c + h_c + nadph_tcosa_c --> glyc3p_c + nadp_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* GAPD_FWD_ORIGINAL_NAD_TCOSA | 0.282 kJ/mol | g3p_c + nad_tcosa_c + pi_c --> 13dpg_c + h_c + nadh_tcosa_c
+* G6PDH2r_FWD_ORIGINAL_NADP_TCOSA | -7.017 kJ/mol | g6p_c + nadp_tcosa_c --> 6pgl_c + h_c + nadph_tcosa_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* HACD1_FWD_ORIGINAL_NAD_TCOSA | -13.065 kJ/mol | aacoa_c + h_c + nadh_tcosa_c --> 3hbcoa_c + nad_tcosa_c
+* HACD2_FWD_ORIGINAL_NAD_TCOSA | -15.61 kJ/mol | 3ohcoa_c + h_c + nadh_tcosa_c --> 3hhcoa_c + nad_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* HACD3_FWD_ORIGINAL_NAD_TCOSA | -15.791 kJ/mol | 3oocoa_c + h_c + nadh_tcosa_c --> 3hocoa_c + nad_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 13.312630553914166
+Minimal sum of active reactions: 56
+ @ µ [1/h] of 0.818 and min OPTSUBMDF of 23.495447971641013 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IMPD_ORIGINAL_NAD_TCOSA | 16.755 kJ/mol | h2o_c + imp_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xmp_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* ALDD2y_ORIGINAL_NADP_TCOSA | -55.941 kJ/mol | acald_c + h2o_c + nadp_tcosa_c --> ac_c + 2.0 h_c + nadph_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* AKGDH_ORIGINAL_NAD_TCOSA | -29.763 kJ/mol | akg_c + coa_c + nad_tcosa_c --> co2_c + nadh_tcosa_c + succoa_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* ME2_ORIGINAL_NADP_TCOSA | 11.485 kJ/mol | mal__L_c + nadp_tcosa_c --> co2_c + nadph_tcosa_c + pyr_c
+* PDH_ORIGINAL_NAD_TCOSA | -34.367 kJ/mol | coa_c + nad_tcosa_c + pyr_c --> accoa_c + co2_c + nadh_tcosa_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR160y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tpalm2eACP_c --> nadp_tcosa_c + palmACP_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* NADH16pp_ORIGINAL_NAD_TCOSA | -79.954 kJ/mol | 4.0 h_c + nadh_tcosa_c + q8_c --> 3.0 h_p + nad_tcosa_c + q8h2_c
+* OPHHX3_ORIGINAL_NAD_TCOSA | -47.343 kJ/mol | 2oph_c + 2.0 atp_c + 3.0 h2o_c + nad_tcosa_c --> 2ohph_c + 2.0 adp_c + 3.0 h_c + nadh_tcosa_c + 2.0 pi_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* GAPD_FWD_ORIGINAL_NAD_TCOSA | 0.282 kJ/mol | g3p_c + nad_tcosa_c + pi_c --> 13dpg_c + h_c + nadh_tcosa_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* MTHFD_REV_ORIGINAL_NADP_TCOSA | -5.119 kJ/mol | methf_c + nadph_tcosa_c --> mlthf_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR160_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3opalmACP_c + h_c + nadph_tcosa_c --> 3hpalmACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 23.495447971641013
+Minimal sum of active reactions: 60
+ @ µ [1/h] of 0.768 and min OPTSUBMDF of 26.803438480712103 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* SSALy_ORIGINAL_NADP_TCOSA | -42.779 kJ/mol | h2o_c + nadp_tcosa_c + sucsal_c --> 2.0 h_c + nadph_tcosa_c + succ_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* HXAND_ORIGINAL_NAD_TCOSA | 15.437 kJ/mol | h2o_c + hxan_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xan_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR160y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tpalm2eACP_c --> nadp_tcosa_c + palmACP_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* NADH16pp_ORIGINAL_NAD_TCOSA | -79.954 kJ/mol | 4.0 h_c + nadh_tcosa_c + q8_c --> 3.0 h_p + nad_tcosa_c + q8h2_c
+* OPHHX3_ORIGINAL_NAD_TCOSA | -47.343 kJ/mol | 2oph_c + 2.0 atp_c + 3.0 h2o_c + nad_tcosa_c --> 2ohph_c + 2.0 adp_c + 3.0 h_c + nadh_tcosa_c + 2.0 pi_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* ACALD_FWD_ORIGINAL_NAD_TCOSA | -21.177 kJ/mol | acald_c + coa_c + nad_tcosa_c --> accoa_c + h_c + nadh_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* GAPD_FWD_ORIGINAL_NAD_TCOSA | 0.282 kJ/mol | g3p_c + nad_tcosa_c + pi_c --> 13dpg_c + h_c + nadh_tcosa_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* MTHFD_REV_ORIGINAL_NADP_TCOSA | -5.119 kJ/mol | methf_c + nadph_tcosa_c --> mlthf_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR160_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3opalmACP_c + h_c + nadph_tcosa_c --> 3hpalmACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 26.803438480712103
+Minimal sum of active reactions: 58
+ @ µ [1/h] of 0.718 and min OPTSUBMDF of 28.73877298866283 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IMPD_ORIGINAL_NAD_TCOSA | 16.755 kJ/mol | h2o_c + imp_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xmp_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* ALDD2y_ORIGINAL_NADP_TCOSA | -55.941 kJ/mol | acald_c + h2o_c + nadp_tcosa_c --> ac_c + 2.0 h_c + nadph_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* AKGDH_ORIGINAL_NAD_TCOSA | -29.763 kJ/mol | akg_c + coa_c + nad_tcosa_c --> co2_c + nadh_tcosa_c + succoa_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* SSALy_ORIGINAL_NADP_TCOSA | -42.779 kJ/mol | h2o_c + nadp_tcosa_c + sucsal_c --> 2.0 h_c + nadph_tcosa_c + succ_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR161y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + t3c9palmeACP_c --> hdeACP_c + nadp_tcosa_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* 3OAR161_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ocpalm9eACP_c + h_c + nadph_tcosa_c --> 3hcpalm9eACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* NADH16pp_ORIGINAL_NAD_TCOSA | -79.954 kJ/mol | 4.0 h_c + nadh_tcosa_c + q8_c --> 3.0 h_p + nad_tcosa_c + q8h2_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* OPHHXy_ORIGINAL_NADP_TCOSA | -439.434 kJ/mol | 2oph_c + h_c + nadph_tcosa_c + o2_c --> 2ohph_c + h2o_c + nadp_tcosa_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* GAPD_FWD_ORIGINAL_NAD_TCOSA | 0.282 kJ/mol | g3p_c + nad_tcosa_c + pi_c --> 13dpg_c + h_c + nadh_tcosa_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 28.73877298866283
+Minimal sum of active reactions: 59
+ @ µ [1/h] of 0.668 and min OPTSUBMDF of 28.738772988745456 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IMPD_ORIGINAL_NAD_TCOSA | 16.755 kJ/mol | h2o_c + imp_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xmp_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* DMPPS_ORIGINAL_NAD_TCOSA | -62.981 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> dmpp_c + h2o_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* TRDR_ORIGINAL_NADP_TCOSA | -7.448 kJ/mol | h_c + nadph_tcosa_c + trdox_c --> nadp_tcosa_c + trdrd_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* SSALy_ORIGINAL_NADP_TCOSA | -42.779 kJ/mol | h2o_c + nadp_tcosa_c + sucsal_c --> 2.0 h_c + nadph_tcosa_c + succ_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR160y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tpalm2eACP_c --> nadp_tcosa_c + palmACP_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* NADH16pp_ORIGINAL_NAD_TCOSA | -79.954 kJ/mol | 4.0 h_c + nadh_tcosa_c + q8_c --> 3.0 h_p + nad_tcosa_c + q8h2_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* OPHHXy_ORIGINAL_NADP_TCOSA | -439.434 kJ/mol | 2oph_c + h_c + nadph_tcosa_c + o2_c --> 2ohph_c + h2o_c + nadp_tcosa_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* G3PD2_REV_ORIGINAL_NADP_TCOSA | -22.375 kJ/mol | dhap_c + h_c + nadph_tcosa_c --> glyc3p_c + nadp_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* GAPD_FWD_ORIGINAL_NAD_TCOSA | 0.282 kJ/mol | g3p_c + nad_tcosa_c + pi_c --> 13dpg_c + h_c + nadh_tcosa_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* MTHFD_REV_ORIGINAL_NADP_TCOSA | -5.119 kJ/mol | methf_c + nadph_tcosa_c --> mlthf_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR160_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3opalmACP_c + h_c + nadph_tcosa_c --> 3hpalmACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 28.738772988745456
+Minimal sum of active reactions: 57
+ @ µ [1/h] of 0.618 and min OPTSUBMDF of 29.012703466513745 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* ALDD2y_ORIGINAL_NADP_TCOSA | -55.941 kJ/mol | acald_c + h2o_c + nadp_tcosa_c --> ac_c + 2.0 h_c + nadph_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* AKGDH_ORIGINAL_NAD_TCOSA | -29.763 kJ/mol | akg_c + coa_c + nad_tcosa_c --> co2_c + nadh_tcosa_c + succoa_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* SSALy_ORIGINAL_NADP_TCOSA | -42.779 kJ/mol | h2o_c + nadp_tcosa_c + sucsal_c --> 2.0 h_c + nadph_tcosa_c + succ_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* HXAND_ORIGINAL_NAD_TCOSA | 15.437 kJ/mol | h2o_c + hxan_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xan_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR160y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tpalm2eACP_c --> nadp_tcosa_c + palmACP_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* NADH16pp_ORIGINAL_NAD_TCOSA | -79.954 kJ/mol | 4.0 h_c + nadh_tcosa_c + q8_c --> 3.0 h_p + nad_tcosa_c + q8h2_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* OPHHXy_ORIGINAL_NADP_TCOSA | -439.434 kJ/mol | 2oph_c + h_c + nadph_tcosa_c + o2_c --> 2ohph_c + h2o_c + nadp_tcosa_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* G3PD2_REV_ORIGINAL_NADP_TCOSA | -22.375 kJ/mol | dhap_c + h_c + nadph_tcosa_c --> glyc3p_c + nadp_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR160_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3opalmACP_c + h_c + nadph_tcosa_c --> 3hpalmACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513745
+Minimal sum of active reactions: 58
+ @ µ [1/h] of 0.568 and min OPTSUBMDF of 29.012703466513678 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IMPD_ORIGINAL_NAD_TCOSA | 16.755 kJ/mol | h2o_c + imp_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xmp_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* SSALy_ORIGINAL_NADP_TCOSA | -42.779 kJ/mol | h2o_c + nadp_tcosa_c + sucsal_c --> 2.0 h_c + nadph_tcosa_c + succ_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR160y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tpalm2eACP_c --> nadp_tcosa_c + palmACP_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* NADH16pp_ORIGINAL_NAD_TCOSA | -79.954 kJ/mol | 4.0 h_c + nadh_tcosa_c + q8_c --> 3.0 h_p + nad_tcosa_c + q8h2_c
+* OPHHX3_ORIGINAL_NAD_TCOSA | -47.343 kJ/mol | 2oph_c + 2.0 atp_c + 3.0 h2o_c + nad_tcosa_c --> 2ohph_c + 2.0 adp_c + 3.0 h_c + nadh_tcosa_c + 2.0 pi_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* ACALD_FWD_ORIGINAL_NAD_TCOSA | -21.177 kJ/mol | acald_c + coa_c + nad_tcosa_c --> accoa_c + h_c + nadh_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR160_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3opalmACP_c + h_c + nadph_tcosa_c --> 3hpalmACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513678
+Minimal sum of active reactions: 57
+ @ µ [1/h] of 0.518 and min OPTSUBMDF of 29.012703466513745 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IMPD_ORIGINAL_NAD_TCOSA | 16.755 kJ/mol | h2o_c + imp_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xmp_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* SSALy_ORIGINAL_NADP_TCOSA | -42.779 kJ/mol | h2o_c + nadp_tcosa_c + sucsal_c --> 2.0 h_c + nadph_tcosa_c + succ_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR161y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + t3c9palmeACP_c --> hdeACP_c + nadp_tcosa_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* 3OAR161_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ocpalm9eACP_c + h_c + nadph_tcosa_c --> 3hcpalm9eACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* OPHHX3_ORIGINAL_NAD_TCOSA | -47.343 kJ/mol | 2oph_c + 2.0 atp_c + 3.0 h2o_c + nad_tcosa_c --> 2ohph_c + 2.0 adp_c + 3.0 h_c + nadh_tcosa_c + 2.0 pi_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513745
+Minimal sum of active reactions: 55
+ @ µ [1/h] of 0.468 and min OPTSUBMDF of 29.012703466513678 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* ME2_ORIGINAL_NADP_TCOSA | 11.485 kJ/mol | mal__L_c + nadp_tcosa_c --> co2_c + nadph_tcosa_c + pyr_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* HXAND_ORIGINAL_NAD_TCOSA | 15.437 kJ/mol | h2o_c + hxan_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xan_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR161y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + t3c9palmeACP_c --> hdeACP_c + nadp_tcosa_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* 3OAR161_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ocpalm9eACP_c + h_c + nadph_tcosa_c --> 3hcpalm9eACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* OPHHXy_ORIGINAL_NADP_TCOSA | -439.434 kJ/mol | 2oph_c + h_c + nadph_tcosa_c + o2_c --> 2ohph_c + h2o_c + nadp_tcosa_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513678
+Minimal sum of active reactions: 55
+ @ µ [1/h] of 0.418 and min OPTSUBMDF of 29.012703466513745 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* ME2_ORIGINAL_NADP_TCOSA | 11.485 kJ/mol | mal__L_c + nadp_tcosa_c --> co2_c + nadph_tcosa_c + pyr_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* HXAND_ORIGINAL_NAD_TCOSA | 15.437 kJ/mol | h2o_c + hxan_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xan_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR160y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tpalm2eACP_c --> nadp_tcosa_c + palmACP_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* OPHHXy_ORIGINAL_NADP_TCOSA | -439.434 kJ/mol | 2oph_c + h_c + nadph_tcosa_c + o2_c --> 2ohph_c + h2o_c + nadp_tcosa_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR160_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3opalmACP_c + h_c + nadph_tcosa_c --> 3hpalmACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513745
+Minimal sum of active reactions: 55
+ @ µ [1/h] of 0.368 and min OPTSUBMDF of 29.012703466513678 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* DMPPS_ORIGINAL_NAD_TCOSA | -62.981 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> dmpp_c + h2o_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* ME2_ORIGINAL_NADP_TCOSA | 11.485 kJ/mol | mal__L_c + nadp_tcosa_c --> co2_c + nadph_tcosa_c + pyr_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* HXAND_ORIGINAL_NAD_TCOSA | 15.437 kJ/mol | h2o_c + hxan_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xan_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR160y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tpalm2eACP_c --> nadp_tcosa_c + palmACP_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* OPHHX3_ORIGINAL_NAD_TCOSA | -47.343 kJ/mol | 2oph_c + 2.0 atp_c + 3.0 h2o_c + nad_tcosa_c --> 2ohph_c + 2.0 adp_c + 3.0 h_c + nadh_tcosa_c + 2.0 pi_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR160_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3opalmACP_c + h_c + nadph_tcosa_c --> 3hpalmACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513678
+Minimal sum of active reactions: 55
+ @ µ [1/h] of 0.318 and min OPTSUBMDF of 29.012703466513678 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* DMPPS_ORIGINAL_NAD_TCOSA | -62.981 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> dmpp_c + h2o_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* ME2_ORIGINAL_NADP_TCOSA | 11.485 kJ/mol | mal__L_c + nadp_tcosa_c --> co2_c + nadph_tcosa_c + pyr_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* HXAND_ORIGINAL_NAD_TCOSA | 15.437 kJ/mol | h2o_c + hxan_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xan_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR160y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tpalm2eACP_c --> nadp_tcosa_c + palmACP_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* OPHHX3_ORIGINAL_NAD_TCOSA | -47.343 kJ/mol | 2oph_c + 2.0 atp_c + 3.0 h2o_c + nad_tcosa_c --> 2ohph_c + 2.0 adp_c + 3.0 h_c + nadh_tcosa_c + 2.0 pi_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR160_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3opalmACP_c + h_c + nadph_tcosa_c --> 3hpalmACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513678
+Minimal sum of active reactions: 55
+ @ µ [1/h] of 0.268 and min OPTSUBMDF of 29.012703466513678 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* DMPPS_ORIGINAL_NAD_TCOSA | -62.981 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> dmpp_c + h2o_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* TRDR_ORIGINAL_NADP_TCOSA | -7.448 kJ/mol | h_c + nadph_tcosa_c + trdox_c --> nadp_tcosa_c + trdrd_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* ME2_ORIGINAL_NADP_TCOSA | 11.485 kJ/mol | mal__L_c + nadp_tcosa_c --> co2_c + nadph_tcosa_c + pyr_c
+* GLUSy_ORIGINAL_NADP_TCOSA | -47.415 kJ/mol | akg_c + gln__L_c + h_c + nadph_tcosa_c --> 2.0 glu__L_c + nadp_tcosa_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* HXAND_ORIGINAL_NAD_TCOSA | 15.437 kJ/mol | h2o_c + hxan_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xan_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR160y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tpalm2eACP_c --> nadp_tcosa_c + palmACP_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* OPHHXy_ORIGINAL_NADP_TCOSA | -439.434 kJ/mol | 2oph_c + h_c + nadph_tcosa_c + o2_c --> 2ohph_c + h2o_c + nadp_tcosa_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR160_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3opalmACP_c + h_c + nadph_tcosa_c --> 3hpalmACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513678
+Minimal sum of active reactions: 55
+ @ µ [1/h] of 0.218 and min OPTSUBMDF of 29.012703466513745 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* GLUSy_ORIGINAL_NADP_TCOSA | -47.415 kJ/mol | akg_c + gln__L_c + h_c + nadph_tcosa_c --> 2.0 glu__L_c + nadp_tcosa_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* HXAND_ORIGINAL_NAD_TCOSA | 15.437 kJ/mol | h2o_c + hxan_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xan_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR160y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tpalm2eACP_c --> nadp_tcosa_c + palmACP_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* OPHHXy_ORIGINAL_NADP_TCOSA | -439.434 kJ/mol | 2oph_c + h_c + nadph_tcosa_c + o2_c --> 2ohph_c + h2o_c + nadp_tcosa_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR160_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3opalmACP_c + h_c + nadph_tcosa_c --> 3hpalmACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513745
+Minimal sum of active reactions: 54
+ @ µ [1/h] of 0.168 and min OPTSUBMDF of 29.012703466513678 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* DMPPS_ORIGINAL_NAD_TCOSA | -62.981 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> dmpp_c + h2o_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* GLUSy_ORIGINAL_NADP_TCOSA | -47.415 kJ/mol | akg_c + gln__L_c + h_c + nadph_tcosa_c --> 2.0 glu__L_c + nadp_tcosa_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* HXAND_ORIGINAL_NAD_TCOSA | 15.437 kJ/mol | h2o_c + hxan_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xan_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR160y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tpalm2eACP_c --> nadp_tcosa_c + palmACP_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* OPHHXy_ORIGINAL_NADP_TCOSA | -439.434 kJ/mol | 2oph_c + h_c + nadph_tcosa_c + o2_c --> 2ohph_c + h2o_c + nadp_tcosa_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR160_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3opalmACP_c + h_c + nadph_tcosa_c --> 3hpalmACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513678
+Minimal sum of active reactions: 54
+ @ µ [1/h] of 0.118 and min OPTSUBMDF of 29.012703466513678 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IMPD_ORIGINAL_NAD_TCOSA | 16.755 kJ/mol | h2o_c + imp_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xmp_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* TRDR_ORIGINAL_NADP_TCOSA | -7.448 kJ/mol | h_c + nadph_tcosa_c + trdox_c --> nadp_tcosa_c + trdrd_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR161y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + t3c9palmeACP_c --> hdeACP_c + nadp_tcosa_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* 3OAR161_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ocpalm9eACP_c + h_c + nadph_tcosa_c --> 3hcpalm9eACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* OPHHXy_ORIGINAL_NADP_TCOSA | -439.434 kJ/mol | 2oph_c + h_c + nadph_tcosa_c + o2_c --> 2ohph_c + h2o_c + nadp_tcosa_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513678
+Minimal sum of active reactions: 54
+ @ µ [1/h] of 0.068 and min OPTSUBMDF of 29.012703466513678 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IMPD_ORIGINAL_NAD_TCOSA | 16.755 kJ/mol | h2o_c + imp_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xmp_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR161y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + t3c9palmeACP_c --> hdeACP_c + nadp_tcosa_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* 3OAR161_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ocpalm9eACP_c + h_c + nadph_tcosa_c --> 3hcpalm9eACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* OPHHX3_ORIGINAL_NAD_TCOSA | -47.343 kJ/mol | 2oph_c + 2.0 atp_c + 3.0 h2o_c + nad_tcosa_c --> 2ohph_c + 2.0 adp_c + 3.0 h_c + nadh_tcosa_c + 2.0 pi_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513678
+Minimal sum of active reactions: 54
+ @ µ [1/h] of 0.05 and min OPTSUBMDF of 29.012703466513972 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IMPD_ORIGINAL_NAD_TCOSA | 16.755 kJ/mol | h2o_c + imp_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xmp_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR160y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tpalm2eACP_c --> nadp_tcosa_c + palmACP_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* OPHHXy_ORIGINAL_NADP_TCOSA | -439.434 kJ/mol | 2oph_c + h_c + nadph_tcosa_c + o2_c --> 2ohph_c + h2o_c + nadp_tcosa_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR160_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3opalmACP_c + h_c + nadph_tcosa_c --> 3hpalmACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513972
+Minimal sum of active reactions: 54
+ @ µ [1/h] of 0.03 and min OPTSUBMDF of 29.012703466513972 kJ/mol
+* NADK | -11.751 kJ/mol | atp_c + nad_tcosa_c --> adp_c + h_c + nadp_tcosa_c
+* G5SD_ORIGINAL_NADP_TCOSA | -8.083 kJ/mol | glu5p_c + h_c + nadph_tcosa_c --> glu5sa_c + nadp_tcosa_c + pi_c
+* APRAUR_ORIGINAL_NADP_TCOSA | -24.989 kJ/mol | 5apru_c + h_c + nadph_tcosa_c --> 5aprbu_c + nadp_tcosa_c
+* SHCHD2_ORIGINAL_NAD_TCOSA | -100 kJ/mol | dscl_c + nad_tcosa_c --> h_c + nadh_tcosa_c + scl_c
+* IPMD_ORIGINAL_NAD_TCOSA | 15.798 kJ/mol | 3c2hmp_c + nad_tcosa_c --> 3c4mop_c + h_c + nadh_tcosa_c
+* GLUTRR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | glutrna_c + h_c + nadph_tcosa_c --> glu1sa_c + nadp_tcosa_c + trnaglu_c
+* GLYCL_ORIGINAL_NAD_TCOSA | 18.862 kJ/mol | gly_c + nad_tcosa_c + thf_c --> co2_c + mlthf_c + nadh_tcosa_c + nh4_c
+* DXPRIi_ORIGINAL_NADP_TCOSA | -12.692 kJ/mol | dxyl5p_c + h_c + nadph_tcosa_c --> 2me4p_c + nadp_tcosa_c
+* UAPGR_ORIGINAL_NADP_TCOSA | -55.132 kJ/mol | h_c + nadph_tcosa_c + uaccg_c --> nadp_tcosa_c + uamr_c
+* IPDPS_ORIGINAL_NAD_TCOSA | -58.232 kJ/mol | h2mb4p_c + h_c + nadh_tcosa_c --> h2o_c + ipdp_c + nad_tcosa_c
+* DHDPRy_ORIGINAL_NADP_TCOSA | -20.811 kJ/mol | 23dhdp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thdp_c
+* P5CR_ORIGINAL_NADP_TCOSA | -14.921 kJ/mol | 1pyr5c_c + 2.0 h_c + nadph_tcosa_c --> nadp_tcosa_c + pro__L_c
+* HISTD_ORIGINAL_NAD_TCOSA | -19.01 kJ/mol | h2o_c + histd_c + 2.0 nad_tcosa_c --> 3.0 h_c + his__L_c + 2.0 nadh_tcosa_c
+* NADS1_ORIGINAL_NAD_TCOSA | -24.456 kJ/mol | atp_c + dnad_c + nh4_c --> amp_c + h_c + nad_tcosa_c + ppi_c
+* PPND_ORIGINAL_NAD_TCOSA | -10.402 kJ/mol | nad_tcosa_c + pphn_c --> 34hpp_c + co2_c + nadh_tcosa_c
+* PDX5PS_ORIGINAL_NAD_TCOSA | -223.979 kJ/mol | dxyl5p_c + nad_tcosa_c + phthr_c --> co2_c + 2.0 h2o_c + h_c + nadh_tcosa_c + pdx5p_c + pi_c
+* SULR_ORIGINAL_NADP_TCOSA | -108.831 kJ/mol | 5.0 h_c + 3.0 nadph_tcosa_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_tcosa_c
+* MTHFR2_ORIGINAL_NAD_TCOSA | -40.632 kJ/mol | 2.0 h_c + mlthf_c + nadh_tcosa_c --> 5mthf_c + nad_tcosa_c
+* DPR_ORIGINAL_NADP_TCOSA | -15.669 kJ/mol | 2dhp_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pant__R_c
+* HXAND_ORIGINAL_NAD_TCOSA | 15.437 kJ/mol | h2o_c + hxan_c + nad_tcosa_c --> h_c + nadh_tcosa_c + xan_c
+* AMPMS2_ORIGINAL_NAD_TCOSA | -182.909 kJ/mol | air_c + h2o_c + nad_tcosa_c --> 4ampm_c + 2.0 for_c + 3.0 h_c + nadh_tcosa_c
+* EAR80y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + toct2eACP_c --> nadp_tcosa_c + ocACP_c
+* EAR120y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tddec2eACP_c --> ddcaACP_c + nadp_tcosa_c
+* EAR40y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | but2eACP_c + h_c + nadph_tcosa_c --> butACP_c + nadp_tcosa_c
+* EAR161y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + t3c9palmeACP_c --> hdeACP_c + nadp_tcosa_c
+* EAR100y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tdec2eACP_c --> dcaACP_c + nadp_tcosa_c
+* 3OAR161_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ocpalm9eACP_c + h_c + nadph_tcosa_c --> 3hcpalm9eACP_c + nadp_tcosa_c
+* EAR140y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + tmrs2eACP_c --> myrsACP_c + nadp_tcosa_c
+* EAR60y_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + thex2eACP_c --> hexACP_c + nadp_tcosa_c
+* OPHHX3_ORIGINAL_NAD_TCOSA | -47.343 kJ/mol | 2oph_c + 2.0 atp_c + 3.0 h2o_c + nad_tcosa_c --> 2ohph_c + 2.0 adp_c + 3.0 h_c + nadh_tcosa_c + 2.0 pi_c
+* OGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + ogmeACP_c --> hgmeACP_c + nadp_tcosa_c
+* EPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | epmeACP_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + pmeACP_c
+* EGMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | egmeACP_c + h_c + nadph_tcosa_c --> gmeACP_c + nadp_tcosa_c
+* OPMEACPR_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | h_c + nadph_tcosa_c + opmeACP_c --> hpmeACP_c + nadp_tcosa_c
+* FLDR2_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2.0 flxso_c + nadph_tcosa_c --> 2.0 flxr_c + h_c + nadp_tcosa_c
+* TYRL_ORIGINAL_NADP_TCOSA | -67.694 kJ/mol | amet_c + nadph_tcosa_c + tyr__L_c --> 4crsol_c + dad_5_c + dhgly_c + h_c + met__L_c + nadp_tcosa_c
+* THZPSN3_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | atp_c + dhgly_c + dxyl5p_c + h_c + iscssh_c + nadph_tcosa_c --> 4mpetz_c + amp_c + co2_c + 2.0 h2o_c + iscs_c + nadp_tcosa_c + ppi_c
+* SHK3Dr_FWD_ORIGINAL_NADP_TCOSA | -6.238 kJ/mol | 3dhsk_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + skm_c
+* ICDHyr_FWD_ORIGINAL_NADP_TCOSA | 5.092 kJ/mol | icit_c + nadp_tcosa_c --> akg_c + co2_c + nadph_tcosa_c
+* GTHOr_FWD_ORIGINAL_NADP_TCOSA | -12.189 kJ/mol | gthox_c + h_c + nadph_tcosa_c --> 2.0 gthrd_c + nadp_tcosa_c
+* KARA1_REV_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | alac__S_c + h_c + nadph_tcosa_c --> 23dhmb_c + nadp_tcosa_c
+* KARA2_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 2ahbut_c + h_c + nadph_tcosa_c --> 23dhmp_c + nadp_tcosa_c
+* AGPR_REV_ORIGINAL_NADP_TCOSA | -4.941 kJ/mol | acg5p_c + h_c + nadph_tcosa_c --> acg5sa_c + nadp_tcosa_c + pi_c
+* ALCD19_FWD_ORIGINAL_NAD_TCOSA | -36.261 kJ/mol | glyald_c + h_c + nadh_tcosa_c --> glyc_c + nad_tcosa_c
+* ASAD_REV_ORIGINAL_NADP_TCOSA | 24.316 kJ/mol | 4pasp_c + h_c + nadph_tcosa_c --> aspsa_c + nadp_tcosa_c + pi_c
+* HSDy_REV_ORIGINAL_NADP_TCOSA | -19.149 kJ/mol | aspsa_c + h_c + nadph_tcosa_c --> hom__L_c + nadp_tcosa_c
+* GLUDy_REV_ORIGINAL_NADP_TCOSA | -33.06 kJ/mol | akg_c + h_c + nadph_tcosa_c + nh4_c --> glu__L_c + h2o_c + nadp_tcosa_c
+* DHFR_FWD_ORIGINAL_NADP_TCOSA | -18.668 kJ/mol | dhf_c + h_c + nadph_tcosa_c --> nadp_tcosa_c + thf_c
+* 3OAR120_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3oddecACP_c + h_c + nadph_tcosa_c --> 3hddecACP_c + nadp_tcosa_c
+* 3OAR140_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3omrsACP_c + h_c + nadph_tcosa_c --> 3hmrsACP_c + nadp_tcosa_c
+* 3OAR60_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ohexACP_c + h_c + nadph_tcosa_c --> 3hhexACP_c + nadp_tcosa_c
+* 3OAR80_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3ooctACP_c + h_c + nadph_tcosa_c --> 3hoctACP_c + nadp_tcosa_c
+* 3OAR40_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | actACP_c + h_c + nadph_tcosa_c --> 3haACP_c + nadp_tcosa_c
+* 3OAR100_FWD_ORIGINAL_NADP_TCOSA | -15.332 kJ/mol | 3odecACP_c + h_c + nadph_tcosa_c --> 3hdecACP_c + nadp_tcosa_c
+Reached MDF: 0.1
+Reached SubMDF: 29.012703466513972
+Minimal sum of active reactions: 54

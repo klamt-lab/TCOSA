@@ -9140,12 +9140,12 @@
         "num_compartments": 1
     },
     "PTAr_FWD": {
-        "dG0": 9.999151332148358,
+        "dG0": -100,
         "uncertainty": 4.293076378458771e-05,
         "num_compartments": 1
     },
     "PTAr_REV": {
-        "dG0": -9.999151332148578,
+        "dG0": 100,
         "uncertainty": -4.2930763784596385e-05,
         "num_compartments": 1
     },
@@ -10040,12 +10040,12 @@
         "num_compartments": 1
     },
     "ASAD_FWD": {
-        "dG0": 100,
+        "dG0": -24.31602062172078,
         "uncertainty": -5.10702591327572e-15,
         "num_compartments": 1
     },
     "ASAD_REV": {
-        "dG0": -100,
+        "dG0": 24.316020621721925,
         "uncertainty": 5.098352295895836e-15,
         "num_compartments": 1
     },
@@ -10140,12 +10140,12 @@
         "num_compartments": 1
     },
     "GAPD_FWD": {
-        "dG0": 0.2816464914124026,
+        "dG0": -100,
         "uncertainty": 0.0003039626920273708,
         "num_compartments": 1
     },
     "GAPD_REV": {
-        "dG0": -0.2816464914117134,
+        "dG0": 100,
         "uncertainty": -0.0003039626920273795,
         "num_compartments": 1
     },
@@ -10230,22 +10230,22 @@
         "num_compartments": 1
     },
     "ACACT2r_FWD": {
-        "dG0": 30.401304306150905,
+        "dG0": -100,
         "uncertainty": -0.036879691698491146,
         "num_compartments": 1
     },
     "ACACT2r_REV": {
-        "dG0": -30.40130430615045,
+        "dG0": 100,
         "uncertainty": 0.036879691698491035,
         "num_compartments": 1
     },
     "ACACT4r_FWD": {
-        "dG0": 30.8443253845453,
+        "dG0": -100,
         "uncertainty": -0.004535677246721548,
         "num_compartments": 1
     },
     "ACACT4r_REV": {
-        "dG0": -30.844325384545073,
+        "dG0": 100,
         "uncertainty": 0.004535677246721548,
         "num_compartments": 1
     },
@@ -10410,12 +10410,12 @@
         "num_compartments": 1
     },
     "ACACT6r_FWD": {
-        "dG0": 30.844325384546664,
+        "dG0": -100,
         "uncertainty": -0.004535677246721548,
         "num_compartments": 1
     },
     "ACACT6r_REV": {
-        "dG0": -30.84432538454621,
+        "dG0": 100,
         "uncertainty": 0.004535677246721548,
         "num_compartments": 1
     },
@@ -10500,12 +10500,12 @@
         "num_compartments": 1
     },
     "GLUDy_FWD": {
-        "dG0": 100,
+        "dG0": 33.05982373603146,
         "uncertainty": -0.0007128191204790564,
         "num_compartments": 1
     },
     "GLUDy_REV": {
-        "dG0": -100,
+        "dG0": -33.0598237360316,
         "uncertainty": 0.0007128191204792689,
         "num_compartments": 1
     },
@@ -10590,12 +10590,12 @@
         "num_compartments": 1
     },
     "ACACT1r_FWD": {
-        "dG0": 25.261219073207485,
+        "dG0": -100,
         "uncertainty": 3.7028054337695515e-05,
         "num_compartments": 1
     },
     "ACACT1r_REV": {
-        "dG0": -25.26121907320794,
+        "dG0": 100,
         "uncertainty": -3.7028054337695515e-05,
         "num_compartments": 1
     },
@@ -12730,42 +12730,42 @@
         "num_compartments": 1
     },
     "ASAD_FWD_VARIANT_NAD_TCOSA": {
-        "dG0": 100,
+        "dG0": -24.31602062172078,
         "uncertainty": -5.10702591327572e-15,
         "num_compartments": 1
     },
     "ASAD_FWD_ORIGINAL_NADP_TCOSA": {
-        "dG0": 100,
+        "dG0": -24.31602062172078,
         "uncertainty": -5.10702591327572e-15,
         "num_compartments": 1
     },
     "ASAD_REV_VARIANT_NAD_TCOSA": {
-        "dG0": -100,
+        "dG0": 24.316020621721925,
         "uncertainty": 5.098352295895836e-15,
         "num_compartments": 1
     },
     "ASAD_REV_ORIGINAL_NADP_TCOSA": {
-        "dG0": -100,
+        "dG0": 24.316020621721925,
         "uncertainty": 5.098352295895836e-15,
         "num_compartments": 1
     },
     "GAPD_FWD_ORIGINAL_NAD_TCOSA": {
-        "dG0": 0.2816464914124026,
+        "dG0": -100,
         "uncertainty": 0.0003039626920273708,
         "num_compartments": 1
     },
     "GAPD_FWD_VARIANT_NADP_TCOSA": {
-        "dG0": 0.2816464914124026,
+        "dG0": -100,
         "uncertainty": 0.0003039626920273708,
         "num_compartments": 1
     },
     "GAPD_REV_ORIGINAL_NAD_TCOSA": {
-        "dG0": -0.2816464914117134,
+        "dG0": 100,
         "uncertainty": -0.0003039626920273795,
         "num_compartments": 1
     },
     "GAPD_REV_VARIANT_NADP_TCOSA": {
-        "dG0": -0.2816464914117134,
+        "dG0": 100,
         "uncertainty": -0.0003039626920273795,
         "num_compartments": 1
     },
@@ -12950,22 +12950,22 @@
         "num_compartments": 1
     },
     "GLUDy_FWD_VARIANT_NAD_TCOSA": {
-        "dG0": 100,
+        "dG0": 33.05982373603146,
         "uncertainty": -0.0007128191204790564,
         "num_compartments": 1
     },
     "GLUDy_FWD_ORIGINAL_NADP_TCOSA": {
-        "dG0": 100,
+        "dG0": 33.05982373603146,
         "uncertainty": -0.0007128191204790564,
         "num_compartments": 1
     },
     "GLUDy_REV_VARIANT_NAD_TCOSA": {
-        "dG0": -100,
+        "dG0": -33.0598237360316,
         "uncertainty": 0.0007128191204792689,
         "num_compartments": 1
     },
     "GLUDy_REV_ORIGINAL_NADP_TCOSA": {
-        "dG0": -100,
+        "dG0": -33.0598237360316,
         "uncertainty": 0.0007128191204792689,
         "num_compartments": 1
     },
