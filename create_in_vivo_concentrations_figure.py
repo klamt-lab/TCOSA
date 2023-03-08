@@ -9,7 +9,7 @@ def create_in_vivo_concentrations_figure():
 
     figurename_tuple = ("aerobic", f"2C_NADH_to_NAD___to___NADPH_to_nadp_{target}_{concentration}.jpg")
 
-    fig, axs = plt.subplots(nrows=2, ncols=1, dpi=500, figsize=(6, 8)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+    fig, axs = plt.subplots(nrows=1, ncols=2, dpi=500, figsize=(12, 5)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
     fig.tight_layout(pad=3.75)
 
     ########################################################
