@@ -205,6 +205,4 @@ def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_
     create_cosa_dG0_sampling_tables(data_path=f"cosa/results{suffix}/dG0_sampling_range{dG0_range}/runs", output_path=f"cosa/results{suffix}/dG0_sampling_range{dG0_range}")
     create_cosa_dG0_sampling_figures(data_path=f"./cosa/results{suffix}/dG0_sampling_range{dG0_range}/", figures_path=f"./cosa/results{suffix}/dG0_sampling_range{dG0_range}/figures/", anaerobic=anaerobic, num_samplings=num_samplings)
 
-cosa_dG0_sampling(anaerobic=False, expanded=False, num_samplings=100, dG0_range=25, normal_range=5)
-cosa_dG0_sampling(anaerobic=True, expanded=False, num_samplings=100, dG0_range=25, normal_range=5)
-create_total_dG0_sampling_figure()
+# create_total_dG0_sampling_figure()
