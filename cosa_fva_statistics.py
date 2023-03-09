@@ -34,8 +34,8 @@ for file in get_files("cosa"):
             if (lb <= 0.0) and (ub <= 0.0):
                 continue
 
-            # if (lb <= 0.0):
-            #     continue
+            if (lb <= 0.0):
+                continue
 
             base_id = name.replace("_ORIGINAL_NADP_TCOSA", "")\
                     .replace("_ORIGINAL_NAD_TCOSA", "")\
