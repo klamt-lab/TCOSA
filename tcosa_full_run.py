@@ -40,7 +40,8 @@ import cosa_ratio_ratio_test
 import cosa_minimal_changes_test
 
 # Perform dG0 sampling.
-import cosa_dG0_sampling
+import cosa_dG0_sampling_aerobic
+import cosa_dG0_sampling_anaerobic
 
 # Create the extended vs. two-cofactor model comparison figure.
 import cosa_create_extended_model_figure

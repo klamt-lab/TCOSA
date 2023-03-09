@@ -1,2 +1,3 @@
 from cosa_dG0_sampling import cosa_dG0_sampling
-cosa_dG0_sampling(anaerobic=False, expanded=False, num_samplings=100, dG0_range=30, normal_range=25)
+
+cosa_dG0_sampling(anaerobic=False, expanded=False, num_samplings=100, change_range=5)
