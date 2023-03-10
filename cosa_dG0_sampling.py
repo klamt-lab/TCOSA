@@ -20,18 +20,18 @@ from typing import Dict
 
 
 def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_size: float=0.05, change_range: float=25.0):
+    suffix = cosa_get_suffix(anaerobic, expanded)
+
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
     ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=expanded)
 
-    suffix = cosa_get_suffix(anaerobic, expanded)
 
     ensure_folder_existence("./cosa")
     ensure_folder_existence(f"./cosa/results{suffix}")
     ensure_folder_existence(f"./cosa/results{suffix}/dG0_sampling_range{change_range}")
     ensure_folder_existence(f"./cosa/results{suffix}/dG0_sampling_range{change_range}/runs")
-
 
     print("Get randoms random lists")
     rng = numpy.random.default_rng(seed=22)
@@ -43,29 +43,36 @@ def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_
         }
         return random_changes
 
-    random_dGf_change_dict = get_random_dGf_change_dict()
+    random_standardconc_dG0_values = {}
+    for i in range(num_samplings):
+        random_dGf_change_dict = get_random_dGf_change_dict()
+        random_standardconc_dG0_values[i] = copy.deepcopy(standardconc_dG0_values)
+        for reaction in cobra_model.reactions:
+            if reaction.id not in random_standardconc_dG0_values.keys():
+                continue
+            for key, value in reaction.metabolites.items():
+                stoichiometry = -value
+                random_dGf_change = random_dGf_change_dict[key.id] * stoichiometry
+                random_standardconc_dG0_values[i][reaction.id]["dG0"] += random_dGf_change
+    for i in range(num_samplings):
+        print(random_standardconc_dG0_values[i]["THD2pp"]["dG0"])
+    input("X")
 
-    random_standardconc_dG0_values = copy.deepcopy(standardconc_dG0_values)
-    for reaction in cobra_model.reactions:
-        if reaction.id not in random_standardconc_dG0_values.keys():
-            continue
-        for key, value in reaction.metabolites.items():
-            stoichiometry = -value
-            random_dGf_change = random_dGf_change_dict[key.id] * stoichiometry
-            random_standardconc_dG0_values[reaction.id]["dG0"] += random_dGf_change
+    random_paperconc_dG0_values = {}
+    for i in range(num_samplings):
+        random_dGf_change_dict = get_random_dGf_change_dict()
+        random_paperconc_dG0_values[i] = copy.deepcopy(paperconc_dG0_values)
+        for reaction in cobra_model.reactions:
+            if reaction.id not in random_paperconc_dG0_values.keys():
+                continue
+            for key, value in reaction.metabolites.items():
+                stoichiometry = -value
+                random_dGf_change = random_dGf_change_dict[key.id] * stoichiometry
+                random_paperconc_dG0_values[i][reaction.id]["dG0"] += random_dGf_change
 
-    random_paperconc_dG0_values = copy.deepcopy(standardconc_dG0_values)
-    for reaction in cobra_model.reactions:
-        if reaction.id not in random_paperconc_dG0_values.keys():
-            continue
-        for key, value in reaction.metabolites.items():
-            stoichiometry = -value
-            random_dGf_change = random_dGf_change_dict[key.id] * stoichiometry
-            random_paperconc_dG0_values[reaction.id]["dG0"] += random_dGf_change
-
-    input("END TEST")
-    json_zip_write(f"./cosa/results{suffix}/dG0_sampling_range{change_range}/random_standard_dG0_list.json", random_standard_dG0_values_list)
-    json_zip_write(f"./cosa/results{suffix}/dG0_sampling_range{change_range}/random_paper_dG0_list.json", random_paper_dG0_values_list)
+    json_zip_write(f"./cosa/results{suffix}/dG0_sampling_range{change_range}/random_standard_dG0_changed_list.json", random_standardconc_dG0_values)
+    json_zip_write(f"./cosa/results{suffix}/dG0_sampling_range{change_range}/random_dG0_changes_list.json", random_dGf_change_dict)
+    json_zip_write(f"./cosa/results{suffix}/dG0_sampling_range{change_range}/random_paper_dG0_changed_list.json", random_paperconc_dG0_values)
 
     old_cobra_model = copy.deepcopy(cobra_model)
     nadx_scenarios = ["SINGLE_COFACTOR", "WILDTYPE", "FLEXIBLE"] +\
@@ -74,13 +81,16 @@ def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_
         [f"RANDOM_FLEXIBLE_{k}" for k in range(num_samplings)]
     print(nadx_scenarios)
     original_used_growth = used_growth
+
     for concentration_scenario in ("STANDARDCONC",): # "VIVOCONC",
         if concentration_scenario == "STANDARDCONC":
-            dG0_values = copy.deepcopy(random_standardconc_dG0_values)
+            dG0_values = copy.deepcopy(standardconc_dG0_values)
             used_concentration_values = concentration_values_free
+            random_dG0_dicts_list = copy.deepcopy(random_standardconc_dG0_values)
         elif concentration_scenario == "VIVOCONC":
-            dG0_values = copy.deepcopy(random_paperconc_dG0_values)
+            dG0_values = copy.deepcopy(paperconc_dG0_values)
             used_concentration_values = concentration_values_paper
+            random_dG0_dicts_list = copy.deepcopy(random_paperconc_dG0_values)
         old_dG0_values = copy.deepcopy(dG0_values)
 
         for nadx_scenario in nadx_scenarios:
@@ -211,6 +221,7 @@ def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_
                     optsubmdf_json_path,
                     full_optsubmdf_results,
                 )
+
     create_cosa_dG0_sampling_tables(data_path=f"cosa/results{suffix}/dG0_sampling_range{change_range}/runs", output_path=f"cosa/results{suffix}/dG0_sampling_range{change_range}")
     create_cosa_dG0_sampling_figures(data_path=f"./cosa/results{suffix}/dG0_sampling_range{change_range}/", figures_path=f"./cosa/results{suffix}/dG0_sampling_range{change_range}/figures/", anaerobic=anaerobic, num_samplings=num_samplings)
 
