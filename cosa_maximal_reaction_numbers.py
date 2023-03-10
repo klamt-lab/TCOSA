@@ -44,11 +44,11 @@ def cosa_maximal_reaction_numbers(anaerobic: bool, expanded: bool, growth_epsilo
             dG0_values = copy.deepcopy(paperconc_dG0_values)
             used_concentration_values = concentration_values_paper
 
-        for target in ("OPTMDF", "OPTSUBMDF"):
+        for target in ("OPTSUBMDF",): # "OPTMDF",
             print(f"TARGET: {target}")
             print(f"===OPTIMIZATION TARGET: {target}===")
 
-            for distribution in ("WILDTYPE", "FLEXIBLE", "SINGLE_COFACTOR"):
+            for distribution in ("WILDTYPE",): #"FLEXIBLE", "SINGLE_COFACTOR"):
                 print(f"DISTRIBUTION: {distribution}")
                 print(f"cosa/results{suffix}/runs/{target}_{concentrations}_{distribution}.json")
                 jsondata_invivo = json_zip_load(f"cosa/results{suffix}/runs/{target}_{concentrations}_{distribution}.json")
@@ -60,6 +60,7 @@ def cosa_maximal_reaction_numbers(anaerobic: bool, expanded: bool, growth_epsilo
                     nadx_scenario=distribution,
                     cobra_model=cobra_model,
                 )
+                reaction_ids = [x.id for x in cobra_model.reactions]
 
                 optmdfpathway_base_problem = get_optmdfpathway_base_problem(
                     cobra_model=cobra_model,
@@ -73,9 +74,23 @@ def cosa_maximal_reaction_numbers(anaerobic: bool, expanded: bool, growth_epsilo
                     add_optmdf_bottleneck_analysis=False,
                 )
                 optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+                z_sum_var = pulp.LpVariable(
+                    name=f"z_sum_var",
+                    lowBound=-float("inf"),
+                    upBound=float("inf"),
+                    cat=pulp.LpContinuous,
+                )
                 z_sum = 0.0
-                for reaction in get_all_tcosa_reaction_ids(cobra_model):
-                    z_sum += optmdfpathway_base_variables[f"z_var_{reaction}"]
+                for reaction_id in reaction_ids:
+                    if not reaction_id.endswith("_TCOSA"):
+                        continue
+                    z_active = pulp.LpVariable(
+                        name=f"z_active_{reaction_id}",
+                        cat=pulp.LpBinary,
+                    )
+                    optmdfpathway_base_problem += -optmdfpathway_base_variables[reaction_id] + z_active * 1e-6 <= 0
+                    optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+                    z_sum += optmdfpathway_base_variables[f"z_active_{reaction_id}"]
                 z_sum_var = pulp.LpVariable(
                     name=f"z_sum_var",
                     lowBound=-float("inf"),
@@ -83,7 +98,6 @@ def cosa_maximal_reaction_numbers(anaerobic: bool, expanded: bool, growth_epsilo
                     cat=pulp.LpContinuous,
                 )
                 optmdfpathway_base_problem += z_sum_var == z_sum
-
 
                 for growth_rate in growth_rates:
                     growth_rate_float = float(growth_rate.replace(",", "."))
@@ -119,6 +133,7 @@ def cosa_maximal_reaction_numbers(anaerobic: bool, expanded: bool, growth_epsilo
                     )
                     all_tcosas = get_all_tcosa_reaction_ids(cobra_model)
                     active_reactions = []
+                    sum_ = 0
                     for var_name in minimization_result["values"].keys():
                         if not var_name.startswith("z_var_"):
                             continue
@@ -132,11 +147,15 @@ def cosa_maximal_reaction_numbers(anaerobic: bool, expanded: bool, growth_epsilo
                             active_reactions.append(reac_id)
                             # print(report_line)
                             report += report_line + "\n"
+                            sum_ += 1
+                    print("sum", sum_)
                     report += f"Reached MDF: {minimization_result['values']['var_B']}\n"
                     report += f"Reached SubMDF: {minimization_result['values']['var_B2']}\n"
                     report += f"Minimal sum of active reactions: {len(active_reactions)}\n"
                     # print(f"Reached MDF: {minimization_result['values']['var_B']} kJ/mol")
                     # print(f"Reached SubMDF: {minimization_result['values']['var_B2']} kJ/mol")
+                    # json_write("x.json", minimization_result)
+                    # input()
 
                     aerobic = "anaerobic" if anaerobic else "aerobic"
                 with open(f"./cosa/max_reacs_{aerobic}_{distribution}_{target}_{concentrations}.txt", "w", encoding="utf-8") as f:
