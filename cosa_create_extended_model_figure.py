@@ -10,7 +10,7 @@ def _get_data_list(file_path: str):
     data_dict = {}
     for line in lines[1:]:
         data_dict[float(line[0].replace(",", "."))] = float(line[flexible_location].replace(",", "."))
-    return list(data_dict.values()), list(data_dict.keys())
+    return list(data_dict.values())[:-1], list(data_dict.keys())[:-1]
 
 
 for concentration_ranges in ("STANDARDCONC", "VIVOCONC"):

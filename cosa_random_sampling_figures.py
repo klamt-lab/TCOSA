@@ -849,13 +849,12 @@ def create_total_cosa_figure() -> None:
 
                 values = [x for x in table[header]]
                 temp_growth_rates = copy.deepcopy(growth_rates)
-                if not "anaerobic" in table_path:
-                    current_index = 0
-                    for _ in temp_growth_rates:
-                        if temp_growth_rates[current_index] < 0.4:
-                            temp_growth_rates[current_index] = None
-                            values[current_index] = None
-                        current_index += 1
+                current_index = 0
+                for _ in temp_growth_rates:
+                    if temp_growth_rates[current_index] < 0.04:
+                        temp_growth_rates[current_index] = None
+                        values[current_index] = None
+                    current_index += 1
                 temp_growth_rates = [x for x in temp_growth_rates if x is not None]
                 values = [x for x in values if x is not None]
 

@@ -9,7 +9,7 @@ def create_in_vivo_concentrations_figure():
 
     figurename_tuple = ("aerobic", f"2C_NADH_to_NAD___to___NADPH_to_nadp_{target}_{concentration}.jpg")
 
-    fig, axs = plt.subplots(nrows=1, ncols=2, dpi=500, figsize=(12, 5)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+    fig, axs = plt.subplots(nrows=1, ncols=2, dpi=500, figsize=(18, 6)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
     fig.tight_layout(pad=3.75)
 
     ########################################################
@@ -67,8 +67,8 @@ def create_in_vivo_concentrations_figure():
             linewidth = 1.0
 
         axs[0].plot(
-            growth_rates[:11], # x
-            list_to_float(table[header])[:11], # y
+            growth_rates[:-1], # x
+            list_to_float(table[header])[:-1], # y
             label=label,
             linestyle=linestyle,
             color=color,
@@ -78,7 +78,7 @@ def create_in_vivo_concentrations_figure():
     axs[0].set_title("A", loc="left", fontweight="bold")
     axs[0].set_xlabel("Growth rate [1/h]")
     axs[0].set_ylabel("OptSubMDF [kJ/mol]")
-    axs[0].set_xlim(min(growth_rates[:11]), max(growth_rates[:11]))
+    axs[0].set_xlim(min(growth_rates[:-1]), max(growth_rates[:-1]))
 
 
     ########################################################
@@ -91,9 +91,9 @@ def create_in_vivo_concentrations_figure():
     max_label = "Maximal ratio"
 
     figurename = figurename_tuple[1]
-    plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"][:10]
-    min_ratios = ratio_ratio_test_data[figurename]["min_ratios"][:10]
-    max_ratios = ratio_ratio_test_data[figurename]["max_ratios"][:10]
+    plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"][:-1]
+    min_ratios = ratio_ratio_test_data[figurename]["min_ratios"][:-1]
+    max_ratios = ratio_ratio_test_data[figurename]["max_ratios"][:-1]
     axs[1].plot(
         plotted_growth_rates[::-1], # x
         min_ratios[::-1], # y

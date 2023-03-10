@@ -48,22 +48,19 @@ def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_
         random_dGf_change_dict = get_random_dGf_change_dict()
         random_standardconc_dG0_values[i] = copy.deepcopy(standardconc_dG0_values)
         for reaction in cobra_model.reactions:
-            if reaction.id not in random_standardconc_dG0_values.keys():
+            if reaction.id not in random_standardconc_dG0_values[i].keys():
                 continue
             for key, value in reaction.metabolites.items():
                 stoichiometry = -value
-                random_dGf_change = random_dGf_change_dict[key.id] * stoichiometry
-                random_standardconc_dG0_values[i][reaction.id]["dG0"] += random_dGf_change
-    for i in range(num_samplings):
-        print(random_standardconc_dG0_values[i]["THD2pp"]["dG0"])
-    input("X")
+                random_dGf_change = copy.deepcopy(random_dGf_change_dict[key.id]) * stoichiometry
+                random_standardconc_dG0_values[i][reaction.id]["dG0"] = copy.deepcopy(random_dGf_change) + copy.deepcopy(random_standardconc_dG0_values[i][reaction.id]["dG0"])
 
     random_paperconc_dG0_values = {}
     for i in range(num_samplings):
         random_dGf_change_dict = get_random_dGf_change_dict()
         random_paperconc_dG0_values[i] = copy.deepcopy(paperconc_dG0_values)
         for reaction in cobra_model.reactions:
-            if reaction.id not in random_paperconc_dG0_values.keys():
+            if reaction.id not in random_paperconc_dG0_values[i].keys():
                 continue
             for key, value in reaction.metabolites.items():
                 stoichiometry = -value

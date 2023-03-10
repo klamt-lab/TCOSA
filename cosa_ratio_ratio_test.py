@@ -221,10 +221,10 @@ def cosa_create_full_ratio_ratio_test_figure_one_panel():
 
                 figurename = figurename_tuple[1]
                 if is_aerobic:
-                    plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"][:10]
+                    plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"]
                     axs_index = figurenames_to_plots[figurename_tuple]
-                    min_ratios = ratio_ratio_test_data[figurename]["min_ratios"][:10]
-                    max_ratios = ratio_ratio_test_data[figurename]["max_ratios"][:10]
+                    min_ratios = ratio_ratio_test_data[figurename]["min_ratios"]
+                    max_ratios = ratio_ratio_test_data[figurename]["max_ratios"]
                 else:
                     plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"]
                     axs_index = figurenames_to_plots[figurename_tuple]
@@ -292,10 +292,10 @@ def cosa_create_full_ratio_ratio_test_figure_two_panels():
 
                 figurename = figurename_tuple[1]
                 if is_aerobic:
-                    plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"][:10]
+                    plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"]
                     axs_index = figurenames_to_plots[figurename_tuple]
-                    min_ratios = ratio_ratio_test_data[figurename]["min_ratios"][:10]
-                    max_ratios = ratio_ratio_test_data[figurename]["max_ratios"][:10]
+                    min_ratios = ratio_ratio_test_data[figurename]["min_ratios"]
+                    max_ratios = ratio_ratio_test_data[figurename]["max_ratios"]
                 else:
                     plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"]
                     axs_index = figurenames_to_plots[figurename_tuple]
@@ -352,7 +352,7 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
         }
         first = True
 
-        fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(11, 6)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+        fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(19, 10)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
         fig.tight_layout(pad=3.75)
         for figurename_tuple in figurenames_to_plots.keys():
             if figurename_tuple[0] == "Aerobic":
@@ -374,15 +374,15 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
 
             figurename = figurename_tuple[3]
             if is_aerobic:
-                plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"][:10]
+                plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"][:-1]
                 axs_index = figurenames_to_plots[figurename_tuple]
-                min_ratios = ratio_ratio_test_data[figurename]["min_ratios"][:10]
-                max_ratios = ratio_ratio_test_data[figurename]["max_ratios"][:10]
+                min_ratios = ratio_ratio_test_data[figurename]["min_ratios"][:-1]
+                max_ratios = ratio_ratio_test_data[figurename]["max_ratios"][:-1]
             else:
-                plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"]
+                plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"][:-1]
                 axs_index = figurenames_to_plots[figurename_tuple]
-                min_ratios = ratio_ratio_test_data[figurename]["min_ratios"]
-                max_ratios = ratio_ratio_test_data[figurename]["max_ratios"]
+                min_ratios = ratio_ratio_test_data[figurename]["min_ratios"][:-1]
+                max_ratios = ratio_ratio_test_data[figurename]["max_ratios"][:-1]
             axs[axs_index].plot(
                 plotted_growth_rates[::-1], # x
                 min_ratios[::-1], # y
@@ -400,7 +400,7 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
             import matplotlib
             axs[axs_index].set_title(title, loc="left", fontweight="bold")
             if figurename_tuple[2] == "A":
-                axs[axs_index].set_ylim(-.000003, 0.00005)
+                axs[axs_index].set_ylim(-.000003, 0.00006)
                 axs[axs_index].yaxis.set_major_formatter(
                     matplotlib.ticker.FuncFormatter(lambda x, p: '{:.0E}'.format(x))
                 )
@@ -424,8 +424,8 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
         plt.close()
 
 
-cosa_ratio_ratio_test(anaerobic=False, expanded=False)
-cosa_ratio_ratio_test(anaerobic=True, expanded=False)
+# cosa_ratio_ratio_test(anaerobic=False, expanded=False)
+# cosa_ratio_ratio_test(anaerobic=True, expanded=False)
 # cosa_create_full_ratio_ratio_test_figure_one_panel()
 # cosa_create_full_ratio_ratio_test_figure_two_panels()
 cosa_create_full_ratio_ratio_test_figure_four_panels()
