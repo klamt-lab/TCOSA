@@ -74,11 +74,12 @@ def create_in_vivo_concentrations_figure():
             color=color,
             linewidth=linewidth,
         )
-    axs[0].legend(loc="lower left")
-    axs[0].set_title("A", loc="left", fontweight="bold")
-    axs[0].set_xlabel("Growth rate [1/h]")
-    axs[0].set_ylabel("OptSubMDF [kJ/mol]")
+    axs[0].legend(loc="lower left", fontsize=14)
+    axs[0].set_title("A", loc="left", fontweight="bold", fontsize=14)
+    axs[0].set_xlabel("Growth rate [1/h]", fontsize=14)
+    axs[0].set_ylabel("OptSubMDF [kJ/mol]", fontsize=14)
     axs[0].set_xlim(min(growth_rates[:-1]), max(growth_rates[:-1]))
+    axs[0].tick_params(labelsize=14)
 
 
     ########################################################
@@ -91,9 +92,9 @@ def create_in_vivo_concentrations_figure():
     max_label = "Maximal ratio"
 
     figurename = figurename_tuple[1]
-    plotted_growth_rates = ratio_ratio_test_data[figurename]["plotted_growth_rates"][:-1]
-    min_ratios = ratio_ratio_test_data[figurename]["min_ratios"][:-1]
-    max_ratios = ratio_ratio_test_data[figurename]["max_ratios"][:-1]
+    plotted_growth_rates = [float(x) for x in ratio_ratio_test_data[figurename]["plotted_growth_rates"][:-1]]
+    min_ratios = [float(x) for x in ratio_ratio_test_data[figurename]["min_ratios"][:-1]]
+    max_ratios = [float(x) for x in ratio_ratio_test_data[figurename]["max_ratios"][:-1]]
     axs[1].plot(
         plotted_growth_rates[::-1], # x
         min_ratios[::-1], # y
@@ -108,11 +109,15 @@ def create_in_vivo_concentrations_figure():
         label=max_label,
         linewidth=1.0,
     )
-    axs[1].legend(loc="upper center", ncol=2)
-    axs[1].set_title("B", loc="left", fontweight="bold")
+    axs[1].legend(loc="upper center", ncol=2, fontsize=14)
+    axs[1].set_title("B", loc="left", fontweight="bold", fontsize=14)
     axs[1].set_ylim(-.0005, 0.01)
-    axs[1].set_xlabel("Growth rate [1/h]")
-    axs[1].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=13)
+    axs[1].set_xlabel("Growth rate [1/h]", fontsize=14)
+    axs[1].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=15)
+    axs[1].set_xlim(0.025, 0.875)
+    axs[1].tick_params(labelsize=14)
+
+    fig.subplots_adjust(right=1.1)
 
     fig.savefig(f"./cosa/in_vivo_concentrations_figure.png", bbox_inches='tight', pad_inches=0.05)
     plt.close()

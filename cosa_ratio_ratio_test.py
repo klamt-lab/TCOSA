@@ -383,6 +383,9 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 axs_index = figurenames_to_plots[figurename_tuple]
                 min_ratios = ratio_ratio_test_data[figurename]["min_ratios"][:-1]
                 max_ratios = ratio_ratio_test_data[figurename]["max_ratios"][:-1]
+            plotted_growth_rates = [float(x) for x in plotted_growth_rates]
+            min_ratios = [float(x) for x in min_ratios]
+            max_ratios = [float(x) for x in max_ratios]
             axs[axs_index].plot(
                 plotted_growth_rates[::-1], # x
                 min_ratios[::-1], # y
@@ -398,13 +401,15 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 linewidth=1.0,
             )
             import matplotlib
-            axs[axs_index].set_title(title, loc="left", fontweight="bold")
+            axs[axs_index].set_title(title, loc="left", fontweight="bold", fontsize=14)
             if figurename_tuple[2] == "A":
+                axs[axs_index].set_xlim(0.025, 0.875)
                 axs[axs_index].set_ylim(-.000003, 0.00006)
                 axs[axs_index].yaxis.set_major_formatter(
                     matplotlib.ticker.FuncFormatter(lambda x, p: '{:.0E}'.format(x))
                 )
             elif figurename_tuple[2] == "B":
+                axs[axs_index].set_xlim(0.025, 0.875)
                 axs[axs_index].set_ylim(-.0000004, 0.000005)
                 axs[axs_index].yaxis.set_major_formatter(
                     matplotlib.ticker.FuncFormatter(lambda x, p: '{:.0E}'.format(x))
@@ -416,9 +421,11 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 )
             elif figurename_tuple[2] == "D":
                 axs[axs_index].set_ylim(-.04, 1.0)
-            axs[axs_index].set_xlabel("Growth rate [1/h]")
-            axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=13)
-        fig.legend(loc="upper center", ncol=2)
+            axs[axs_index].set_xlabel("Growth rate [1/h]", fontsize=14)
+            axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=16)
+            axs[axs_index].tick_params(labelsize=14)
+        fig.legend(loc=(0.36, 0.9575), ncol=2, fontsize=14)
+        fig.subplots_adjust(right=1.25)
 
         fig.savefig(f"./cosa/full_ratio_ratio_test_figure_{concentration}.png", bbox_inches='tight', pad_inches=0.05)
         plt.close()
