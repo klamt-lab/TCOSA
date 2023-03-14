@@ -109,15 +109,16 @@ def create_in_vivo_concentrations_figure():
         label=max_label,
         linewidth=1.0,
     )
-    axs[1].legend(loc="upper center", ncol=2, fontsize=14)
-    axs[1].set_title("B", loc="left", fontweight="bold", fontsize=14)
+    axs[1].legend(loc="upper center", ncol=2, fontsize=15)
+    axs[1].set_title("B", loc="left", fontweight="bold", fontsize=15)
     axs[1].set_ylim(-.0005, 0.01)
-    axs[1].set_xlabel("Growth rate [1/h]", fontsize=14)
-    axs[1].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=15)
+    axs[1].set_xlabel("Growth rate [1/h]", fontsize=15)
+    # axs[1].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=15)
+    axs[1].set_ylabel(r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$", fontsize=13)
     axs[1].set_xlim(0.025, 0.875)
-    axs[1].tick_params(labelsize=14)
+    axs[1].tick_params(labelsize=12)
 
-    fig.subplots_adjust(right=1.1)
+    # fig.subplots_adjust(right=1.1)
 
     fig.savefig(f"./cosa/in_vivo_concentrations_figure.png", bbox_inches='tight', pad_inches=0.05)
     plt.close()

@@ -421,11 +421,12 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 )
             elif figurename_tuple[2] == "D":
                 axs[axs_index].set_ylim(-.04, 1.0)
-            axs[axs_index].set_xlabel("Growth rate [1/h]", fontsize=14)
-            axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=16)
-            axs[axs_index].tick_params(labelsize=14)
-        fig.legend(loc=(0.36, 0.9575), ncol=2, fontsize=14)
-        fig.subplots_adjust(right=1.25)
+            axs[axs_index].set_xlabel("Growth rate [1/h]", fontsize=15)
+            # axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=16)
+            axs[axs_index].set_ylabel(r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$", fontsize=13)
+            axs[axs_index].tick_params(labelsize=12)
+        fig.legend(loc=(0.295, 0.9575), ncol=2, fontsize=15)
+        # fig.subplots_adjust(right=1.25)
 
         fig.savefig(f"./cosa/full_ratio_ratio_test_figure_{concentration}.png", bbox_inches='tight', pad_inches=0.05)
         plt.close()
