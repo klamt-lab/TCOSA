@@ -245,9 +245,9 @@ def create_cosa_dG0_sampling_figures(
 
     table_paths = [
         f"{data_path}optmdf_table_STANDARDCONC.csv",
-        f"{data_path}optmdf_table_VIVOCONC.csv",
+        # f"{data_path}optmdf_table_VIVOCONC.csv",
         f"{data_path}optsubmdf_table_STANDARDCONC.csv",
-        f"{data_path}optsubmdf_table_VIVOCONC.csv",
+        # f"{data_path}optsubmdf_table_VIVOCONC.csv",
     ]
     for table_path in table_paths:
         table = pandas.read_csv(
@@ -398,7 +398,7 @@ def create_cosa_dG0_sampling_figures(
         plt.close()
 
 
-def create_total_dG0_sampling_figure() -> None:
+def create_total_dG0_sampling_figure(change_range) -> None:
     #TTTTTTTTTTTTTTT
     str_to_float = lambda x: float(x.replace(",", "."))
     list_to_float = lambda x: [str_to_float(y) for y in x]
@@ -408,11 +408,11 @@ def create_total_dG0_sampling_figure() -> None:
     in_vivo_id = "WILDTYPE"
     only_one_id = "SINGLE_COFACTOR"
 
-    for concentrations in ("STANDARDCONC", "VIVOCONC"):
+    for concentrations in ("STANDARDCONC",): #"VIVOCONC"):
         fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(13, 10)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
         for target in ("OptMDF", "OptSubMDF"):
-            table_path_aerobic = f"./cosa/results_aerobic/dG0_sampling_range25/{target.lower()}_table_{concentrations}.csv"
-            table_path_anaerobic = f"./cosa/results_anaerobic/dG0_sampling_range25/{target.lower()}_table_{concentrations}.csv"
+            table_path_aerobic = f"./cosa/results_aerobic/dG0_sampling_range{change_range}/{target.lower()}_table_{concentrations}.csv"
+            table_path_anaerobic = f"./cosa/results_anaerobic/dG0_sampling_range{change_range}/{target.lower()}_table_{concentrations}.csv"
 
             # fig.tight_layout(pad=10.0)
 
@@ -576,7 +576,7 @@ def create_total_dG0_sampling_figure() -> None:
             Line2D([0], [0], color="lawngreen", linestyle="--", linewidth=2.0, label="Random ΔG'°: flexible specificity"),
         ]
         plt.legend(handles=legend, bbox_to_anchor=(0.0, 2.5), ncol=2, loc='upper center')
-        plt.savefig(f"./cosa/total_dG0_sampling_figure_{concentrations}.png", bbox_inches='tight', pad_inches=0.05)
+        plt.savefig(f"./cosa/total_dG0_sampling_figure_change_range_{change_range}_{concentrations}.png", bbox_inches='tight', pad_inches=0.05)
         plt.close()
 
 

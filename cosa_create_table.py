@@ -58,7 +58,7 @@ def create_cosa_dG0_sampling_tables(data_path: str, output_path: str) -> None:
     filepaths = get_files(data_path)
     filepaths = [data_path+"/"+x for x in filepaths]
 
-    for concentration_scenario in ("STANDARDCONC", "VIVOCONC"):
+    for concentration_scenario in ("STANDARDCONC",): # "VIVOCONC"):
         optmdf_results = {}
         optsubmdf_results = {}
         for filepath in filepaths:
@@ -82,6 +82,7 @@ def create_cosa_dG0_sampling_tables(data_path: str, output_path: str) -> None:
                         -round(jsondata[rounded_used_growth]["objective_value"], 3)
                     ).replace(".", ",")
         print(">Generate OPTMDF table")
+        print("A", list(optmdf_results.keys()))
         csv_string = "µ [1/h]" + "\t" + "\t".join([str(growth_rate) for growth_rate in optmdf_results[list(optmdf_results.keys())[0]].keys()]) + "\n"
         for growth_rate in optmdf_results.keys():
             print_output = f"{growth_rate}"

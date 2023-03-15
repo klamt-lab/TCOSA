@@ -21,7 +21,6 @@ from typing import Dict
 
 def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_size: float=0.05, change_range: float=25.0):
     suffix = cosa_get_suffix(anaerobic, expanded)
-
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
@@ -42,7 +41,9 @@ def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_
             for x in cobra_model.metabolites
         }
         return random_changes
-
+    
+    excluded_metabolites = ["h_c", "h_p", "h_e", "h2o_c", "h2o_p", "h2o_e", "o2_c", "o2_p", "o2_e", "co2_c", "co2_p", "co2_e"]
+    
     random_standardconc_dG0_values = {}
     for i in range(num_samplings):
         random_dGf_change_dict = get_random_dGf_change_dict()
@@ -51,6 +52,8 @@ def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_
             if reaction.id not in random_standardconc_dG0_values[i].keys():
                 continue
             for key, value in reaction.metabolites.items():
+                if key.id in excluded_metabolites:
+                    continue
                 stoichiometry = -value
                 random_dGf_change = copy.deepcopy(random_dGf_change_dict[key.id]) * stoichiometry
                 random_standardconc_dG0_values[i][reaction.id]["dG0"] = copy.deepcopy(random_dGf_change) + copy.deepcopy(random_standardconc_dG0_values[i][reaction.id]["dG0"])
@@ -63,6 +66,8 @@ def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_
             if reaction.id not in random_paperconc_dG0_values[i].keys():
                 continue
             for key, value in reaction.metabolites.items():
+                if key.id in excluded_metabolites:
+                    continue
                 stoichiometry = -value
                 random_dGf_change = random_dGf_change_dict[key.id] * stoichiometry
                 random_paperconc_dG0_values[i][reaction.id]["dG0"] += random_dGf_change
@@ -221,5 +226,3 @@ def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_
 
     create_cosa_dG0_sampling_tables(data_path=f"cosa/results{suffix}/dG0_sampling_range{change_range}/runs", output_path=f"cosa/results{suffix}/dG0_sampling_range{change_range}")
     create_cosa_dG0_sampling_figures(data_path=f"./cosa/results{suffix}/dG0_sampling_range{change_range}/", figures_path=f"./cosa/results{suffix}/dG0_sampling_range{change_range}/figures/", anaerobic=anaerobic, num_samplings=num_samplings)
-
-# create_total_dG0_sampling_figure()

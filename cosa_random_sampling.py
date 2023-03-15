@@ -239,9 +239,9 @@ def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: in
 
 
 
-# cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=500, num_randomfixed_random=500)
-# cosa_random_sampling(anaerobic=True, expanded=False, num_randoms_random=500, num_randomfixed_random=500)
-# cosa_random_sampling(anaerobic=False, expanded=True, num_randoms_random=1, num_randomfixed_random=1)
-# cosa_random_sampling(anaerobic=True, expanded=True, num_randoms_random=1, num_randomfixed_random=1)
+cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=500, num_randomfixed_random=500)
+cosa_random_sampling(anaerobic=True, expanded=False, num_randoms_random=500, num_randomfixed_random=500)
+cosa_random_sampling(anaerobic=False, expanded=True, num_randoms_random=1, num_randomfixed_random=1)
+cosa_random_sampling(anaerobic=True, expanded=True, num_randoms_random=1, num_randomfixed_random=1)
 create_total_cosa_figure()
 # create_total_cosa_figure_optsubmdf_only()

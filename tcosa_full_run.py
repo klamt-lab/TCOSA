@@ -29,11 +29,14 @@ import cosa_create_model_and_data
 # and the figures for this analysis are also generated.
 import cosa_random_sampling
 
-# Run the ratio range variability analysis and generate its figures.
-# import cosa_ratio_test
+# Create the extended vs. two-cofactor model comparison figure.
+import cosa_create_extended_model_figure
 
 # Run the ratio ratio range variability analysis and generate its figures.
 import cosa_ratio_ratio_test
+
+# Create in vivo concentrations figure
+import cosa_create_in_vivo_concentrations_figure
 
 # Run the number of minimal changes to reach theoretical optimality analysis
 # and generate a text report about it.
@@ -42,9 +45,6 @@ import cosa_minimal_changes_test
 # Perform dG0 sampling.
 import cosa_dG0_sampling_aerobic
 import cosa_dG0_sampling_anaerobic
-
-# Create the extended vs. two-cofactor model comparison figure.
-import cosa_create_extended_model_figure
 
 # Single swap analyses
 import cosa_single_swap_effect_analysis_aerobic
