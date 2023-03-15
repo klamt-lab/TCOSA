@@ -74,8 +74,8 @@ def create_in_vivo_concentrations_figure():
             color=color,
             linewidth=linewidth,
         )
-    axs[0].legend(loc="lower left", fontsize=14)
-    axs[0].set_title("A", loc="left", fontweight="bold", fontsize=14)
+    axs[0].legend(loc="lower left", fontsize=16)
+    axs[0].set_title("A", loc="left", fontweight="bold", fontsize=18)
     axs[0].set_xlabel("Growth rate [1/h]", fontsize=14)
     axs[0].set_ylabel("OptSubMDF [kJ/mol]", fontsize=14)
     axs[0].set_xlim(min(growth_rates[:-1]), max(growth_rates[:-1]))
@@ -109,14 +109,14 @@ def create_in_vivo_concentrations_figure():
         label=max_label,
         linewidth=1.0,
     )
-    axs[1].legend(loc="upper center", ncol=2, fontsize=15)
-    axs[1].set_title("B", loc="left", fontweight="bold", fontsize=15)
+    axs[1].legend(loc="upper center", ncol=2, fontsize=16)
+    axs[1].set_title("B", loc="left", fontweight="bold", fontsize=18)
     axs[1].set_ylim(-.0005, 0.01)
     axs[1].set_xlabel("Growth rate [1/h]", fontsize=15)
     # axs[1].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=15)
-    axs[1].set_ylabel(r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$", fontsize=13)
-    axs[1].set_xlim(0.025, 0.875)
-    axs[1].tick_params(labelsize=12)
+    axs[1].set_ylabel(r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$", fontsize=14)
+    axs[1].set_xlim(0.025, 0.89)
+    axs[1].tick_params(labelsize=14)
 
     # fig.subplots_adjust(right=1.1)
 

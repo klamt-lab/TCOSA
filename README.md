@@ -38,7 +38,6 @@ conda config --add channels IBMDecisionOptimization
 
 ```sh
 conda env create -n tcosa -f environment.yml
-pip install ray
 ```
 
 ### Expected install time

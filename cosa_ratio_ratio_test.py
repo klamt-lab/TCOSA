@@ -401,15 +401,15 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 linewidth=1.0,
             )
             import matplotlib
-            axs[axs_index].set_title(title, loc="left", fontweight="bold", fontsize=14)
+            axs[axs_index].set_title(title, loc="left", fontweight="bold", fontsize=17)
             if figurename_tuple[2] == "A":
-                axs[axs_index].set_xlim(0.025, 0.875)
+                axs[axs_index].set_xlim(0.025, 0.895)
                 axs[axs_index].set_ylim(-.000003, 0.00006)
                 axs[axs_index].yaxis.set_major_formatter(
                     matplotlib.ticker.FuncFormatter(lambda x, p: '{:.0E}'.format(x))
                 )
             elif figurename_tuple[2] == "B":
-                axs[axs_index].set_xlim(0.025, 0.875)
+                axs[axs_index].set_xlim(0.025, 0.895)
                 axs[axs_index].set_ylim(-.0000004, 0.000005)
                 axs[axs_index].yaxis.set_major_formatter(
                     matplotlib.ticker.FuncFormatter(lambda x, p: '{:.0E}'.format(x))
@@ -421,11 +421,11 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 )
             elif figurename_tuple[2] == "D":
                 axs[axs_index].set_ylim(-.04, 1.0)
-            axs[axs_index].set_xlabel("Growth rate [1/h]", fontsize=15)
+            axs[axs_index].set_xlabel("Growth rate [1/h]", fontsize=16)
             # axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=16)
-            axs[axs_index].set_ylabel(r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$", fontsize=13)
-            axs[axs_index].tick_params(labelsize=12)
-        fig.legend(loc=(0.295, 0.9575), ncol=2, fontsize=15)
+            axs[axs_index].set_ylabel(r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$", fontsize=12)
+            axs[axs_index].tick_params(labelsize=13)
+        fig.legend(loc=(0.235, 0.9525), ncol=2, fontsize=18)
         # fig.subplots_adjust(right=1.25)
 
         fig.savefig(f"./cosa/full_ratio_ratio_test_figure_{concentration}.png", bbox_inches='tight', pad_inches=0.05)
