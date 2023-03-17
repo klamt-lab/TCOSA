@@ -34,7 +34,7 @@ def cosa_maximal_reaction_numbers(anaerobic: bool, expanded: bool, growth_epsilo
     biomass_reaction_id = "BIOMASS_Ec_iML1515_core_75p37M"
 
     original_cobra_model = copy.deepcopy(cobra_model)
-    for concentrations in ("STANDARDCONC", "VIVOCONC"):
+    for concentrations in ("STANDARDCONC",): #"VIVOCONC"):
         print(f"CONCENTRATIONS: {concentrations}")
         print(f"=CONCENTRATION RANGES: {concentrations}=")
         if concentrations == "STANDARDCONC":
@@ -44,7 +44,7 @@ def cosa_maximal_reaction_numbers(anaerobic: bool, expanded: bool, growth_epsilo
             dG0_values = copy.deepcopy(paperconc_dG0_values)
             used_concentration_values = concentration_values_paper
 
-        for target in ("OPTSUBMDF",): # "OPTMDF",
+        for target in ("OPTMDF", "OPTSUBMDF"):
             print(f"TARGET: {target}")
             print(f"===OPTIMIZATION TARGET: {target}===")
 
@@ -81,16 +81,19 @@ def cosa_maximal_reaction_numbers(anaerobic: bool, expanded: bool, growth_epsilo
                     cat=pulp.LpContinuous,
                 )
                 z_sum = 0.0
+                all_tcosa_ids = get_all_tcosa_reaction_ids(cobra_model)
                 for reaction_id in reaction_ids:
-                    if not reaction_id.endswith("_TCOSA"):
-                        continue
-                    z_active = pulp.LpVariable(
-                        name=f"z_active_{reaction_id}",
-                        cat=pulp.LpBinary,
-                    )
-                    optmdfpathway_base_problem += -optmdfpathway_base_variables[reaction_id] + z_active * 1e-6 <= 0
-                    optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
-                    z_sum += optmdfpathway_base_variables[f"z_active_{reaction_id}"]
+                    # if not reaction_id.endswith("_TCOSA"):
+                    #     continue
+                    # z_active = pulp.LpVariable(
+                    #     name=f"z_active_{reaction_id}",
+                    #     cat=pulp.LpBinary,
+                    # )
+                    # optmdfpathway_base_problem += -optmdfpathway_base_variables[reaction_id] + z_active * 1e-5 <= 0
+                    # optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+                    if reaction_id in all_tcosa_ids:
+                        if "_VARIANT_" not in reaction_id:
+                            z_sum += optmdfpathway_base_variables[f"z_var_{reaction_id}"]
                 z_sum_var = pulp.LpVariable(
                     name=f"z_sum_var",
                     lowBound=-float("inf"),
@@ -143,7 +146,7 @@ def cosa_maximal_reaction_numbers(anaerobic: bool, expanded: bool, growth_epsilo
                         z_value = minimization_result["values"][var_name]
                         reaction_string = cobra_model.reactions.get_by_id(reac_id).reaction
                         if z_value > 0.1:
-                            report_line = f"* {reac_id} | {round(dG0_values[reac_id]['dG0'], 3)} kJ/mol | {reaction_string}"
+                            report_line = f"* {reac_id} | {round(dG0_values[reac_id]['dG0'], 3)} kJ/mol | {minimization_result['values'][reac_id]} | {reaction_string}"
                             active_reactions.append(reac_id)
                             # print(report_line)
                             report += report_line + "\n"
