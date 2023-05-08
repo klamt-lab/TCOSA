@@ -13,18 +13,18 @@ from cosa_create_table import create_cosa_tables
 from cosa_load_model_data import (
     MIN_OPTMDF, load_model_data
 )
-from cosa_random_sampling_figures import create_cosa_figures, create_total_cosa_figure, create_total_cosa_figure_optsubmdf_only
+from cosa_random_sampling_figures import create_cosa_figures, create_total_cosa_figure
 from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
 from cosa_add_promiscuity_constraints import cosa_add_promiscuity_constraints
 
 
-def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: int, num_randomfixed_random: int, step_size: float=0.05, step_number: float=9):
+def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: int, num_randomfixed_random: int, c_source: str="glucose", step_size: float=0.05, step_number: float=9):
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
-    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=expanded)
+    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=expanded, c_source=c_source)
 
-    suffix = cosa_get_suffix(anaerobic, expanded)
+    suffix = cosa_get_suffix(anaerobic, expanded, c_source)
     ensure_folder_existence("./cosa")
     ensure_folder_existence(f"./cosa/results{suffix}")
     ensure_folder_existence(f"./cosa/results{suffix}/runs")
@@ -238,10 +238,12 @@ def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: in
     create_cosa_figures(data_path=f"./cosa/results{suffix}/", figures_path=f"./cosa/results{suffix}/figures/", anaerobic=anaerobic)
 
 
-
+cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=50, num_randomfixed_random=50, c_source="acetate")
+# cosa_random_sampling(anaerobic=True, expanded=False, num_randoms_random=1, num_randomfixed_random=1, c_source="acetate")
+"""
 cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=500, num_randomfixed_random=500)
 cosa_random_sampling(anaerobic=True, expanded=False, num_randoms_random=500, num_randomfixed_random=500)
 cosa_random_sampling(anaerobic=False, expanded=True, num_randoms_random=1, num_randomfixed_random=1)
 cosa_random_sampling(anaerobic=True, expanded=True, num_randoms_random=1, num_randomfixed_random=1)
 create_total_cosa_figure()
-# create_total_cosa_figure_optsubmdf_only()
+"""

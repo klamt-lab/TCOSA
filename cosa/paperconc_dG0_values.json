@@ -8010,7 +8010,7 @@
         "num_compartments": 1
     },
     "PGCD": {
-        "dG0": 30.47874899186172,
+        "dG0": -100,
         "uncertainty": 0.0005608557753733479,
         "num_compartments": 1
     },
@@ -9140,12 +9140,12 @@
         "num_compartments": 1
     },
     "PTAr_FWD": {
-        "dG0": -100,
+        "dG0": 9.999151332148358,
         "uncertainty": 4.293076378458771e-05,
         "num_compartments": 1
     },
     "PTAr_REV": {
-        "dG0": 100,
+        "dG0": -9.999151332148578,
         "uncertainty": -4.2930763784596385e-05,
         "num_compartments": 1
     },
@@ -9180,12 +9180,12 @@
         "num_compartments": 1
     },
     "ENO_FWD": {
-        "dG0": -3.959611747296236,
+        "dG0": 100,
         "uncertainty": 0.0003805228007028316,
         "num_compartments": 1
     },
     "ENO_REV": {
-        "dG0": 3.959611747296236,
+        "dG0": -100,
         "uncertainty": -0.00038052280070283157,
         "num_compartments": 1
     },
@@ -9410,12 +9410,12 @@
         "num_compartments": 1
     },
     "MDH_FWD": {
-        "dG0": 26.563754485540258,
+        "dG0": -100,
         "uncertainty": 0.00011604275815814587,
         "num_compartments": 1
     },
     "MDH_REV": {
-        "dG0": -26.56375448554013,
+        "dG0": 100,
         "uncertainty": -0.00011604275815813025,
         "num_compartments": 1
     },
@@ -10140,12 +10140,12 @@
         "num_compartments": 1
     },
     "GAPD_FWD": {
-        "dG0": -100,
+        "dG0": 0.2816464914124026,
         "uncertainty": 0.0003039626920273708,
         "num_compartments": 1
     },
     "GAPD_REV": {
-        "dG0": 100,
+        "dG0": -0.2816464914117134,
         "uncertainty": -0.0003039626920273795,
         "num_compartments": 1
     },
@@ -10230,22 +10230,22 @@
         "num_compartments": 1
     },
     "ACACT2r_FWD": {
-        "dG0": -100,
+        "dG0": 30.401304306150905,
         "uncertainty": -0.036879691698491146,
         "num_compartments": 1
     },
     "ACACT2r_REV": {
-        "dG0": 100,
+        "dG0": -30.40130430615045,
         "uncertainty": 0.036879691698491035,
         "num_compartments": 1
     },
     "ACACT4r_FWD": {
-        "dG0": -100,
+        "dG0": 30.8443253845453,
         "uncertainty": -0.004535677246721548,
         "num_compartments": 1
     },
     "ACACT4r_REV": {
-        "dG0": 100,
+        "dG0": -30.844325384545073,
         "uncertainty": 0.004535677246721548,
         "num_compartments": 1
     },
@@ -10410,12 +10410,12 @@
         "num_compartments": 1
     },
     "ACACT6r_FWD": {
-        "dG0": -100,
+        "dG0": 30.844325384546664,
         "uncertainty": -0.004535677246721548,
         "num_compartments": 1
     },
     "ACACT6r_REV": {
-        "dG0": 100,
+        "dG0": -30.84432538454621,
         "uncertainty": 0.004535677246721548,
         "num_compartments": 1
     },
@@ -10590,12 +10590,12 @@
         "num_compartments": 1
     },
     "ACACT1r_FWD": {
-        "dG0": -100,
+        "dG0": 25.261219073207485,
         "uncertainty": 3.7028054337695515e-05,
         "num_compartments": 1
     },
     "ACACT1r_REV": {
-        "dG0": 100,
+        "dG0": -25.26121907320794,
         "uncertainty": -3.7028054337695515e-05,
         "num_compartments": 1
     },
@@ -11980,12 +11980,12 @@
         "num_compartments": 1
     },
     "PGCD_ORIGINAL_NAD_TCOSA": {
-        "dG0": 30.47874899186172,
+        "dG0": -100,
         "uncertainty": 0.0005608557753733479,
         "num_compartments": 1
     },
     "PGCD_VARIANT_NADP_TCOSA": {
-        "dG0": 30.47874899186172,
+        "dG0": -100,
         "uncertainty": 0.0005608557753733479,
         "num_compartments": 1
     },
@@ -12370,22 +12370,22 @@
         "num_compartments": 1
     },
     "MDH_FWD_ORIGINAL_NAD_TCOSA": {
-        "dG0": 26.563754485540258,
+        "dG0": -100,
         "uncertainty": 0.00011604275815814587,
         "num_compartments": 1
     },
     "MDH_FWD_VARIANT_NADP_TCOSA": {
-        "dG0": 26.563754485540258,
+        "dG0": -100,
         "uncertainty": 0.00011604275815814587,
         "num_compartments": 1
     },
     "MDH_REV_ORIGINAL_NAD_TCOSA": {
-        "dG0": -26.56375448554013,
+        "dG0": 100,
         "uncertainty": -0.00011604275815813025,
         "num_compartments": 1
     },
     "MDH_REV_VARIANT_NADP_TCOSA": {
-        "dG0": -26.56375448554013,
+        "dG0": 100,
         "uncertainty": -0.00011604275815813025,
         "num_compartments": 1
     },
@@ -12750,22 +12750,22 @@
         "num_compartments": 1
     },
     "GAPD_FWD_ORIGINAL_NAD_TCOSA": {
-        "dG0": -100,
+        "dG0": 0.2816464914124026,
         "uncertainty": 0.0003039626920273708,
         "num_compartments": 1
     },
     "GAPD_FWD_VARIANT_NADP_TCOSA": {
-        "dG0": -100,
+        "dG0": 0.2816464914124026,
         "uncertainty": 0.0003039626920273708,
         "num_compartments": 1
     },
     "GAPD_REV_ORIGINAL_NAD_TCOSA": {
-        "dG0": 100,
+        "dG0": -0.2816464914117134,
         "uncertainty": -0.0003039626920273795,
         "num_compartments": 1
     },
     "GAPD_REV_VARIANT_NADP_TCOSA": {
-        "dG0": 100,
+        "dG0": -0.2816464914117134,
         "uncertainty": -0.0003039626920273795,
         "num_compartments": 1
     },

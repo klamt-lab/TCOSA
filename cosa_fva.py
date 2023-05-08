@@ -21,15 +21,15 @@ from helper import ensure_folder_existence
 from fva import perform_variability_analysis, perform_fva_multi
 
 
-def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_scenario: str) -> None:
+def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_scenario: str, c_source: str="glucose") -> None:
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
-    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=False)
+    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=False, c_source=c_source)
 
     biomass_reaction_id = "BIOMASS_Ec_iML1515_core_75p37M"
 
-    suffix = cosa_get_suffix(anaerobic, expanded=False)
+    suffix = cosa_get_suffix(anaerobic, expanded=False, c_source=c_source)
 
     # figures_path = f"./cosa/results{suffix}/figures/"
     # ensure_folder_existence(figures_path)

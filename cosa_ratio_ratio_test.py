@@ -21,14 +21,14 @@ from typing import Dict
 from helper import ensure_folder_existence
 
 
-def cosa_ratio_ratio_test(anaerobic: bool, expanded: bool, growth_epsilon: float = 0.01) -> None:
-    suffix = cosa_get_suffix(anaerobic, expanded)
+def cosa_ratio_ratio_test(anaerobic: bool, expanded: bool, growth_epsilon: float = 0.01, c_source: str="glucose") -> None:
+    suffix = cosa_get_suffix(anaerobic, expanded, c_source)
     figures_path = f"./cosa/results{suffix}/figures/"
     ensure_folder_existence(figures_path)
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
-    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=expanded)
+    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=expanded, c_source=c_source)
 
     biomass_reaction_id = "BIOMASS_Ec_iML1515_core_75p37M"
 
@@ -128,6 +128,8 @@ def cosa_ratio_ratio_test(anaerobic: bool, expanded: bool, growth_epsilon: float
                             min_target,
                             1e12,
                         )
+
+                    print(growth_rate)
 
                     print(f" @ µ [1/h] of {growth_rate_float} and min {target} of {min_target} kJ/mol")
                     report += f" @ µ [1/h] of {growth_rate_float} and min {target} of {min_target} kJ/mol\n"
@@ -432,8 +434,10 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
         plt.close()
 
 
-cosa_ratio_ratio_test(anaerobic=False, expanded=False)
-cosa_ratio_ratio_test(anaerobic=True, expanded=False)
+cosa_ratio_ratio_test(anaerobic=False, expanded=False, c_source="acetate")
+
+# cosa_ratio_ratio_test(anaerobic=False, expanded=False)
+# cosa_ratio_ratio_test(anaerobic=True, expanded=False)
 # cosa_create_full_ratio_ratio_test_figure_one_panel()
 # cosa_create_full_ratio_ratio_test_figure_two_panels()
-cosa_create_full_ratio_ratio_test_figure_four_panels()
+# cosa_create_full_ratio_ratio_test_figure_four_panels()

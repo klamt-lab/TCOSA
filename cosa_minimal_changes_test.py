@@ -16,15 +16,15 @@ from typing import Dict
 import matplotlib.pyplot as plt
 
 
-def cosa_minimal_changes_test(anaerobic: bool, disallowed_changed_reaction: str="") -> None:
+def cosa_minimal_changes_test(anaerobic: bool, disallowed_changed_reaction: str="", c_source: str="glucose") -> None:
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
-    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=False)
+    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=False, c_source=c_source)
 
     biomass_reaction_id = "BIOMASS_Ec_iML1515_core_75p37M"
 
-    suffix = cosa_get_suffix(anaerobic, False)
+    suffix = cosa_get_suffix(anaerobic, False, c_source)
 
     figures_path = f"./cosa/results{suffix}/figures/"
     ensure_folder_existence(figures_path)
@@ -203,9 +203,10 @@ def cosa_minimal_changes_test(anaerobic: bool, disallowed_changed_reaction: str=
         f.write(report)
 
 
-cosa_minimal_changes_test(anaerobic=False)
+# cosa_minimal_changes_test(anaerobic=False)
+cosa_minimal_changes_test(anaerobic=False, c_source="acetate")
 # cosa_minimal_changes_test(anaerobic=False, disallowed_changed_reaction="PDH_NADY")
 # cosa_minimal_changes_test(anaerobic=False, disallowed_changed_reaction="NADH16pp_NADY")
 # cosa_minimal_changes_test(anaerobic=False, disallowed_changed_reaction="FLDR2_NADX")
 # cosa_minimal_changes_test(anaerobic=False, disallowed_changed_reaction="ICDHyr_FWD_NADX")
-cosa_minimal_changes_test(anaerobic=True)
+# cosa_minimal_changes_test(anaerobic=True)

@@ -17,13 +17,13 @@ from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
 from cosa_add_promiscuity_constraints import cosa_add_promiscuity_constraints
 
 
-def cosa_single_swap_analysis(anaerobic: bool):
+def cosa_single_swap_analysis(anaerobic: bool, c_source: str = "glucose"):
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
-    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=False)
+    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=False, c_source=c_source)
 
-    suffix = cosa_get_suffix(anaerobic, expanded=False)
+    suffix = cosa_get_suffix(anaerobic, expanded=False, c_source=c_source)
 
     nadx_scenario = "WILDTYPE"
     old_cobra_model = copy.deepcopy(cobra_model)

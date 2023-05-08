@@ -1,0 +1,3 @@
+import cosa_single_swap_effect_analysis
+
+cosa_single_swap_effect_analysis.cosa_single_swap_analysis(anaerobic=False, c_source="acetate")
