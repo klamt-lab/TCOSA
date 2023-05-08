@@ -1,4 +1,7 @@
+import cobra
 from helper import json_load
+
+model = cobra.io.read_sbml_model("resources/iML1515.xml")
 
 make_base = lambda y: [
     x.replace("_ORIGINAL", "").replace("_VARIANT", "").replace("_NADP_TCOSA", "").replace("_NAD_TCOSA", "").replace("_FWD", "").replace("_REV", "") for x in y
@@ -7,7 +10,7 @@ make_base = lambda y: [
 all_ids = []
 for mode in ("GREATER_THAN", "LOWER_THAN"):
     print(f"===={mode}====")
-    for concentrations in ("STANDARDCONC",): # ("VIVOCONC",):
+    for concentrations in ("STANDARDCONC", "VIVOCONC"):
         max_optmdf_change = 0
         max_optsubmdf_change = 0
         min_optmdf_change = 0
@@ -121,10 +124,14 @@ for mode in ("GREATER_THAN", "LOWER_THAN"):
 
             all_ids += id_optmdf_at_all + id_optsubmdf_at_all + id_optmdf_at_one + id_optsubmdf_at_one
         print("###########################")
-print(f"Min OptMDF change: {min_optmdf_change} kJ/mol")
-print(f"Max OptMDF change: {max_optmdf_change} kJ/mol")
-print(f"Min OptSubMDF change: {min_optsubmdf_change} kJ/mol")
-print(f"Max OptSubMDF change: {max_optsubmdf_change} kJ/mol")
+        print(f"Min OptMDF change: {min_optmdf_change} kJ/mol")
+        print(f"Max OptMDF change: {max_optmdf_change} kJ/mol")
+        print(f"Min OptSubMDF change: {min_optsubmdf_change} kJ/mol")
+        print(f"Max OptSubMDF change: {max_optsubmdf_change} kJ/mol")
 
-all_ids = list(set(all_ids))
-print(f"All IDs (n={len(all_ids)}): {all_ids}")
+        all_ids = list(set(all_ids))
+        print(f"All IDs (n={len(all_ids)}): {all_ids}")
+
+        for id_ in all_ids:
+            reaction = model.reactions.get_by_id(id_)
+            print(reaction.id, reaction.reaction)
