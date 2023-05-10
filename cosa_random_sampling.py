@@ -18,13 +18,13 @@ from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
 from cosa_add_promiscuity_constraints import cosa_add_promiscuity_constraints
 
 
-def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: int, num_randomfixed_random: int, c_source: str="glucose", step_size: float=0.05, step_number: float=9):
+def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: int, num_randomfixed_random: int, c_source: str="glucose", step_size: float=0.05, step_number: float=9, fixed_nadx_change: int=0):
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
     ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=expanded, c_source=c_source)
 
-    suffix = cosa_get_suffix(anaerobic, expanded, c_source)
+    suffix = cosa_get_suffix(anaerobic, expanded, c_source, fixed_nadx_change)
     ensure_folder_existence("./cosa")
     ensure_folder_existence(f"./cosa/results{suffix}")
     ensure_folder_existence(f"./cosa/results{suffix}/runs")
@@ -104,6 +104,7 @@ def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: in
     print(nadx_scenarios)
     original_used_growth = used_growth
 
+
     for concentration_scenario in ("STANDARDCONC", "VIVOCONC"):
         if concentration_scenario == "STANDARDCONC":
             dG0_values = copy.deepcopy(standardconc_dG0_values)
@@ -111,6 +112,25 @@ def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: in
         elif concentration_scenario == "VIVOCONC":
             dG0_values = copy.deepcopy(paperconc_dG0_values)
             used_concentration_values = concentration_values_paper
+
+        if fixed_nadx_change != 0:
+            if not expanded:
+                input("WARNING: WRONG CONFUGURATION!")
+            reaction_ids = [x.id for x in cobra_model.reactions]
+            for key in reaction_ids:
+                if not "_NADZ_TCOSA" in key:
+                    continue
+                if key not in dG0_values.keys():
+                    continue
+                if (dG0_values[key]["dG0"] == +100.0) or (dG0_values[key]["dG0"] == -100.0):
+                    continue
+                cobra_reaction_metabolites = cobra_model.reactions.get_by_id(key).metabolites
+                try:
+                    num_nadz = cobra_reaction_metabolites[cobra_model.metabolites.get_by_id("nadz_tcosa_c")]
+                    # num_nadzh = cobra_reaction_metabolites[cobra_model.reactions.get_by_id("nadzh_tcosa_c")]
+                    dG0_values[key]["dG0"] += num_nadz * fixed_nadx_change
+                except KeyError:
+                    continue
 
         for nadx_scenario in nadx_scenarios:
             print("~~~")
@@ -238,7 +258,9 @@ def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: in
     create_cosa_figures(data_path=f"./cosa/results{suffix}/", figures_path=f"./cosa/results{suffix}/figures/", anaerobic=anaerobic)
 
 
-cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=500, num_randomfixed_random=500, c_source="acetate")
+# cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=500, num_randomfixed_random=500, c_source="acetate")
+# cosa_random_sampling(anaerobic=False, expanded=True, num_randoms_random=1, num_randomfixed_random=1, fixed_nadx_change=+30)
+cosa_random_sampling(anaerobic=True, expanded=True, num_randoms_random=1, num_randomfixed_random=1, fixed_nadx_change=-30)
 # cosa_random_sampling(anaerobic=True, expanded=False, num_randoms_random=1, num_randomfixed_random=1, c_source="acetate")
 """
 cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=500, num_randomfixed_random=500)
