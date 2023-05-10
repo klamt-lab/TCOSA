@@ -18,70 +18,79 @@ for concentration_ranges in ("STANDARDCONC", "VIVOCONC"):
     # fig.tight_layout(pad=7.0)
 
     for aerobicity in ("aerobic", "anaerobic"):
-        file_path_optmdf = f"cosa/results_{aerobicity}/optmdf_table_{concentration_ranges}.csv"
-        file_path_expanded_optmdf = f"cosa/results_{aerobicity}_expanded/optmdf_table_{concentration_ranges}.csv"
-        file_path_optsubmdf = f"cosa/results_{aerobicity}/optsubmdf_table_{concentration_ranges}.csv"
-        file_path_expanded_optsubmdf = f"cosa/results_{aerobicity}_expanded/optsubmdf_table_{concentration_ranges}.csv"
+        for change_state in (0, 30, -30):
+            if change_state == 0:
+                extra = ""
+                legend_addition = ""
+            else:
+                extra = f"_nadz_change_{change_state}"
+                legend_addition = f" (Formation energy change: {change_state})"
+            file_path_optmdf = f"cosa/results_{aerobicity}/optmdf_table_{concentration_ranges}.csv"
+            file_path_expanded_optmdf = f"cosa/results_{aerobicity}_expanded{extra}/optmdf_table_{concentration_ranges}.csv"
+            file_path_optsubmdf = f"cosa/results_{aerobicity}/optsubmdf_table_{concentration_ranges}.csv"
+            file_path_expanded_optsubmdf = f"cosa/results_{aerobicity}_expanded{extra}/optsubmdf_table_{concentration_ranges}.csv"
 
-        data_optmdf, growth_rates = _get_data_list(file_path_optmdf)
-        data_optmdf_expanded, _ = _get_data_list(file_path_expanded_optmdf)
-        data_optsubmdf, growth_rates = _get_data_list(file_path_optsubmdf)
-        data_optsubmdf_expanded, _ = _get_data_list(file_path_expanded_optsubmdf)
+            data_optmdf, growth_rates = _get_data_list(file_path_optmdf)
+            data_optmdf_expanded, _ = _get_data_list(file_path_expanded_optmdf)
+            data_optsubmdf, growth_rates = _get_data_list(file_path_optsubmdf)
+            data_optsubmdf_expanded, _ = _get_data_list(file_path_expanded_optsubmdf)
 
-        if aerobicity == "aerobic":
-            axs_row = 0
-            title = "A Aerobic"
-            label_optmdf_two = "OptMDF of two-cofactor model"
-            label_optsubmdf_three = "OptSubMDF of three-cofactor model"
-            label_optmdf_three = "OptMDF of three-cofactor model"
-            label_optsubmdf_two = "OptSubMDF of two-cofactor model"
-        else:
-            axs_row = 1
-            title = "B Anaerobic"
-            label_optmdf_two = None
-            label_optsubmdf_three = None
-            label_optmdf_three = None
-            label_optsubmdf_two = None
+            if aerobicity == "aerobic":
+                axs_row = 0
+                title = "A Aerobic"
+                label_optmdf_two = "OptMDF of two-cofactor model"
+                label_optsubmdf_three = "OptSubMDF of three-cofactor model" + legend_addition
+                label_optmdf_three = "OptMDF of three-cofactor model" + legend_addition
+                label_optsubmdf_two = "OptSubMDF of two-cofactor model"
+            else:
+                axs_row = 1
+                title = "B Anaerobic"
+                label_optmdf_two = None
+                label_optsubmdf_three = None
+                label_optmdf_three = None
+                label_optsubmdf_two = None
 
-        axs[axs_row].plot(
-            growth_rates, # x
-            data_optmdf, # y
-            label=label_optmdf_two,
-            linestyle="--",
-            color="salmon",
-            linewidth=2.0,
-        )
-        axs[axs_row].plot(
-            growth_rates, # x
-            data_optmdf_expanded, # y
-            label=label_optmdf_three,
-            linestyle="-",
-            color="red",
-            linewidth=2.0,
-        )
-        axs[axs_row].plot(
-            growth_rates, # x
-            data_optsubmdf, # y
-            label=label_optsubmdf_two,
-            linestyle="--",
-            color="deepskyblue",
-            linewidth=2.0,
-        )
-        axs[axs_row].plot(
-            growth_rates, # x
-            data_optsubmdf_expanded, # y
-            label=label_optsubmdf_three,
-            linestyle="-",
-            color="blue",
-            linewidth=2.0,
-        )
+            if change_state == 0:
+                axs[axs_row].plot(
+                    growth_rates, # x
+                    data_optmdf, # y
+                    label=label_optmdf_two,
+                    linestyle="--",
+                    color="salmon",
+                    linewidth=2.0,
+                )
+            axs[axs_row].plot(
+                growth_rates, # x
+                data_optmdf_expanded, # y
+                label=label_optmdf_three,
+                linestyle="-",
+                color="red",
+                linewidth=2.0,
+            )
+            if change_state == 0:
+                axs[axs_row].plot(
+                    growth_rates, # x
+                    data_optsubmdf, # y
+                    label=label_optsubmdf_two,
+                    linestyle="--",
+                    color="deepskyblue",
+                    linewidth=2.0,
+                )
+            axs[axs_row].plot(
+                growth_rates, # x
+                data_optsubmdf_expanded, # y
+                label=label_optsubmdf_three,
+                linestyle="-",
+                color="blue",
+                linewidth=2.0,
+            )
 
-        anaerobic = aerobicity == "anaerobic"
-        axs[axs_row].set_title(title, loc="left", fontweight="bold")
-        axs[axs_row].set_xlabel("Growth rate [1/h]")
-        axs[axs_row].set_ylabel(r"MDF [kJ/mol]")
-        axs[axs_row].set_xlim(min(growth_rates), max(growth_rates))
-        axs[axs_row].set_ylim(0.0, 30)
+            anaerobic = aerobicity == "anaerobic"
+            axs[axs_row].set_title(title, loc="left", fontweight="bold")
+            axs[axs_row].set_xlabel("Growth rate [1/h]")
+            axs[axs_row].set_ylabel(r"MDF [kJ/mol]")
+            axs[axs_row].set_xlim(min(growth_rates), max(growth_rates))
+            axs[axs_row].set_ylim(0.0, 30)
 
         # plt.legend(loc="center left")
         # plt.title(f"Comparison of two-cofactor and expanded three-cofactor models\nunder {'anaerobic' if anaerobic else 'aerobic'} conditions")

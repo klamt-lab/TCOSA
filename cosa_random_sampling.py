@@ -260,7 +260,8 @@ def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: in
 
 # cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=500, num_randomfixed_random=500, c_source="acetate")
 # cosa_random_sampling(anaerobic=False, expanded=True, num_randoms_random=1, num_randomfixed_random=1, fixed_nadx_change=+30)
-cosa_random_sampling(anaerobic=True, expanded=True, num_randoms_random=1, num_randomfixed_random=1, fixed_nadx_change=-30)
+cosa_random_sampling(anaerobic=False, expanded=True, num_randoms_random=1, num_randomfixed_random=1, fixed_nadx_change=-30)
+cosa_random_sampling(anaerobic=True, expanded=True, num_randoms_random=1, num_randomfixed_random=1, fixed_nadx_change=30)
 # cosa_random_sampling(anaerobic=True, expanded=False, num_randoms_random=1, num_randomfixed_random=1, c_source="acetate")
 """
 cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=500, num_randomfixed_random=500)
