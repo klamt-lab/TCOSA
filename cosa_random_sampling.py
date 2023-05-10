@@ -238,7 +238,7 @@ def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: in
     create_cosa_figures(data_path=f"./cosa/results{suffix}/", figures_path=f"./cosa/results{suffix}/figures/", anaerobic=anaerobic)
 
 
-cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=50, num_randomfixed_random=50, c_source="acetate")
+cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=500, num_randomfixed_random=500, c_source="acetate")
 # cosa_random_sampling(anaerobic=True, expanded=False, num_randoms_random=1, num_randomfixed_random=1, c_source="acetate")
 """
 cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=500, num_randomfixed_random=500)
