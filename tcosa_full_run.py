@@ -36,7 +36,7 @@ import cosa_create_extended_model_figure
 import cosa_ratio_ratio_test
 
 # Create in vivo concentrations figure
-import cosa_create_in_vivo_concentrations_figure
+import cosa_create_aerobic_figures
 
 # Run the number of minimal changes to reach theoretical optimality analysis
 # and generate a text report about it.

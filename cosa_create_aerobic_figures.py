@@ -2,15 +2,26 @@ import matplotlib.pyplot as plt
 import pandas
 from helper import json_load
 
-def create_in_vivo_concentrations_figure():
-    ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic/ratio_ratio_test_data.json")
-    concentration = "VIVOCONC"
+def create_aerobic_figure(aim: str):
+    if aim == "in_vivo":
+        ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic/ratio_ratio_test_data.json")
+        concentration = "VIVOCONC"
+        output_path = "./cosa/in_vivo_concentrations_figure.png"
+        table_path = f"cosa/results_aerobic/optsubmdf_table_{concentration}.csv"
+        pad = 3.75
+    elif aim == "acetate":
+        ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic_acetate/ratio_ratio_test_data.json")
+        concentration = "STANDARDCONC"
+        output_path = "./cosa/acetate_figure.png"
+        table_path = f"cosa/results_aerobic_acetate/optsubmdf_table_{concentration}.csv"
+        pad = 5.0
+
     target = "OPTSUBMDF"
 
     figurename_tuple = ("aerobic", f"2C_NADH_to_NAD___to___NADPH_to_nadp_{target}_{concentration}.jpg")
 
     fig, axs = plt.subplots(nrows=1, ncols=2, dpi=500, figsize=(18, 6)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
-    fig.tight_layout(pad=3.75)
+    fig.tight_layout(pad=pad)
 
     ########################################################
     ########################################################
@@ -24,7 +35,6 @@ def create_in_vivo_concentrations_figure():
     in_vivo_id = "WILDTYPE"
     only_one_id = "SINGLE_COFACTOR"
 
-    table_path = f"cosa/results_aerobic/optsubmdf_table_VIVOCONC.csv"
     table = pandas.read_csv(
         table_path,
         sep="\t",
@@ -111,16 +121,24 @@ def create_in_vivo_concentrations_figure():
     )
     axs[1].legend(loc="upper center", ncol=2, fontsize=16)
     axs[1].set_title("B", loc="left", fontweight="bold", fontsize=18)
-    axs[1].set_ylim(-.0005, 0.01)
     axs[1].set_xlabel("Growth rate [1/h]", fontsize=15)
     # axs[1].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=15)
     axs[1].set_ylabel(r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$", fontsize=14)
-    axs[1].set_xlim(0.025, 0.89)
     axs[1].tick_params(labelsize=14)
+
+    if aim == "in_vivo":
+        axs[1].set_ylim(-.0005, 0.01)
+        axs[1].set_xlim(0.025, 0.89)
+        pad_inches = 0.05
+    else:
+        axs[1].set_ylim(-.00005, 0.0015)
+        axs[1].set_xlim(0.0275, 0.21)
+        pad_inches = 0.05
 
     # fig.subplots_adjust(right=1.1)
 
-    fig.savefig(f"./cosa/in_vivo_concentrations_figure.png", bbox_inches='tight', pad_inches=0.05)
+    fig.savefig(output_path, bbox_inches='tight', pad_inches=pad_inches)
     plt.close()
 
-create_in_vivo_concentrations_figure()
+create_aerobic_figure("in_vivo")
+create_aerobic_figure("acetate")
