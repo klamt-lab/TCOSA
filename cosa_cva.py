@@ -70,6 +70,12 @@ def cosa_cva(metabolites: List[str], anaerobic: bool, expanded: bool, growth_eps
             optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
 
             for metabolite in metabolites:
+                # if type(metabolite) is tuple:
+                #     if metabolite[0] == "SUM":
+                #         for
+                #     elif metabolit[0] == "RATIO":
+                #         pass
+
                 metabolite_var_id = f"x_{metabolite}"
 
                 if metabolite_var_id in cva_data.keys():
@@ -128,6 +134,8 @@ def cosa_cva(metabolites: List[str], anaerobic: bool, expanded: bool, growth_eps
                     }
                     json_write(f"./cosa/results{suffix}/cva_{target}_{concentrations}.json", cva_data)
 
+"""
+# "Significant" metabolites
 metabolites = {
     "nad_tcosa_c",
     "nadh_tcosa_c",
@@ -144,5 +152,60 @@ metabolites = {
     "glu__L_c",
     "gln__L_c",
 }
+"""
+metabolites = [
+    "akg_c",
+    "3mob_c",
+    # "5oxpro_c", # Does not occur in iML1515
+    "prpp_c",
+    "6pgc_c",
+    "accoa_c",
+    "adp_c",
+    "r5p_c",
+    "amp_c",
+    "atp_c",
+    "cdp_c",
+    "coa_c",
+    "ctp_c",
+    "datp_c",
+    "dcdp_c",
+    "dctp_c",
+    "fdp_c",
+    "f1p_c",
+    "f6p_c",
+    "dgdp_c",
+    "gam6p_c",
+    "g6p_c",
+    "ru5p__D_c",
+    "dtdpglu_c",
+    "dttp_c",
+    "dump_c",
+    "fad_c",
+    "gdp_c",
+    "gpt_c",
+    "imp_c",
+    "itp_c",
+    "asp__L_c",
+    "citr__L_c",
+    "glu__L_c",
+    "gln__L_c",
+    "phe__L_c",
+    "ser__L_c",
+    "thr__L_c",
+    "trp__L_c",
+    "nadh_tcosa_c",
+    "nad_tcosa_c",
+    "nadph_tcosa_c",
+    "nadp_tcosa_c",
+    "gthox_c",
+    "pep_c",
+    "gthrd_c",
+    "udp_c",
+    "ump_c",
+    "utp_c",
+    # ("RATIO", "nad_tcosa_c", "nadh_tcosa_c"),
+    # ("RATIO", "nadp_tcosa_c", "nadph_tcosa_c"),
+    # ("SUM", "2pg_c", "3pg_c"),
+]
 cosa_cva(metabolites=metabolites, anaerobic=False, expanded=False)
 cosa_cva(metabolites=metabolites, anaerobic=True, expanded=False)
