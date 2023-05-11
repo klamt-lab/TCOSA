@@ -50,12 +50,19 @@ for concentration_ranges in ("STANDARDCONC", "VIVOCONC"):
                 label_optmdf_three = None
                 label_optsubmdf_two = None
 
+            if change_state == 30:
+                linestyle = "-."
+            elif change_state == -30:
+                linestyle = ":"
+            else:
+                linestyle = "-"
+
             if change_state == 0:
                 axs[axs_row].plot(
                     growth_rates, # x
                     data_optmdf, # y
                     label=label_optmdf_two,
-                    linestyle="--",
+                    linestyle="-",
                     color="salmon",
                     linewidth=2.0,
                 )
@@ -63,7 +70,7 @@ for concentration_ranges in ("STANDARDCONC", "VIVOCONC"):
                 growth_rates, # x
                 data_optmdf_expanded, # y
                 label=label_optmdf_three,
-                linestyle="-",
+                linestyle=linestyle,
                 color="red",
                 linewidth=2.0,
             )
@@ -72,7 +79,7 @@ for concentration_ranges in ("STANDARDCONC", "VIVOCONC"):
                     growth_rates, # x
                     data_optsubmdf, # y
                     label=label_optsubmdf_two,
-                    linestyle="--",
+                    linestyle="-",
                     color="deepskyblue",
                     linewidth=2.0,
                 )
@@ -80,7 +87,7 @@ for concentration_ranges in ("STANDARDCONC", "VIVOCONC"):
                 growth_rates, # x
                 data_optsubmdf_expanded, # y
                 label=label_optsubmdf_three,
-                linestyle="-",
+                linestyle=linestyle,
                 color="blue",
                 linewidth=2.0,
             )
@@ -90,7 +97,11 @@ for concentration_ranges in ("STANDARDCONC", "VIVOCONC"):
             axs[axs_row].set_xlabel("Growth rate [1/h]")
             axs[axs_row].set_ylabel(r"MDF [kJ/mol]")
             axs[axs_row].set_xlim(min(growth_rates), max(growth_rates))
-            axs[axs_row].set_ylim(0.0, 30)
+
+            if axs_row == 0:
+                axs[axs_row].set_ylim(0.0, 50)
+            else:
+                axs[axs_row].set_ylim(0.0, 40)
 
         # plt.legend(loc="center left")
         # plt.title(f"Comparison of two-cofactor and expanded three-cofactor models\nunder {'anaerobic' if anaerobic else 'aerobic'} conditions")
@@ -99,6 +110,6 @@ for concentration_ranges in ("STANDARDCONC", "VIVOCONC"):
         # plt.xlim(min(growth_rates), max(growth_rates))
         # plt.savefig(f"cosa/results_{aerobicity}/expanded_comparison_{aerobicity}_{concentration_ranges}.jpg")
         # plt.close()
-    fig.legend(loc="upper center", bbox_to_anchor=(0.5, 1.18))
+    fig.legend(loc="upper center", bbox_to_anchor=(0.5, 1.18), ncol=2)
     fig.savefig(f"cosa/expanded_comparison_{concentration_ranges}.png", bbox_inches='tight', pad_inches=0.05)
     plt.close()
