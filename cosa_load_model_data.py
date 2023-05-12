@@ -127,6 +127,7 @@ def load_model_data(anaerobic: bool, expanded: bool, c_source: str="glucose"):
         concentration_values_paper[key] = {}
         concentration_values_paper[key]["min"] = paper_concentration_data[key]["lb"] / 1
         concentration_values_paper[key]["max"] = paper_concentration_data[key]["ub"] * 1
+    json_write("./resources/in_vivo_concentration_data/final_concentration_values_paper.json", concentration_values_paper)
 
     print(">Set standard concentration ranges")
     concentration_values_free = {

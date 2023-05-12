@@ -2,6 +2,7 @@ from tkinter.messagebox import NO
 import matplotlib.pyplot as plt
 import cobra
 import copy
+import os
 import pulp
 from math import exp
 from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
@@ -45,7 +46,12 @@ def cosa_cva(metabolites: List[str], anaerobic: bool, expanded: bool, growth_eps
             used_concentration_values = concentration_values_paper
 
         for target in ("OPTMDF", "OPTSUBMDF"):
-            cva_data = {}
+            cva_filepath = f"./cosa/results{suffix}/cva_{target}_{concentrations}.json"
+
+            if not os.path.exists(cva_filepath):
+                cva_data = {}
+            else:
+                cva_data = json_load(cva_filepath)
 
             print(f"===OPTIMIZATION TARGET: {target}===")
             report += f"===OPTIMIZATION TARGET: {target}===\n"
@@ -132,7 +138,7 @@ def cosa_cva(metabolites: List[str], anaerobic: bool, expanded: bool, growth_eps
                         "min": min_conc,
                         "max": max_conc,
                     }
-                    json_write(f"./cosa/results{suffix}/cva_{target}_{concentrations}.json", cva_data)
+                    json_write(cva_filepath, cva_data)
 
 """
 # "Significant" metabolites
@@ -207,5 +213,12 @@ metabolites = [
     # ("RATIO", "nadp_tcosa_c", "nadph_tcosa_c"),
     # ("SUM", "2pg_c", "3pg_c"),
 ]
+
+in_vivo_concentrations = json_load("resources/in_vivo_concentration_data/final_concentration_values_paper.json")
+
+metabolites += list(in_vivo_concentrations.keys())
+metabolites = list(set(metabolites))
+metabolites = [x for x in metabolites if metabolites != "DEFAULT"]
+
 cosa_cva(metabolites=metabolites, anaerobic=False, expanded=False)
 cosa_cva(metabolites=metabolites, anaerobic=True, expanded=False)
