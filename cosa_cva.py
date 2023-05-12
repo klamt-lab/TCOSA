@@ -182,7 +182,7 @@ metabolites = [
     "dump_c",
     "fad_c",
     "gdp_c",
-    "gpt_c",
+    "gtp_c",
     "imp_c",
     "itp_c",
     "asp__L_c",
