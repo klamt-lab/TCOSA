@@ -35,7 +35,7 @@ def cosa_cva(metabolites: List[str], anaerobic: bool, expanded: bool, growth_eps
 
     report = ""
     original_cobra_model = copy.deepcopy(cobra_model)
-    for concentrations in ("STANDARDCONC", "VIVOCONC"):
+    for concentrations in ("STANDARDCONC",): #"VIVOCONC"):
         print(f"=CONCENTRATION RANGES: {concentrations}=")
         report += f"=CONCENTRATION RANGES: {concentrations}=\n"
         if concentrations == "STANDARDCONC":
@@ -138,7 +138,7 @@ def cosa_cva(metabolites: List[str], anaerobic: bool, expanded: bool, growth_eps
                         "min": min_conc,
                         "max": max_conc,
                     }
-                    json_write(cva_filepath, cva_data)
+                json_write(cva_filepath, cva_data)
 
 """
 # "Significant" metabolites
@@ -214,11 +214,14 @@ metabolites = [
     # ("SUM", "2pg_c", "3pg_c"),
 ]
 
+test_model = cobra.io.read_sbml_model("cosa/iML1515_TCOSA.xml")
+metabolite_ids = [x.id for x in test_model.metabolites]
+
 in_vivo_concentrations = json_load("resources/in_vivo_concentration_data/final_concentration_values_paper.json")
 
 metabolites += list(in_vivo_concentrations.keys())
 metabolites = list(set(metabolites))
-metabolites = [x for x in metabolites if metabolites != "DEFAULT"]
+metabolites = [x for x in metabolites if not (x in metabolite_ids)]
 
 cosa_cva(metabolites=metabolites, anaerobic=False, expanded=False)
 cosa_cva(metabolites=metabolites, anaerobic=True, expanded=False)

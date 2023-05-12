@@ -5,7 +5,7 @@ def create_cosa_tables(data_path: str, output_path: str) -> None:
     filepaths = get_files(data_path)
     filepaths = [data_path+"/"+x for x in filepaths]
 
-    for concentration_scenario in ("STANDARDCONC", "VIVOCONC"):
+    for concentration_scenario in ("VIVOCONC",): # ("STANDARDCONC", "VIVOCONC"):
         optmdf_results = {}
         optsubmdf_results = {}
         for filepath in filepaths:

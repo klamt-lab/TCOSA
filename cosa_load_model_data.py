@@ -325,7 +325,6 @@ def load_model_data(anaerobic: bool, expanded: bool, c_source: str="glucose"):
         elif concentration_scenario == "PAPERCONC":
             used_concentrations = concentration_values_paper
 
-
         """
         ###TTTT
         max_dG0_changes = {}
@@ -460,7 +459,6 @@ def load_model_data(anaerobic: bool, expanded: bool, c_source: str="glucose"):
         #TTTT
         """
 
-
         print(f"===TEST OF COMBINED SINGLE_COFACTOR/WILDTYPE BOTTLENECK 'REMOVALS' WITH {concentration_scenario}===")
         print("Set up dG0 fixed bottleneck 'removals' (done for consistency between runs with different solvers)")
         if c_source == "glucose":
@@ -523,13 +521,15 @@ def load_model_data(anaerobic: bool, expanded: bool, c_source: str="glucose"):
                     paperconc_dG0_values["GLUDy_FWD_VARIANT_NAD_TCOSA"]["dG0"] = 100 # added for consistency
                     paperconc_dG0_values["GLUDy_REV_ORIGINAL_NADP_TCOSA"]["dG0"] = -100 # added for consistency
                     paperconc_dG0_values["GLUDy_FWD_ORIGINAL_NADP_TCOSA"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["CBMKr_FWD"]["dG0"] = -100
+                    paperconc_dG0_values["CBMKr_REV"]["dG0"] = 100 # added for consistency
 
                     if expanded:
-                        paperconc_dG0_values["SHCHD2_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                        paperconc_dG0_values["ASAD_FWD_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                        paperconc_dG0_values["ASAD_REV_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                        paperconc_dG0_values["GLUDy_FWD_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                        paperconc_dG0_values["GLUDy_REV_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
+                        paperconc_dG0_values["SHCHD2_NADZ_TCOSA"]["dG0"] = -100
+                        paperconc_dG0_values["ASAD_REV_NADZ_TCOSA"]["dG0"] = -100
+                        paperconc_dG0_values["ASAD_FWD_NADZ_TCOSA"]["dG0"] = 100
+                        paperconc_dG0_values["GLUDy_REV_NADZ_TCOSA"]["dG0"] = -100
+                        paperconc_dG0_values["GLUDy_FWD_NADZ_TCOSA"]["dG0"] = 100
                 else: # anaerobic
                     paperconc_dG0_values["KDOCT2"]["dG0"] = -100
                     paperconc_dG0_values["MECDPS"]["dG0"] = -100
@@ -538,16 +538,16 @@ def load_model_data(anaerobic: bool, expanded: bool, c_source: str="glucose"):
                     paperconc_dG0_values["IG3PS"]["dG0"] = -100
                     paperconc_dG0_values["MCTP1App"]["dG0"] = -100
                     paperconc_dG0_values["MALCOAMT"]["dG0"] = -100
-                    paperconc_dG0_values["PTAr_FWD"]["dG0"] = -100
-                    paperconc_dG0_values["PTAr_REV"]["dG0"] = 100 # added for consistency
                     paperconc_dG0_values["AIRC3_REV"]["dG0"] = -100
                     paperconc_dG0_values["AIRC3_FWD"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["ASPK_FWD"]["dG0"] = -100
+                    paperconc_dG0_values["ASPK_REV"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["ATPS4rpp_REV"]["dG0"] = -100
+                    paperconc_dG0_values["ATPS4rpp_FWD"]["dG0"] = 100 # added for consistency
                     paperconc_dG0_values["SHCHD2_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
                     paperconc_dG0_values["SHCHD2_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["GAPD_FWD_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
-                    paperconc_dG0_values["GAPD_REV_ORIGINAL_NAD_TCOSA"]["dG0"] = 100 # added for consistency
-                    paperconc_dG0_values["GAPD_FWD_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["GAPD_REV_VARIANT_NADP_TCOSA"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["PTAr_FWD"]["dG0"] = -100
+                    paperconc_dG0_values["PTAr_REV"]["dG0"] = 100 # added for consistency
                     paperconc_dG0_values["ACACT2r_FWD"]["dG0"] = -100
                     paperconc_dG0_values["ACACT2r_REV"]["dG0"] = 100 # added for consistency
                     paperconc_dG0_values["ACACT4r_FWD"]["dG0"] = -100
@@ -556,13 +556,13 @@ def load_model_data(anaerobic: bool, expanded: bool, c_source: str="glucose"):
                     paperconc_dG0_values["ACACT6r_REV"]["dG0"] = 100 # added for consistency
                     paperconc_dG0_values["ACACT1r_FWD"]["dG0"] = -100
                     paperconc_dG0_values["ACACT1r_REV"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["GAPD_FWD_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
+                    paperconc_dG0_values["GAPD_REV_ORIGINAL_NAD_TCOSA"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["GAPD_FWD_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
+                    paperconc_dG0_values["GAPD_REV_VARIANT_NADP_TCOSA"]["dG0"] = 100 # added for consistency
 
                     if expanded:
-                        paperconc_dG0_values["SHCHD2_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                        paperconc_dG0_values["ASAD_FWD_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                        paperconc_dG0_values["ASAD_REV_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                        paperconc_dG0_values["GAPD_FWD_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                        paperconc_dG0_values["GAPD_REV_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
+                        pass # This data is not useful (in vivo data is just under aerobicity)
                 test_used_dG0 = copy.deepcopy(paperconc_dG0_values)
         elif c_source == "acetate":
             standardconc_dG0_values = copy.deepcopy(dG0_values)
@@ -591,25 +591,7 @@ def load_model_data(anaerobic: bool, expanded: bool, c_source: str="glucose"):
                 paperconc_dG0_values = copy.deepcopy(dG0_values)
 
                 if not anaerobic: # aerobic
-                    paperconc_dG0_values["KDOCT2"]["dG0"] = -100
-                    paperconc_dG0_values["MECDPS"]["dG0"] = -100
-                    paperconc_dG0_values["DHPPDA2"]["dG0"] = -100
-                    paperconc_dG0_values["ATPPRT"]["dG0"] = -100
-                    paperconc_dG0_values["IG3PS"]["dG0"] = -100
-                    paperconc_dG0_values["MCTP1App"]["dG0"] = -100
-                    paperconc_dG0_values["MALCOAMT"]["dG0"] = -100
-                    paperconc_dG0_values["ENO_REV"]["dG0"] = -100
-                    paperconc_dG0_values["ENO_FWD"]["dG0"] = 100 # added for consistency
-                    paperconc_dG0_values["AIRC3_REV"]["dG0"] = -100
-                    paperconc_dG0_values["AIRC3_FWD"]["dG0"] = 100 # added for consistency
-                    paperconc_dG0_values["SHCHD2_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
-                    paperconc_dG0_values["SHCHD2_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["PGCD_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
-                    paperconc_dG0_values["PGCD_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["MDH_FWD_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
-                    paperconc_dG0_values["MDH_REV_ORIGINAL_NAD_TCOSA"]["dG0"] = 100 # added for consistency
-                    paperconc_dG0_values["MDH_FWD_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["MDH_REV_VARIANT_NADP_TCOSA"]["dG0"] = 100 # added for consistency
+                    pass
 
                     if expanded:
                         pass
@@ -692,7 +674,8 @@ def load_model_data(anaerobic: bool, expanded: bool, c_source: str="glucose"):
 if __name__ == "__main__":
     print("AEROBIC - NOT EXPANDED")
     # load_model_data(anaerobic=False, expanded=True)
-    load_model_data(anaerobic=False, expanded=False, c_source="acetate")
+    load_model_data(anaerobic=False, expanded=False)
+    load_model_data(anaerobic=True, expanded=False)
     print("=============")
     # load_model_data(anaerobic=True, expanded=False)
     # print("~~~~~~~")

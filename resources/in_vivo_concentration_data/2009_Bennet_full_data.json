@@ -47,13 +47,13 @@
         "mean": 1.61e-05,
         "name": "cis-aconitate"
     },
-    "ade_e": {
+    "ade_c": {
         "lb": 1.26e-06,
         "ub": 1.71e-06,
         "mean": 1.47e-06,
         "name": "adenine"
     },
-    "adn_e": {
+    "adn_c": {
         "lb": 5.1e-06,
         "ub": 8.62e-06,
         "mean": 6.63e-06,
@@ -71,7 +71,7 @@
         "mean": 4.27e-06,
         "name": "ADP-glucose"
     },
-    "ala__L_e": {
+    "ala__L_c": {
         "lb": 0.00232,
         "ub": 0.0028,
         "mean": 0.00255,
@@ -83,7 +83,7 @@
         "mean": 0.000443,
         "name": "alpha-ketoglutarate"
     },
-    "amp_p": {
+    "amp_c": {
         "lb": 0.000232,
         "ub": 0.000341,
         "mean": 0.000281,
@@ -101,7 +101,7 @@
         "mean": 0.000569,
         "name": "arginine"
     },
-    "asn__L_e": {
+    "asn__L_c": {
         "lb": 0.000442,
         "ub": 0.000592,
         "mean": 0.000511,
@@ -125,7 +125,7 @@
         "mean": 0.00059,
         "name": "carbamylaspartate"
     },
-    "cit_e": {
+    "cit_c": {
         "lb": 0.0011,
         "ub": 0.00348,
         "mean": 0.00196,
@@ -167,13 +167,13 @@
         "mean": 2.59e-06,
         "name": "cytidine"
     },
-    "csn_p": {
+    "csn_c": {
         "lb": 8.65e-06,
         "ub": 2.29e-05,
         "mean": 1.41e-05,
         "name": "cytosine"
     },
-    "damp_e": {
+    "damp_c": {
         "lb": 2.99e-06,
         "ub": 2.62e-05,
         "mean": 8.84e-06,
@@ -191,13 +191,13 @@
         "mean": 3.45e-05,
         "name": "dCTP"
     },
-    "dad_2_e": {
+    "dad_2_c": {
         "lb": 1.8e-06,
         "ub": 4.41e-06,
         "mean": 2.82e-06,
         "name": "deoxyadenosine"
     },
-    "dgsn_e": {
+    "dgsn_c": {
         "lb": 4.11e-07,
         "ub": 6.62e-07,
         "mean": 5.22e-07,
@@ -209,7 +209,7 @@
         "mean": 0.000303,
         "name": "deoxyribose-5-P"
     },
-    "dgmp_e": {
+    "dgmp_c": {
         "lb": 3.91e-05,
         "ub": 6.58e-05,
         "mean": 5.07e-05,
@@ -257,19 +257,19 @@
         "mean": 0.0152,
         "name": "fructose-1,6-bisphosphate"
     },
-    "fum_p": {
+    "fum_c": {
         "lb": 3e-06,
         "ub": 0.00442,
         "mean": 0.000115,
         "name": "fumarate"
     },
-    "gdp_e": {
+    "gdp_c": {
         "lb": 0.000499,
         "ub": 0.000916,
         "mean": 0.000676,
         "name": "GDP"
     },
-    "glcn_p": {
+    "glcn_c": {
         "lb": 5.74e-06,
         "ub": 0.000302,
         "mean": 4.16e-05,
@@ -293,7 +293,7 @@
         "mean": 0.096,
         "name": "glutamate"
     },
-    "gln__L_e": {
+    "gln__L_c": {
         "lb": 0.0035,
         "ub": 0.00415,
         "mean": 0.00381,
@@ -311,31 +311,31 @@
         "mean": 4.9e-05,
         "name": "glycerol-3-phosphate"
     },
-    "gmp_e": {
+    "gmp_c": {
         "lb": 1.66e-05,
         "ub": 3.38e-05,
         "mean": 2.37e-05,
         "name": "GMP"
     },
-    "gtp_e": {
+    "gtp_c": {
         "lb": 0.00157,
         "ub": 0.0151,
         "mean": 0.00487,
         "name": "GTP"
     },
-    "gua_p": {
+    "gua_c": {
         "lb": 0.000132,
         "ub": 0.000269,
         "mean": 0.000188,
         "name": "guanine"
     },
-    "gsn_e": {
+    "gsn_c": {
         "lb": 1.22e-06,
         "ub": 2.17e-06,
         "mean": 1.62e-06,
         "name": "guanosine"
     },
-    "his__L_p": {
+    "his__L_c": {
         "lb": 4.58e-05,
         "ub": 9.97e-05,
         "mean": 6.76e-05,
@@ -359,7 +359,7 @@
         "mean": 0.000205,
         "name": "inosine triphosphate"
     },
-    "lys__L_e": {
+    "lys__L_c": {
         "lb": 0.000327,
         "ub": 0.000502,
         "mean": 0.000405,
@@ -383,7 +383,7 @@
         "mean": 0.000145,
         "name": "methionine"
     },
-    "minohp_p": {
+    "minohp_c": {
         "lb": 4.22e-06,
         "ub": 7.75e-06,
         "mean": 5.72e-06,
@@ -401,7 +401,7 @@
         "mean": 4.33e-05,
         "name": "N-acetyl-ornithine"
     },
-    "orn_e": {
+    "orn_c": {
         "lb": 6.81e-06,
         "ub": 1.51e-05,
         "mean": 1.01e-05,
@@ -425,7 +425,7 @@
         "mean": 0.000184,
         "name": "phosphoenolpyruvate"
     },
-    "pro__L_e": {
+    "pro__L_c": {
         "lb": 0.000372,
         "ub": 0.000399,
         "mean": 0.000385,
@@ -449,7 +449,7 @@
         "mean": 1.15e-05,
         "name": "quinolinate"
     },
-    "ribflv_p": {
+    "ribflv_c": {
         "lb": 1.72e-05,
         "ub": 2.11e-05,
         "mean": 1.9e-05,
@@ -473,7 +473,7 @@
         "mean": 1.41e-05,
         "name": "shikimate"
     },
-    "succ_p": {
+    "succ_c": {
         "lb": 0.000341,
         "ub": 0.000949,
         "mean": 0.000569,
@@ -497,7 +497,7 @@
         "mean": 1.21e-05,
         "name": "tryptophan"
     },
-    "tyr__L_p": {
+    "tyr__L_c": {
         "lb": 1.87e-05,
         "ub": 4.47e-05,
         "mean": 2.89e-05,
@@ -521,7 +521,7 @@
         "mean": 0.0025,
         "name": "UDP-glucose"
     },
-    "uri_p": {
+    "uri_c": {
         "lb": 0.00196,
         "ub": 0.00224,
         "mean": 0.00209,
@@ -533,7 +533,7 @@
         "mean": 0.00829,
         "name": "UTP"
     },
-    "val__L_p": {
+    "val__L_c": {
         "lb": 0.00353,
         "ub": 0.00458,
         "mean": 0.00402,

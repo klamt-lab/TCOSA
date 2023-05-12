@@ -66,6 +66,11 @@ for line in lines:
     linesplit = line.split("  ")
     name = linesplit[0]
     bigg_id = name_dict[name.lower()]
+
+    bigg_id = (bigg_id+"\b").replace("_e\b", "_c")
+    bigg_id = (bigg_id+"\b").replace("_p\b", "_c")
+    bigg_id = bigg_id.replace("\b", "")
+
     concentration_raw = linesplit[1]
     mean_conc = float(concentration_raw.split(" ")[0])
     lb_conc = float(concentration_raw.split(" ")[1].replace("(", ""))

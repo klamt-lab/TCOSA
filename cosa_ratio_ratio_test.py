@@ -434,6 +434,7 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
         plt.close()
 
 
+cosa_ratio_ratio_test(anaerobic=False, expanded=False)
 cosa_ratio_ratio_test(anaerobic=False, expanded=False, c_source="acetate")
 
 # cosa_ratio_ratio_test(anaerobic=False, expanded=False)
