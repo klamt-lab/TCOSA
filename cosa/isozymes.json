@@ -1,0 +1,266 @@
+{
+    "0": [
+        "ME1 mal__L_c + nad_c --> co2_c + nadh_c + pyr_c",
+        "ME2 mal__L_c + nadp_c --> co2_c + nadph_c + pyr_c"
+    ],
+    "1": [
+        "NADH9 2dmmq8_c + h_c + nadh_c --> 2dmmql8_c + nad_c",
+        "NADPHQR4 2dmmq8_c + h_c + nadph_c --> 2dmmql8_c + nadp_c"
+    ],
+    "2": [
+        "NADH10 h_c + mqn8_c + nadh_c --> mql8_c + nad_c",
+        "NADPHQR3 h_c + mqn8_c + nadph_c --> mql8_c + nadp_c"
+    ],
+    "3": [
+        "SSALx h2o_c + nad_c + sucsal_c --> 2.0 h_c + nadh_c + succ_c",
+        "SSALy h2o_c + nadp_c + sucsal_c --> 2.0 h_c + nadph_c + succ_c"
+    ],
+    "4": [
+        "LCARS h_c + lald__L_c + nadh_c <=> 12ppd__S_c + nad_c",
+        "LCARSyi h_c + lald__L_c + nadph_c --> 12ppd__S_c + nadp_c"
+    ],
+    "5": [
+        "2DGULRx 2dhguln_c + h_c + nadh_c --> idon__L_c + nad_c",
+        "2DGULRy 2dhguln_c + h_c + nadph_c --> idon__L_c + nadp_c"
+    ],
+    "6": [
+        "DKGLCNR2y 25dkglcn_c + h_c + nadph_c --> 5dglcn_c + nadp_c",
+        "DKGLCNR2x 25dkglcn_c + h_c + nadh_c --> 5dglcn_c + nad_c"
+    ],
+    "7": [
+        "2DGULRy 2dhguln_c + h_c + nadph_c --> idon__L_c + nadp_c",
+        "2DGULRx 2dhguln_c + h_c + nadh_c --> idon__L_c + nad_c"
+    ],
+    "8": [
+        "IDOND 5dglcn_c + h_c + nadh_c <=> idon__L_c + nad_c",
+        "IDOND2 5dglcn_c + h_c + nadph_c --> idon__L_c + nadp_c"
+    ],
+    "9": [
+        "IDOND2 5dglcn_c + h_c + nadph_c --> idon__L_c + nadp_c",
+        "IDOND 5dglcn_c + h_c + nadh_c <=> idon__L_c + nad_c"
+    ],
+    "10": [
+        "FADRx fad_c + h_c + nadh_c --> fadh2_c + nad_c",
+        "FADRx2 fad_c + h_c + nadph_c --> fadh2_c + nadp_c"
+    ],
+    "11": [
+        "GLYCLTDx glx_c + h_c + nadh_c --> glyclt_c + nad_c",
+        "GLYCLTDy glx_c + h_c + nadph_c --> glyclt_c + nadp_c"
+    ],
+    "12": [
+        "HPYRRy h_c + hpyr_c + nadph_c --> glyc__R_c + nadp_c",
+        "HPYRRx h_c + hpyr_c + nadh_c --> glyc__R_c + nad_c"
+    ],
+    "13": [
+        "BETALDHx betald_c + h2o_c + nad_c --> glyb_c + 2.0 h_c + nadh_c",
+        "BETALDHy betald_c + h2o_c + nadp_c --> glyb_c + 2.0 h_c + nadph_c"
+    ],
+    "14": [
+        "BETALDHy betald_c + h2o_c + nadp_c --> glyb_c + 2.0 h_c + nadph_c",
+        "BETALDHx betald_c + h2o_c + nad_c --> glyb_c + 2.0 h_c + nadh_c"
+    ],
+    "15": [
+        "FMNRx2 fmn_c + h_c + nadph_c --> fmnh2_c + nadp_c",
+        "FMNRx fmn_c + h_c + nadh_c --> fmnh2_c + nad_c"
+    ],
+    "16": [
+        "HPYRRx h_c + hpyr_c + nadh_c --> glyc__R_c + nad_c",
+        "HPYRRy h_c + hpyr_c + nadph_c --> glyc__R_c + nadp_c"
+    ],
+    "17": [
+        "ME2 mal__L_c + nadp_c --> co2_c + nadph_c + pyr_c",
+        "ME1 mal__L_c + nad_c --> co2_c + nadh_c + pyr_c"
+    ],
+    "18": [
+        "NADH5 h_c + nadh_c + q8_c --> nad_c + q8h2_c",
+        "NADPHQR2 h_c + nadph_c + q8_c --> nadp_c + q8h2_c"
+    ],
+    "19": [
+        "BSORy btnso_c + h_c + nadph_c --> btn_c + h2o_c + nadp_c",
+        "BSORx btnso_c + h_c + nadh_c --> btn_c + h2o_c + nad_c"
+    ],
+    "20": [
+        "SSALy h2o_c + nadp_c + sucsal_c --> 2.0 h_c + nadph_c + succ_c",
+        "SSALx h2o_c + nad_c + sucsal_c --> 2.0 h_c + nadh_c + succ_c"
+    ],
+    "21": [
+        "BSORx btnso_c + h_c + nadh_c --> btn_c + h2o_c + nad_c",
+        "BSORy btnso_c + h_c + nadph_c --> btn_c + h2o_c + nadp_c"
+    ],
+    "22": [
+        "NODOy nadph_c + 2.0 no_c + 2.0 o2_c --> h_c + nadp_c + 2.0 no3_c",
+        "NODOx nadh_c + 2.0 no_c + 2.0 o2_c --> h_c + nad_c + 2.0 no3_c"
+    ],
+    "23": [
+        "NODOx nadh_c + 2.0 no_c + 2.0 o2_c --> h_c + nad_c + 2.0 no3_c",
+        "NODOy nadph_c + 2.0 no_c + 2.0 o2_c --> h_c + nadp_c + 2.0 no3_c"
+    ],
+    "24": [
+        "FLVR h_c + nadph_c + ribflv_c --> nadp_c + rbflvrd_c",
+        "FLVRx h_c + nadh_c + ribflv_c --> nad_c + rbflvrd_c"
+    ],
+    "25": [
+        "NADPHQR2 h_c + nadph_c + q8_c --> nadp_c + q8h2_c",
+        "NADH5 h_c + nadh_c + q8_c --> nad_c + q8h2_c"
+    ],
+    "26": [
+        "NADPHQR3 h_c + mqn8_c + nadph_c --> mql8_c + nadp_c",
+        "NADH10 h_c + mqn8_c + nadh_c --> mql8_c + nad_c"
+    ],
+    "27": [
+        "NADPHQR4 2dmmq8_c + h_c + nadph_c --> 2dmmql8_c + nadp_c",
+        "NADH9 2dmmq8_c + h_c + nadh_c --> 2dmmql8_c + nad_c"
+    ],
+    "28": [
+        "GLYCLTDy glx_c + h_c + nadph_c --> glyclt_c + nadp_c",
+        "GLYCLTDx glx_c + h_c + nadh_c --> glyclt_c + nad_c"
+    ],
+    "29": [
+        "DKGLCNR2x 25dkglcn_c + h_c + nadh_c --> 5dglcn_c + nad_c",
+        "DKGLCNR2y 25dkglcn_c + h_c + nadph_c --> 5dglcn_c + nadp_c"
+    ],
+    "30": [
+        "ALR2 h_c + mthgxl_c + nadph_c --> acetol_c + nadp_c",
+        "ALR2x h_c + mthgxl_c + nadh_c --> acetol_c + nad_c"
+    ],
+    "31": [
+        "EAR141y h_c + nadph_c + t3c7mrseACP_c --> nadp_c + tdeACP_c",
+        "EAR141x h_c + nadh_c + t3c7mrseACP_c --> nad_c + tdeACP_c"
+    ],
+    "32": [
+        "EAR161x h_c + nadh_c + t3c9palmeACP_c --> hdeACP_c + nad_c",
+        "EAR161y h_c + nadph_c + t3c9palmeACP_c --> hdeACP_c + nadp_c"
+    ],
+    "33": [
+        "FLVRx h_c + nadh_c + ribflv_c --> nad_c + rbflvrd_c",
+        "FLVR h_c + nadph_c + ribflv_c --> nadp_c + rbflvrd_c"
+    ],
+    "34": [
+        "FMNRx fmn_c + h_c + nadh_c --> fmnh2_c + nad_c",
+        "FMNRx2 fmn_c + h_c + nadph_c --> fmnh2_c + nadp_c"
+    ],
+    "35": [
+        "EAR141x h_c + nadh_c + t3c7mrseACP_c --> nad_c + tdeACP_c",
+        "EAR141y h_c + nadph_c + t3c7mrseACP_c --> nadp_c + tdeACP_c"
+    ],
+    "36": [
+        "EAR181x h_c + nadh_c + t3c11vaceACP_c --> nad_c + octeACP_c",
+        "EAR181y h_c + nadph_c + t3c11vaceACP_c --> nadp_c + octeACP_c"
+    ],
+    "37": [
+        "EAR181y h_c + nadph_c + t3c11vaceACP_c --> nadp_c + octeACP_c",
+        "EAR181x h_c + nadh_c + t3c11vaceACP_c --> nad_c + octeACP_c"
+    ],
+    "38": [
+        "EAR180x h_c + nadh_c + toctd2eACP_c --> nad_c + ocdcaACP_c",
+        "EAR180y h_c + nadph_c + toctd2eACP_c --> nadp_c + ocdcaACP_c"
+    ],
+    "39": [
+        "EAR180y h_c + nadph_c + toctd2eACP_c --> nadp_c + ocdcaACP_c",
+        "EAR180x h_c + nadh_c + toctd2eACP_c --> nad_c + ocdcaACP_c"
+    ],
+    "40": [
+        "FADRx2 fad_c + h_c + nadph_c --> fadh2_c + nadp_c",
+        "FADRx fad_c + h_c + nadh_c --> fadh2_c + nad_c"
+    ],
+    "41": [
+        "EAR80y h_c + nadph_c + toct2eACP_c --> nadp_c + ocACP_c",
+        "EAR80x h_c + nadh_c + toct2eACP_c --> nad_c + ocACP_c"
+    ],
+    "42": [
+        "EAR120y h_c + nadph_c + tddec2eACP_c --> ddcaACP_c + nadp_c",
+        "EAR120x h_c + nadh_c + tddec2eACP_c --> ddcaACP_c + nad_c"
+    ],
+    "43": [
+        "EAR121y h_c + nadph_c + t3c5ddeceACP_c --> cddec5eACP_c + nadp_c",
+        "EAR121x h_c + nadh_c + t3c5ddeceACP_c --> cddec5eACP_c + nad_c"
+    ],
+    "44": [
+        "EAR140x h_c + nadh_c + tmrs2eACP_c --> myrsACP_c + nad_c",
+        "EAR140y h_c + nadph_c + tmrs2eACP_c --> myrsACP_c + nadp_c"
+    ],
+    "45": [
+        "EAR40y but2eACP_c + h_c + nadph_c --> butACP_c + nadp_c",
+        "EAR40x but2eACP_c + h_c + nadh_c --> butACP_c + nad_c"
+    ],
+    "46": [
+        "EAR161y h_c + nadph_c + t3c9palmeACP_c --> hdeACP_c + nadp_c",
+        "EAR161x h_c + nadh_c + t3c9palmeACP_c --> hdeACP_c + nad_c"
+    ],
+    "47": [
+        "EAR160y h_c + nadph_c + tpalm2eACP_c --> nadp_c + palmACP_c",
+        "EAR160x h_c + nadh_c + tpalm2eACP_c --> nad_c + palmACP_c"
+    ],
+    "48": [
+        "EAR100y h_c + nadph_c + tdec2eACP_c --> dcaACP_c + nadp_c",
+        "EAR100x h_c + nadh_c + tdec2eACP_c --> dcaACP_c + nad_c"
+    ],
+    "49": [
+        "EAR121x h_c + nadh_c + t3c5ddeceACP_c --> cddec5eACP_c + nad_c",
+        "EAR121y h_c + nadph_c + t3c5ddeceACP_c --> cddec5eACP_c + nadp_c"
+    ],
+    "50": [
+        "EAR100x h_c + nadh_c + tdec2eACP_c --> dcaACP_c + nad_c",
+        "EAR100y h_c + nadph_c + tdec2eACP_c --> dcaACP_c + nadp_c"
+    ],
+    "51": [
+        "EAR120x h_c + nadh_c + tddec2eACP_c --> ddcaACP_c + nad_c",
+        "EAR120y h_c + nadph_c + tddec2eACP_c --> ddcaACP_c + nadp_c"
+    ],
+    "52": [
+        "EAR160x h_c + nadh_c + tpalm2eACP_c --> nad_c + palmACP_c",
+        "EAR160y h_c + nadph_c + tpalm2eACP_c --> nadp_c + palmACP_c"
+    ],
+    "53": [
+        "EAR140y h_c + nadph_c + tmrs2eACP_c --> myrsACP_c + nadp_c",
+        "EAR140x h_c + nadh_c + tmrs2eACP_c --> myrsACP_c + nad_c"
+    ],
+    "54": [
+        "EAR40x but2eACP_c + h_c + nadh_c --> butACP_c + nad_c",
+        "EAR40y but2eACP_c + h_c + nadph_c --> butACP_c + nadp_c"
+    ],
+    "55": [
+        "EAR60y h_c + nadph_c + thex2eACP_c --> hexACP_c + nadp_c",
+        "EAR60x h_c + nadh_c + thex2eACP_c --> hexACP_c + nad_c"
+    ],
+    "56": [
+        "EAR60x h_c + nadh_c + thex2eACP_c --> hexACP_c + nad_c",
+        "EAR60y h_c + nadph_c + thex2eACP_c --> hexACP_c + nadp_c"
+    ],
+    "57": [
+        "EAR80x h_c + nadh_c + toct2eACP_c --> nad_c + ocACP_c",
+        "EAR80y h_c + nadph_c + toct2eACP_c --> nadp_c + ocACP_c"
+    ],
+    "58": [
+        "2DGULRGx 2dhguln_c + h_c + nadh_c --> glcn_c + nad_c",
+        "2DGULRGy 2dhguln_c + h_c + nadph_c --> glcn_c + nadp_c"
+    ],
+    "59": [
+        "2DGULRGy 2dhguln_c + h_c + nadph_c --> glcn_c + nadp_c",
+        "2DGULRGx 2dhguln_c + h_c + nadh_c --> glcn_c + nad_c"
+    ],
+    "60": [
+        "ALR2x h_c + mthgxl_c + nadh_c --> acetol_c + nad_c",
+        "ALR2 h_c + mthgxl_c + nadph_c --> acetol_c + nadp_c"
+    ],
+    "61": [
+        "DHPTDNR dhptdn_c + 3.0 h_c + nadph_c --> nadp_c + thptdn_c",
+        "DHPTDNRN dhptdn_c + 3.0 h_c + nadh_c --> nad_c + thptdn_c"
+    ],
+    "62": [
+        "DHPTDNRN dhptdn_c + 3.0 h_c + nadh_c --> nad_c + thptdn_c",
+        "DHPTDNR dhptdn_c + 3.0 h_c + nadph_c --> nadp_c + thptdn_c"
+    ],
+    "63": [
+        "QUINDHyi nadp_c + quin_c --> 3dhq_c + 2.0 h_c + nadph_c",
+        "QUINDH nad_c + quin_c --> 3dhq_c + 2.0 h_c + nadh_c"
+    ],
+    "64": [
+        "QUINDH nad_c + quin_c --> 3dhq_c + 2.0 h_c + nadh_c",
+        "QUINDHyi nadp_c + quin_c --> 3dhq_c + 2.0 h_c + nadph_c"
+    ],
+    "65": [
+        "LCARSyi h_c + lald__L_c + nadph_c --> 12ppd__S_c + nadp_c",
+        "LCARS h_c + lald__L_c + nadh_c <=> 12ppd__S_c + nad_c"
+    ]
+}
