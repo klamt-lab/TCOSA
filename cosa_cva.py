@@ -221,7 +221,7 @@ in_vivo_concentrations = json_load("resources/in_vivo_concentration_data/final_c
 
 metabolites += list(in_vivo_concentrations.keys())
 metabolites = list(set(metabolites))
-metabolites = [x for x in metabolites if not (x in metabolite_ids)]
+metabolites = [x for x in metabolites if (x in metabolite_ids)]
 
 cosa_cva(metabolites=metabolites, anaerobic=False, expanded=False)
 cosa_cva(metabolites=metabolites, anaerobic=True, expanded=False)

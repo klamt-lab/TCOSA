@@ -107,7 +107,9 @@ def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: in
     if (anaerobic) or (c_source == "acetate"):
         concentration_scenarios = ("STANDARDCONC",)
     else:
-        concentration_scenarios = ("STANDARDCONC", "VIVOCONC")
+        # Temporary change
+        concentration_scenarios = ("VIVOCONC",)
+        # End of temporary change
 
     for concentration_scenario in concentration_scenarios:
         if concentration_scenario == "STANDARDCONC":
