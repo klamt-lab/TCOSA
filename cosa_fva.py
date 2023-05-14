@@ -1,6 +1,6 @@
-import matplotlib.pyplot as plt
 import cobra
 import copy
+import os
 import pulp
 import math
 from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
@@ -120,7 +120,11 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
 
     report = ""
     original_cobra_model = copy.deepcopy(cobra_model)
-    for concentrations in ("STANDARDCONCS",): #, "PAPERCONCS"):
+    for concentrations in ("STANDARDCONCS", "PAPERCONCS"):
+        output_filepath = f"./cosa/variability_{suffix}_{reac_id}_{concentrations}_{base_nadx_scenario}.json"
+        if os.path.exists(output_filepath):
+            continue
+
         print(f"=CONCENTRATION RANGES: {concentrations}=")
         report += f"=CONCENTRATION RANGES: {concentrations}=\n"
         if concentrations == "STANDARDCONCS":
@@ -199,4 +203,4 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
             base_problem=optmdfpathway_base_problem,
         )
 
-        json_write(f"./cosa/variability_{suffix}_{reac_id}_{concentrations}_{base_nadx_scenario}.json", fva_results)
+        json_write(output_filepath, fva_results)
