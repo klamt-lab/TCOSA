@@ -19,6 +19,11 @@ for anaerobic in (True, False):
 
     zip_file_index = 0
     for variability_file in variability_files:
+        if "acetate" in variability_file:
+            ac_prefix = "acetate_"
+        else:
+            ac_prefix = ""
+
         json_data = json_load(variability_file)
         growth_rate = variability_file.split("_TEST_")[1].split("_STANDARD")[0]
         for target in ("OptMDF", "OptSubMDF"):
@@ -46,7 +51,7 @@ for anaerobic in (True, False):
                     scen_data[base_id][0] += abs_flux_low
                     scen_data[base_id][1] += abs_flux_high
             json_write(
-                scenpath+growth_rate+"_STANDARDCONCS_"+f"_{aerobicity_string}_{target}.scen",
+                scenpath+ac_prefix+growth_rate+"_STANDARDCONCS_"+f"_{aerobicity_string}_{target}.scen",
                 scen_data
             )
         zip_file_index += 1
