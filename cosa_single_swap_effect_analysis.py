@@ -29,12 +29,10 @@ def cosa_single_swap_analysis(anaerobic: bool, c_source: str = "glucose"):
     old_cobra_model = copy.deepcopy(cobra_model)
     biomass_reaction_id = "BIOMASS_Ec_iML1515_core_75p37M"
 
-    ##Temporary addition
-    if c_source == "glucose":
-        concentration_scenarios = ("VIVOCONC",)
-    else:
+    if (c_source != "glucose") or (anaerobic):
         concentration_scenarios = ("STANDARDCONC",)
-    ##End of temporary addition
+    else:
+        concentration_scenarios = ("STANDARDCONC", "VIVOCONC",)
 
     for concentration_scenario in concentration_scenarios:
         swap_json_path = f"./cosa/results{suffix}/swap_results_{concentration_scenario}.json"

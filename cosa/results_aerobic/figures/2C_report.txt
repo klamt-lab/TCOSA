@@ -1,482 +1,123 @@
-=CONCENTRATION RANGES: STANDARDCONC=
-===OPTIMIZATION TARGET: OPTMDF===
-Ratio ratio range of (NADH:NAD) to (NADPH:NADP) at growth-rate-dependent
-maximal OptMDF under aerobic conditions
- @ µ [1/h] of 0.868 and min OPTMDF of 6.223321152920811 kJ/mol
- Min ratio ratio: 1.0587637036675116e-06
- Max ratio ratio: 1.134970528806762e-05
- @ µ [1/h] of 0.818 and min OPTMDF of 7.96554142656144 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 1.462102883289951e-05
- @ µ [1/h] of 0.768 and min OPTMDF of 7.965541426561438 kJ/mol
- Min ratio ratio: 9.697491281103852e-09
- Max ratio ratio: 2.0586547428516908e-05
- @ µ [1/h] of 0.718 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 3.6483933157847465e-05
- @ µ [1/h] of 0.668 and min OPTMDF of 7.965541426561439 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 3.6483933157847465e-05
- @ µ [1/h] of 0.618 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 3.6483933157847336e-05
- @ µ [1/h] of 0.568 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 3.6483933157847336e-05
- @ µ [1/h] of 0.518 and min OPTMDF of 7.965541426561439 kJ/mol
- Min ratio ratio: 9.697491281103886e-09
- Max ratio ratio: 3.6483933157847465e-05
- @ µ [1/h] of 0.468 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 3.6483933157847336e-05
- @ µ [1/h] of 0.418 and min OPTMDF of 7.965541426561433 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 3.6483933157847465e-05
- @ µ [1/h] of 0.368 and min OPTMDF of 7.965541426561433 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 3.6483933157847465e-05
- @ µ [1/h] of 0.318 and min OPTMDF of 7.965541426561433 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 3.648393315784759e-05
- @ µ [1/h] of 0.268 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 3.6483933157847465e-05
- @ µ [1/h] of 0.218 and min OPTMDF of 7.965541426561433 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 3.648393315784759e-05
- @ µ [1/h] of 0.168 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 3.6483933157847404e-05
- @ µ [1/h] of 0.118 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 9.697491281103817e-09
- Max ratio ratio: 5.00516063111025e-05
- @ µ [1/h] of 0.068 and min OPTMDF of 7.965541426561441 kJ/mol
- Min ratio ratio: 9.697491281103852e-09
- Max ratio ratio: 5.005160631110259e-05
- @ µ [1/h] of 0.05 and min OPTMDF of 7.965541426561441 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 5.00516063111025e-05
- @ µ [1/h] of 0.03 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 9.697491281103921e-09
- Max ratio ratio: 0.025082410302595674
-Ratio ratio range of (NADPH:NADP) to (NADH:NAD) at growth-rate-dependent
-maximal OptMDF under aerobic conditions
- @ µ [1/h] of 0.868 and min OPTMDF of 6.223321152920811 kJ/mol
- Min ratio ratio: 88108.01466812873
- Max ratio ratio: 944497.8105464358
- @ µ [1/h] of 0.818 and min OPTMDF of 7.96554142656144 kJ/mol
- Min ratio ratio: 68394.63976364302
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.768 and min OPTMDF of 7.965541426561438 kJ/mol
- Min ratio ratio: 48575.41088287487
- Max ratio ratio: 103119453.37332352
- @ µ [1/h] of 0.718 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 27409.325515248245
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.668 and min OPTMDF of 7.965541426561439 kJ/mol
- Min ratio ratio: 27409.325515248245
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.618 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 27409.325515248343
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.568 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 27409.325515248343
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.518 and min OPTMDF of 7.965541426561439 kJ/mol
- Min ratio ratio: 27409.325515248245
- Max ratio ratio: 103119453.37332316
- @ µ [1/h] of 0.468 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 27409.325515248343
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.418 and min OPTMDF of 7.965541426561433 kJ/mol
- Min ratio ratio: 27409.325515248245
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.368 and min OPTMDF of 7.965541426561433 kJ/mol
- Min ratio ratio: 27409.325515248245
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.318 and min OPTMDF of 7.965541426561433 kJ/mol
- Min ratio ratio: 27409.325515248147
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.268 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 27409.325515248245
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.218 and min OPTMDF of 7.965541426561433 kJ/mol
- Min ratio ratio: 27409.325515248147
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.168 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 27409.325515248293
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.118 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 19979.378759282277
- Max ratio ratio: 103119453.37332389
- @ µ [1/h] of 0.068 and min OPTMDF of 7.965541426561441 kJ/mol
- Min ratio ratio: 19979.37875928224
- Max ratio ratio: 103119453.37332352
- @ µ [1/h] of 0.05 and min OPTMDF of 7.965541426561441 kJ/mol
- Min ratio ratio: 19979.378759282277
- Max ratio ratio: 103119453.37332278
- @ µ [1/h] of 0.03 and min OPTMDF of 7.965541426561437 kJ/mol
- Min ratio ratio: 39.86857674106839
- Max ratio ratio: 103119453.37332278
-===OPTIMIZATION TARGET: OPTSUBMDF===
-Ratio ratio range of (NADH:NAD) to (NADPH:NADP) at growth-rate-dependent
-maximal OptSubMDF under aerobic conditions
- @ µ [1/h] of 0.868 and min OPTSUBMDF of 13.313630553914166 kJ/mol
- Min ratio ratio: 3.170970035392897e-08
- Max ratio ratio: 4.2395816420623875e-06
- @ µ [1/h] of 0.818 and min OPTSUBMDF of 23.496447971641015 kJ/mol
- Min ratio ratio: 8.945159205641623e-09
- Max ratio ratio: 4.901053093527106e-07
- @ µ [1/h] of 0.768 and min OPTSUBMDF of 26.804438480712104 kJ/mol
- Min ratio ratio: 3.397466517937589e-08
- Max ratio ratio: 3.397466517935416e-08
- @ µ [1/h] of 0.718 and min OPTSUBMDF of 28.739772988662832 kJ/mol
- Min ratio ratio: 7.417029190411599e-08
- Max ratio ratio: 7.417029190406565e-08
- @ µ [1/h] of 0.668 and min OPTSUBMDF of 28.739772988745457 kJ/mol
- Min ratio ratio: 7.417029190656554e-08
- Max ratio ratio: 7.417029189916734e-08
- @ µ [1/h] of 0.618 and min OPTSUBMDF of 29.013703466513746 kJ/mol
- Min ratio ratio: 8.283677869721503e-08
- Max ratio ratio: 5.000046497229754e-07
- @ µ [1/h] of 0.568 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 8.283677869721503e-08
- Max ratio ratio: 5.000046497229738e-07
- @ µ [1/h] of 0.518 and min OPTSUBMDF of 29.013703466513746 kJ/mol
- Min ratio ratio: 8.283677869721503e-08
- Max ratio ratio: 5.000046497229754e-07
- @ µ [1/h] of 0.468 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 8.283677869721445e-08
- Max ratio ratio: 5.000046497229754e-07
- @ µ [1/h] of 0.418 and min OPTSUBMDF of 29.013703466513746 kJ/mol
- Min ratio ratio: 8.283677869721503e-08
- Max ratio ratio: 5.000046497229738e-07
- @ µ [1/h] of 0.368 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 8.283677869721503e-08
- Max ratio ratio: 5.000046497229754e-07
- @ µ [1/h] of 0.318 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 8.283677869721503e-08
- Max ratio ratio: 5.000046497229754e-07
- @ µ [1/h] of 0.268 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 8.283677869721503e-08
- Max ratio ratio: 5.000046497229746e-07
- @ µ [1/h] of 0.218 and min OPTSUBMDF of 29.013703466513746 kJ/mol
- Min ratio ratio: 8.283677869721445e-08
- Max ratio ratio: 5.000046497229746e-07
- @ µ [1/h] of 0.168 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 8.283677869721503e-08
- Max ratio ratio: 5.000046497229746e-07
- @ µ [1/h] of 0.118 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 8.283677869721503e-08
- Max ratio ratio: 5.000046497229754e-07
- @ µ [1/h] of 0.068 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 8.283677869721503e-08
- Max ratio ratio: 5.000046497229754e-07
- @ µ [1/h] of 0.05 and min OPTSUBMDF of 29.013703466513974 kJ/mol
- Min ratio ratio: 8.283677869721445e-08
- Max ratio ratio: 5.000046497229754e-07
- @ µ [1/h] of 0.03 and min OPTSUBMDF of 29.013703466513974 kJ/mol
- Min ratio ratio: 8.283677869721503e-08
- Max ratio ratio: 2.0586965751996375e-05
-Ratio ratio range of (NADPH:NADP) to (NADH:NAD) at growth-rate-dependent
-maximal OptSubMDF under aerobic conditions
- @ µ [1/h] of 0.868 and min OPTSUBMDF of 13.313630553914166 kJ/mol
- Min ratio ratio: 235872.3299673361
- Max ratio ratio: 31536091.127902932
- @ µ [1/h] of 0.818 and min OPTSUBMDF of 23.496447971641015 kJ/mol
- Min ratio ratio: 2040377.814557273
- Max ratio ratio: 111792308.77962574
- @ µ [1/h] of 0.768 and min OPTSUBMDF of 26.804438480712104 kJ/mol
- Min ratio ratio: 29433696.983353447
- Max ratio ratio: 29433696.983334627
- @ µ [1/h] of 0.718 and min OPTSUBMDF of 28.739772988662832 kJ/mol
- Min ratio ratio: 13482487.04876925
- Max ratio ratio: 13482487.048760103
- @ µ [1/h] of 0.668 and min OPTSUBMDF of 28.739772988745457 kJ/mol
- Min ratio ratio: 13482487.049659653
- Max ratio ratio: 13482487.048314828
- @ µ [1/h] of 0.618 and min OPTSUBMDF of 29.013703466513746 kJ/mol
- Min ratio ratio: 1999981.4012810558
- Max ratio ratio: 12071932.488529034
- @ µ [1/h] of 0.568 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 1999981.401281063
- Max ratio ratio: 12071932.488529034
- @ µ [1/h] of 0.518 and min OPTSUBMDF of 29.013703466513746 kJ/mol
- Min ratio ratio: 1999981.4012810558
- Max ratio ratio: 12071932.488529034
- @ µ [1/h] of 0.468 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 1999981.4012810558
- Max ratio ratio: 12071932.48852912
- @ µ [1/h] of 0.418 and min OPTSUBMDF of 29.013703466513746 kJ/mol
- Min ratio ratio: 1999981.401281063
- Max ratio ratio: 12071932.488529034
- @ µ [1/h] of 0.368 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 1999981.4012810558
- Max ratio ratio: 12071932.488529034
- @ µ [1/h] of 0.318 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 1999981.4012810558
- Max ratio ratio: 12071932.488529034
- @ µ [1/h] of 0.268 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 1999981.4012810595
- Max ratio ratio: 12071932.488529034
- @ µ [1/h] of 0.218 and min OPTSUBMDF of 29.013703466513746 kJ/mol
- Min ratio ratio: 1999981.4012810595
- Max ratio ratio: 12071932.48852912
- @ µ [1/h] of 0.168 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 1999981.4012810595
- Max ratio ratio: 12071932.488529034
- @ µ [1/h] of 0.118 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 1999981.4012810558
- Max ratio ratio: 12071932.488529034
- @ µ [1/h] of 0.068 and min OPTSUBMDF of 29.01370346651368 kJ/mol
- Min ratio ratio: 1999981.4012810558
- Max ratio ratio: 12071932.488529034
- @ µ [1/h] of 0.05 and min OPTSUBMDF of 29.013703466513974 kJ/mol
- Min ratio ratio: 1999981.4012810558
- Max ratio ratio: 12071932.48852912
- @ µ [1/h] of 0.03 and min OPTSUBMDF of 29.013703466513974 kJ/mol
- Min ratio ratio: 48574.42383917247
- Max ratio ratio: 12071932.488529034
 =CONCENTRATION RANGES: VIVOCONC=
 ===OPTIMIZATION TARGET: OPTMDF===
 Ratio ratio range of (NADH:NAD) to (NADPH:NADP) at growth-rate-dependent
 maximal OptMDF under aerobic conditions
 
 with adapted measured concentration ranges @ µ [1/h] of 0.868 and min OPTMDF of 0.3759646127591125 kJ/mol
- Min ratio ratio: 2.2941186385106266e-08
- Max ratio ratio: 43.219820755546195
- @ µ [1/h] of 0.818 and min OPTMDF of 1.875142033476818 kJ/mol
+ Min ratio ratio: 5.454701288745219e-09
+ Max ratio ratio: 43.219820755546266
+ @ µ [1/h] of 0.818 and min OPTMDF of 1.8751420335768185 kJ/mol
+ Min ratio ratio: 1.8284759110685234e-08
+ Max ratio ratio: 5.489600406820648
+ @ µ [1/h] of 0.768 and min OPTMDF of 1.8751420335768185 kJ/mol
+ Min ratio ratio: 1.828475911068517e-08
+ Max ratio ratio: 1409.9629208438744
+ @ µ [1/h] of 0.718 and min OPTMDF of 1.8751420335768185 kJ/mol
+ Min ratio ratio: 1.8284759110685234e-08
+ Max ratio ratio: 1409.9629208438744
+ @ µ [1/h] of 0.668 and min OPTMDF of 1.8751420335768185 kJ/mol
+ Min ratio ratio: 1.828475911068517e-08
+ Max ratio ratio: 1409.9629208438744
+ @ µ [1/h] of 0.618 and min OPTMDF of 1.875142033476818 kJ/mol
  Min ratio ratio: 1.8284759109209265e-08
- Max ratio ratio: 5.489600407928427
- @ µ [1/h] of 0.768 and min OPTMDF of 1.875142033476818 kJ/mol
+ Max ratio ratio: 1409.9629210714984
+ @ µ [1/h] of 0.568 and min OPTMDF of 1.875142033476818 kJ/mol
+ Min ratio ratio: 1.8284759109209265e-08
+ Max ratio ratio: 1409.9629210714984
+ @ µ [1/h] of 0.518 and min OPTMDF of 1.8751420335768185 kJ/mol
+ Min ratio ratio: 1.828475911068517e-08
+ Max ratio ratio: 1409.9629208438769
+ @ µ [1/h] of 0.468 and min OPTMDF of 1.875142033476818 kJ/mol
  Min ratio ratio: 1.8284759109209265e-08
  Max ratio ratio: 1409.9629210714972
- @ µ [1/h] of 0.718 and min OPTMDF of 1.875142033476818 kJ/mol
+ @ µ [1/h] of 0.418 and min OPTMDF of 1.875142033476818 kJ/mol
  Min ratio ratio: 1.8284759109209265e-08
- Max ratio ratio: 1409.9629210714984
- @ µ [1/h] of 0.668 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 1.8284759109209265e-08
- Max ratio ratio: 1409.9629210714984
- @ µ [1/h] of 0.618 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 1.8284759109209265e-08
- Max ratio ratio: 1409.9629210714984
- @ µ [1/h] of 0.568 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 1.8284759109209265e-08
- Max ratio ratio: 1409.9629210714984
- @ µ [1/h] of 0.518 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 1.8284759109209265e-08
- Max ratio ratio: 1409.9629210714984
- @ µ [1/h] of 0.468 and min OPTMDF of 1.8751420335768185 kJ/mol
- Min ratio ratio: 1.828475911068517e-08
- Max ratio ratio: 1409.9629208438769
- @ µ [1/h] of 0.418 and min OPTMDF of 1.8751420335768185 kJ/mol
- Min ratio ratio: 1.828475911068517e-08
- Max ratio ratio: 1409.9629208438769
+ Max ratio ratio: 1409.9629210714972
  @ µ [1/h] of 0.368 and min OPTMDF of 1.8751420335768185 kJ/mol
- Min ratio ratio: 1.8284759110685234e-08
- Max ratio ratio: 1409.9629208438769
- @ µ [1/h] of 0.318 and min OPTMDF of 1.8751420335768185 kJ/mol
  Min ratio ratio: 1.828475911068517e-08
  Max ratio ratio: 1409.9629208438769
+ @ µ [1/h] of 0.318 and min OPTMDF of 1.875142033476818 kJ/mol
+ Min ratio ratio: 1.8284759109209265e-08
+ Max ratio ratio: 1409.9629210714997
  @ µ [1/h] of 0.268 and min OPTMDF of 1.875142033476818 kJ/mol
  Min ratio ratio: 1.8284759109209265e-08
- Max ratio ratio: 1409.9629210714984
+ Max ratio ratio: 1409.9629210714997
  @ µ [1/h] of 0.218 and min OPTMDF of 1.875142033476818 kJ/mol
  Min ratio ratio: 1.8284759109209265e-08
  Max ratio ratio: 1409.9629210714984
- @ µ [1/h] of 0.168 and min OPTMDF of 1.8751420335768185 kJ/mol
- Min ratio ratio: 1.828475911068517e-08
- Max ratio ratio: 1409.9629208438769
+ @ µ [1/h] of 0.168 and min OPTMDF of 1.875142033476818 kJ/mol
+ Min ratio ratio: 1.8284759109209265e-08
+ Max ratio ratio: 1409.9629210714984
  @ µ [1/h] of 0.118 and min OPTMDF of 1.875142033476818 kJ/mol
  Min ratio ratio: 1.8284759109209265e-08
- Max ratio ratio: 1409.9629210714997
+ Max ratio ratio: 1409.9629210714984
  @ µ [1/h] of 0.068 and min OPTMDF of 1.875142033476818 kJ/mol
  Min ratio ratio: 1.8284759109209265e-08
  Max ratio ratio: 1409.9629210714984
  @ µ [1/h] of 0.05 and min OPTMDF of 1.875142033476818 kJ/mol
  Min ratio ratio: 1.8284759109209265e-08
- Max ratio ratio: 1409.9629210714997
+ Max ratio ratio: 1409.9629210714984
  @ µ [1/h] of 0.03 and min OPTMDF of 1.875142033476818 kJ/mol
  Min ratio ratio: 1.8284759109209265e-08
- Max ratio ratio: 1409.9629210714997
-Ratio ratio range of (NADPH:NADP) to (NADH:NAD) at growth-rate-dependent
-maximal OptMDF under aerobic conditions
-
-with adapted measured concentration ranges @ µ [1/h] of 0.868 and min OPTMDF of 0.3759646127591125 kJ/mol
- Min ratio ratio: 0.023137532329346247
- Max ratio ratio: 43589724.751515634
- @ µ [1/h] of 0.818 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.18216262126396976
- Max ratio ratio: 54690356.8172436
- @ µ [1/h] of 0.768 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.0007092385090808295
- Max ratio ratio: 54690356.8172436
- @ µ [1/h] of 0.718 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.0007092385090808289
- Max ratio ratio: 54690356.8172436
- @ µ [1/h] of 0.668 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.0007092385090808289
- Max ratio ratio: 54690356.8172436
- @ µ [1/h] of 0.618 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.0007092385090808289
- Max ratio ratio: 54690356.8172436
- @ µ [1/h] of 0.568 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.0007092385090808289
- Max ratio ratio: 54690356.8172436
- @ µ [1/h] of 0.518 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.0007092385090808289
- Max ratio ratio: 54690356.8172436
- @ µ [1/h] of 0.468 and min OPTMDF of 1.8751420335768185 kJ/mol
- Min ratio ratio: 0.0007092385091953269
- Max ratio ratio: 54690356.81282912
- @ µ [1/h] of 0.418 and min OPTMDF of 1.8751420335768185 kJ/mol
- Min ratio ratio: 0.0007092385091953269
- Max ratio ratio: 54690356.81282912
- @ µ [1/h] of 0.368 and min OPTMDF of 1.8751420335768185 kJ/mol
- Min ratio ratio: 0.0007092385091953269
- Max ratio ratio: 54690356.81282893
- @ µ [1/h] of 0.318 and min OPTMDF of 1.8751420335768185 kJ/mol
- Min ratio ratio: 0.0007092385091953269
- Max ratio ratio: 54690356.81282912
- @ µ [1/h] of 0.268 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.0007092385090808289
- Max ratio ratio: 54690356.8172436
- @ µ [1/h] of 0.218 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.0007092385090808289
- Max ratio ratio: 54690356.8172436
- @ µ [1/h] of 0.168 and min OPTMDF of 1.8751420335768185 kJ/mol
- Min ratio ratio: 0.0007092385091953269
- Max ratio ratio: 54690356.81282912
- @ µ [1/h] of 0.118 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.0007092385090808282
- Max ratio ratio: 54690356.8172436
- @ µ [1/h] of 0.068 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.0007092385090808289
- Max ratio ratio: 54690356.8172436
- @ µ [1/h] of 0.05 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.0007092385090808282
- Max ratio ratio: 54690356.8172436
- @ µ [1/h] of 0.03 and min OPTMDF of 1.875142033476818 kJ/mol
- Min ratio ratio: 0.0007092385090808282
- Max ratio ratio: 54690356.8172436
+ Max ratio ratio: 1409.9629210714972
 ===OPTIMIZATION TARGET: OPTSUBMDF===
 Ratio ratio range of (NADH:NAD) to (NADPH:NADP) at growth-rate-dependent
 maximal OptSubMDF under aerobic conditions
 
-with adapted measured concentration ranges @ µ [1/h] of 0.868 and min OPTSUBMDF of 11.036296627226497 kJ/mol
- Min ratio ratio: 1.6917226357589395e-06
- Max ratio ratio: 0.008883947553605047
- @ µ [1/h] of 0.818 and min OPTSUBMDF of 18.56523945777669 kJ/mol
- Min ratio ratio: 7.502772402635922e-06
- Max ratio ratio: 6.672435872378162e-05
- @ µ [1/h] of 0.768 and min OPTSUBMDF of 22.9263043187736 kJ/mol
+with adapted measured concentration ranges @ µ [1/h] of 0.868 and min OPTSUBMDF of 12.327154281398377 kJ/mol
+ Min ratio ratio: 6.057532061018978e-07
+ Max ratio ratio: 6.057532061018978e-07
+ @ µ [1/h] of 0.818 and min OPTSUBMDF of 18.535082760878048 kJ/mol
+ Min ratio ratio: 7.412048519953993e-06
+ Max ratio ratio: 0.00047008681571776854
+ @ µ [1/h] of 0.768 and min OPTSUBMDF of 22.926304318773596 kJ/mol
  Min ratio ratio: 4.3580257636046746e-05
- Max ratio ratio: 0.0005079434042157408
+ Max ratio ratio: 0.0005079434041649491
  @ µ [1/h] of 0.718 and min OPTSUBMDF of 22.926304318773596 kJ/mol
  Min ratio ratio: 4.3580257636046746e-05
- Max ratio ratio: 0.0005079434041649469
- @ µ [1/h] of 0.668 and min OPTSUBMDF of 22.9263043187736 kJ/mol
+ Max ratio ratio: 0.0005079434041649491
+ @ µ [1/h] of 0.668 and min OPTSUBMDF of 22.92630431889754 kJ/mol
+ Min ratio ratio: 4.3580257638221385e-05
+ Max ratio ratio: 0.0005079434041142558
+ @ µ [1/h] of 0.618 and min OPTSUBMDF of 22.92630431889754 kJ/mol
+ Min ratio ratio: 4.3580257638221303e-05
+ Max ratio ratio: 0.0005079434041142549
+ @ µ [1/h] of 0.568 and min OPTSUBMDF of 22.926304318773596 kJ/mol
  Min ratio ratio: 4.3580257636046746e-05
  Max ratio ratio: 0.0005079434041649491
- @ µ [1/h] of 0.618 and min OPTSUBMDF of 22.926304318773592 kJ/mol
- Min ratio ratio: 4.358025763604659e-05
- Max ratio ratio: 0.0005079434041649491
- @ µ [1/h] of 0.568 and min OPTSUBMDF of 22.92630431877359 kJ/mol
- Min ratio ratio: 4.3580257636046746e-05
- Max ratio ratio: 0.0005079434041649491
- @ µ [1/h] of 0.518 and min OPTSUBMDF of 22.926304318773607 kJ/mol
- Min ratio ratio: 4.358025763604659e-05
- Max ratio ratio: 0.0005079434041649491
+ @ µ [1/h] of 0.518 and min OPTSUBMDF of 22.92630431889754 kJ/mol
+ Min ratio ratio: 4.3580257638221303e-05
+ Max ratio ratio: 0.0005079434041142558
  @ µ [1/h] of 0.468 and min OPTSUBMDF of 22.926304318773596 kJ/mol
  Min ratio ratio: 4.3580257636046746e-05
- Max ratio ratio: 0.0005079434041649482
- @ µ [1/h] of 0.418 and min OPTSUBMDF of 22.926304318773596 kJ/mol
+ Max ratio ratio: 0.0005079434041649491
+ @ µ [1/h] of 0.418 and min OPTSUBMDF of 22.92630431889754 kJ/mol
+ Min ratio ratio: 4.3580257638221385e-05
+ Max ratio ratio: 0.0005079434041650502
+ @ µ [1/h] of 0.368 and min OPTSUBMDF of 22.92630431889754 kJ/mol
+ Min ratio ratio: 4.3580257638221303e-05
+ Max ratio ratio: 0.0005079434041142558
+ @ µ [1/h] of 0.318 and min OPTSUBMDF of 22.92630431889754 kJ/mol
+ Min ratio ratio: 4.358025763822146e-05
+ Max ratio ratio: 0.0005079434041142558
+ @ µ [1/h] of 0.268 and min OPTSUBMDF of 22.92630431902148 kJ/mol
+ Min ratio ratio: 4.3580257640428075e-05
+ Max ratio ratio: 0.0005079434040628172
+ @ µ [1/h] of 0.218 and min OPTSUBMDF of 22.92630431889754 kJ/mol
+ Min ratio ratio: 4.3580257638221303e-05
+ Max ratio ratio: 0.0005079434041142568
+ @ µ [1/h] of 0.168 and min OPTSUBMDF of 22.926304318773596 kJ/mol
  Min ratio ratio: 4.3580257636046746e-05
- Max ratio ratio: 0.0005079434041649491
- @ µ [1/h] of 0.368 and min OPTSUBMDF of 22.926304318773596 kJ/mol
+ Max ratio ratio: 0.0005079434041649478
+ @ µ [1/h] of 0.118 and min OPTSUBMDF of 22.92630431889754 kJ/mol
+ Min ratio ratio: 4.3580257638221385e-05
+ Max ratio ratio: 0.0005079434041142549
+ @ µ [1/h] of 0.068 and min OPTSUBMDF of 22.92630431889754 kJ/mol
+ Min ratio ratio: 4.358025763822069e-05
+ Max ratio ratio: 0.0005079434041646992
+ @ µ [1/h] of 0.05 and min OPTSUBMDF of 22.92630431889747 kJ/mol
+ Min ratio ratio: 4.3580257638221385e-05
+ Max ratio ratio: 0.0005079434041142549
+ @ µ [1/h] of 0.03 and min OPTSUBMDF of 22.92630431877353 kJ/mol
  Min ratio ratio: 4.3580257636046746e-05
- Max ratio ratio: 0.0005079434041649491
- @ µ [1/h] of 0.318 and min OPTSUBMDF of 22.9263043187736 kJ/mol
- Min ratio ratio: 4.358025763604659e-05
- Max ratio ratio: 0.0005079434041649491
- @ µ [1/h] of 0.268 and min OPTSUBMDF of 22.926304318773596 kJ/mol
- Min ratio ratio: 4.358025763604659e-05
- Max ratio ratio: 0.0005079434041649482
- @ µ [1/h] of 0.218 and min OPTSUBMDF of 22.926304318773596 kJ/mol
- Min ratio ratio: 4.3580257636046746e-05
- Max ratio ratio: 0.0005079434041649482
- @ µ [1/h] of 0.168 and min OPTSUBMDF of 22.92630431902148 kJ/mol
- Min ratio ratio: 4.358025764042776e-05
- Max ratio ratio: 0.0005079434040628191
- @ µ [1/h] of 0.118 and min OPTSUBMDF of 22.926304318773596 kJ/mol
- Min ratio ratio: 4.358025763604659e-05
- Max ratio ratio: 0.0005079434041649491
- @ µ [1/h] of 0.068 and min OPTSUBMDF of 22.926304318773596 kJ/mol
- Min ratio ratio: 4.3580257636046746e-05
- Max ratio ratio: 0.0005079434041649491
- @ µ [1/h] of 0.05 and min OPTSUBMDF of 22.926304318773525 kJ/mol
- Min ratio ratio: 4.3580257636046746e-05
- Max ratio ratio: 0.0005079434041649491
- @ µ [1/h] of 0.03 and min OPTSUBMDF of 22.926304318773518 kJ/mol
- Min ratio ratio: 4.3580257636046746e-05
- Max ratio ratio: 0.0005079434041649491
-Ratio ratio range of (NADPH:NADP) to (NADH:NAD) at growth-rate-dependent
-maximal OptSubMDF under aerobic conditions
-
-with adapted measured concentration ranges @ µ [1/h] of 0.868 and min OPTSUBMDF of 11.036296627226497 kJ/mol
- Min ratio ratio: 112.5625735593415
- Max ratio ratio: 591113.447832647
- @ µ [1/h] of 0.818 and min OPTSUBMDF of 18.56523945777669 kJ/mol
- Min ratio ratio: 14987.030510696903
- Max ratio ratio: 133284.06438780864
- @ µ [1/h] of 0.768 and min OPTSUBMDF of 22.9263043187736 kJ/mol
- Min ratio ratio: 1968.7232705462322
- Max ratio ratio: 22946.169991727293
- @ µ [1/h] of 0.718 and min OPTSUBMDF of 22.926304318773596 kJ/mol
- Min ratio ratio: 1968.7232707431028
- Max ratio ratio: 22946.169991727293
- @ µ [1/h] of 0.668 and min OPTSUBMDF of 22.9263043187736 kJ/mol
- Min ratio ratio: 1968.723270743094
- Max ratio ratio: 22946.169991727293
- @ µ [1/h] of 0.618 and min OPTSUBMDF of 22.926304318773592 kJ/mol
- Min ratio ratio: 1968.723270743094
- Max ratio ratio: 22946.169991727373
- @ µ [1/h] of 0.568 and min OPTSUBMDF of 22.92630431877359 kJ/mol
- Min ratio ratio: 1968.723270743094
- Max ratio ratio: 22946.169991727293
- @ µ [1/h] of 0.518 and min OPTSUBMDF of 22.926304318773607 kJ/mol
- Min ratio ratio: 1968.723270743094
- Max ratio ratio: 22946.169991727373
- @ µ [1/h] of 0.468 and min OPTSUBMDF of 22.926304318773596 kJ/mol
- Min ratio ratio: 1968.7232707430976
- Max ratio ratio: 22946.169991727293
- @ µ [1/h] of 0.418 and min OPTSUBMDF of 22.926304318773596 kJ/mol
- Min ratio ratio: 1968.723270743094
- Max ratio ratio: 22946.169991727293
- @ µ [1/h] of 0.368 and min OPTSUBMDF of 22.926304318773596 kJ/mol
- Min ratio ratio: 1968.723270743094
- Max ratio ratio: 22946.169991727293
- @ µ [1/h] of 0.318 and min OPTSUBMDF of 22.9263043187736 kJ/mol
- Min ratio ratio: 1968.723270743094
- Max ratio ratio: 22946.169991727373
- @ µ [1/h] of 0.268 and min OPTSUBMDF of 22.926304318773596 kJ/mol
- Min ratio ratio: 1968.7232707430976
- Max ratio ratio: 22946.169991727373
- @ µ [1/h] of 0.218 and min OPTSUBMDF of 22.926304318773596 kJ/mol
- Min ratio ratio: 1968.7232707430976
- Max ratio ratio: 22946.169991727293
- @ µ [1/h] of 0.168 and min OPTSUBMDF of 22.92630431902148 kJ/mol
- Min ratio ratio: 1968.723271138937
- Max ratio ratio: 22946.16998942057
- @ µ [1/h] of 0.118 and min OPTSUBMDF of 22.926304318773596 kJ/mol
- Min ratio ratio: 1968.723270743094
- Max ratio ratio: 22946.169991727373
- @ µ [1/h] of 0.068 and min OPTSUBMDF of 22.926304318773596 kJ/mol
- Min ratio ratio: 1968.723270743094
- Max ratio ratio: 22946.169991727293
- @ µ [1/h] of 0.05 and min OPTSUBMDF of 22.926304318773525 kJ/mol
- Min ratio ratio: 1968.723270743094
- Max ratio ratio: 22946.169991727293
- @ µ [1/h] of 0.03 and min OPTSUBMDF of 22.926304318773518 kJ/mol
- Min ratio ratio: 1968.723270743094
- Max ratio ratio: 22946.169991727293
+ Max ratio ratio: 0.0005079434041649478

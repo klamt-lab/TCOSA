@@ -34,12 +34,18 @@ def cosa_ratio_ratio_test(anaerobic: bool, expanded: bool, growth_epsilon: float
 
     ratio_ratios = [
         (("nadh_tcosa_c", "nad_tcosa_c"), ("nadph_tcosa_c", "nadp_tcosa_c")),
-        (("nadph_tcosa_c", "nadp_tcosa_c"), ("nadh_tcosa_c", "nad_tcosa_c")),
+        # (("nadph_tcosa_c", "nadp_tcosa_c"), ("nadh_tcosa_c", "nad_tcosa_c")),
     ]
     report = ""
     ratio_ratio_test_data = {}
     original_cobra_model = copy.deepcopy(cobra_model)
-    for concentrations in ("STANDARDCONC", "VIVOCONC"):
+
+    if (c_source != "glucose") or (anaerobic) or (expanded):
+        concentration_scenarios = ("STANDARDCONC",)
+    else:
+        concentration_scenarios = ("VIVOCONC",)
+
+    for concentrations in concentration_scenarios:
         print(f"=CONCENTRATION RANGES: {concentrations}=")
         report += f"=CONCENTRATION RANGES: {concentrations}=\n"
         if concentrations == "STANDARDCONC":
@@ -435,10 +441,9 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
 
 
 cosa_ratio_ratio_test(anaerobic=False, expanded=False)
+cosa_ratio_ratio_test(anaerobic=True, expanded=False)
 cosa_ratio_ratio_test(anaerobic=False, expanded=False, c_source="acetate")
 
-# cosa_ratio_ratio_test(anaerobic=False, expanded=False)
-# cosa_ratio_ratio_test(anaerobic=True, expanded=False)
 # cosa_create_full_ratio_ratio_test_figure_one_panel()
 # cosa_create_full_ratio_ratio_test_figure_two_panels()
 # cosa_create_full_ratio_ratio_test_figure_four_panels()

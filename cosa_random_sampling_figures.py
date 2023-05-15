@@ -19,7 +19,7 @@ def create_cosa_figures(data_path: str, figures_path: str, anaerobic: bool, conc
     only_one_id = "SINGLE_COFACTOR"
 
     table_paths = []
-    if "STANDARCONC" in concentration_scenarios:
+    if "STANDARDCONC" in concentration_scenarios:
         table_paths.append(f"{data_path}optmdf_table_STANDARDCONC.csv")
         table_paths.append(f"{data_path}optsubmdf_table_STANDARDCONC.csv")
     elif "VIVOCONC" in concentration_scenarios:
