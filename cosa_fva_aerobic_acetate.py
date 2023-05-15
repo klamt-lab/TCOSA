@@ -6,7 +6,7 @@ for base_nadx_scenario in ("WILDTYPE", "FLEXIBLE"):
     cosa_single_swap_test(
         anaerobic=False,
         reac_id="TEST_0_206",
-        mu=0.206,
+        mu=0.2055,
         base_nadx_scenario=base_nadx_scenario,
         c_source="acetate",
     )
@@ -18,7 +18,6 @@ for base_nadx_scenario in ("WILDTYPE", "FLEXIBLE"):
         base_nadx_scenario=base_nadx_scenario,
         c_source="acetate",
     )
-    """
     cosa_single_swap_test(
         anaerobic=False,
         reac_id="TEST_0_106",
@@ -40,3 +39,4 @@ for base_nadx_scenario in ("WILDTYPE", "FLEXIBLE"):
         base_nadx_scenario=base_nadx_scenario,
         c_source="acetate",
     )
+    """
