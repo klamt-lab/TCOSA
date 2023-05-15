@@ -766,7 +766,7 @@ def create_total_cosa_figure() -> None:
     OPTMDF_ANAEROBIC = 2
     OPTSUBMDF_ANAEROBIC = 3
 
-    for concentration in ("STANDARDCONC", "VIVOCONC"):
+    for concentration in ("STANDARDCONC",):
         table_paths = [
             f"./cosa/results_aerobic/optmdf_table_{concentration}.csv",
             f"./cosa/results_aerobic/optsubmdf_table_{concentration}.csv",
@@ -784,19 +784,19 @@ def create_total_cosa_figure() -> None:
                 first = True
                 ax_x = 0
                 ax_y = 0
-                title = "A Aerobic, OptMDF"
+                title = "A Aerobic, MDF"
             elif current_table == OPTSUBMDF_AEROBIC:
                 ax_x = 0
                 ax_y = 1
-                title = "B Aerobic, OptSubMDF"
+                title = "B Aerobic, SubMDF"
             elif current_table == OPTMDF_ANAEROBIC:
                 ax_x = 1
                 ax_y = 0
-                title = "C Anaerobic, OptMDF"
+                title = "C Anaerobic, MDF"
             elif current_table == OPTSUBMDF_ANAEROBIC:
                 ax_x = 1
                 ax_y = 1
-                title = "D Anaerobic, OptSubMDF"
+                title = "D Anaerobic, SubMDF"
             current_table += 1
 
             table = pandas.read_csv(
@@ -806,9 +806,9 @@ def create_total_cosa_figure() -> None:
 
             ylabel = ""
             if "optsubmdf_" in table_path:
-                ylabel += "OptSubMDF"
+                ylabel += "SubMDF"
             else:
-                ylabel += "OptMDF"
+                ylabel += "MDF"
             ylabel += " [kJ/mol]"
 
             headers = list(table.keys())
@@ -873,7 +873,7 @@ def create_total_cosa_figure() -> None:
                 axs[ax_x, ax_y].set_xlabel(r"Growth rate [$\mathrm{h^{-1}}$]")
                 axs[ax_x, ax_y].set_ylabel(ylabel)
                 axs[ax_x, ax_y].set_xlim(min(temp_growth_rates), max(temp_growth_rates))
-                if "OptMDF" in ylabel:
+                if "SubMDF" not in ylabel:
                     axs[ax_x, ax_y].set_ylim(0.0, max(list_to_float(values))+.25)
                 else:
                     axs[ax_x, ax_y].set_ylim(0.0, 30.0)

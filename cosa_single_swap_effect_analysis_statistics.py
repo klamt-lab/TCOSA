@@ -10,13 +10,13 @@ make_base = lambda y: [
 all_ids = []
 for mode in ("GREATER_THAN", "LOWER_THAN"):
     print(f"===={mode}====")
-    for concentrations in ("STANDARDCONC", "VIVOCONC"):
+    for concentrations in ("VIVOCONC",):
         max_optmdf_change = 0
         max_optsubmdf_change = 0
         min_optmdf_change = 0
         min_optsubmdf_change = 0
         print(f"=={concentrations}==")
-        for aerobicity in ("aerobic", "anaerobic"):
+        for aerobicity in ("aerobic",):
             print(f"={aerobicity}=")
             data_path = f"./cosa/results_{aerobicity}/swap_results_{concentrations}.json"
             swap_data = json_load(data_path)
@@ -33,7 +33,7 @@ for mode in ("GREATER_THAN", "LOWER_THAN"):
                 optsubmdf_changes = []
                 error = False
                 for growth_rate in swap_data[reac_id].keys():
-                    if len(swap_data[reac_id][growth_rate].keys()) == 0:
+                    if len(swap_data[reac_id][growth_rate].keys()) != 2:
                         error = True
                         break
                     optmdf_changes.append(swap_data[reac_id][growth_rate]["OptMDF"])

@@ -30,6 +30,7 @@ import cosa_create_model_and_data
 import cosa_random_sampling_aerobic
 import cosa_random_sampling_anaerobic
 import cosa_random_sampling_acetate
+import cosa_random_sampling_create_figures
 
 # Create the extended vs. two-cofactor model comparison figure.
 import cosa_create_extended_model_figure
@@ -37,8 +38,8 @@ import cosa_create_extended_model_figure
 # Run the ratio ratio range variability analysis and generate its figures.
 import cosa_ratio_ratio_test
 
-# Create in vivo concentrations figure
-import cosa_create_aerobic_figures
+# Create in vivo concentrations and acetate figures
+import cosa_create_special_aerobic_figures
 
 # Run the number of minimal changes to reach theoretical optimality analysis
 # and generate a text report about it.

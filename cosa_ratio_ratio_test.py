@@ -43,7 +43,7 @@ def cosa_ratio_ratio_test(anaerobic: bool, expanded: bool, growth_epsilon: float
     if (c_source != "glucose") or (anaerobic) or (expanded):
         concentration_scenarios = ("STANDARDCONC",)
     else:
-        concentration_scenarios = ("VIVOCONC",)
+        concentration_scenarios = ("STANDARDCONC", "VIVOCONC",)
 
     for concentrations in concentration_scenarios:
         print(f"=CONCENTRATION RANGES: {concentrations}=")
@@ -350,7 +350,7 @@ def get_latex_scientific_notation(x: float):
 def cosa_create_full_ratio_ratio_test_figure_four_panels():
     ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic/ratio_ratio_test_data.json")
     ratio_ratio_test_data_anaerobic = json_load("cosa/results_anaerobic/ratio_ratio_test_data.json")
-    concentrations = ("STANDARDCONC", "VIVOCONC")
+    concentrations = ("STANDARDCONC",) #"VIVOCONC")
     for concentration in concentrations:
         figurenames_to_plots = {
             ("Aerobic", "OptMDF", "A", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (0, 0),
@@ -378,7 +378,7 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 min_label = None
                 max_label = None
 
-            title = f"{figurename_tuple[2]} {figurename_tuple[0]}, {figurename_tuple[1]}"
+            title = f"{figurename_tuple[2]} {figurename_tuple[0]}, {figurename_tuple[1].replace('Opt', '')}"
 
             figurename = figurename_tuple[3]
             if is_aerobic:
@@ -431,7 +431,7 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 axs[axs_index].set_ylim(-.04, 1.0)
             axs[axs_index].set_xlabel("Growth rate [1/h]", fontsize=16)
             # axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=16)
-            axs[axs_index].set_ylabel(r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$", fontsize=12)
+            axs[axs_index].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=12)
             axs[axs_index].tick_params(labelsize=13)
         fig.legend(loc=(0.235, 0.9525), ncol=2, fontsize=18)
         # fig.subplots_adjust(right=1.25)
@@ -446,4 +446,4 @@ cosa_ratio_ratio_test(anaerobic=False, expanded=False, c_source="acetate")
 
 # cosa_create_full_ratio_ratio_test_figure_one_panel()
 # cosa_create_full_ratio_ratio_test_figure_two_panels()
-# cosa_create_full_ratio_ratio_test_figure_four_panels()
+cosa_create_full_ratio_ratio_test_figure_four_panels()

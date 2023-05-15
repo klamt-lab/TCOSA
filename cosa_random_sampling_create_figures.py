@@ -1,0 +1,3 @@
+from cosa_random_sampling_figures import create_total_cosa_figure
+
+create_total_cosa_figure()
