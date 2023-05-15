@@ -4,9 +4,10 @@ from matplotlib.lines import Line2D
 import pandas
 from helper import ensure_folder_existence
 from statistics import mean, stdev
+from typing import Tuple
 
 
-def create_cosa_figures(data_path: str, figures_path: str, anaerobic: bool) -> None:
+def create_cosa_figures(data_path: str, figures_path: str, anaerobic: bool, concentration_scenarios: Tuple[str]) -> None:
     ensure_folder_existence(figures_path)
 
     str_to_float = lambda x: float(x.replace(",", "."))
@@ -17,12 +18,14 @@ def create_cosa_figures(data_path: str, figures_path: str, anaerobic: bool) -> N
     in_vivo_id = "WILDTYPE"
     only_one_id = "SINGLE_COFACTOR"
 
-    table_paths = [
-        f"{data_path}optmdf_table_STANDARDCONC.csv",
-        f"{data_path}optmdf_table_VIVOCONC.csv",
-        f"{data_path}optsubmdf_table_STANDARDCONC.csv",
-        f"{data_path}optsubmdf_table_VIVOCONC.csv",
-    ]
+    table_paths = []
+    if "STANDARCONC" in concentration_scenarios:
+        table_paths.append(f"{data_path}optmdf_table_STANDARDCONC.csv")
+        table_paths.append(f"{data_path}optsubmdf_table_STANDARDCONC.csv")
+    elif "VIVOCONC" in concentration_scenarios:
+        table_paths.append(f"{data_path}optmdf_table_VIVOCONC.csv",)
+        table_paths.append(f"{data_path}optsubmdf_table_VIVOCONC.csv",)
+
     for table_path in table_paths:
         table = pandas.read_csv(
             table_path,

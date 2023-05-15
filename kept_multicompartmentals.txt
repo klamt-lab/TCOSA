@@ -24,7 +24,10 @@ ATPS4rpp_REV | 40.08227377736075 kJ/mol | ATP synthase (four protons for one ATP
 THD2pp | -35.10954537950019 kJ/mol | NAD(P) transhydrogenase (periplasm) | 2.0 h_p + nadh_tcosa_c + nadp_tcosa_c --> 2.0 h_c + nad_tcosa_c + nadph_tcosa_c
 NADH16pp_ORIGINAL_NAD_TCOSA | -79.95394219095436 kJ/mol | NADH dehydrogenase (ubiquinone-8 & 3 protons) (periplasm) | 4.0 h_c + nadh_tcosa_c + q8_c --> 3.0 h_p + nad_tcosa_c + q8h2_c
 NADH16pp_VARIANT_NADP_TCOSA | -79.95394219095436 kJ/mol | NADH dehydrogenase (ubiquinone-8 & 3 protons) (periplasm) | 4.0 h_c + nadph_tcosa_c + q8_c --> 3.0 h_p + nadp_tcosa_c + q8h2_c
+NADH16pp_NADZ_TCOSA | -79.95394219095436 kJ/mol | NADH dehydrogenase (ubiquinone-8 & 3 protons) (periplasm) | 4.0 h_c + nadzh_tcosa_c + q8_c --> 3.0 h_p + nadz_tcosa_c + q8h2_c
 NADH18pp_ORIGINAL_NAD_TCOSA | 5.506824277244732 kJ/mol | NADH dehydrogenase (demethylmenaquinone-8 & 3 protons) (periplasm) | 2dmmq8_c + 4.0 h_c + nadh_tcosa_c --> 2dmmql8_c + 3.0 h_p + nad_tcosa_c
 NADH18pp_VARIANT_NADP_TCOSA | 5.506824277244732 kJ/mol | NADH dehydrogenase (demethylmenaquinone-8 & 3 protons) (periplasm) | 2dmmq8_c + 4.0 h_c + nadph_tcosa_c --> 2dmmql8_c + 3.0 h_p + nadp_tcosa_c
+NADH18pp_NADZ_TCOSA | 5.506824277244732 kJ/mol | NADH dehydrogenase (demethylmenaquinone-8 & 3 protons) (periplasm) | 2dmmq8_c + 4.0 h_c + nadzh_tcosa_c --> 2dmmql8_c + 3.0 h_p + nadz_tcosa_c
 NADH17pp_ORIGINAL_NAD_TCOSA | 27.946891798261504 kJ/mol | NADH dehydrogenase (menaquinone-8 & 3 protons) (periplasm) | 4.0 h_c + mqn8_c + nadh_tcosa_c --> 3.0 h_p + mql8_c + nad_tcosa_c
 NADH17pp_VARIANT_NADP_TCOSA | 27.946891798261504 kJ/mol | NADH dehydrogenase (menaquinone-8 & 3 protons) (periplasm) | 4.0 h_c + mqn8_c + nadph_tcosa_c --> 3.0 h_p + mql8_c + nadp_tcosa_c
+NADH17pp_NADZ_TCOSA | 27.946891798261504 kJ/mol | NADH dehydrogenase (menaquinone-8 & 3 protons) (periplasm) | 4.0 h_c + mqn8_c + nadzh_tcosa_c --> 3.0 h_p + mql8_c + nadz_tcosa_c

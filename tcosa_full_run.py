@@ -27,7 +27,9 @@ import cosa_create_model_and_data
 # Perform the random sampling where the in vivo distribution
 # is compared with random distributions. Here, the CSV tables
 # and the figures for this analysis are also generated.
-import cosa_random_sampling
+import cosa_random_sampling_aerobic
+import cosa_random_sampling_anaerobic
+import cosa_random_sampling_acetate
 
 # Create the extended vs. two-cofactor model comparison figure.
 import cosa_create_extended_model_figure

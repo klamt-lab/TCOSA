@@ -104,12 +104,11 @@ def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: in
     print(nadx_scenarios)
     original_used_growth = used_growth
 
-    if (anaerobic) or (c_source == "acetate"):
+    if (anaerobic) or (c_source == "acetate") or (expanded):
         concentration_scenarios = ("STANDARDCONC",)
     else:
-        # Temporary change
-        concentration_scenarios = ("VIVOCONC",)
-        # End of temporary change
+        concentration_scenarios = ("STANDARDCONC", "VIVOCONC",)
+
 
     for concentration_scenario in concentration_scenarios:
         if concentration_scenario == "STANDARDCONC":
@@ -260,5 +259,5 @@ def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: in
                     full_optsubmdf_results,
                 )
 
-    create_cosa_tables(data_path=f"cosa/results{suffix}/runs", output_path=f"cosa/results{suffix}")
-    create_cosa_figures(data_path=f"./cosa/results{suffix}/", figures_path=f"./cosa/results{suffix}/figures/", anaerobic=anaerobic)
+    create_cosa_tables(data_path=f"cosa/results{suffix}/runs", output_path=f"cosa/results{suffix}", concentration_scenarios=concentration_scenarios)
+    create_cosa_figures(data_path=f"./cosa/results{suffix}/", figures_path=f"./cosa/results{suffix}/figures/", anaerobic=anaerobic, concentration_scenarios=concentration_scenarios)
