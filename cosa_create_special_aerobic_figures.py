@@ -140,7 +140,6 @@ def create_acetate_figure():
     ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic_acetate/ratio_ratio_test_data.json")
     concentration = "STANDARDCONC"
     output_path = "./cosa/acetate_figure.png"
-    table_path = f"cosa/results_aerobic_acetate/optsubmdf_table_{concentration}.csv"
     pad = 5.25
 
     fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(14, 11)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
@@ -151,6 +150,7 @@ def create_acetate_figure():
             xpos = 1
         else:
             xpos = 0
+        table_path = f"cosa/results_aerobic_acetate/{target.lower()}_table_{concentration}.csv"
 
         figurename_tuple = ("aerobic", f"2C_NADH_to_NAD___to___NADPH_to_nadp_{target}_{concentration}.jpg")
         ########################################################
