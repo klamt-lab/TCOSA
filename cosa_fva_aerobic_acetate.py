@@ -6,7 +6,7 @@ for base_nadx_scenario in ("WILDTYPE", "FLEXIBLE"):
     cosa_single_swap_test(
         anaerobic=False,
         reac_id="TEST_0_206",
-        mu=0.2055,
+        mu=0.2059,
         base_nadx_scenario=base_nadx_scenario,
         c_source="acetate",
     )
