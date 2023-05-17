@@ -89,9 +89,16 @@ def cosa_single_swap_analysis(anaerobic: bool, c_source: str = "glucose"):
         for reaction in cobra_model.reactions:
             if (reaction.id not in dG0_values.keys()):
                 continue
+            if ((reaction.id != "ICDHyr_FWD_ORIGINAL_NADP_TCOSA") and (reaction.id != "PDH_ORIGINAL_NAD_TCOSA")) or (c_source != "acetate"):
+                if (reaction.id in swap_results.keys()):
+                    continue
+                multiplier = 1.0
+            else:
+                if (reaction.id == "ICDHyr_FWD_ORIGINAL_NADP_TCOSA"):
+                    multiplier = .9875 # Numeric error at highest growth rate D:
+                else:
+                    multiplier = .999
 
-            if (reaction.id in swap_results.keys()):
-                continue
 
             if reaction.id.endswith("_ORIGINAL_NAD_TCOSA"):
                 other_id = reaction.id.replace("_ORIGINAL_NAD_TCOSA", "_VARIANT_NADP_TCOSA")
@@ -121,7 +128,7 @@ def cosa_single_swap_analysis(anaerobic: bool, c_source: str = "glucose"):
 
                 print("Set growth to", growth_rate)
                 optmdfpathway_base_variables[biomass_reaction_id].bounds(
-                    growth_rate,
+                    growth_rate*multiplier,
                     1e12
                 )
 

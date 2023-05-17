@@ -10,7 +10,7 @@ make_base = lambda y: [
 all_ids = []
 for mode in ("GREATER_THAN", "LOWER_THAN"):
     print(f"===={mode}====")
-    for concentrations in ("VIVOCONC",):
+    for concentrations in ("VIVOCONC",): #("VIVOCONC",):
         max_optmdf_change = 0
         max_optsubmdf_change = 0
         min_optmdf_change = 0

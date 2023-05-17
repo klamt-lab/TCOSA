@@ -3041,8 +3041,8 @@
     },
     "PDH_ORIGINAL_NAD_TCOSA": {
         "0,206": {
-            "OptMDF": -0.501344,
-            "OptSubMDF": -0.0
+            "OptMDF": 0.0,
+            "OptSubMDF": 0.0
         },
         "0,181": {
             "OptMDF": 0.0,
@@ -3050,14 +3050,14 @@
         },
         "0,156": {
             "OptMDF": 0.0,
-            "OptSubMDF": 0.0
+            "OptSubMDF": -0.0
         },
         "0,131": {
             "OptMDF": 0.0,
             "OptSubMDF": 0.0
         },
         "0,106": {
-            "OptMDF": 0.0,
+            "OptMDF": -0.00078,
             "OptSubMDF": 0.0
         },
         "0,081": {
@@ -3074,7 +3074,7 @@
         },
         "0,03": {
             "OptMDF": 0.0,
-            "OptSubMDF": 0.0
+            "OptSubMDF": -0.0
         }
     },
     "MTHFR2_ORIGINAL_NAD_TCOSA": {
@@ -6803,15 +6803,15 @@
     },
     "ICDHyr_FWD_ORIGINAL_NADP_TCOSA": {
         "0,206": {
-            "OptMDF": NaN,
-            "OptSubMDF": NaN
+            "OptMDF": -1.510146,
+            "OptSubMDF": -3.412242
         },
         "0,181": {
-            "OptMDF": 0.0,
+            "OptMDF": -0.0,
             "OptSubMDF": 0.0
         },
         "0,156": {
-            "OptMDF": 0.0,
+            "OptMDF": -0.0,
             "OptSubMDF": 0.0
         },
         "0,131": {
@@ -6832,7 +6832,7 @@
         },
         "0,05": {
             "OptMDF": 0.0,
-            "OptSubMDF": 0.0
+            "OptSubMDF": -0.0
         },
         "0,03": {
             "OptMDF": 0.0,
