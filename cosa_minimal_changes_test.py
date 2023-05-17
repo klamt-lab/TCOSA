@@ -29,8 +29,13 @@ def cosa_minimal_changes_test(anaerobic: bool, disallowed_changed_reaction: str=
     figures_path = f"./cosa/results{suffix}/figures/"
     ensure_folder_existence(figures_path)
 
+    if c_source == "glucose":
+        concentrations = ("PAPERCONCS", "STANDARDCONCS")
+    else:
+        concentrations = ("STANDARDCONCS",)
+
     report = ""
-    for concentrations in ("PAPERCONCS", "STANDARDCONCS"):
+    for concentrations in concentrations:
         print(f"=CONCENTRATION RANGES: {concentrations}=")
         report += f"=CONCENTRATION RANGES: {concentrations}=\n"
 
