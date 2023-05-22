@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""[summary]"""
+"""Includes a function with which reversible reactions of a cobrapy model can be splitted."""
 
 ## IMPORTS ##
 # External
@@ -10,17 +10,16 @@ import copy
 ## PUBLIC FUNCTIONS ##
 def make_model_irreversible(cobra_model: cobra.Model,
                             forward_id:str = "_FWD", reverse_id: str="_REV") -> cobra.Model:
-    """[summary]
+    """Returns a cobrapy model where all reversible reactions are splitted into irreversible ones.
 
     Args:
-        cobra_model (cobra.Model): [description]
-        forward_id (str, optional): [description]. Defaults to "_FWD".
-        reverse_id (str, optional): [description]. Defaults to "_REV".
+        cobra_model (cobra.Model): The cobrapy model for which all reversible reactions shall be splitted.
+        forward_id (str, optional): The forward reaction ID suffix used in new splitted reactions. Defaults to "_FWD".
+        reverse_id (str, optional): The reverse reaction ID suffix used in new splitted reactions. Defaults to "_REV".
 
     Returns:
-        cobra.Model: [description]
+        cobra.Model: The cobrapy model with splitted reversible reactions.
     """
-    # Create
     cobra_reaction_ids = [x.id for x in cobra_model.reactions]
     for cobra_reaction_id in cobra_reaction_ids:
         cobra_reaction: cobra.Reaction = cobra_model.reactions.get_by_id(cobra_reaction_id)

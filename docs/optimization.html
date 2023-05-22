@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>optimization API documentation</title>
+<meta name="description" content="Generic functions for performing optimizations, i.e., maximizations and/or optimizations …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>optimization</code></h1>
+</header>
+<section id="section-intro">
+<p>Generic functions for performing optimizations, i.e., maximizations and/or optimizations.</p>
+<p>Basically, these are pulp wrappers.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/usr/bin/env python3
+&#34;&#34;&#34;Generic functions for performing optimizations, i.e., maximizations and/or optimizations.
+
+Basically, these are pulp wrappers.
+&#34;&#34;&#34;
+
+## IMPORTS ##
+import ray
+import pulp
+from typing import Any, Dict, List, Tuple
+
+
+## CONSTANTS ##
+SOLVER = &#34;CPLEX_PY&#34;  # Can be whatever pulp supports.
+TIMELIMIT = 180  # In seconds
+IS_VERBOSE = True
+WARMSTART = False
+
+
+## PUBLIC FUNCTIONS ##
+def set_timelimit(timelimit: int):
+    &#34;&#34;&#34;Sets the solver timelimit to the given value.&#34;&#34;&#34;
+    global TIMELIMIT
+    TIMELIMIT = timelimit
+
+
+def add_objective(base_problem: pulp.LpProblem, objective: List[Tuple[float, str]], direction: str, variables_dict=None) -&gt; pulp.LpProblem:
+    &#34;&#34;&#34;Adds the given objective to the given pulp problem
+
+    Args:
+        base_problem (pulp.LpProblem): The pulp problem.
+        objective (List[Tuple[float, str]]): The objective in the form of tuples where element 0 is the coefficient of the
+        objective functions and element 1 the variable&#39;s ID.
+        direction (str): The objective&#39;s direction, i.e., &#39;min&#39; or &#39;max&#39;.
+        variables_dict (_type_, optional): Optional already calculated variablesDict from pulp. Defaults to None.
+
+    Returns:
+        pulp.LpProblem: _description_
+    &#34;&#34;&#34;
+    if variables_dict is None:
+        base_problem_variables: Dict[str,
+                                     pulp.LpVariable] = base_problem.variablesDict()
+    else:
+        base_problem_variables = variables_dict
+
+    objective_expression: pulp.LpAffineExpression = 0.0
+    for objective_part in objective:
+        multiplier = objective_part[0]
+        variable_id = objective_part[1]
+
+        if variable_id == &#34;NO_OPTIMIZATION&#34;:
+            break
+
+        objective_expression += multiplier * \
+            base_problem_variables[variable_id]
+
+    if variable_id != &#34;NO_OPTIMIZATION&#34;:
+        final_objective: pulp.LpAffineExpression = None
+        if direction == &#34;min&#34;:
+            final_objective = objective_expression
+        elif direction == &#34;max&#34;:
+            final_objective = -objective_expression
+        final_objective.name = &#34;objective&#34;
+        base_problem.objective = final_objective
+
+    return base_problem
+
+
+def init_ray_multiprocessing(num_cpus=16, ignore_reinit_error=True, **kwargs):
+    &#34;&#34;&#34;Initialize ray with the given settings.&#34;&#34;&#34;
+    ray.init(num_cpus=num_cpus, ignore_reinit_error=ignore_reinit_error, **kwargs)
+
+
+def perform_optimization(base_problem: pulp.LpProblem, objective: List[Tuple[float, str]],
+                         direction: str, variables_dict=None, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Performs the given optimization.
+
+    Args:
+        base_problem (pulp.LpProblem): The pulp problem.
+        objective (List[Tuple[float, str]]): The objective in the form of tuples where element 0 is the coefficient of the
+        objective functions and element 1 the variable&#39;s ID.
+        direction (str): The objective&#39;s direction, i.e., &#39;min&#39; or &#39;max&#39;.
+        variables_dict (_type_, optional): Optional already calculated variablesDict from pulp. Defaults to None.
+
+    Returns:
+        Dict[str, Any]: Returns a dict with &#39;status&#39; as key (there, the solver status is the value) as well as
+        &#39;objective_value&#39; (its namesake) and &#39;values&#39; (another dictionary with all variable IDs as keys and their
+        solution values as values).
+    &#34;&#34;&#34;
+    if variables_dict is None:
+        base_problem_variables: Dict[str,
+                                     pulp.LpVariable] = base_problem.variablesDict()
+    else:
+        base_problem_variables = variables_dict
+
+    add_objective(
+        base_problem=base_problem,
+        objective=objective,
+        direction=direction,
+        variables_dict=variables_dict,
+    )
+
+    base_problem = solve_current_problem(base_problem=base_problem)
+
+    results: Dict[str, Any] = {}
+    results[&#34;status&#34;] = pulp.LpStatus[base_problem.status]
+    results[&#34;objective_value&#34;] = base_problem.objective.value()
+    results[&#34;values&#34;] = {}
+    for variable_id in base_problem_variables.keys():
+        variable_value = base_problem_variables[variable_id].value()
+        results[&#34;values&#34;][variable_id] = variable_value
+
+    return results
+
+
+def perform_optimization_with_given_objective(base_problem: pulp.LpProblem, variables_dict=None, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Performs optimization with pre-added objective.
+
+    Args:
+        base_problem (pulp.LpProblem): The pulp problem.
+        variables_dict (_type_, optional): Optional already calculated variablesDict from pulp. Defaults to None.
+
+    Returns:
+        Dict[str, Any]: Returns a dict with &#39;status&#39; as key (there, the solver status is the value) as well as
+        &#39;objective_value&#39; (its namesake) and &#39;values&#39; (another dictionary with all variable IDs as keys and their
+        solution values as values).
+    &#34;&#34;&#34;
+    return perform_optimization(
+        base_problem=base_problem,
+        objective=[(0.0, &#34;NO_OPTIMIZATION&#34;)],
+        direction=&#34;min&#34;,
+        variables_dict=variables_dict,
+        **kwargs
+    )
+
+
+def perform_stepwise_variable_optimization(
+    base_problem: pulp.LpProblem,
+    optimized_variable_id: str,
+    start_value: float = 0.0,
+    step_sizes: List[float] = [0.5, 0.2, 0.1, 0.05, 0.01],
+    variables_dict=None,
+    **kwargs
+) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;The same as perform_optimization(), but only performs simplex phase I by trying to go closer to the objective with the given step sizes.
+
+    Args:
+        base_problem (pulp.LpProblem): The pulp problem.
+        optimized_variable_id (str): The optimized variable ID.
+        start_value (float, optional): The initial value for the optimized variable. Defaults to 0.0.
+        step_sizes (List[float], optional): The phase I approximation step sizes. Defaults to [0.5, 0.2, 0.1, 0.05, 0.01].
+
+    Returns:
+        Dict[str, Any]: Returns a dict with &#39;status&#39; as key (there, the solver status is the value) as well as
+        &#39;objective_value&#39; (its namesake) and &#39;values&#39; (another dictionary with all variable IDs as keys and their
+        solution values as values).
+    &#34;&#34;&#34;
+    if variables_dict is None:
+        base_problem_variables = base_problem.variablesDict()
+    else:
+        base_problem_variables = variables_dict
+    variable: pulp.LpVariable = base_problem_variables[optimized_variable_id]
+
+    last_working_value = start_value
+    for step_size in step_sizes:
+        current_status = &#34;Optimal&#34;
+        current_min_value = last_working_value + step_size
+        while current_status == &#34;Optimal&#34;:
+            variable.lowBound = current_min_value
+            result = perform_optimization_with_given_objective(
+                base_problem=base_problem, variables_dict=base_problem_variables, **kwargs)
+            current_status = result[&#34;status&#34;]
+
+            if current_status == &#34;Optimal&#34;:
+                last_working_value = current_min_value
+
+            current_min_value += step_size
+
+    variable.lowBound = last_working_value
+    output_result = perform_optimization_with_given_objective(
+        base_problem=base_problem, variables_dict=base_problem_variables, **kwargs)
+
+    return output_result
+
+
+def perform_variable_maximization(base_problem: pulp.LpProblem, variable_id: str, variables_dict=None, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Maximizes the given variable with perform_optimization(...).&#34;&#34;&#34;
+    return perform_optimization(
+        base_problem=base_problem,
+        objective=[(1.0, variable_id)],
+        direction=&#34;max&#34;,
+        variables_dict=variables_dict,
+        **kwargs
+    )
+
+
+def perform_variable_minimization(base_problem: pulp.LpProblem, variable_id: str, variables_dict=None, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Minimizes the given variable with perform_optimization(...).&#34;&#34;&#34;
+    return perform_optimization(
+        base_problem=base_problem,
+        objective=[(1.0, variable_id)],
+        direction=&#34;min&#34;,
+        variables_dict=variables_dict,
+        **kwargs
+    )
+
+
+def solve_current_problem(base_problem: pulp.LpProblem) -&gt; pulp.LpProblem:
+    &#34;&#34;&#34;Solves the given problem using pulp.
+
+    Args:
+        base_problem (pulp.LpProblem): The pulp problem.
+
+    Returns:
+        pulp.LpProblem: The solved pulp problem.
+    &#34;&#34;&#34;
+    # solver = pulp.getSolver(SOLVER, msg=IS_VERBOSE,
+    #                        warmStart=WARMSTART, timeLimit=TIMELIMIT)
+    # base_problem.solve(solver)
+    solver = pulp.CPLEX_PY()
+    solver.buildSolverModel(base_problem)
+    solver.solverModel.parameters.mip.display.set(0)
+    solver.solverModel.parameters.paramdisplay.set(0)
+    solver.solverModel.parameters.simplex.tolerances.feasibility.set(1e-9)
+    # solver.solverModel.parameters.simplex.tolerances.optimality.set(1e-6)
+    solver.solverModel.parameters.emphasis.numerical.set(1)
+    solver.solverModel.parameters.mip.tolerances.absmipgap.set(1e-9)
+    solver.solverModel.parameters.mip.tolerances.integrality.set(0.0)
+    solver.solverModel.parameters.timelimit.set(TIMELIMIT)
+    # solver.solverModel.parameters.read.scale.set(-1)
+    solver.callSolver(base_problem)
+    status = solver.findSolutionValues(base_problem)
+
+    return base_problem</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="optimization.add_objective"><code class="name flex">
+<span>def <span class="ident">add_objective</span></span>(<span>base_problem: pulp.pulp.LpProblem, objective: List[Tuple[float, str]], direction: str, variables_dict=None) ‑> pulp.pulp.LpProblem</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Adds the given objective to the given pulp problem</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>base_problem</code></strong> :&ensp;<code>pulp.LpProblem</code></dt>
+<dd>The pulp problem.</dd>
+<dt><strong><code>objective</code></strong> :&ensp;<code>List[Tuple[float, str]]</code></dt>
+<dd>The objective in the form of tuples where element 0 is the coefficient of the</dd>
+<dt>objective functions and element 1 the variable's ID.</dt>
+<dt><strong><code>direction</code></strong> :&ensp;<code>str</code></dt>
+<dd>The objective's direction, i.e., 'min' or 'max'.</dd>
+<dt><strong><code>variables_dict</code></strong> :&ensp;<code>_type_</code>, optional</dt>
+<dd>Optional already calculated variablesDict from pulp. Defaults to None.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pulp.LpProblem</code></dt>
+<dd><em>description</em></dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_objective(base_problem: pulp.LpProblem, objective: List[Tuple[float, str]], direction: str, variables_dict=None) -&gt; pulp.LpProblem:
+    &#34;&#34;&#34;Adds the given objective to the given pulp problem
+
+    Args:
+        base_problem (pulp.LpProblem): The pulp problem.
+        objective (List[Tuple[float, str]]): The objective in the form of tuples where element 0 is the coefficient of the
+        objective functions and element 1 the variable&#39;s ID.
+        direction (str): The objective&#39;s direction, i.e., &#39;min&#39; or &#39;max&#39;.
+        variables_dict (_type_, optional): Optional already calculated variablesDict from pulp. Defaults to None.
+
+    Returns:
+        pulp.LpProblem: _description_
+    &#34;&#34;&#34;
+    if variables_dict is None:
+        base_problem_variables: Dict[str,
+                                     pulp.LpVariable] = base_problem.variablesDict()
+    else:
+        base_problem_variables = variables_dict
+
+    objective_expression: pulp.LpAffineExpression = 0.0
+    for objective_part in objective:
+        multiplier = objective_part[0]
+        variable_id = objective_part[1]
+
+        if variable_id == &#34;NO_OPTIMIZATION&#34;:
+            break
+
+        objective_expression += multiplier * \
+            base_problem_variables[variable_id]
+
+    if variable_id != &#34;NO_OPTIMIZATION&#34;:
+        final_objective: pulp.LpAffineExpression = None
+        if direction == &#34;min&#34;:
+            final_objective = objective_expression
+        elif direction == &#34;max&#34;:
+            final_objective = -objective_expression
+        final_objective.name = &#34;objective&#34;
+        base_problem.objective = final_objective
+
+    return base_problem</code></pre>
+</details>
+</dd>
+<dt id="optimization.init_ray_multiprocessing"><code class="name flex">
+<span>def <span class="ident">init_ray_multiprocessing</span></span>(<span>num_cpus=16, ignore_reinit_error=True, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initialize ray with the given settings.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def init_ray_multiprocessing(num_cpus=16, ignore_reinit_error=True, **kwargs):
+    &#34;&#34;&#34;Initialize ray with the given settings.&#34;&#34;&#34;
+    ray.init(num_cpus=num_cpus, ignore_reinit_error=ignore_reinit_error, **kwargs)</code></pre>
+</details>
+</dd>
+<dt id="optimization.perform_optimization"><code class="name flex">
+<span>def <span class="ident">perform_optimization</span></span>(<span>base_problem: pulp.pulp.LpProblem, objective: List[Tuple[float, str]], direction: str, variables_dict=None, **kwargs) ‑> Dict[str, Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Performs the given optimization.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>base_problem</code></strong> :&ensp;<code>pulp.LpProblem</code></dt>
+<dd>The pulp problem.</dd>
+<dt><strong><code>objective</code></strong> :&ensp;<code>List[Tuple[float, str]]</code></dt>
+<dd>The objective in the form of tuples where element 0 is the coefficient of the</dd>
+<dt>objective functions and element 1 the variable's ID.</dt>
+<dt><strong><code>direction</code></strong> :&ensp;<code>str</code></dt>
+<dd>The objective's direction, i.e., 'min' or 'max'.</dd>
+<dt><strong><code>variables_dict</code></strong> :&ensp;<code>_type_</code>, optional</dt>
+<dd>Optional already calculated variablesDict from pulp. Defaults to None.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Dict[str, Any]</code></dt>
+<dd>Returns a dict with 'status' as key (there, the solver status is the value) as well as</dd>
+</dl>
+<p>'objective_value' (its namesake) and 'values' (another dictionary with all variable IDs as keys and their
+solution values as values).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def perform_optimization(base_problem: pulp.LpProblem, objective: List[Tuple[float, str]],
+                         direction: str, variables_dict=None, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Performs the given optimization.
+
+    Args:
+        base_problem (pulp.LpProblem): The pulp problem.
+        objective (List[Tuple[float, str]]): The objective in the form of tuples where element 0 is the coefficient of the
+        objective functions and element 1 the variable&#39;s ID.
+        direction (str): The objective&#39;s direction, i.e., &#39;min&#39; or &#39;max&#39;.
+        variables_dict (_type_, optional): Optional already calculated variablesDict from pulp. Defaults to None.
+
+    Returns:
+        Dict[str, Any]: Returns a dict with &#39;status&#39; as key (there, the solver status is the value) as well as
+        &#39;objective_value&#39; (its namesake) and &#39;values&#39; (another dictionary with all variable IDs as keys and their
+        solution values as values).
+    &#34;&#34;&#34;
+    if variables_dict is None:
+        base_problem_variables: Dict[str,
+                                     pulp.LpVariable] = base_problem.variablesDict()
+    else:
+        base_problem_variables = variables_dict
+
+    add_objective(
+        base_problem=base_problem,
+        objective=objective,
+        direction=direction,
+        variables_dict=variables_dict,
+    )
+
+    base_problem = solve_current_problem(base_problem=base_problem)
+
+    results: Dict[str, Any] = {}
+    results[&#34;status&#34;] = pulp.LpStatus[base_problem.status]
+    results[&#34;objective_value&#34;] = base_problem.objective.value()
+    results[&#34;values&#34;] = {}
+    for variable_id in base_problem_variables.keys():
+        variable_value = base_problem_variables[variable_id].value()
+        results[&#34;values&#34;][variable_id] = variable_value
+
+    return results</code></pre>
+</details>
+</dd>
+<dt id="optimization.perform_optimization_with_given_objective"><code class="name flex">
+<span>def <span class="ident">perform_optimization_with_given_objective</span></span>(<span>base_problem: pulp.pulp.LpProblem, variables_dict=None, **kwargs) ‑> Dict[str, Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Performs optimization with pre-added objective.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>base_problem</code></strong> :&ensp;<code>pulp.LpProblem</code></dt>
+<dd>The pulp problem.</dd>
+<dt><strong><code>variables_dict</code></strong> :&ensp;<code>_type_</code>, optional</dt>
+<dd>Optional already calculated variablesDict from pulp. Defaults to None.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Dict[str, Any]</code></dt>
+<dd>Returns a dict with 'status' as key (there, the solver status is the value) as well as</dd>
+</dl>
+<p>'objective_value' (its namesake) and 'values' (another dictionary with all variable IDs as keys and their
+solution values as values).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def perform_optimization_with_given_objective(base_problem: pulp.LpProblem, variables_dict=None, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Performs optimization with pre-added objective.
+
+    Args:
+        base_problem (pulp.LpProblem): The pulp problem.
+        variables_dict (_type_, optional): Optional already calculated variablesDict from pulp. Defaults to None.
+
+    Returns:
+        Dict[str, Any]: Returns a dict with &#39;status&#39; as key (there, the solver status is the value) as well as
+        &#39;objective_value&#39; (its namesake) and &#39;values&#39; (another dictionary with all variable IDs as keys and their
+        solution values as values).
+    &#34;&#34;&#34;
+    return perform_optimization(
+        base_problem=base_problem,
+        objective=[(0.0, &#34;NO_OPTIMIZATION&#34;)],
+        direction=&#34;min&#34;,
+        variables_dict=variables_dict,
+        **kwargs
+    )</code></pre>
+</details>
+</dd>
+<dt id="optimization.perform_stepwise_variable_optimization"><code class="name flex">
+<span>def <span class="ident">perform_stepwise_variable_optimization</span></span>(<span>base_problem: pulp.pulp.LpProblem, optimized_variable_id: str, start_value: float = 0.0, step_sizes: List[float] = [0.5, 0.2, 0.1, 0.05, 0.01], variables_dict=None, **kwargs) ‑> Dict[str, Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The same as perform_optimization(), but only performs simplex phase I by trying to go closer to the objective with the given step sizes.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>base_problem</code></strong> :&ensp;<code>pulp.LpProblem</code></dt>
+<dd>The pulp problem.</dd>
+<dt><strong><code>optimized_variable_id</code></strong> :&ensp;<code>str</code></dt>
+<dd>The optimized variable ID.</dd>
+<dt><strong><code>start_value</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>The initial value for the optimized variable. Defaults to 0.0.</dd>
+<dt><strong><code>step_sizes</code></strong> :&ensp;<code>List[float]</code>, optional</dt>
+<dd>The phase I approximation step sizes. Defaults to [0.5, 0.2, 0.1, 0.05, 0.01].</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Dict[str, Any]</code></dt>
+<dd>Returns a dict with 'status' as key (there, the solver status is the value) as well as</dd>
+</dl>
+<p>'objective_value' (its namesake) and 'values' (another dictionary with all variable IDs as keys and their
+solution values as values).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def perform_stepwise_variable_optimization(
+    base_problem: pulp.LpProblem,
+    optimized_variable_id: str,
+    start_value: float = 0.0,
+    step_sizes: List[float] = [0.5, 0.2, 0.1, 0.05, 0.01],
+    variables_dict=None,
+    **kwargs
+) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;The same as perform_optimization(), but only performs simplex phase I by trying to go closer to the objective with the given step sizes.
+
+    Args:
+        base_problem (pulp.LpProblem): The pulp problem.
+        optimized_variable_id (str): The optimized variable ID.
+        start_value (float, optional): The initial value for the optimized variable. Defaults to 0.0.
+        step_sizes (List[float], optional): The phase I approximation step sizes. Defaults to [0.5, 0.2, 0.1, 0.05, 0.01].
+
+    Returns:
+        Dict[str, Any]: Returns a dict with &#39;status&#39; as key (there, the solver status is the value) as well as
+        &#39;objective_value&#39; (its namesake) and &#39;values&#39; (another dictionary with all variable IDs as keys and their
+        solution values as values).
+    &#34;&#34;&#34;
+    if variables_dict is None:
+        base_problem_variables = base_problem.variablesDict()
+    else:
+        base_problem_variables = variables_dict
+    variable: pulp.LpVariable = base_problem_variables[optimized_variable_id]
+
+    last_working_value = start_value
+    for step_size in step_sizes:
+        current_status = &#34;Optimal&#34;
+        current_min_value = last_working_value + step_size
+        while current_status == &#34;Optimal&#34;:
+            variable.lowBound = current_min_value
+            result = perform_optimization_with_given_objective(
+                base_problem=base_problem, variables_dict=base_problem_variables, **kwargs)
+            current_status = result[&#34;status&#34;]
+
+            if current_status == &#34;Optimal&#34;:
+                last_working_value = current_min_value
+
+            current_min_value += step_size
+
+    variable.lowBound = last_working_value
+    output_result = perform_optimization_with_given_objective(
+        base_problem=base_problem, variables_dict=base_problem_variables, **kwargs)
+
+    return output_result</code></pre>
+</details>
+</dd>
+<dt id="optimization.perform_variable_maximization"><code class="name flex">
+<span>def <span class="ident">perform_variable_maximization</span></span>(<span>base_problem: pulp.pulp.LpProblem, variable_id: str, variables_dict=None, **kwargs) ‑> Dict[str, Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Maximizes the given variable with perform_optimization(&hellip;).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def perform_variable_maximization(base_problem: pulp.LpProblem, variable_id: str, variables_dict=None, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Maximizes the given variable with perform_optimization(...).&#34;&#34;&#34;
+    return perform_optimization(
+        base_problem=base_problem,
+        objective=[(1.0, variable_id)],
+        direction=&#34;max&#34;,
+        variables_dict=variables_dict,
+        **kwargs
+    )</code></pre>
+</details>
+</dd>
+<dt id="optimization.perform_variable_minimization"><code class="name flex">
+<span>def <span class="ident">perform_variable_minimization</span></span>(<span>base_problem: pulp.pulp.LpProblem, variable_id: str, variables_dict=None, **kwargs) ‑> Dict[str, Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Minimizes the given variable with perform_optimization(&hellip;).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def perform_variable_minimization(base_problem: pulp.LpProblem, variable_id: str, variables_dict=None, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Minimizes the given variable with perform_optimization(...).&#34;&#34;&#34;
+    return perform_optimization(
+        base_problem=base_problem,
+        objective=[(1.0, variable_id)],
+        direction=&#34;min&#34;,
+        variables_dict=variables_dict,
+        **kwargs
+    )</code></pre>
+</details>
+</dd>
+<dt id="optimization.set_timelimit"><code class="name flex">
+<span>def <span class="ident">set_timelimit</span></span>(<span>timelimit: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the solver timelimit to the given value.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_timelimit(timelimit: int):
+    &#34;&#34;&#34;Sets the solver timelimit to the given value.&#34;&#34;&#34;
+    global TIMELIMIT
+    TIMELIMIT = timelimit</code></pre>
+</details>
+</dd>
+<dt id="optimization.solve_current_problem"><code class="name flex">
+<span>def <span class="ident">solve_current_problem</span></span>(<span>base_problem: pulp.pulp.LpProblem) ‑> pulp.pulp.LpProblem</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Solves the given problem using pulp.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>base_problem</code></strong> :&ensp;<code>pulp.LpProblem</code></dt>
+<dd>The pulp problem.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pulp.LpProblem</code></dt>
+<dd>The solved pulp problem.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def solve_current_problem(base_problem: pulp.LpProblem) -&gt; pulp.LpProblem:
+    &#34;&#34;&#34;Solves the given problem using pulp.
+
+    Args:
+        base_problem (pulp.LpProblem): The pulp problem.
+
+    Returns:
+        pulp.LpProblem: The solved pulp problem.
+    &#34;&#34;&#34;
+    # solver = pulp.getSolver(SOLVER, msg=IS_VERBOSE,
+    #                        warmStart=WARMSTART, timeLimit=TIMELIMIT)
+    # base_problem.solve(solver)
+    solver = pulp.CPLEX_PY()
+    solver.buildSolverModel(base_problem)
+    solver.solverModel.parameters.mip.display.set(0)
+    solver.solverModel.parameters.paramdisplay.set(0)
+    solver.solverModel.parameters.simplex.tolerances.feasibility.set(1e-9)
+    # solver.solverModel.parameters.simplex.tolerances.optimality.set(1e-6)
+    solver.solverModel.parameters.emphasis.numerical.set(1)
+    solver.solverModel.parameters.mip.tolerances.absmipgap.set(1e-9)
+    solver.solverModel.parameters.mip.tolerances.integrality.set(0.0)
+    solver.solverModel.parameters.timelimit.set(TIMELIMIT)
+    # solver.solverModel.parameters.read.scale.set(-1)
+    solver.callSolver(base_problem)
+    status = solver.findSolutionValues(base_problem)
+
+    return base_problem</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="optimization.add_objective" href="#optimization.add_objective">add_objective</a></code></li>
+<li><code><a title="optimization.init_ray_multiprocessing" href="#optimization.init_ray_multiprocessing">init_ray_multiprocessing</a></code></li>
+<li><code><a title="optimization.perform_optimization" href="#optimization.perform_optimization">perform_optimization</a></code></li>
+<li><code><a title="optimization.perform_optimization_with_given_objective" href="#optimization.perform_optimization_with_given_objective">perform_optimization_with_given_objective</a></code></li>
+<li><code><a title="optimization.perform_stepwise_variable_optimization" href="#optimization.perform_stepwise_variable_optimization">perform_stepwise_variable_optimization</a></code></li>
+<li><code><a title="optimization.perform_variable_maximization" href="#optimization.perform_variable_maximization">perform_variable_maximization</a></code></li>
+<li><code><a title="optimization.perform_variable_minimization" href="#optimization.perform_variable_minimization">perform_variable_minimization</a></code></li>
+<li><code><a title="optimization.set_timelimit" href="#optimization.set_timelimit">set_timelimit</a></code></li>
+<li><code><a title="optimization.solve_current_problem" href="#optimization.solve_current_problem">solve_current_problem</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

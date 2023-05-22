@@ -1,6 +1,15 @@
+"""Creates tables with single cofactor swap statistics as used in TCOSA's publication.
+
+These tables are printed to the console.
+"""
+
+# IMPORTS #
+# External
 import cobra
+# Internal
 from helper import json_load
 
+# LOGIC
 model = cobra.io.read_sbml_model("resources/iML1515.xml")
 
 make_base = lambda y: [
@@ -10,13 +19,19 @@ make_base = lambda y: [
 all_ids = []
 for mode in ("GREATER_THAN", "LOWER_THAN"):
     print(f"===={mode}====")
-    for concentrations in ("VIVOCONC",): #("VIVOCONC",):
+    for concentrations in ("STANDARDCONC", "VIVOCONC",):
         max_optmdf_change = 0
         max_optsubmdf_change = 0
         min_optmdf_change = 0
         min_optsubmdf_change = 0
         print(f"=={concentrations}==")
-        for aerobicity in ("aerobic",):
+
+        if concentrations == "STANDARDCONC":
+            aerobicities = ("aerobic", "anaerobic")
+        else:
+            aerobicities = ("aerobic",)
+
+        for aerobicity in aerobicities:
             print(f"={aerobicity}=")
             data_path = f"./cosa/results_{aerobicity}/swap_results_{concentrations}.json"
             swap_data = json_load(data_path)
@@ -103,14 +118,6 @@ for mode in ("GREATER_THAN", "LOWER_THAN"):
                     id_optmdf_at_one.append(reac_id)
                 if optsubmdf_at_one:
                     id_optsubmdf_at_one.append(reac_id)
-
-                # DEBUG:
-                # print(reac_id)
-                # print(optmdf_at_all)
-                # print(optsubmdf_at_all)
-                # print(optmdf_at_one)
-                # print(optsubmdf_at_one)
-                # print(swap_data[reac_id])
 
             id_optmdf_at_all = list(set(make_base(id_optmdf_at_all)))
             id_optsubmdf_at_all = list(set(make_base(id_optsubmdf_at_all)))

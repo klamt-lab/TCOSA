@@ -1,3 +1,5 @@
+"""Run of thermodynamics-using FVAs under aerobic conditions and acetate."""
+
 from cosa_fva import cosa_single_swap_test
 import ray
 ray.init(log_to_driver=False)
@@ -10,7 +12,6 @@ for base_nadx_scenario in ("WILDTYPE", "FLEXIBLE"):
         base_nadx_scenario=base_nadx_scenario,
         c_source="acetate",
     )
-    """
     cosa_single_swap_test(
         anaerobic=False,
         reac_id="TEST_0_156",
@@ -39,4 +40,3 @@ for base_nadx_scenario in ("WILDTYPE", "FLEXIBLE"):
         base_nadx_scenario=base_nadx_scenario,
         c_source="acetate",
     )
-    """

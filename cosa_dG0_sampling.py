@@ -1,8 +1,13 @@
+"""Performs the dGf sampling, as done for the TCOSA publication."""
+
+# IMPORTS #
+# External
 import cobra
 import copy
 import os
 import numpy
 from typing import List
+# Internal
 from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
 from cosa_get_suffix import cosa_get_suffix
 from fba import get_fba_base_problem, perform_fba_flux_maximization
@@ -19,7 +24,20 @@ from cosa_add_promiscuity_constraints import cosa_add_promiscuity_constraints
 from typing import Dict
 
 
+# PUBLIC FUNCTIONS #
 def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_size: float=0.05, change_range: float=25.0):
+    """Performs the TCOSA dGf sampling as given.
+
+    Args:
+        anaerobic (bool): Is it anaerobic?
+        expanded (bool): Is is a 2-cofactor model (False) or not (True)?
+        num_samplings (int): Number of dG0 samplings for each 'base' specificity'.
+        step_size (float, optional): The µ step size. Defaults to 0.05.
+        change_range (float, optional): The maximal dGf change. Defaults to 25.0.
+
+    Returns:
+        _type_: _description_
+    """
     suffix = cosa_get_suffix(anaerobic, expanded)
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
@@ -41,9 +59,9 @@ def cosa_dG0_sampling(anaerobic: bool, expanded: bool, num_samplings: int, step_
             for x in cobra_model.metabolites
         }
         return random_changes
-    
+
     excluded_metabolites = ["h_c", "h_p", "h_e", "h2o_c", "h2o_p", "h2o_e", "o2_c", "o2_p", "o2_e", "co2_c", "co2_p", "co2_e"]
-    
+
     random_standardconc_dG0_values = {}
     for i in range(num_samplings):
         random_dGf_change_dict = get_random_dGf_change_dict()

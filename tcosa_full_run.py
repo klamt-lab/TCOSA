@@ -1,11 +1,13 @@
-# This script re-runs all calculations performed for the TCOSA publication.
-# In order to really run all calculations again, delete the "cosa" subfolder
-# beforehand as all OptMDFpathway-based calculations for the random sampling
-# are cached and would not be re-run.
-# All scripts run for aerobic and anaerobic conditions and can, where useful,
-# use the expanded model.
-# These "imports" will directly run the top-level code of the modules
-# thereby starting the calculations.
+"""
+This script re-runs all calculations performed for the TCOSA publication.
+In order to really run all calculations again, delete the "cosa" subfolder
+beforehand as all OptMDFpathway-based calculations for the random sampling
+are cached and would not be re-run.
+All scripts run for aerobic and anaerobic conditions and can, where useful,
+use the expanded model.
+These "imports" will directly run the top-level code of the modules
+thereby starting the calculations.
+"""
 
 # Create an irreversible and cleaned-up version of iML which
 # will be later converted to a TCOSA model.
@@ -14,7 +16,10 @@ import model_create_irreversible_cleaned_iML
 # Calculate the ΔG'° values using the eQuilibrator
 import model_get_iML_dG0_data
 
-# Get ΔG'° statistics (these are implicitly used later already)
+# Get ΔG'° statistics (these are implicitly used later already) for ...
+# ...all reactions
+import model_dG0_statistics
+# ...NAD(P)(H) reactions only
 import cosa_dG0_TCOSA_reaction_statistics
 
 # Transform the concentration data form Bennett et al., 2009
@@ -45,15 +50,19 @@ import cosa_create_special_aerobic_figures
 # and generate a text report about it.
 import cosa_minimal_changes_test
 
-# Perform dG0 sampling.
+# Perform dGf sampling (called dG0 sampling for historical reasons).
 import cosa_dG0_sampling_aerobic
 import cosa_dG0_sampling_anaerobic
 
 # Single swap analyses
 import cosa_single_swap_effect_analysis_aerobic
 import cosa_single_swap_effect_analysis_anaerobic
+import cosa_single_swap_effect_analysis_statistics
 
 # Thermodynamic Flux Variability Analyses to find out minimal and maximal active reactions
 import cosa_fva_aerobic
 import cosa_fva_anaerobic
 import cosa_fva_statistics
+
+# Test full switch of NAD and NADP in a source-code selected solution
+import cosa_switch_test

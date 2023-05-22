@@ -1,9 +1,14 @@
+"""Contains the script for performing the single cofactor swap analysis."""
+
+# IMPORTS #
+# External
 import cobra
 import copy
 import os
 import numpy
 import shutil
 from typing import List
+# Internal
 from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
 from cosa_get_suffix import cosa_get_suffix
 from fba import get_fba_base_problem, perform_fba_flux_maximization
@@ -17,7 +22,14 @@ from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
 from cosa_add_promiscuity_constraints import cosa_add_promiscuity_constraints
 
 
+# PUBLIC FUNCTIONS #
 def cosa_single_swap_analysis(anaerobic: bool, c_source: str = "glucose"):
+    """Performs the single redox cofactor swap analysis.
+
+    Args:
+        anaerobic (bool): Is it anaerobic (True)?
+        c_source (str, optional): Either 'glucose' or 'acetate'. Defaults to "glucose".
+    """
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\

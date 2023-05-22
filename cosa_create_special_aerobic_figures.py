@@ -1,20 +1,27 @@
+"""In this script, the following figures are generated:
+
+1) The figure for the solutions with in vivo concentraitons from Bennett et al., 2009.
+2) The figure with results under acetate.
+
+Both figures depict the situation under aerobic conditions as this is the only repective viable environment.
+"""
+
+# IMPORTS #
+# External
 import matplotlib.pyplot as plt
 import pandas
+# Internal
 from helper import json_load
 
 
+# PUBLIC FUNCTIONS #
 def create_in_vivo_concentrations_figure():
+    """Creates figure for results with in vivo concentration ranges."""
     ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic/ratio_ratio_test_data.json")
     concentration = "VIVOCONC"
     output_path = "./cosa/in_vivo_concentrations_figure.png"
     table_path = f"cosa/results_aerobic/optsubmdf_table_{concentration}.csv"
     pad = 3.75
-    # elif aim == "acetate":
-    #     ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic_acetate/ratio_ratio_test_data.json")
-    #     concentration = "STANDARDCONC"
-    #     output_path = "./cosa/acetate_figure.png"
-    #     table_path = f"cosa/results_aerobic_acetate/optsubmdf_table_{concentration}.csv"
-    #     pad = 5.0
 
     target = "OPTSUBMDF"
 
@@ -137,6 +144,7 @@ def create_in_vivo_concentrations_figure():
 
 
 def create_acetate_figure():
+    """Creates figure for results under acetate."""
     ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic_acetate/ratio_ratio_test_data.json")
     concentration = "STANDARDCONC"
     output_path = "./cosa/acetate_figure.png"

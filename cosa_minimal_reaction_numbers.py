@@ -1,4 +1,5 @@
-from tkinter.messagebox import NO
+"""Calculates the minimal number of reactions per scenario."""
+
 import matplotlib.pyplot as plt
 import cobra
 import copy
@@ -23,6 +24,13 @@ from helper import ensure_folder_existence
 
 
 def cosa_minimal_reaction_numbers(anaerobic: bool, expanded: bool, growth_epsilon: float = 0.01) -> None:
+    """Calculates the minimal number of reactions per scenario.
+
+    Args:
+        anaerobic (bool): Is it anaerobic?
+        expanded (bool): Is it a 2-cofactor (False) model or not
+        growth_epsilon (float, optional): _description_. Defaults to 0.01.
+    """
     suffix = cosa_get_suffix(anaerobic, expanded)
     figures_path = f"./cosa/results{suffix}/figures/"
     ensure_folder_existence(figures_path)

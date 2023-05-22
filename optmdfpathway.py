@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""[summary]"""
+"""Functions for creating OptMDFpathway problems, including MDF, SubMDF and bottleneck-finding routines.
+
+For more about it, see its publication:
+Hädicke, Oliver, et al. "OptMDFpathway: Identification of metabolic pathways with maximal thermodynamic driving force and its application
+for analyzing the endogenous CO2 fixation potential of Escherichia coli." PLoS computational biology 14.9 (2018): e1006492.
+"""
 
 ## IMPORTS ##
 # External
@@ -29,19 +34,32 @@ def get_optmdfpathway_base_problem(cobra_model: cobra.Model, dG0_values: Dict[st
                                    extra_constraints: List[Dict[str, float]],
                                    sub_network_ids: List[str]=[],
                                    add_optmdf_bottleneck_analysis: bool=False) -> pulp.LpProblem:
-    """[summary]
+    """Returns an OptMDFpathway 'base problem', i.e., all constraints but no objective.
+
+    The resulting (Opt)MDF variable is called 'var_B', the (Opt)SubMDF 'var_B2'.
 
     Args:
-        cobra_model (cobra.Model): [description]
-        dG0_values (Dict[str, Dict[str, float]]): [description]
-        metabolite_concentration_values (Dict[str, Dict[str, float]]): [description]
-        ratio_constraint_data (List[Dict[str, Any]]): [description]
-        R (float): [description]
-        T (float): [description]
-        extra_constraints (List[Dict[str, float]]): [description]
+        cobra_model (cobra.Model): The cobrapy model from which the base problem is built up from.
+        dG0_values (Dict[str, Dict[str, float]]): A dictionary containing the dG0 values. The keys
+        are the reaction IDs, the values another dictionary where, under the key 'dG0', the dG0 values are given.
+        metabolite_concentration_values (Dict[str, Dict[str, float]]): A dictionary containing the metabolite concentration
+        values. The keys are the metabolite IDs, the values another dictionary with a 'min' and a 'max' value.
+        ratio_constraint_data (List[Dict[str, Any]]): [Can be empty] A list of metabolite concentration ratios. It is a list
+        of dictionaries where every dictionary described the ratio constraint. Each dictionary contains the keys
+        'c_i' (a metabolite ID,) 'c_j' (another ID), 'h_min' (the minimal ratio) and 'h_max' (maximal ratio) such that
+        c_i / c_j <= h_max AND c_i / c_j >= h_min.
+        R (float): The gas constant. You can use this module's STANDARD_R.
+        T (float): The temperature. You can use this module's STANADRD_T.
+        extra_constraints (List[Dict[str, float]]): Additional linear constraints as described in the optimization module.
+        sub_network_ids (List[str], optional): If given as list of reaction IDs, these reactions get extra constraints
+        such that a SubMDF for these reactions can be calculated. The SubMDF will be added as a variable called 'var_B2'. Defaults to [].
+        add_optmdf_bottleneck_analysis (bool, optional): If True, adds constaints such that a subsequent minimization of the newly created
+        variable 'zb_sum_var' can be performed with a previously given minimal value for 'var_B' and/or 'var_B2'. If the given (Sub)MDF cannot
+        be reached, minimizing zb_sum_var returns the lowest number of dG0 'deletions' (i.e., 'bottleneck deletions') such that
+        the given (Sub)MDF can be reached. Defaults to False.
 
     Returns:
-        pulp.LpProblem: [description]
+        pulp.LpProblem: The OptMDFpathway base problem.
     """
     # Concentrations in M
     # T in K
@@ -357,6 +375,7 @@ def get_thermodynamic_bottlenecks(cobra_model: cobra.Model,
 
 
 def perform_optmdfpathway_mdf_maximization(optmdfpathway_base_problem: pulp.LpProblem, **kwargs) -> Dict[str, Any]:
+    """Performs an OptMDFpathway MDF optimization for the given OptMDFpathway base problem."""
     results = perform_variable_maximization(
         base_problem=optmdfpathway_base_problem,
         variable_id="var_B",
@@ -366,7 +385,10 @@ def perform_optmdfpathway_mdf_maximization(optmdfpathway_base_problem: pulp.LpPr
 
 
 def add_differential_reactions_constraints(optmdfpathway_base_problem: pulp.LpProblem,
-                                           in_vivo_solution: Dict[str, int]) -> pulp.LpProblem:
+                                           in_vivo_solution: Dict[str, int]) -> pulp.LpProblem:#
+    """Legacy function. Not usable."""
+    pass
+    """
     optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
 
     error_sum = 0.0
@@ -424,9 +446,13 @@ def add_differential_reactions_constraints(optmdfpathway_base_problem: pulp.LpPr
     optmdfpathway_base_problem += error_sum_var == error_sum
 
     return optmdfpathway_base_problem
+    """
 
 
 def get_z_variable_status(optmdfpathway_solution: Dict[str, Any], necessary_id_part: str="") -> Dict[str, int]:
+    """Legacy function. Not used."""
+    pass
+    """
     z_variable_status: Dict[str, int] = {}
     for var_id in optmdfpathway_solution["values"].keys():
         if var_id.startswith("z_var_"):
@@ -444,12 +470,16 @@ def get_z_variable_status(optmdfpathway_solution: Dict[str, Any], necessary_id_p
             z_variable_status[var_id] = z_int
 
     return z_variable_status
+    """
 
 
 def add_differential_concentration_constraints(cobra_model: cobra.Model,
                                                optmdfpathway_base_problem: pulp.LpProblem,
                                                in_vivo_solution: Dict[str, float],
                                                **kwargs) -> pulp.LpProblem:
+    """Legacy function. Not used."""
+    pass
+    """
     optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
 
     solve_current_problem(optmdfpathway_base_problem)
@@ -484,6 +514,7 @@ def add_differential_concentration_constraints(cobra_model: cobra.Model,
     optmdfpathway_base_problem += error_sum_var == error_sum
 
     return optmdfpathway_base_problem
+    """
 
 
 def perform_concentration_variability_analysis(cobra_model: cobra.Model,
@@ -491,15 +522,16 @@ def perform_concentration_variability_analysis(cobra_model: cobra.Model,
                                                min_mdf: float,
                                                selected_metabolites: List[str]=[],
                                                **kwargs) -> Dict[str, Dict[str, float]]:
-    """[summary]
+    """Performs a non-threaded concentration variability analysis in the given problem.
 
     Args:
-        cobra_model (cobra.Model): [description]
-        optmdfpathway_base_problem (pulp.LpProblem): [description]
-        min_mdf (float): [description]
+        cobra_model (cobra.Model): The cobrapy model to find the metabolite IDs.
+        optmdfpathway_base_problem (pulp.LpProblem): The base problem created by get_optmdfpathway_base_problem().
+        min_mdf (float): The minimal MDF that must be reached.
 
     Returns:
-        Dict[str, Dict[str, float]]: [description]
+        Dict[str, Dict[str, float]]: A dictionary with the metabolite IDs as keys, and another dictionary as value with
+        the 'min' and 'max' concentration values.
     """
     optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
     var_B = optmdfpathway_base_variables["var_B"]
@@ -552,6 +584,7 @@ def perform_concentration_variability_analysis(cobra_model: cobra.Model,
 
 
 def _mt_perform_concentration_variability_analysis_multi(metabolite: cobra.Metabolite, base_problem_dict: Dict[Any, Any]):
+    """Multithreading subfunction of perform_concentration_variability_analysis_multi()."""
     variables_dict, optmdfpathway_base_problem = pulp.LpProblem.from_dict(base_problem_dict)
 
     x_var_id = f"x_{metabolite.id}"
@@ -587,6 +620,7 @@ def _mt_perform_concentration_variability_analysis_multi(metabolite: cobra.Metab
 
 @ray.remote
 def _ray_perform_concentration_variability_analysis_multi(metabolites: List[cobra.Metabolite], base_problem_dict: Dict[Any, Any]):
+    """Ray subfunction of perform_concentration_variability_analysis_multi()"""
     with concurrent.futures.ThreadPoolExecutor() as executor:
         futures = [executor.submit(_mt_perform_concentration_variability_analysis_multi, metabolite, base_problem_dict) for metabolite in metabolites]
         results = [future.result() for future in futures]
@@ -597,15 +631,16 @@ def _ray_perform_concentration_variability_analysis_multi(metabolites: List[cobr
 def perform_concentration_variability_analysis_multi(cobra_model: cobra.Model,
                                                      optmdfpathway_base_problem: pulp.LpProblem,
                                                      min_mdf: float) -> Dict[str, Dict[str, float]]:
-    """[summary]
+    """Performs a multi-threaded concentration variability analysis in the given problem.
 
     Args:
-        cobra_model (cobra.Model): [description]
-        optmdfpathway_base_problem (pulp.LpProblem): [description]
-        min_mdf (float): [description]
+        cobra_model (cobra.Model): The cobrapy model to find the metabolite IDs.
+        optmdfpathway_base_problem (pulp.LpProblem): The base problem created by get_optmdfpathway_base_problem().
+        min_mdf (float): The minimal MDF that must be reached.
 
     Returns:
-        Dict[str, Dict[str, float]]: [description]
+        Dict[str, Dict[str, float]]: A dictionary with the metabolite IDs as keys, and another dictionary as value with
+        the 'min' and 'max' concentration values.
     """
     optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
     optmdfpathway_base_variables["var_B"].bounds(min_mdf, 10e9)

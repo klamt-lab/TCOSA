@@ -1,6 +1,13 @@
+"""Contains the function for the minimal number of reactions from wild-type to optimum analysis."""
+
+# IMPORTS #
+# Internal
 import copy
 import cobra
 import pulp
+from typing import Dict
+import matplotlib.pyplot as plt
+# External
 from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
 from cosa_get_suffix import cosa_get_suffix
 from helper import ensure_folder_existence, json_load, json_write, json_zip_load
@@ -12,11 +19,17 @@ from optimization import perform_variable_minimization, perform_variable_maximiz
 from cosa_load_model_data import (
     MIN_OPTMDF, load_model_data
 )
-from typing import Dict
-import matplotlib.pyplot as plt
 
 
+# PUBLIC FUNCTION #
 def cosa_minimal_changes_test(anaerobic: bool, disallowed_changed_reaction: str="", c_source: str="glucose") -> None:
+    """Performs the minimal number of reactions from wild-type to optimum analysis.
+
+    Args:
+        anaerobic (bool): Is it anaerobic (True)?
+        disallowed_changed_reaction (str, optional): A reaction which is not allowed to be cofactor switched (only if given). Defaults to "".
+        c_source (str, optional): Either 'glucose' or 'acetate'. Defaults to "glucose".
+    """
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
@@ -208,10 +221,11 @@ def cosa_minimal_changes_test(anaerobic: bool, disallowed_changed_reaction: str=
         f.write(report)
 
 
-# cosa_minimal_changes_test(anaerobic=False)
+# LOGIC #
+cosa_minimal_changes_test(anaerobic=False)
 cosa_minimal_changes_test(anaerobic=False, c_source="acetate")
 # cosa_minimal_changes_test(anaerobic=False, disallowed_changed_reaction="PDH_NADY")
 # cosa_minimal_changes_test(anaerobic=False, disallowed_changed_reaction="NADH16pp_NADY")
 # cosa_minimal_changes_test(anaerobic=False, disallowed_changed_reaction="FLDR2_NADX")
 # cosa_minimal_changes_test(anaerobic=False, disallowed_changed_reaction="ICDHyr_FWD_NADX")
-# cosa_minimal_changes_test(anaerobic=True)
+cosa_minimal_changes_test(anaerobic=True)

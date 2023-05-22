@@ -1,3 +1,8 @@
+"""This script generates a comparison of Concentration Variability Analysis results with the measured concentrations from Bennett et al., 2009.
+
+The result is stored in a JSON file named cva_comparison.json.
+"""
+
 from helper import json_load, json_write
 
 

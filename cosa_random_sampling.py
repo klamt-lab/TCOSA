@@ -1,8 +1,12 @@
+"""The module contains the main function for the random specificity sampling as shown in TCOSA's publication."""
+# IMPORTS #
+# External
 import cobra
 import copy
 import os
 import numpy
 from typing import List
+# Internal
 from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
 from cosa_get_suffix import cosa_get_suffix
 from fba import get_fba_base_problem, perform_fba_flux_maximization
@@ -18,7 +22,23 @@ from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
 from cosa_add_promiscuity_constraints import cosa_add_promiscuity_constraints
 
 
+# PUBLIC FUNCTIONS #
 def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: int, num_randomfixed_random: int, c_source: str="glucose", step_size: float=0.05, step_number: float=9, fixed_nadx_change: int=0):
+    """Performs a TCOSA random specificity sampling (and calculates all main specificities) with the given settings.
+
+    Specificities that were already succesfully calculated are not calculated again.
+
+    Args:
+        anaerobic (bool): Is it anaerobic (no oxygen)? Then, this argument is True.
+        expanded (bool): Is is a 2-cofactor (False) or 3-cofactor (True) model?
+        num_randoms_random (int): Number of random specificities with random number NAD and NADP reactions.
+        num_randomfixed_random (int): Number of random specificities with original number NAD and NADP reactions.
+        c_source (str, optional): Either 'glucose' or 'acetate'. Defaults to "glucose".
+        step_size (float, optional): The growth rate step size (going down). Defaults to 0.05.
+        step_number (float, optional): Unused legacy argument. Defaults to 9.
+        fixed_nadx_change (int, optional): Fixed NAD-NADP dG0 difference for the hypothetical 3rd cofactor. Defaults to 0.
+        In TCOSA's publications, the effects with +30 and -30 kJ/mol are shown.
+    """
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\

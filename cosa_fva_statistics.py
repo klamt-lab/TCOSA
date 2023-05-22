@@ -1,3 +1,5 @@
+"""Creates statistics over all FVA results to see how many reactions may be active."""
+
 from helper import json_load, get_files
 
 can_be_active = {

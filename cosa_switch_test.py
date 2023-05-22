@@ -129,9 +129,3 @@ def cosa_test_switch(anaerobic: bool, expanded: bool, growth_epsilon: float = 0.
                 print("COMPARISON: ", old_target, new_target)
 
 cosa_test_switch(anaerobic=False, expanded=False, c_source="glucose")
-
-# cosa_ratio_ratio_test(anaerobic=False, expanded=False)
-# cosa_ratio_ratio_test(anaerobic=True, expanded=False)
-# cosa_create_full_ratio_ratio_test_figure_one_panel()
-# cosa_create_full_ratio_ratio_test_figure_two_panels()
-# cosa_create_full_ratio_ratio_test_figure_four_panels()

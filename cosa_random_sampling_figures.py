@@ -754,6 +754,8 @@ def create_total_dG0_sampling_figures() -> None:
 
 
 def create_total_cosa_figure() -> None:
+    """Creates the 'full' random specificity comparison figure under glucose and aerobicity as well as anaerobicity.
+    """
     str_to_float = lambda x: float(x.replace(",", "."))
     list_to_float = lambda x: [str_to_float(y) for y in x]
 

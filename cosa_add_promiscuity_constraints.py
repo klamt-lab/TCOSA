@@ -1,13 +1,33 @@
+"""Contains function for adding promiscuity constraints."""
+
+# IMPORTS #
+# External
 import cobra
 import copy
 import pulp
 from typing import Any, Dict
 
+# PUBLIC FUNCTIONS #
 def cosa_add_promiscuity_constraints(
     optmdfpathway_base_problem: pulp.LpProblem, optmdfpathway_base_variables: Dict[Any, Any],
     cobra_model: cobra.Model, dG0_values: Dict[Any, Any]) -> pulp.LpProblem:
+    """This function adds the TCOSA promiscuity constraints to the pulp problem.
 
-    for reaction in cobra_model.reactions:#
+    The promuscuity constraints ensure that out of all generated forward and reverse
+    and TCOSA reactions, only one of the descendants of an original iML1515 reaction
+    can be active at the same time.
+
+    Args:
+        optmdfpathway_base_problem (pulp.LpProblem): The pulp problem.
+        optmdfpathway_base_variables (Dict[Any, Any]): The pulp problem's base variables dict.
+        cobra_model (cobra.Model): The cobra model on which the pulp problem is based upon.
+        dG0_values (Dict[Any, Any]): The used dG0 values.
+
+    Returns:
+        pulp.LpProblem: The pulp problem enhanced by the promiscuity constraints.
+    """
+
+    for reaction in cobra_model.reactions:
         key = reaction.id
 
         if key not in dG0_values.keys():

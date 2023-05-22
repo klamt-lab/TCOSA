@@ -183,12 +183,10 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
         #     tested_vars=tested_vars,
         #     base_problem=optmdfpathway_base_problem,
         # )
-        # Temporary change
-        # fva_results["OptMDF"] = perform_fva_multi(
-        #     var_ids=tested_vars,
-        #     base_problem=optmdfpathway_base_problem,
-        # )
-        # Temporary change
+        fva_results["OptMDF"] = perform_fva_multi(
+            var_ids=tested_vars,
+            base_problem=optmdfpathway_base_problem,
+        )
 
         optmdfpathway_base_variables["var_B"].bounds(
             MIN_OPTMDF,
@@ -197,7 +195,7 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
         optsubmdf_result = perform_variable_maximization(base_problem=optmdfpathway_base_problem, variable_id="var_B2")
         min_optsubmdf = optsubmdf_result["values"]["var_B2"]
         optmdfpathway_base_variables["var_B2"].bounds(
-            min_optsubmdf*0.99, # Temporary change
+            min_optsubmdf,
             1e12,
         )
         fva_results["OptSubMDF"] = perform_fva_multi(

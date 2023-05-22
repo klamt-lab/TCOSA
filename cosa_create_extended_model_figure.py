@@ -1,7 +1,16 @@
+"""This script creates the 3-cofactor vs. 2-cofactor TCOSA model comparison figure.
+
+This also includes the different set dG0 differences between NAD(P) and NAD(P)H.
+"""
+
+# IMPORTS #
+# External
 import matplotlib.pyplot as plt
+# Internal
 from helper import ensure_folder_existence
 
 
+# PRIVATE FUNCTIONS #
 def _get_data_list(file_path: str):
     with open(file_path, "r", encoding="utf-8") as f:
         lines = f.readlines()
@@ -13,9 +22,9 @@ def _get_data_list(file_path: str):
     return list(data_dict.values())[:-1], list(data_dict.keys())[:-1]
 
 
+# LOGIC #
 for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
     fig, axs = plt.subplots(nrows=1, ncols=2, dpi=500, figsize=(11, 4)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
-    # fig.tight_layout(pad=7.0)
 
     for run in (0, 1, 2):
         for aerobicity in ("aerobic", "anaerobic"):
@@ -108,13 +117,6 @@ for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
                 else:
                     axs[axs_row].set_ylim(0.0, 40)
 
-            # plt.legend(loc="center left")
-            # plt.title(f"Comparison of two-cofactor and expanded three-cofactor models\nunder {'anaerobic' if anaerobic else 'aerobic'} conditions")
-            # plt.xlabel("Growth rate [1/h]")
-            # plt.ylabel("OptMDF or OptSubMDF [kJ/mol]")
-            # plt.xlim(min(growth_rates), max(growth_rates))
-            # plt.savefig(f"cosa/results_{aerobicity}/expanded_comparison_{aerobicity}_{concentration_ranges}.jpg")
-            # plt.close()
     fig.legend(loc="upper center", bbox_to_anchor=(0.5, 1.18), ncol=2)
     fig.savefig(f"cosa/expanded_comparison_{concentration_ranges}.png", bbox_inches='tight', pad_inches=0.05)
     plt.close()

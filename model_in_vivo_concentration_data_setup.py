@@ -1,16 +1,27 @@
+"""This script contains the transformation of raw data from the supplementary data of...
+'Bennett, Bryson D., et al. "Absolute metabolite concentrations and implied enzyme active site occupancy in Escherichia coli."
+Nature chemical biology 5.8 (2009): 593-599.'
+...into a easily machine-readable JSON, i.e., a list of BiGG (iML1515 model) metabolite IDs and the measured minimal
+and maximal concentrations (as given in the mentioned publication.)
+"""
+
+# IMPORT SECTION #
+# External imports
 import cobra
+# Internal imports
 from helper import json_load, json_write, pickle_load
 
 
-# Bennett 2009
+# ACTUAL LOGIC SECTION #
+
+# Load (and clean) raw Bennett data (taken from the supplement of the mentioned Bennett et al., 2009)
 with open("resources/in_vivo_concentration_data/2009_Bennet_full_raw_data.txt", encoding="utf-8") as f:
     lines = f.readlines()
 lines = [x.replace("\n", "") for x in lines]
-
 names = [x.split(";")[0].split(" (")[0].split("  ")[:-1][0].lower() for x in lines]
-
 print(names)
 
+# Get BiGG IDs
 model = cobra.io.read_sbml_model("resources/iML1515_irreversible_cleaned.xml")
 name_to_bigg_ids = {}
 for name in names:
@@ -22,7 +33,7 @@ for name in names:
     if name not in name_to_bigg_ids.keys():
         name_to_bigg_ids[name] = "N/A"
 
-# Manual setting for found other metabolites
+# Manual setting for found other metabolites where the automatic BiGG ID identification fails
 name_to_bigg_ids["2,3-dihydroxybenzoic acid"] = "23dhb_c"  # KEGG ID C00196
 name_to_bigg_ids["3-phosphoglycerate"] = "3pg_c"  # KEGG ID C00197
 name_to_bigg_ids["6-phosphogluconate"] = "6pgc_c"  # KEGG ID C00345
@@ -53,6 +64,7 @@ for name in name_to_bigg_ids.keys():
 
 json_write("./resources/in_vivo_concentration_data/2009_Bennett_names.json", name_to_bigg_ids)
 
+# Finally, create JSON with minimal and maximal concentrations form Bennett et al., 2009
 name_dict = json_load("./resources/in_vivo_concentration_data/2009_Bennett_names.json")
 
 with open("./resources/in_vivo_concentration_data/2009_Bennet_full_raw_data.txt", encoding="utf-8") as f:

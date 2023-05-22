@@ -1,12 +1,24 @@
-from helper import get_files, json_zip_load
+"""Creates csv tables from the random specificity sampling."""
+
+# IMPORTS #
+# External
 from typing import Tuple
+# Internal
+from helper import get_files, json_zip_load
 
-
+# PUBLIC FUNCTIONS #
 def create_cosa_tables(data_path: str, output_path: str, concentration_scenarios: Tuple[str]) -> None:
+    """Create tables from the random specificity sampling.
+
+    Args:
+        data_path (str): The folder where the single result calculation results are stored as zipped JSON files.
+        output_path (str): Path to the directory where the csv shall be stored.
+        concentration_scenarios (Tuple[str]): The names of the tested concentration scenarios.
+    """
     filepaths = get_files(data_path)
     filepaths = [data_path+"/"+x for x in filepaths]
 
-    for concentration_scenario in concentration_scenarios: # ("STANDARDCONC", "VIVOCONC"):
+    for concentration_scenario in concentration_scenarios:
         optmdf_results = {}
         optsubmdf_results = {}
         for filepath in filepaths:
