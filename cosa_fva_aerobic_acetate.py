@@ -14,8 +14,8 @@ for base_nadx_scenario in ("WILDTYPE", "FLEXIBLE", "SINGLE_COFACTOR"):
     # )
     cosa_single_swap_test(
         anaerobic=False,
-        reac_id="TEST_0_156",
-        mu=0.156,
+        reac_id="TEST_0_181",
+        mu=0.181,
         base_nadx_scenario=base_nadx_scenario,
         c_source="acetate",
     )
