@@ -115,15 +115,12 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
 
     suffix = cosa_get_suffix(anaerobic, expanded=False, c_source=c_source)
 
-    # figures_path = f"./cosa/results{suffix}/figures/"
-    # ensure_folder_existence(figures_path)
-
     report = ""
     original_cobra_model = copy.deepcopy(cobra_model)
     for concentrations in ("STANDARDCONCS", "PAPERCONCS"):
         output_filepath = f"./cosa/variability_{suffix}_{reac_id}_{concentrations}_{base_nadx_scenario}.json"
-        if os.path.exists(output_filepath):
-            continue
+        # if os.path.exists(output_filepath):
+        #     continue
 
         print(f"=CONCENTRATION RANGES: {concentrations}=")
         report += f"=CONCENTRATION RANGES: {concentrations}=\n"
@@ -162,6 +159,15 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
                     tested_vars.append(reaction.id)
         tested_vars = list(set(tested_vars))
 
+        variable_ids = list(optmdfpathway_base_variables.keys())
+        f_var_addition = []
+        for tested_var in tested_vars:
+            f_var = f"f_var_{tested_var}"
+            if f_var in variable_ids:
+                f_var_addition.append(f_var)
+        tested_vars += f_var_addition
+        tested_vars += ["var_B", "var_B2"]
+
         # tested_vars = [f"f_var_{x}" for x in get_all_tcosa_reaction_ids(cobra_model)] + get_all_tcosa_reaction_ids(cobra_model)
         # tested_vars = [x for x in tested_vars if ((("_ORIGINAL_") in x) or (("_VARIANT_") in x)) and (x in optmdf_result["values"].keys())]
         # tested_vars += ["x_nad_tcosa_c", "x_nadp_tcosa_c", "x_nadh_tcosa_c", "x_nadph_tcosa_c"]
@@ -179,10 +185,7 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
             1e12,
         )
         print(optmdf_result["values"]["var_B"])
-        # fva_results["OptMDF"] = perform_variability_analysis(
-        #     tested_vars=tested_vars,
-        #     base_problem=optmdfpathway_base_problem,
-        # )
+
         fva_results["OptMDF"] = perform_fva_multi(
             var_ids=tested_vars,
             base_problem=optmdfpathway_base_problem,
