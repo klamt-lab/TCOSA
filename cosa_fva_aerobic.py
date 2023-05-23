@@ -11,11 +11,25 @@ for base_nadx_scenario in ("WILDTYPE", "FLEXIBLE", "SINGLE_COFACTOR"):
     #     mu=0.868,
     #     base_nadx_scenario=base_nadx_scenario
     # )
+    # cosa_single_swap_test(
+    #     anaerobic=False,
+    #     reac_id="TEST_0_818",
+    #     mu=0.818,
+    #     base_nadx_scenario=base_nadx_scenario
+    # )
     cosa_single_swap_test(
         anaerobic=False,
-        reac_id="TEST_0_818",
-        mu=0.818,
-        base_nadx_scenario=base_nadx_scenario
+        reac_id="TEST_0_868",
+        mu=0.868,
+        base_nadx_scenario=base_nadx_scenario,
+        activate_reactions=[],
+    )
+    cosa_single_swap_test(
+        anaerobic=False,
+        reac_id="TEST_0_868",
+        mu=0.868,
+        base_nadx_scenario=base_nadx_scenario,
+        activate_reactions=["PYK"],
     )
     # cosa_single_swap_test(
     #     anaerobic=False,

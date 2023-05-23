@@ -105,7 +105,7 @@ core_map_reactions = [
 ]
 
 
-def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_scenario: str, c_source: str="glucose") -> None:
+def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_scenario: str, c_source: str="glucose", activate_reactions: List[str]=[]) -> None:
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
@@ -114,11 +114,15 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
     biomass_reaction_id = "BIOMASS_Ec_iML1515_core_75p37M"
 
     suffix = cosa_get_suffix(anaerobic, expanded=False, c_source=c_source)
+    if len(activate_reactions) > 0:
+        activate_suffix = "_active_"
+    else:
+        activate_suffix = ""
 
     report = ""
     original_cobra_model = copy.deepcopy(cobra_model)
     for concentrations in ("STANDARDCONCS", "PAPERCONCS"):
-        output_filepath = f"./cosa/variability_{suffix}_{reac_id}_{concentrations}_{base_nadx_scenario}.json"
+        output_filepath = f"./cosa/variability_{suffix}_{reac_id}_{concentrations}_{base_nadx_scenario}{activate_suffix}.json"
         # if os.path.exists(output_filepath):
         #     continue
 
@@ -148,6 +152,13 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
             sub_network_ids=get_all_tcosa_reaction_ids(cobra_model),
         )
         optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+
+        for activate_reaction in activate_reactions:
+            optmdfpathway_base_variables[f"z_var_"+activate_reaction].bounds(
+                1.0,
+                1.0,
+            )
+            activate_suffix += "_"+activate_reaction
 
         tested_vars = [
             x for x in optmdfpathway_base_variables.keys()
