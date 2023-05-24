@@ -1,0 +1,26 @@
+{
+    "3pg_c": {
+        "name": "3-phosphoglycerate",
+        "min_cva": 5.500726811128712e-06,
+        "max_cva": 0.00030138484441201365,
+        "min_measurement": 0.00151,
+        "max_measurement": 0.00158,
+        "min_difference": 0.0012086151555879864
+    },
+    "akg_c": {
+        "name": "alpha-ketoglutarate",
+        "min_cva": 1.0000000000000004e-06,
+        "max_cva": 5.479000407769235e-05,
+        "min_measurement": 0.000312,
+        "max_measurement": 0.000631,
+        "min_difference": 0.0002572099959223076
+    },
+    "glu__L_c": {
+        "name": "glutamate",
+        "min_cva": 9.553681988856925e-06,
+        "max_cva": 0.005295855157744216,
+        "min_measurement": 0.0924,
+        "max_measurement": 0.0998,
+        "min_difference": 0.08710414484225579
+    }
+}
