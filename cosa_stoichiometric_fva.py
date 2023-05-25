@@ -1,10 +1,13 @@
 """This script contains the functions to run a 'normal' FVA without thermodynamic constraints."""
 
+# IMPORTS #
+# External
 import matplotlib.pyplot as plt
 import cobra
 import copy
 import pulp
 import math
+# Internal
 from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
 from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
 from cosa_get_suffix import cosa_get_suffix
@@ -23,6 +26,7 @@ from helper import ensure_folder_existence
 from fva import perform_variability_analysis, perform_fva_multi
 
 
+# CONSTANTS #
 core_map_reactions = [
     "EX_glc__D_e",
     "GLCptspp",
@@ -107,7 +111,7 @@ core_map_reactions = [
 ]
 
 
-
+# PUBLIC FUNCTIONS #
 def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_scenario: str) -> None:
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
@@ -145,7 +149,11 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
         x for x in optmdfpathway_base_variables.keys()
         if x in get_all_tcosa_reaction_ids(cobra_model)
     ]
-    tested_vars += core_map_reactions
+    for reaction in cobra_model.reactions:
+        for core_map_reaction in core_map_reactions:
+            if reaction.id.startswith(core_map_reaction):
+                tested_vars.append(reaction.id)
+    tested_vars = list(set(tested_vars))
 
     optmdfpathway_base_variables[biomass_reaction_id].bounds(
         mu,
