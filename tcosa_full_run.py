@@ -29,12 +29,16 @@ import model_in_vivo_concentration_data_setup
 # Create the actual TCOSA models, including iML1515_TCOSA.
 import cosa_create_model_and_data
 
-# Perform the random sampling where the in vivo distribution
-# is compared with random distributions. Here, the CSV tables
+# Perform the random specificity sampling where the in vivo distribution
+# is compared with random distributions and other special distributions. Herein, the CSV tables
 # and the figures for this analysis are also generated.
+# >Aerobic with glucose, including 3-cofactor analyses
 import cosa_random_sampling_aerobic
+# >Anaerobic with glucose, including 3-cofactor analyses
 import cosa_random_sampling_anaerobic
+# >Aerobic with acetate
 import cosa_random_sampling_acetate
+# >Create figures
 import cosa_random_sampling_create_figures
 
 # Create the extended vs. two-cofactor model comparison figure.
@@ -50,7 +54,7 @@ import cosa_create_special_aerobic_figures
 # and generate a text report about it.
 import cosa_minimal_changes_test
 
-# Perform dGf sampling (called dG0 sampling for historical reasons).
+# Perform dGf or redox potential sampling (called dG0 sampling for historical reasons).
 import cosa_dG0_sampling_aerobic
 import cosa_dG0_sampling_anaerobic
 

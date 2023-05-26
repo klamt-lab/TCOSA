@@ -76,6 +76,7 @@ The used scripts and the structure of the generated results are explained in the
 The subfolders of this repository have the following meaning:
 
 * "cosa": This includes all results of the actual TCOSA calculations. In the folder itself, you can find the lists of original NAD and NADP reactions as JSON. In addition, you can also find the ready-to-use iML_TCOSA and iML_TCOSA models in the SBML format as well as a pickle format. The subfolders all start with "results_" followed by the tested conditions, i.e., either "_aerobic" or "_anaerobic" and, depending on if "_expanded" is added or not, whether the expanded model was used or not. All these results folders include CSV tables with all SubMDF or OptMDF (called "mmdf") results and the used reproducible (through the usage fo a seed) random distributions. The, again, included folder named "figures" includes all generated graphical results figures for the publication. The other folder, "runs", includes zipped JSON files which contain the full flux distribution and other [OptMDFpathway](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006492) variables results for each calculated run. Regarding the suffixes, "FREECONC" stands for the standard OptMDFpathway concentrations and "VIVOCONC" for the concentration ranges adapted from [(Bennett et al., 2009)](https://www.nature.com/articles/nchembio.186).
+* "docs": This folder contains [pdoc3](https://pypi.org/project/pdoc3/)-generated documentation files for all Python scripts which contain functions that are not TCOSA-specific (see also next section).
 * "resources": This folder includes the [eQuilibrator](https://gitlab.com/equilibrator/equilibrator-api)-calculated ΔG° values as well as [*i*ML1515](https://pubmed.ncbi.nlm.nih.gov/29020004/) which was downloaded from [its corresponding BiGG website](http://bigg.ucsd.edu/models/iML1515). Furthermore, the raw data and results of the preparation of *in vivo* concentrations from [(Bennett et al., 2009)](https://www.nature.com/articles/nchembio.186) are also included.
 
 ### Scripts
@@ -86,6 +87,12 @@ The category of a script depends on its prefix:
 * "cosa_(...).py": These are all scripts - except of the full run file "tcosa_full_run.py" - which directly include the TCOSA model changes, TCOSA analyses and generated publication figures. They do not include basic methods such as OptMDFpathway.
 * "test_(...).py": This one script includes a test of the OptMDFpathway routine used herein with the [ASTHERISC](https://github.com/klamt-lab/astheriscPackage) toy model.
 * None of these prefixes: These scripts include basic methods such as FBA, a Python implementation of [OptMDFpathway](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006492) with all extensions used in TCOSA's publication and the CPLEX interface which are all using [pulp](https://github.com/coin-or/pulp).
+
+### Source Documentation
+
+If you're interested in the base functions (i.e., scripts without a prefix as given in the previous section), you can take a look at the "docs" subfolder where you can find automatically generated HTML documentation files for them. The command for the documentation generation can be found in "create_documentations.bat".
+
+For all other (TCOSA-related) scripts with a prefix (as given in the previous section), you can find docstring-based descriptions inside the source files. A good starting point for these scripts is also the full run script "tcosa_full_run.py" where all publication-related scripts are called and described in the source file comments.
 
 ## The TCOSA publication
 
