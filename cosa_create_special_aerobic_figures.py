@@ -21,7 +21,7 @@ def create_in_vivo_concentrations_figure():
     concentration = "VIVOCONC"
     output_path = "./cosa/in_vivo_concentrations_figure.png"
     table_path = f"cosa/results_aerobic/optsubmdf_table_{concentration}.csv"
-    pad = 5
+    pad = 4.99
 
     target = "OPTSUBMDF"
 
@@ -273,4 +273,4 @@ def create_acetate_figure():
 
 
 create_in_vivo_concentrations_figure()
-# create_acetate_figure()
+create_acetate_figure()
