@@ -31,12 +31,12 @@ for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
             for change_state in (0, 30, -30):
                 if change_state == 0:
                     extra = ""
-                    legend_addition = " (no $\mathrm{Δ_{f}G'∘}$ difference change)"
+                    legend_addition = " (no $\mathrm{ΔE'°}$ change)"
                 else:
                     extra = f"_nadz_change_{change_state}"
                     # legend_addition = f" (formation energy change: {'' if change_state<0 else '+'}{change_state} kJ/mol)"
                     r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$"
-                    legend_addition = r" ($\mathrm{Δ_{f}G'°}$ difference change: "+f"{'' if change_state<0 else '+'}{change_state} kJ/mol)"
+                    legend_addition = r" ($\mathrm{ΔE'°}$ change: "+f"{'+155' if change_state == -30 else '-155'} mV)"
                 file_path_optmdf = f"cosa/results_{aerobicity}/optmdf_table_{concentration_ranges}.csv"
                 file_path_expanded_optmdf = f"cosa/results_{aerobicity}_expanded{extra}/optmdf_table_{concentration_ranges}.csv"
                 file_path_optsubmdf = f"cosa/results_{aerobicity}/optsubmdf_table_{concentration_ranges}.csv"
@@ -118,5 +118,5 @@ for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
                     axs[axs_row].set_ylim(0.0, 40)
 
     fig.legend(loc="upper center", bbox_to_anchor=(0.5, 1.18), ncol=2)
-    fig.savefig(f"cosa/expanded_comparison_{concentration_ranges}.png", bbox_inches='tight', pad_inches=0.05)
+    fig.savefig(f"cosa/expanded_comparison_{concentration_ranges}.png", bbox_inches='tight', pad_inches=0.0)
     plt.close()
