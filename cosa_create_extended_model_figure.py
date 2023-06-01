@@ -31,12 +31,12 @@ for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
             for change_state in (0, 30, -30):
                 if change_state == 0:
                     extra = ""
-                    legend_addition = " (no $\mathrm{ΔE'°}$ change)"
+                    legend_addition = " (all $\mathrm{ΔE'°}$ at -320 mV)"
                 else:
                     extra = f"_nadz_change_{change_state}"
                     # legend_addition = f" (formation energy change: {'' if change_state<0 else '+'}{change_state} kJ/mol)"
                     r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$"
-                    legend_addition = r" ($\mathrm{ΔE'°}$ change: "+f"{'+155' if change_state == -30 else '-155'} mV)"
+                    legend_addition = r" ($\mathrm{ΔE'°}$ at "+f"{'-165' if change_state == -30 else '-475'} mV for third cofactor)"
                 file_path_optmdf = f"cosa/results_{aerobicity}/optmdf_table_{concentration_ranges}.csv"
                 file_path_expanded_optmdf = f"cosa/results_{aerobicity}_expanded{extra}/optmdf_table_{concentration_ranges}.csv"
                 file_path_optsubmdf = f"cosa/results_{aerobicity}/optsubmdf_table_{concentration_ranges}.csv"
@@ -50,10 +50,10 @@ for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
                 if aerobicity == "aerobic":
                     axs_row = 0
                     title = "A Aerobic"
-                    label_optmdf_two = "MDF with 2 cofactors"
+                    label_optmdf_two = "MDF with 2 cofactors (all $\mathrm{ΔE'°}$ at -320 mV)"
                     label_optsubmdf_three = "SubMDF with 3 cofactors" + legend_addition
                     label_optmdf_three = "MDF with 3 cofactors" + legend_addition
-                    label_optsubmdf_two = "SubMDF with 2 cofactors"
+                    label_optsubmdf_two = "SubMDF with 2 cofactors (all $\mathrm{ΔE'°}$ at -320 mV)"
                 else:
                     axs_row = 1
                     title = "B Anaerobic"
@@ -109,7 +109,7 @@ for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
                 anaerobic = aerobicity == "anaerobic"
                 axs[axs_row].set_title(title, loc="left", fontweight="bold")
                 axs[axs_row].set_xlabel("Growth rate [1/h]")
-                axs[axs_row].set_ylabel(r"MDF [kJ/mol]")
+                axs[axs_row].set_ylabel(r"(Sub)MDF [kJ/mol]")
                 axs[axs_row].set_xlim(min(growth_rates), max(growth_rates))
 
                 if axs_row == 0:
