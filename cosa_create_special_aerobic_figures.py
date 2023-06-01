@@ -21,7 +21,7 @@ def create_in_vivo_concentrations_figure():
     concentration = "VIVOCONC"
     output_path = "./cosa/in_vivo_concentrations_figure.png"
     table_path = f"cosa/results_aerobic/optsubmdf_table_{concentration}.csv"
-    pad = 3.75
+    pad = 5
 
     target = "OPTSUBMDF"
 
@@ -133,7 +133,7 @@ def create_in_vivo_concentrations_figure():
     axs[1].set_ylabel(r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$", fontsize=14)
     axs[1].tick_params(labelsize=14)
 
-    axs[1].set_ylim(-.0005, 0.005)
+    axs[1].set_ylim(-.00003, 0.0006)
     axs[1].set_xlim(0.025, 0.89)
     pad_inches = 0.05
 
@@ -273,4 +273,4 @@ def create_acetate_figure():
 
 
 create_in_vivo_concentrations_figure()
-create_acetate_figure()
+# create_acetate_figure()
