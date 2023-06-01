@@ -430,21 +430,21 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                 if (aerobicity == "aerobic") and (target == "OptMDF"):
                     ax_x = 0
                     ax_y = 0
-                    title = "A Aerobic, OptMDF"
+                    title = "A Aerobic, MDF"
                 elif (aerobicity == "anaerobic") and (target == "OptMDF"):
                     ax_x = 1
                     ax_y = 0
-                    title = "C Anaerobic, OptMDF"
+                    title = "C Anaerobic, MDF"
                 elif (aerobicity == "aerobic") and (target == "OptSubMDF"):
                     ax_x = 0
                     ax_y = 1
-                    title = "B Aerobic, OptSubMDF"
+                    title = "B Aerobic, SubMDF"
                 elif (aerobicity == "anaerobic") and (target == "OptSubMDF"):
                     ax_x = 1
                     ax_y = 1
-                    title = "D Anaerobic, OptSubMDF"
+                    title = "D Anaerobic, SubMDF"
 
-                ylabel = f"{target} [kJ/mol]"
+                ylabel = f"{target.replace('Opt', '')} [kJ/mol]"
 
                 table = pandas.read_csv(
                     table_path,
