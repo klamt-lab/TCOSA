@@ -111,6 +111,8 @@ color_white = "FFFFFF"
 fill_white = openpyxl.styles.PatternFill(start_color=color_white, end_color=color_white, fill_type="solid")
 color_black = "000000"
 fill_black = openpyxl.styles.PatternFill(start_color=color_black, end_color=color_black, fill_type="solid")
+color_grey = "D3D3D3"
+fill_grey = openpyxl.styles.PatternFill(start_color=color_grey, end_color=color_grey, fill_type="solid")
 
 italic = openpyxl.styles.Font(italic=True)
 bold = openpyxl.styles.Font(bold=True)
@@ -128,7 +130,22 @@ num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
 ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=True, expanded=False)
 
 
-for concentrations in ("PAPERCONCS", "STANDARDCONCS"):
+wb = openpyxl.Workbook()
+current_sheet = 0
+
+sheet_to_letter = {
+    0: "A",
+    1: "B",
+    2: "C",
+    3: "D",
+    4: "E",
+    5: "F",
+    6: "G",
+    7: "H",
+    8: "I",
+}
+
+for concentrations in ("STANDARDCONCS", "PAPERCONCS"):
     original_cobra_model_aerobic = copy.deepcopy(cobra_model_aerobic)
     original_cobra_model_anaerobic = copy.deepcopy(cobra_model_anaerobic)
 
@@ -180,9 +197,16 @@ for concentrations in ("PAPERCONCS", "STANDARDCONCS"):
                 json_metadata[target][var_id][condition]["min_stoich"] = min_value
                 json_metadata[target][var_id][condition]["max_stoich"] = max_value
 
-    wb = openpyxl.Workbook()
     for target in ("OptMDF", "OptSubMDF"):
-        ws = wb.create_sheet(target)
+        ##########################
+        ### START OF FVA SHEET ###
+        ##########################
+        concentrations_string = "Measured" if "PAPER" in concentrations else "Standard"
+        ws = wb.create_sheet(sheet_to_letter[current_sheet]+"_"+target.replace("Opt", "")+"_FVAs_"+concentrations_string)
+        current_sheet += 1
+
+        cell = ws.cell(3, 1)
+        cell.value = "µ: 0.818"
 
         targetdata = json_metadata[target]
         varnames = list(targetdata.keys())
@@ -259,6 +283,14 @@ for concentrations in ("PAPERCONCS", "STANDARDCONCS"):
             cell = ws.cell(2, n_column+3)
             cell.value = targetdata["var_B2"][header]["max"]
 
+            if ("STANDARD" in concentrations) and (target == "OptMDF"):
+                standard_optmdf_mdf = targetdata["var_B"][header]["max"]
+                standard_optmdf_submdf = targetdata["var_B2"][header]["max"]
+
+            if ("STANDARD" in concentrations) and (target == "OptSubMDF"):
+                standard_optsubmdf_mdf = targetdata["var_B"][header]["max"]
+                standard_optsubmdf_submdf = targetdata["var_B2"][header]["max"]
+
             mdf = tested_MDFs[header]
 
             n_column += 5
@@ -269,6 +301,7 @@ for concentrations in ("PAPERCONCS", "STANDARDCONCS"):
 
         cell = ws.cell(1, n_column)
         cell.value = "LEGEND:"
+        cell.font = bold
 
         cell = ws.cell(2, n_column)
         cell.value = "Blocked in model"
@@ -288,7 +321,7 @@ for concentrations in ("PAPERCONCS", "STANDARDCONCS"):
 
         cell = ws.cell(3, n_column+1)
         cell.value = "Blocked already in FVA"
-        cell.fill = fill_light_red
+        cell.fill = fill_dark_red
 
         cell = ws.cell(2, n_column+2)
         cell.value = "Essential in TFVA only"
@@ -298,9 +331,15 @@ for concentrations in ("PAPERCONCS", "STANDARDCONCS"):
         cell.value = "Essential already in FVA"
         cell.fill = fill_dark_blue
 
-        ws.column_dimensions['M'].width = 15
-        ws.column_dimensions['N'].width = 15
-        ws.column_dimensions['O'].width = 15
+
+        cell = ws.cell(2, n_column+3)
+        cell.value = "Bold text: Bottleneck in at least one condition"
+        cell.font = bold
+
+        ws.column_dimensions['M'].width = 18
+        ws.column_dimensions['N'].width = 18
+        ws.column_dimensions['O'].width = 23
+        ws.column_dimensions['P'].width = 43
 
 
         for f_var in f_vars:
@@ -385,7 +424,142 @@ for concentrations in ("PAPERCONCS", "STANDARDCONCS"):
             current_line += 1
         ws.freeze_panes = "A4"
 
+        ##########################
+        ### END OF FVA SHEET   ###
+        ##########################
+
+invivodata = json_load("resources/in_vivo_concentration_data/final_concentration_values_paper.json")
+invivo_met_ids = list(invivodata.keys())
+invivo_min_concs = {
+    met_id: invivodata[met_id]["min"]
+    for met_id in invivo_met_ids
+}
+invivo_max_concs = {
+    met_id: invivodata[met_id]["max"]
+    for met_id in invivo_met_ids
+}
+
+for target in ("OptMDF", "OptSubMDF"):
+    ############################
+    ### START OF CVA SHEET   ###
+    ############################
+    ws = wb.create_sheet(sheet_to_letter[current_sheet]+"_"+target.replace("Opt", "")+"_CVAs_STANDARD")
+    current_sheet += 1
+
+    cvadata = json_load(f"cosa/results_aerobic/cva_{target.upper()}_STANDARDCONC.json")
+    cva_met_ids = list(cvadata.keys())
+    tabledata = {
+        met_id: cvadata[met_id]["0,818"]
+        for met_id in cva_met_ids
+    }
+    cva_min_concs = {
+        met_id: tabledata[met_id]["min"]
+        for met_id in cva_met_ids
+    }
+    cva_max_concs = {
+        met_id: tabledata[met_id]["max"]
+        for met_id in cva_met_ids
+    }
+
+    ws.freeze_panes = "A3"
+
+    if target == "OptMDF":
+        written_mdf = standard_optmdf_mdf
+        written_submdf = standard_optmdf_submdf
+    else:
+        written_mdf = standard_optsubmdf_mdf
+        written_submdf = standard_optsubmdf_submdf
+
+    cell = ws.cell(1, 1)
+    cell.value = "MDF:"
+    cell = ws.cell(1, 2)
+    cell.value = written_mdf
+    cell = ws.cell(1, 3)
+    cell.value = "SubMDF:"
+    cell = ws.cell(1, 4)
+    cell.value = written_submdf
+    cell = ws.cell(1, 5)
+    cell.value = "µ:"
+    cell = ws.cell(1, 6)
+    cell.value = 0.818
+
+    cell = ws.cell(2, 1)
+    cell.value = "Metabolite ID"
+    cell.font = italic
+    cell = ws.cell(2, 2)
+    cell.value = "Min CVA conc."
+    cell.font = italic
+    cell = ws.cell(2, 3)
+    cell.value = "Max CVA conc."
+    cell.font = italic
+    cell = ws.cell(2, 4)
+    cell.value = "Min in vivo conc."
+    cell.font = italic
+    cell = ws.cell(2, 5)
+    cell.value = "Max in vivo conc."
+    cell.font = italic
+
+    cell = ws.cell(1, 7)
+    cell.value = "LEGEND:"
+    cell.font = bold
+
+    cell = ws.cell(2, 7)
+    cell.value = "CVA range not in measured range"
+    cell.fill = fill_light_red
+
+    cell = ws.cell(2, 8)
+    cell.value = "CVA range in measured range"
+    cell.fill = fill_green
+
+    cell = ws.cell(2, 9)
+    cell.value = "CVA data only"
+    cell.fill = fill_grey
+
+    current_line = 3
+    for cva_met_id in cva_met_ids:
+        cva_min_conc = cva_min_concs[cva_met_id]
+        cva_max_conc = cva_max_concs[cva_met_id]
+
+        if cva_met_id[2:] in invivo_met_ids:
+            invivo_min_conc = invivo_min_concs[cva_met_id[2:]]
+            invivo_max_conc = invivo_max_concs[cva_met_id[2:]]
+
+            if ((cva_min_conc >= invivo_min_conc) and (cva_max_conc <= invivo_max_conc)) or ((cva_min_conc <= invivo_min_conc) and (cva_max_conc >= invivo_max_conc)) or ((cva_min_conc <= invivo_min_conc) and (cva_max_conc >= invivo_min_conc)) or ((invivo_min_conc <= invivo_max_conc) and (cva_max_conc >= invivo_max_conc)):
+                cell_filler = fill_green
+            else:
+                cell_filler = fill_light_red
+        else:
+            invivo_min_conc = "N/A"
+            invivo_max_conc = "N/A"
+            cell_filler = fill_grey
+
+        cell = ws.cell(current_line, 1)
+        cell.value = cva_met_id[2:]
+        cell.fill = cell_filler
+
+        cell = ws.cell(current_line, 2)
+        cell.value = cva_min_conc
+        cell.fill = cell_filler
+
+        cell = ws.cell(current_line, 3)
+        cell.value = cva_max_conc
+        cell.fill = cell_filler
+
+        cell = ws.cell(current_line, 4)
+        cell.value = invivo_min_conc
+        cell.fill = cell_filler
+
+        cell = ws.cell(current_line, 5)
+        cell.value = invivo_max_conc
+        cell.fill = cell_filler
+
+        current_line += 1
+
+    ws.column_dimensions['A'].width = 18
+    ws.column_dimensions['G'].width = 25
+    ws.column_dimensions['H'].width = 25
+    ws.column_dimensions['I'].width = 15
 
 
-    del(wb["Sheet"])
-    wb.save("./cosa/xx_"+concentrations+".xlsx")
+del(wb["Sheet"])
+wb.save("./cosa/Supplementary_Table_3.xlsx")
