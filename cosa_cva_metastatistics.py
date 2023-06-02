@@ -1,3 +1,4 @@
+from math import log, log10
 from helper import json_load, json_write
 
 
@@ -32,9 +33,22 @@ for target in "OPTMDF", "OPTSUBMDF":
             "name": name_measurement,
             "min_cva": min_cva,
             "max_cva": max_cva,
+
+            "min_cva_ln": log(min_cva),
+            "max_cva_ln": log(max_cva),
+            "min_cva_log10": log10(min_cva),
+            "max_cva_log10": log10(max_cva),
+
             "min_measurement": min_measurement,
             "max_measurement": max_measurement,
             "min_difference": min_difference,
+
+            "min_measurement_ln": log(min_measurement),
+            "max_measurement_ln": log(max_measurement),
+            "min_difference_ln":  log(min_difference),
+            "min_measurement_log10": log10(min_measurement),
+            "max_measurement_log10": log10(max_measurement),
+            "min_difference_log10": log10(min_difference),
         }
 
     json_write("./cosa/results_aerobic/cva_metastatistics_"+target+".json", outjson)

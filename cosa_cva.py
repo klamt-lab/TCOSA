@@ -214,6 +214,7 @@ metabolites = [
     # ("SUM", "2pg_c", "3pg_c"),
 ]
 
+
 test_model = cobra.io.read_sbml_model("cosa/iML1515_TCOSA.xml")
 metabolite_ids = [x.id for x in test_model.metabolites]
 
