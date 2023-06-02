@@ -920,8 +920,8 @@ URATEtex_FWD | 0.0 kJ/mol | Uric acid transport | urate_e --> urate_p
 URATEtex_REV | 0.0 kJ/mol | Uric acid transport | urate_p --> urate_e
 AI2tex_FWD | 0.0 kJ/mol | Ai2 transport, outer membrane | mththf_e --> mththf_p
 AI2tex_REV | 0.0 kJ/mol | Ai2 transport, outer membrane | mththf_p --> mththf_e
-CYSItex_FWD | 0.0 kJ/mol | L cystine transport via diffusion extracellular to periplasm | cysi__L_e --> cysi__L_p
-CYSItex_REV | 0.0 kJ/mol | L cystine transport via diffusion extracellular to periplasm | cysi__L_p --> cysi__L_e
+CYSItex_FWD | 0.0 kJ/mol | L cystine transport via diffusion extracellular to periplasm  | cysi__L_e --> cysi__L_p
+CYSItex_REV | 0.0 kJ/mol | L cystine transport via diffusion extracellular to periplasm  | cysi__L_p --> cysi__L_e
 ASPtpp_FWD | 14.405522276277514 kJ/mol | L-aspartate uptake via facillitated diffusion | asp__L_p --> asp__L_c
 ASPtpp_REV | -14.405522276277514 kJ/mol | L-aspartate uptake via facillitated diffusion | asp__L_c --> asp__L_p
 SUCCt1pp_FWD | 28.967096335712768 kJ/mol | Succinate transport via diffusion in (periplasm) | succ_p --> succ_c
