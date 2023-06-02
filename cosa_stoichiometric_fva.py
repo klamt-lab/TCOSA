@@ -8,7 +8,7 @@ import copy
 import pulp
 import math
 # Internal
-from cosa_add_promiscuity_constraints import cosa_add_promiscuity_constraints
+from cosa_add_promiscuity_constraints import cosa_add_stoichiometric_promiscuity_constraints
 from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
 from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
 from cosa_get_suffix import cosa_get_suffix
@@ -147,7 +147,7 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
 
     optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
 
-    optmdfpathway_base_problem = cosa_add_promiscuity_constraints(
+    optmdfpathway_base_problem = cosa_add_stoichiometric_promiscuity_constraints(
         optmdfpathway_base_problem=optmdfpathway_base_problem,
         optmdfpathway_base_variables=optmdfpathway_base_variables,
         cobra_model=cobra_model,

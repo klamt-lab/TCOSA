@@ -115,6 +115,7 @@ fill_black = openpyxl.styles.PatternFill(start_color=color_black, end_color=colo
 italic = openpyxl.styles.Font(italic=True)
 bold = openpyxl.styles.Font(bold=True)
 border = openpyxl.styles.Border(left=openpyxl.styles.Side(border_style='thin', color='000000'))
+white_font = openpyxl.styles.Font(color="FFFFFF")
 
 all_base_ids, cobra_model_aerobic, concentration_values_free, concentration_values_paper,\
 standardconc_dG0_values, paperconc_dG0_values,\
@@ -265,6 +266,41 @@ for concentrations in ("PAPERCONCS", "STANDARDCONCS"):
         max_width = 5
         max_width_str = 5
         current_line = 4
+
+        cell = ws.cell(1, n_column)
+        cell.value = "LEGEND:"
+
+        cell = ws.cell(2, n_column)
+        cell.value = "Blocked in model"
+        cell.fill = fill_black
+        cell.font = white_font
+
+
+        cell = ws.cell(3, n_column)
+        cell.value = "Can always run"
+        cell.fill = fill_green
+
+
+        cell = ws.cell(2, n_column+1)
+        cell.value = "Blocked in TFVA only"
+        cell.fill = fill_light_red
+
+
+        cell = ws.cell(3, n_column+1)
+        cell.value = "Blocked already in FVA"
+        cell.fill = fill_light_red
+
+        cell = ws.cell(2, n_column+2)
+        cell.value = "Essential in TFVA only"
+        cell.fill = fill_light_blue
+
+        cell = ws.cell(3, n_column+2)
+        cell.value = "Essential already in FVA"
+        cell.fill = fill_dark_blue
+
+        ws.column_dimensions['M'].width = 15
+        ws.column_dimensions['N'].width = 15
+        ws.column_dimensions['O'].width = 15
 
 
         for f_var in f_vars:
