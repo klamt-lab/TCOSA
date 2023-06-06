@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>equilibrator API documentation</title>
+<meta name="description" content="This script is a wrapper for the ΔG&#39;° determination with the eQuilibrator API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>equilibrator</code></h1>
+</header>
+<section id="section-intro">
+<p>This script is a wrapper for the ΔG'° determination with the eQuilibrator API.</p>
+<p>This wrapper intends to work for BiGG-styled cobrapy metabolic models.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/usr/bin/env python3
+&#34;&#34;&#34;This script is a wrapper for the ΔG&#39;° determination with the eQuilibrator API.
+
+This wrapper intends to work for BiGG-styled cobrapy metabolic models.
+&#34;&#34;&#34;
+
+## IMPORTS ##
+# External
+import cobra
+from equilibrator_api import ComponentContribution , Q_, Reaction
+from typing import Any, Dict, List, Tuple
+
+
+## CONSTANTS ##
+STANDARD_INNER_TO_OUTER_COMPARTMENTS: List[str] = [
+    &#34;c&#34;,
+    &#34;p&#34;,
+    &#34;e&#34;,
+]
+
+STANDARD_IONIC_STRENGTHS: Dict[str, float] = {  # In mM
+    &#34;c&#34;: 250,  # Source: eQuilibrator standard
+    &#34;p&#34;: 250,
+    &#34;e&#34;: 250,
+}
+
+STANDARD_PHS: Dict[str, float] = {  # Unitless
+    &#34;c&#34;: 7.5,  # Source: Bionumbers ID 105980
+    &#34;p&#34;: 7.5,  # Source: Bionumbers ID 105980
+    &#34;e&#34;: 7.5,
+}
+
+STANDARD_PMGS: Dict[str, float] = {  # Unitless
+    &#34;c&#34;: 2.5,  # Source: eQuilibrator standard
+    &#34;p&#34;: 2.5,
+    &#34;e&#34;: 2.5,
+}
+
+STANDARD_POTENTIAL_DIFFERENCES: Dict[Tuple[str, str], float] = {  # In V
+    (&#34;c&#34;, &#34;p&#34;): 0.15,  # Source: eQuilibrator standard
+    (&#34;p&#34;, &#34;e&#34;): 0.15,
+}
+
+USED_IDENTIFIERS = [
+    &#34;inchi&#34;,
+    &#34;inchi_key&#34;,
+    &#34;metanetx.chemical&#34;,
+    &#34;bigg.metabolite&#34;,
+    &#34;kegg.compound&#34;,
+    &#34;chebi&#34;,
+    &#34;sabiork.compound&#34;,
+    &#34;metacyc.compound&#34;,
+    &#34;hmdb&#34;,
+    &#34;swisslipid&#34;,
+    &#34;reactome&#34;,
+    &#34;lipidmaps&#34;,
+    &#34;seed&#34;,
+]
+
+
+## PUBLIC FUNCTIONS ##
+def get_model_dG0_values(cobra_model: cobra.Model,
+        inner_to_outer_compartments: List[str],
+        phs: Dict[str, float],
+        pmgs: Dict[str, float],
+        ionic_strengths: Dict[str, float],
+        potential_differences: Dict[Tuple[str, str], float]
+    ) -&gt; Dict[str, Dict[str, float]]:
+    &#34;&#34;&#34;Cobrapy model wrapper for the ΔG&#39;° determination of reactions using the eQuilibrator-API.
+
+    Reactions are identified according to all annotations (in the cobrapy reaction&#39;s annotation member variable)
+    given in this modules global USED_IDENTIFIERS list.
+
+    Args:
+        cobra_model (cobra.Model): The cobra model for which, for each reaction, dG0 values are determined.
+        inner_to_outer_compartments (List[str]): A list with compartment IDs going from inner (e.g., in E. coli,
+        the cytosol or &#39;c&#39; in iML1515) to outer (e.g., the extracellular component or &#39;e&#39; in iML1515). Used
+        for the dG0 calculation in multi-compartmental reactions.
+        phs (Dict[str, float]): A dictionary with compartment IDs as keys and the compartment pHs as values.
+        pmgs (Dict[str, float]): A dictionary with compartment IDs as keys and the compartment pMgs as values.
+        ionic_strengths (Dict[str, float]): A dictionary with compartment IDs as keys and the ionic strengths as values.
+        potential_differences (Dict[Tuple[str, str], float]): A dictionary containing tuples with 2 elements describing
+        the ID of an innter and outer compartment, and the potential difference between ghem.
+
+    Returns:
+        Dict[str, Dict[str, float]]: A dictionary with the reaction IDs as keys, and dictionaries as values which,
+        in turn, contain the dG0 of a reaction under the key &#39;dG0&#39; and the calculated uncertainty as &#39;uncertainty&#39;.
+    &#34;&#34;&#34;
+    reaction_dG0s: Dict[str, Dict[str, float]] = {}
+    single_compartment_cc_reactions: List[Reaction] = []
+    single_compartment_reaction_ids: List[str] = []
+    cc = ComponentContribution()
+    for reaction_x in cobra_model.reactions:
+        reaction: cobra.Reaction = reaction_x
+
+        stoichiometries: List[float] = []
+        compartments: List[str] = []
+        identifiers: List[str] = []
+        identifier_keys: List[str] = []
+        for metabolite_x in reaction.metabolites.keys():
+            metabolite: cobra.Metabolite = metabolite_x
+            stoichiometries.append(reaction.metabolites[metabolite])
+            compartments.append(metabolite.compartment)
+            identifier = &#34;&#34;
+            for used_identifier in USED_IDENTIFIERS:
+                if used_identifier not in metabolite.annotation.keys():
+                    continue
+                metabolite_identifiers = metabolite.annotation[used_identifier]
+                if type(metabolite_identifiers) is list:
+                    identifier_temp = metabolite_identifiers[0]
+                elif type(metabolite_identifiers) is str:
+                    identifier_temp = metabolite_identifiers
+                if used_identifier == &#34;inchi&#34;:
+                    compound = cc.get_compound_by_inchi(identifier_temp)
+                elif used_identifier == &#34;inchi_key&#34;:
+                    compound_list = cc.search_compound_by_inchi_key(identifier_temp)
+                    if len(compound_list) &gt; 0:
+                        compound = compound_list[0]
+                    else:
+                        compound = None
+                else:
+                    identifier_temp = used_identifier + &#34;:&#34; + identifier_temp
+                    compound = cc.get_compound(identifier_temp)
+                if compound is not None:
+                    identifier_key = used_identifier
+                    identifier = identifier_temp
+                    break
+            if identifier == &#34;&#34;:
+                break
+            identifier_keys.append(identifier_key)
+            identifiers.append(identifier)
+
+        if identifier == &#34;&#34;:
+            print(&#34;ERROR: Metabolite has no identifier of the given types!&#34;)
+            continue
+
+        # Check for three cases:
+        # 1: Single-compartment reaction
+        # 2: Double-compartment reaction
+        # 3: Multi-compartment reaction (not possible)
+        unique_reaction_compartments = list(set(compartments))
+        num_compartments = len(unique_reaction_compartments)
+        if num_compartments  == 1:
+            # Set compartment conditions
+            compartment = unique_reaction_compartments[0]
+            cc.p_h = Q_(phs[compartment])
+            cc.p_mg = Q_(pmgs[compartment])
+            cc.ionic_strength = Q_(str(ionic_strengths[compartment])+&#34;mM&#34;)
+
+            # Build together reaction
+            reaction_dict: Dict[Any, float] = {}
+            for i in range(len(stoichiometries)):
+                identifier_string = identifiers[i]
+                identifier_key = identifier_keys[i]
+                stoichiometry = stoichiometries[i]
+                if identifier_key == &#34;inchi&#34;:
+                    compound = cc.get_compound_by_inchi(identifier_string)
+                elif identifier_key == &#34;inchi_key&#34;:
+                    compound = cc.search_compound_by_inchi_key(identifier_string)[0]
+                else:
+                    compound = cc.get_compound(identifier_string)
+                reaction_dict[compound] = stoichiometry
+            cc_reaction = Reaction(reaction_dict)
+
+            # Check whether or not the reaction is balanced and...
+            if not cc_reaction.is_balanced():
+                print(f&#34;ERROR: Reaction {reaction.id} is not balanced&#34;)
+                continue
+            print(f&#34;No error with reaction {reaction.id}, ΔG&#39;0 succesfully calculated!&#34;)
+            # ...if it is balanced, calculate dG0 later on
+            single_compartment_cc_reactions.append(cc_reaction)
+            single_compartment_reaction_ids.append(reaction.id)
+        elif num_compartments  == 2:
+            index_zero = inner_to_outer_compartments.index(unique_reaction_compartments[0])
+            index_one = inner_to_outer_compartments.index(unique_reaction_compartments[1])
+
+            if index_one &gt; index_zero:
+                outer_compartment = unique_reaction_compartments[1]
+                inner_compartment = unique_reaction_compartments[0]
+            else:
+                outer_compartment = unique_reaction_compartments[0]
+                inner_compartment = unique_reaction_compartments[1]
+
+            ph_inner = Q_(phs[inner_compartment])
+            ph_outer = Q_(phs[outer_compartment])
+            ionic_strength_inner = Q_(str(ionic_strengths[inner_compartment])+&#34; mM&#34;)
+            ionic_strength_outer = Q_(str(ionic_strengths[outer_compartment])+&#34; mM&#34;)
+            pmg_inner = Q_(pmgs[inner_compartment])
+            pmg_outer = Q_(pmgs[outer_compartment])
+
+            if (inner_compartment, outer_compartment) in potential_differences.keys():
+                potential_difference = Q_(str(potential_differences[(inner_compartment, outer_compartment)])+&#34; V&#34;)
+            elif (outer_compartment, inner_compartment) in potential_differences.keys():
+                potential_difference = Q_(str(potential_differences[(outer_compartment, inner_compartment)])+&#34; V&#34;)
+            else:
+                print(&#34;ERROR&#34;)
+                continue
+
+            inner_reaction_dict: Dict[str, float] = {}
+            outer_reaction_dict: Dict[str, float] = {}
+            for i in range(len(stoichiometries)):
+                key = identifiers[i]
+                stoichiometry = stoichiometries[i]
+                try:
+                    compound_key = cc.get_compound(key)
+                except Exception:  # sqlalchemy.orm.exc.MultipleResultsFound
+                    print(&#34;ERROR&#34;)
+                    continue
+
+                if compound_key is None:
+                    print(&#34;NONE in compound&#34;)
+                    continue
+
+                if compartments[i] == inner_compartment:
+                    inner_reaction_dict[compound_key] = stoichiometry
+                else:
+                    outer_reaction_dict[compound_key] = stoichiometry
+
+            cc_inner_reaction = Reaction(inner_reaction_dict)
+            cc_outer_reaction = Reaction(outer_reaction_dict)
+
+            cc.p_h = ph_inner
+            cc.ionic_strength = ionic_strength_inner
+            cc.p_mg = pmg_inner
+            try:
+                standard_dg_prime = cc.multicompartmental_standard_dg_prime(
+                    cc_inner_reaction,
+                    cc_outer_reaction,
+                    e_potential_difference=potential_difference,
+                    p_h_outer=ph_outer,
+                    p_mg_outer=pmg_outer,
+                    ionic_strength_outer=ionic_strength_outer,
+                )
+                uncertainty = standard_dg_prime.error.m_as(&#34;kJ/mol&#34;)
+                if uncertainty &lt; 1000:
+                    dG0 = standard_dg_prime.value.m_as(&#34;kJ/mol&#34;)
+                    reaction_dG0s[reaction.id] = {}
+                    reaction_dG0s[reaction.id][&#34;dG0&#34;] = dG0
+                    reaction_dG0s[reaction.id][&#34;uncertainty&#34;] = abs(uncertainty)
+                    reaction_dG0s[reaction.id][&#34;num_compartments&#34;] = 2
+            except ValueError:
+                print(&#34;ERROR: Multi-compartmental reaction is not balanced&#34;)
+                continue
+        else:
+            # TODO: More extended errors
+            print(&#34;ERROR: More than two compartments are not possible&#34;)
+            continue
+
+
+    # Calculate - as batch - the rest of the single-compartment reactions
+    print(&#34;Start batch ΔG&#39;0 calculation...&#34;)
+    (
+        standard_dg_primes, dg_uncertainties
+    ) = cc.standard_dg_prime_multi(single_compartment_cc_reactions, uncertainty_representation=&#34;sqrt&#34;)
+    print(&#34;Done!&#34;)
+
+    for single_compartment_index in range(len(standard_dg_primes)):
+        uncertainty = dg_uncertainties[single_compartment_index][0].m_as(&#34;kJ/mol&#34;)
+        if True:
+            dG0 = standard_dg_primes[single_compartment_index].m_as(&#34;kJ/mol&#34;)
+            reaction_id = single_compartment_reaction_ids[single_compartment_index]
+            reaction_dG0s[reaction_id] = {}
+            reaction_dG0s[reaction_id][&#34;dG0&#34;] = dG0
+            reaction_dG0s[reaction_id][&#34;uncertainty&#34;] = uncertainty
+            reaction_dG0s[reaction_id][&#34;num_compartments&#34;] = 1
+    return reaction_dG0s</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="equilibrator.get_model_dG0_values"><code class="name flex">
+<span>def <span class="ident">get_model_dG0_values</span></span>(<span>cobra_model: cobra.core.model.Model, inner_to_outer_compartments: List[str], phs: Dict[str, float], pmgs: Dict[str, float], ionic_strengths: Dict[str, float], potential_differences: Dict[Tuple[str, str], float]) ‑> Dict[str, Dict[str, float]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Cobrapy model wrapper for the ΔG'° determination of reactions using the eQuilibrator-API.</p>
+<p>Reactions are identified according to all annotations (in the cobrapy reaction's annotation member variable)
+given in this modules global USED_IDENTIFIERS list.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>cobra_model</code></strong> :&ensp;<code>cobra.Model</code></dt>
+<dd>The cobra model for which, for each reaction, dG0 values are determined.</dd>
+<dt><strong><code>inner_to_outer_compartments</code></strong> :&ensp;<code>List[str]</code></dt>
+<dd>A list with compartment IDs going from inner (e.g., in E. coli,</dd>
+<dt>the cytosol or 'c' in iML1515) to outer (e.g., the extracellular component or 'e' in iML1515). Used</dt>
+<dt>for the dG0 calculation in multi-compartmental reactions.</dt>
+<dt><strong><code>phs</code></strong> :&ensp;<code>Dict[str, float]</code></dt>
+<dd>A dictionary with compartment IDs as keys and the compartment pHs as values.</dd>
+<dt><strong><code>pmgs</code></strong> :&ensp;<code>Dict[str, float]</code></dt>
+<dd>A dictionary with compartment IDs as keys and the compartment pMgs as values.</dd>
+<dt><strong><code>ionic_strengths</code></strong> :&ensp;<code>Dict[str, float]</code></dt>
+<dd>A dictionary with compartment IDs as keys and the ionic strengths as values.</dd>
+<dt><strong><code>potential_differences</code></strong> :&ensp;<code>Dict[Tuple[str, str], float]</code></dt>
+<dd>A dictionary containing tuples with 2 elements describing</dd>
+</dl>
+<p>the ID of an innter and outer compartment, and the potential difference between ghem.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Dict[str, Dict[str, float]]</code></dt>
+<dd>A dictionary with the reaction IDs as keys, and dictionaries as values which,</dd>
+</dl>
+<p>in turn, contain the dG0 of a reaction under the key 'dG0' and the calculated uncertainty as 'uncertainty'.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_model_dG0_values(cobra_model: cobra.Model,
+        inner_to_outer_compartments: List[str],
+        phs: Dict[str, float],
+        pmgs: Dict[str, float],
+        ionic_strengths: Dict[str, float],
+        potential_differences: Dict[Tuple[str, str], float]
+    ) -&gt; Dict[str, Dict[str, float]]:
+    &#34;&#34;&#34;Cobrapy model wrapper for the ΔG&#39;° determination of reactions using the eQuilibrator-API.
+
+    Reactions are identified according to all annotations (in the cobrapy reaction&#39;s annotation member variable)
+    given in this modules global USED_IDENTIFIERS list.
+
+    Args:
+        cobra_model (cobra.Model): The cobra model for which, for each reaction, dG0 values are determined.
+        inner_to_outer_compartments (List[str]): A list with compartment IDs going from inner (e.g., in E. coli,
+        the cytosol or &#39;c&#39; in iML1515) to outer (e.g., the extracellular component or &#39;e&#39; in iML1515). Used
+        for the dG0 calculation in multi-compartmental reactions.
+        phs (Dict[str, float]): A dictionary with compartment IDs as keys and the compartment pHs as values.
+        pmgs (Dict[str, float]): A dictionary with compartment IDs as keys and the compartment pMgs as values.
+        ionic_strengths (Dict[str, float]): A dictionary with compartment IDs as keys and the ionic strengths as values.
+        potential_differences (Dict[Tuple[str, str], float]): A dictionary containing tuples with 2 elements describing
+        the ID of an innter and outer compartment, and the potential difference between ghem.
+
+    Returns:
+        Dict[str, Dict[str, float]]: A dictionary with the reaction IDs as keys, and dictionaries as values which,
+        in turn, contain the dG0 of a reaction under the key &#39;dG0&#39; and the calculated uncertainty as &#39;uncertainty&#39;.
+    &#34;&#34;&#34;
+    reaction_dG0s: Dict[str, Dict[str, float]] = {}
+    single_compartment_cc_reactions: List[Reaction] = []
+    single_compartment_reaction_ids: List[str] = []
+    cc = ComponentContribution()
+    for reaction_x in cobra_model.reactions:
+        reaction: cobra.Reaction = reaction_x
+
+        stoichiometries: List[float] = []
+        compartments: List[str] = []
+        identifiers: List[str] = []
+        identifier_keys: List[str] = []
+        for metabolite_x in reaction.metabolites.keys():
+            metabolite: cobra.Metabolite = metabolite_x
+            stoichiometries.append(reaction.metabolites[metabolite])
+            compartments.append(metabolite.compartment)
+            identifier = &#34;&#34;
+            for used_identifier in USED_IDENTIFIERS:
+                if used_identifier not in metabolite.annotation.keys():
+                    continue
+                metabolite_identifiers = metabolite.annotation[used_identifier]
+                if type(metabolite_identifiers) is list:
+                    identifier_temp = metabolite_identifiers[0]
+                elif type(metabolite_identifiers) is str:
+                    identifier_temp = metabolite_identifiers
+                if used_identifier == &#34;inchi&#34;:
+                    compound = cc.get_compound_by_inchi(identifier_temp)
+                elif used_identifier == &#34;inchi_key&#34;:
+                    compound_list = cc.search_compound_by_inchi_key(identifier_temp)
+                    if len(compound_list) &gt; 0:
+                        compound = compound_list[0]
+                    else:
+                        compound = None
+                else:
+                    identifier_temp = used_identifier + &#34;:&#34; + identifier_temp
+                    compound = cc.get_compound(identifier_temp)
+                if compound is not None:
+                    identifier_key = used_identifier
+                    identifier = identifier_temp
+                    break
+            if identifier == &#34;&#34;:
+                break
+            identifier_keys.append(identifier_key)
+            identifiers.append(identifier)
+
+        if identifier == &#34;&#34;:
+            print(&#34;ERROR: Metabolite has no identifier of the given types!&#34;)
+            continue
+
+        # Check for three cases:
+        # 1: Single-compartment reaction
+        # 2: Double-compartment reaction
+        # 3: Multi-compartment reaction (not possible)
+        unique_reaction_compartments = list(set(compartments))
+        num_compartments = len(unique_reaction_compartments)
+        if num_compartments  == 1:
+            # Set compartment conditions
+            compartment = unique_reaction_compartments[0]
+            cc.p_h = Q_(phs[compartment])
+            cc.p_mg = Q_(pmgs[compartment])
+            cc.ionic_strength = Q_(str(ionic_strengths[compartment])+&#34;mM&#34;)
+
+            # Build together reaction
+            reaction_dict: Dict[Any, float] = {}
+            for i in range(len(stoichiometries)):
+                identifier_string = identifiers[i]
+                identifier_key = identifier_keys[i]
+                stoichiometry = stoichiometries[i]
+                if identifier_key == &#34;inchi&#34;:
+                    compound = cc.get_compound_by_inchi(identifier_string)
+                elif identifier_key == &#34;inchi_key&#34;:
+                    compound = cc.search_compound_by_inchi_key(identifier_string)[0]
+                else:
+                    compound = cc.get_compound(identifier_string)
+                reaction_dict[compound] = stoichiometry
+            cc_reaction = Reaction(reaction_dict)
+
+            # Check whether or not the reaction is balanced and...
+            if not cc_reaction.is_balanced():
+                print(f&#34;ERROR: Reaction {reaction.id} is not balanced&#34;)
+                continue
+            print(f&#34;No error with reaction {reaction.id}, ΔG&#39;0 succesfully calculated!&#34;)
+            # ...if it is balanced, calculate dG0 later on
+            single_compartment_cc_reactions.append(cc_reaction)
+            single_compartment_reaction_ids.append(reaction.id)
+        elif num_compartments  == 2:
+            index_zero = inner_to_outer_compartments.index(unique_reaction_compartments[0])
+            index_one = inner_to_outer_compartments.index(unique_reaction_compartments[1])
+
+            if index_one &gt; index_zero:
+                outer_compartment = unique_reaction_compartments[1]
+                inner_compartment = unique_reaction_compartments[0]
+            else:
+                outer_compartment = unique_reaction_compartments[0]
+                inner_compartment = unique_reaction_compartments[1]
+
+            ph_inner = Q_(phs[inner_compartment])
+            ph_outer = Q_(phs[outer_compartment])
+            ionic_strength_inner = Q_(str(ionic_strengths[inner_compartment])+&#34; mM&#34;)
+            ionic_strength_outer = Q_(str(ionic_strengths[outer_compartment])+&#34; mM&#34;)
+            pmg_inner = Q_(pmgs[inner_compartment])
+            pmg_outer = Q_(pmgs[outer_compartment])
+
+            if (inner_compartment, outer_compartment) in potential_differences.keys():
+                potential_difference = Q_(str(potential_differences[(inner_compartment, outer_compartment)])+&#34; V&#34;)
+            elif (outer_compartment, inner_compartment) in potential_differences.keys():
+                potential_difference = Q_(str(potential_differences[(outer_compartment, inner_compartment)])+&#34; V&#34;)
+            else:
+                print(&#34;ERROR&#34;)
+                continue
+
+            inner_reaction_dict: Dict[str, float] = {}
+            outer_reaction_dict: Dict[str, float] = {}
+            for i in range(len(stoichiometries)):
+                key = identifiers[i]
+                stoichiometry = stoichiometries[i]
+                try:
+                    compound_key = cc.get_compound(key)
+                except Exception:  # sqlalchemy.orm.exc.MultipleResultsFound
+                    print(&#34;ERROR&#34;)
+                    continue
+
+                if compound_key is None:
+                    print(&#34;NONE in compound&#34;)
+                    continue
+
+                if compartments[i] == inner_compartment:
+                    inner_reaction_dict[compound_key] = stoichiometry
+                else:
+                    outer_reaction_dict[compound_key] = stoichiometry
+
+            cc_inner_reaction = Reaction(inner_reaction_dict)
+            cc_outer_reaction = Reaction(outer_reaction_dict)
+
+            cc.p_h = ph_inner
+            cc.ionic_strength = ionic_strength_inner
+            cc.p_mg = pmg_inner
+            try:
+                standard_dg_prime = cc.multicompartmental_standard_dg_prime(
+                    cc_inner_reaction,
+                    cc_outer_reaction,
+                    e_potential_difference=potential_difference,
+                    p_h_outer=ph_outer,
+                    p_mg_outer=pmg_outer,
+                    ionic_strength_outer=ionic_strength_outer,
+                )
+                uncertainty = standard_dg_prime.error.m_as(&#34;kJ/mol&#34;)
+                if uncertainty &lt; 1000:
+                    dG0 = standard_dg_prime.value.m_as(&#34;kJ/mol&#34;)
+                    reaction_dG0s[reaction.id] = {}
+                    reaction_dG0s[reaction.id][&#34;dG0&#34;] = dG0
+                    reaction_dG0s[reaction.id][&#34;uncertainty&#34;] = abs(uncertainty)
+                    reaction_dG0s[reaction.id][&#34;num_compartments&#34;] = 2
+            except ValueError:
+                print(&#34;ERROR: Multi-compartmental reaction is not balanced&#34;)
+                continue
+        else:
+            # TODO: More extended errors
+            print(&#34;ERROR: More than two compartments are not possible&#34;)
+            continue
+
+
+    # Calculate - as batch - the rest of the single-compartment reactions
+    print(&#34;Start batch ΔG&#39;0 calculation...&#34;)
+    (
+        standard_dg_primes, dg_uncertainties
+    ) = cc.standard_dg_prime_multi(single_compartment_cc_reactions, uncertainty_representation=&#34;sqrt&#34;)
+    print(&#34;Done!&#34;)
+
+    for single_compartment_index in range(len(standard_dg_primes)):
+        uncertainty = dg_uncertainties[single_compartment_index][0].m_as(&#34;kJ/mol&#34;)
+        if True:
+            dG0 = standard_dg_primes[single_compartment_index].m_as(&#34;kJ/mol&#34;)
+            reaction_id = single_compartment_reaction_ids[single_compartment_index]
+            reaction_dG0s[reaction_id] = {}
+            reaction_dG0s[reaction_id][&#34;dG0&#34;] = dG0
+            reaction_dG0s[reaction_id][&#34;uncertainty&#34;] = uncertainty
+            reaction_dG0s[reaction_id][&#34;num_compartments&#34;] = 1
+    return reaction_dG0s</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="equilibrator.get_model_dG0_values" href="#equilibrator.get_model_dG0_values">get_model_dG0_values</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

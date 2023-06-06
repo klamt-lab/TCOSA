@@ -9,7 +9,7 @@ dependencies:
   - mypy
   - autopep8
   - matplotlib-base
-  - numpy
+  - numpy<1.24
   - python=3.8
   - cobra=0.22
   - pulp
@@ -18,3 +18,4 @@ dependencies:
   - pip
   - pip:
     - ray
+    - openpyxl

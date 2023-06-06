@@ -1,8 +1,14 @@
+"""This script contains the functions to run a 'normal' FVA without thermodynamic constraints."""
+
+# IMPORTS #
+# External
 import matplotlib.pyplot as plt
 import cobra
 import copy
 import pulp
 import math
+# Internal
+from cosa_add_promiscuity_constraints import cosa_add_stoichiometric_promiscuity_constraints
 from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
 from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
 from cosa_get_suffix import cosa_get_suffix
@@ -21,6 +27,92 @@ from helper import ensure_folder_existence
 from fva import perform_variability_analysis, perform_fva_multi
 
 
+# CONSTANTS #
+core_map_reactions = [
+    "EX_glc__D_e",
+    "GLCptspp",
+    "GLCt2pp",
+    "HEX1",
+    "G6PDH2r",
+    "PGL",
+    "F6PA",
+    "PGI",
+    "GND",
+    "PFK",
+    "FBP",
+    "RPE",
+    "RPI",
+    "GLYCDx",
+    "FBA",
+    "TKT2",
+    "TKT1",
+    "TALA",
+    "TPI",
+    "G3PD2",
+    "G3PD5",
+    "GLYK",
+    "EX_glyc_e",
+    "PGK",
+    "GAPD",
+    "PGM",
+    "ENO",
+    "EDA",
+    "EDD",
+    "EX_h_e",
+    "EX_h2o_e",
+    "EX_co2_e",
+    "PPC",
+    "PPCK",
+    "PYK",
+    "PPS",
+    "MGSA",
+    "GLYOX3",
+    "LDH_D",
+    "FHL",
+    "PFL",
+    "ME2",
+    "ME1",
+    "PDH",
+    "POX",
+    "PTAr",
+    "ACALD",
+    "ACKr",
+    "ALCD2x",
+    "EX_ac_e",
+    "EX_etoh_e",
+    "CS",
+    "EX_succ_e",
+    "SUCCt2_2pp",
+    "SUCDi",
+    "FRD2",
+    "FUM",
+    "MDH",
+    "MALS",
+    "SUCOAS",
+    "AKGDH",
+    "ICL",
+    "ACONTa",
+    "ACONTb",
+    "ICDHyr",
+    "ADK1",
+    "ATPM",
+    "ATPS4rpp",
+    "EX_o2_e",
+    "CYTBO3_4pp",
+    "NADH16pp",
+    "NADH17pp",
+    "NADTRHD",
+    "THD2pp",
+    "EX_lac__D_e",
+    "EX_h2_e",
+    "EX_for_e",
+    "SUCCt2_3pp",
+    "SUCCt1pp",
+    "BIOMASS_Ec_iML1515_core_75p37M"
+]
+
+
+# PUBLIC FUNCTIONS #
 def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_scenario: str) -> None:
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
@@ -30,9 +122,6 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
     biomass_reaction_id = "BIOMASS_Ec_iML1515_core_75p37M"
 
     suffix = cosa_get_suffix(anaerobic, expanded=False)
-
-    # figures_path = f"./cosa/results{suffix}/figures/"
-    # ensure_folder_existence(figures_path)
 
     report = ""
     original_cobra_model = copy.deepcopy(cobra_model)
@@ -55,12 +144,25 @@ def cosa_single_swap_test(anaerobic : bool, reac_id: str, mu: float, base_nadx_s
         extra_constraints=[],
         sub_network_ids=[],
     )
+
     optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+
+    optmdfpathway_base_problem = cosa_add_stoichiometric_promiscuity_constraints(
+        optmdfpathway_base_problem=optmdfpathway_base_problem,
+        optmdfpathway_base_variables=optmdfpathway_base_variables,
+        cobra_model=cobra_model,
+        dG0_values={},
+    )
 
     tested_vars = [
         x for x in optmdfpathway_base_variables.keys()
         if x in get_all_tcosa_reaction_ids(cobra_model)
     ]
+    for reaction in cobra_model.reactions:
+        for core_map_reaction in core_map_reactions:
+            if reaction.id.startswith(core_map_reaction):
+                tested_vars.append(reaction.id)
+    tested_vars = list(set(tested_vars))
 
     optmdfpathway_base_variables[biomass_reaction_id].bounds(
         mu,

@@ -1,8 +1,17 @@
+"""Creates TCOSA-reaction related dG0 statistics, i.e., dG0 staistics for all NAD(P)(H)-containing reactions.
+
+This data is especially used for the dG0 sampling in TCOSA's publication, and mentioned elsewhere there.
+"""
+
+# IMPORTS #
+# External
 import cobra
 from statistics import mean, median
+# Internal
 from helper import json_load
 
 
+# SCRIPT RUN #
 model = cobra.io.read_sbml_model("resources/iML1515_irreversible_cleaned.xml")
 dG0s = json_load("resources/dG0_iML1515_irreversible_cleaned.json")
 

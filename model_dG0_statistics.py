@@ -1,8 +1,15 @@
+"""This script shows, when running, some statistics about the ΔG'° values collected for iML1515."""
+
+
+# IMPORT SECTION #
+# External imports
 import cobra
 from statistics import mean, median
+# Internal imports
 from helper import json_load
 
 
+# ACTUAL LOGIC SECTION #
 model = cobra.io.read_sbml_model("resources/iML1515_irreversible_cleaned.xml")
 dG0s = json_load("resources/dG0_iML1515_irreversible_cleaned.json")
 

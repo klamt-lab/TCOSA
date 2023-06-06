@@ -1,0 +1,1572 @@
+{
+    "23dhb_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "3pg_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [
+                "0,868"
+            ],
+            "min_differences": [
+                0.001003212321217418
+            ]
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [
+                "0,818",
+                "0,768",
+                "0,718",
+                "0,668"
+            ],
+            "min_differences": [
+                0.0012086151555879864,
+                0.0015044992731888713,
+                0.0015044992731888713,
+                0.0015044992731888713
+            ]
+        }
+    },
+    "4hbz_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "6pgc_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "aacoa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "accoa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "actp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "acon_C_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "ade_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "adn_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "adp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": false,
+            "defective_mus": [
+                "0,868",
+                "0,818",
+                "0,768",
+                "0,718",
+                "0,668",
+                "0,618",
+                "0,568",
+                "0,518",
+                "0,468",
+                "0,418",
+                "0,368",
+                "0,318",
+                "0,268",
+                "0,218",
+                "0,168",
+                "0,118",
+                "0,068",
+                "0,05"
+            ],
+            "min_differences": [
+                0.0002599727717135068,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824,
+                0.00034934043735228824
+            ]
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [
+                "0,768",
+                "0,718",
+                "0,668"
+            ],
+            "min_differences": [
+                0.00038799611015045044,
+                0.0003879961101504526,
+                0.0003879961101553071
+            ]
+        }
+    },
+    "adpglc_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "ala__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "akg_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [
+                "0,868"
+            ],
+            "min_differences": [
+                0.00030023989979518785
+            ]
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": false,
+            "defective_mus": [
+                "0,868",
+                "0,818",
+                "0,768",
+                "0,718",
+                "0,668",
+                "0,618",
+                "0,568",
+                "0,518",
+                "0,468",
+                "0,418",
+                "0,368",
+                "0,318",
+                "0,268",
+                "0,218",
+                "0,168",
+                "0,118",
+                "0,068",
+                "0,05"
+            ],
+            "min_differences": [
+                0.00014315520751671533,
+                0.0002572099959223076,
+                0.00031099999999999997,
+                0.00031099999999999997,
+                0.00031099999999999997,
+                0.0003059639776245936,
+                0.0003059639776245936,
+                0.0003059639776245936,
+                0.0003059639776245936,
+                0.0003059639776245936,
+                0.0003059639776245936,
+                0.0003059639776245936,
+                0.0003059639776245936,
+                0.0003059639776245936,
+                0.0003059639776245936,
+                0.0003059639776245936,
+                0.0003059639776245936,
+                0.0003059639776245936
+            ]
+        }
+    },
+    "amp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "anth_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "arg__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "asn__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "asp__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "atp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "cbasp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "cit_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "citr__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "cmp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "coa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "ctp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "cpmp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "cytd_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "csn_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "damp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "datp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "dctp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "dad_2_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "dgsn_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "2dr5p_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "dgmp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "dhor__S_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "dhap_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "dtdp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "dttp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "fad_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "fadh2_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "fdp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "fum_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "gdp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "glcn_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "gam6p_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "glu__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": false,
+            "defective_mus": [
+                "0,868",
+                "0,818",
+                "0,768",
+                "0,718",
+                "0,668",
+                "0,618",
+                "0,568",
+                "0,518",
+                "0,468",
+                "0,418",
+                "0,368",
+                "0,318",
+                "0,268",
+                "0,218",
+                "0,168",
+                "0,118",
+                "0,068",
+                "0,05"
+            ],
+            "min_differences": [
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999
+            ]
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": false,
+            "defective_mus": [
+                "0,868",
+                "0,818",
+                "0,768",
+                "0,718",
+                "0,668",
+                "0,618",
+                "0,568",
+                "0,518",
+                "0,468",
+                "0,418",
+                "0,368",
+                "0,318",
+                "0,268",
+                "0,218",
+                "0,168",
+                "0,118",
+                "0,068",
+                "0,05"
+            ],
+            "min_differences": [
+                0.07239999999999999,
+                0.08710414484225579,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999,
+                0.07239999999999999
+            ]
+        }
+    },
+    "gln__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "glyc3p_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "gmp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "gtp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "gua_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "gsn_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "his__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "histd_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "hcys__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "ins_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "lys__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "mal__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "malcoame_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "met__D_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "acgam1p_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "acorn_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "orn_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "phe__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "phpyr_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "pep_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [
+                "0,868",
+                "0,818"
+            ],
+            "min_differences": [
+                0.00014287406438241935,
+                0.00013353674896373732
+            ]
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [
+                "0,768",
+                "0,718",
+                "0,668"
+            ],
+            "min_differences": [
+                0.00014125526077621411,
+                0.00014125526077621428,
+                0.00014125526077668433
+            ]
+        }
+    },
+    "pro__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "ppcoa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "prpp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "quln_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "ribflv_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "amet_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "ser__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "skm_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "succ_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "succoa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "thr__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "trp__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "tyr__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "udp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "udpglcur_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "udpg_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "uri_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "utp_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "val__L_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "gthox_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "gthrd_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "nad_tcosa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "nadh_tcosa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": false,
+            "defective_mus": [
+                "0,868",
+                "0,818",
+                "0,768",
+                "0,718",
+                "0,668",
+                "0,618",
+                "0,568",
+                "0,518",
+                "0,468",
+                "0,418",
+                "0,368",
+                "0,318",
+                "0,268",
+                "0,218",
+                "0,168",
+                "0,118",
+                "0,068",
+                "0,05"
+            ],
+            "min_differences": [
+                5.256006633025602e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153411e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05
+            ]
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": false,
+            "defective_mus": [
+                "0,868",
+                "0,818",
+                "0,768",
+                "0,718",
+                "0,668",
+                "0,618",
+                "0,568",
+                "0,518",
+                "0,468",
+                "0,418",
+                "0,368",
+                "0,318",
+                "0,268",
+                "0,218",
+                "0,168",
+                "0,118",
+                "0,068",
+                "0,05"
+            ],
+            "min_differences": [
+                4.5997627531043405e-05,
+                4.523948525756911e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05
+            ]
+        }
+    },
+    "nadp_tcosa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "nadph_tcosa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    }
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""[summary]"""
+"""Generic helper functions, primarily for I/O tasks such as pickle and JSON file handlings."""
 
 ## IMPORTS ##
 # External
@@ -164,29 +164,3 @@ def standardize_folder(folder: str) -> str:
         folder += "/"
 
     return folder
-
-
-def save_xy_point_plot(path: str, xs: List[float], ys: List[float], title: str, xlabel: str, ylabel: str,
-                       style: str="bo", clear_previous_figure: bool=True):
-    """[summary]
-
-    Args:
-        path (str): [description]
-        xs (List[float]): [description]
-        ys (List[float]): [description]
-        title (str): [description]
-        xlabel (str): [description]
-        ylabel (str): [description]
-        style (str, optional): [description]. Defaults to "bo".
-        clear_previous_figure (bool, optional): [description]. Defaults to True.
-    """
-    if clear_previous_figure:
-        plt.clf()
-    plt.plot(xs, ys, style)
-    plt.title(title)
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    if path != "":
-        plt.savefig(path)
-    else:
-        plt.show()

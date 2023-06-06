@@ -1,6 +1,13 @@
+"""Contains the function for the minimal number of reactions from wild-type to optimum analysis."""
+
+# IMPORTS #
+# Internal
 import copy
 import cobra
 import pulp
+from typing import Dict
+import matplotlib.pyplot as plt
+# External
 from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
 from cosa_get_suffix import cosa_get_suffix
 from helper import ensure_folder_existence, json_load, json_write, json_zip_load
@@ -12,25 +19,36 @@ from optimization import perform_variable_minimization, perform_variable_maximiz
 from cosa_load_model_data import (
     MIN_OPTMDF, load_model_data
 )
-from typing import Dict
-import matplotlib.pyplot as plt
 
 
-def cosa_minimal_changes_test(anaerobic: bool, disallowed_changed_reaction: str="") -> None:
+# PUBLIC FUNCTION #
+def cosa_minimal_changes_test(anaerobic: bool, disallowed_changed_reaction: str="", c_source: str="glucose") -> None:
+    """Performs the minimal number of reactions from wild-type to optimum analysis.
+
+    Args:
+        anaerobic (bool): Is it anaerobic (True)?
+        disallowed_changed_reaction (str, optional): A reaction which is not allowed to be cofactor switched (only if given). Defaults to "".
+        c_source (str, optional): Either 'glucose' or 'acetate'. Defaults to "glucose".
+    """
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
-    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=False)
+    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=False, c_source=c_source)
 
     biomass_reaction_id = "BIOMASS_Ec_iML1515_core_75p37M"
 
-    suffix = cosa_get_suffix(anaerobic, False)
+    suffix = cosa_get_suffix(anaerobic, False, c_source)
 
     figures_path = f"./cosa/results{suffix}/figures/"
     ensure_folder_existence(figures_path)
 
+    if c_source == "glucose":
+        concentrations = ("PAPERCONCS", "STANDARDCONCS")
+    else:
+        concentrations = ("STANDARDCONCS",)
+
     report = ""
-    for concentrations in ("PAPERCONCS", "STANDARDCONCS"):
+    for concentrations in concentrations:
         print(f"=CONCENTRATION RANGES: {concentrations}=")
         report += f"=CONCENTRATION RANGES: {concentrations}=\n"
 
@@ -203,7 +221,9 @@ def cosa_minimal_changes_test(anaerobic: bool, disallowed_changed_reaction: str=
         f.write(report)
 
 
+# LOGIC #
 cosa_minimal_changes_test(anaerobic=False)
+cosa_minimal_changes_test(anaerobic=False, c_source="acetate")
 # cosa_minimal_changes_test(anaerobic=False, disallowed_changed_reaction="PDH_NADY")
 # cosa_minimal_changes_test(anaerobic=False, disallowed_changed_reaction="NADH16pp_NADY")
 # cosa_minimal_changes_test(anaerobic=False, disallowed_changed_reaction="FLDR2_NADX")

@@ -1,0 +1,137 @@
+{
+    "1": [
+        "ME1 mal__L_c + nad_c --> co2_c + nadh_c + pyr_c : b1479",
+        "ME2 mal__L_c + nadp_c --> co2_c + nadph_c + pyr_c : b2463"
+    ],
+    "2": [
+        "NADH9 2dmmq8_c + h_c + nadh_c --> 2dmmql8_c + nad_c : b1109 or b1004 or b0046 or b3713",
+        "NADPHQR4 2dmmq8_c + h_c + nadph_c --> 2dmmql8_c + nadp_c : b3028"
+    ],
+    "3": [
+        "NADH10 h_c + mqn8_c + nadh_c --> mql8_c + nad_c : b1109 or b3713 or b0046 or b1004",
+        "NADPHQR3 h_c + mqn8_c + nadph_c --> mql8_c + nadp_c : b3028"
+    ],
+    "4": [
+        "SSALx h2o_c + nad_c + sucsal_c --> 2.0 h_c + nadh_c + succ_c : b1525",
+        "SSALy h2o_c + nadp_c + sucsal_c --> 2.0 h_c + nadph_c + succ_c : b1525 or b2661"
+    ],
+    "5": [
+        "LCARS h_c + lald__L_c + nadh_c <=> 12ppd__S_c + nad_c : b2799",
+        "LCARSyi h_c + lald__L_c + nadph_c --> 12ppd__S_c + nadp_c : b0325"
+    ],
+    "6": [
+        "2DGULRx 2dhguln_c + h_c + nadh_c --> idon__L_c + nad_c : b3553",
+        "2DGULRy 2dhguln_c + h_c + nadph_c --> idon__L_c + nadp_c : b3553"
+    ],
+    "7": [
+        "DKGLCNR2y 25dkglcn_c + h_c + nadph_c --> 5dglcn_c + nadp_c : b3553",
+        "DKGLCNR2x 25dkglcn_c + h_c + nadh_c --> 5dglcn_c + nad_c : b3553"
+    ],
+    "8": [
+        "IDOND 5dglcn_c + h_c + nadh_c <=> idon__L_c + nad_c : b4267",
+        "IDOND2 5dglcn_c + h_c + nadph_c --> idon__L_c + nadp_c : b4267"
+    ],
+    "9": [
+        "FADRx fad_c + h_c + nadh_c --> fadh2_c + nad_c : b3844",
+        "FADRx2 fad_c + h_c + nadph_c --> fadh2_c + nadp_c : b2764 and b2763"
+    ],
+    "10": [
+        "GLYCLTDx glx_c + h_c + nadh_c --> glyclt_c + nad_c : b3553 or b1033",
+        "GLYCLTDy glx_c + h_c + nadph_c --> glyclt_c + nadp_c : b1033 or b3553"
+    ],
+    "11": [
+        "HPYRRy h_c + hpyr_c + nadph_c --> glyc__R_c + nadp_c : b1033 or b3553",
+        "HPYRRx h_c + hpyr_c + nadh_c --> glyc__R_c + nad_c : b1033 or b3553"
+    ],
+    "12": [
+        "BETALDHx betald_c + h2o_c + nad_c --> glyb_c + 2.0 h_c + nadh_c : b0312",
+        "BETALDHy betald_c + h2o_c + nadp_c --> glyb_c + 2.0 h_c + nadph_c : b0312"
+    ],
+    "13": [
+        "FMNRx2 fmn_c + h_c + nadph_c --> fmnh2_c + nadp_c : b3844 or b0937 or (b2764 and b2763)",
+        "FMNRx fmn_c + h_c + nadh_c --> fmnh2_c + nad_c : b0937 or b3844"
+    ],
+    "14": [
+        "NADH5 h_c + nadh_c + q8_c --> nad_c + q8h2_c : b1109 or b0046 or b3713 or b1004",
+        "NADPHQR2 h_c + nadph_c + q8_c --> nadp_c + q8h2_c : b3028"
+    ],
+    "15": [
+        "BSORy btnso_c + h_c + nadph_c --> btn_c + h2o_c + nadp_c : b3551",
+        "BSORx btnso_c + h_c + nadh_c --> btn_c + h2o_c + nad_c : b3551"
+    ],
+    "16": [
+        "NODOy nadph_c + 2.0 no_c + 2.0 o2_c --> h_c + nadp_c + 2.0 no3_c : b2552",
+        "NODOx nadh_c + 2.0 no_c + 2.0 o2_c --> h_c + nad_c + 2.0 no3_c : b2552"
+    ],
+    "17": [
+        "FLVR h_c + nadph_c + ribflv_c --> nadp_c + rbflvrd_c : b3844 or (b2764 and b2763)",
+        "FLVRx h_c + nadh_c + ribflv_c --> nad_c + rbflvrd_c : b3844"
+    ],
+    "18": [
+        "ALR2 h_c + mthgxl_c + nadph_c --> acetol_c + nadp_c : b3012 or b0207 or b1781 or b3001",
+        "ALR2x h_c + mthgxl_c + nadh_c --> acetol_c + nad_c : b1771"
+    ],
+    "19": [
+        "EAR141y h_c + nadph_c + t3c7mrseACP_c --> nadp_c + tdeACP_c : b1288",
+        "EAR141x h_c + nadh_c + t3c7mrseACP_c --> nad_c + tdeACP_c : b1288"
+    ],
+    "20": [
+        "EAR161x h_c + nadh_c + t3c9palmeACP_c --> hdeACP_c + nad_c : b1288",
+        "EAR161y h_c + nadph_c + t3c9palmeACP_c --> hdeACP_c + nadp_c : b1288"
+    ],
+    "21": [
+        "EAR181x h_c + nadh_c + t3c11vaceACP_c --> nad_c + octeACP_c : b1288",
+        "EAR181y h_c + nadph_c + t3c11vaceACP_c --> nadp_c + octeACP_c : b1288"
+    ],
+    "22": [
+        "EAR180x h_c + nadh_c + toctd2eACP_c --> nad_c + ocdcaACP_c : b1288",
+        "EAR180y h_c + nadph_c + toctd2eACP_c --> nadp_c + ocdcaACP_c : b1288"
+    ],
+    "23": [
+        "EAR80y h_c + nadph_c + toct2eACP_c --> nadp_c + ocACP_c : b1288",
+        "EAR80x h_c + nadh_c + toct2eACP_c --> nad_c + ocACP_c : b1288"
+    ],
+    "24": [
+        "EAR120y h_c + nadph_c + tddec2eACP_c --> ddcaACP_c + nadp_c : b1288",
+        "EAR120x h_c + nadh_c + tddec2eACP_c --> ddcaACP_c + nad_c : b1288"
+    ],
+    "25": [
+        "EAR121y h_c + nadph_c + t3c5ddeceACP_c --> cddec5eACP_c + nadp_c : b1288",
+        "EAR121x h_c + nadh_c + t3c5ddeceACP_c --> cddec5eACP_c + nad_c : b1288"
+    ],
+    "26": [
+        "EAR140x h_c + nadh_c + tmrs2eACP_c --> myrsACP_c + nad_c : b1288",
+        "EAR140y h_c + nadph_c + tmrs2eACP_c --> myrsACP_c + nadp_c : b1288"
+    ],
+    "27": [
+        "EAR40y but2eACP_c + h_c + nadph_c --> butACP_c + nadp_c : b1288",
+        "EAR40x but2eACP_c + h_c + nadh_c --> butACP_c + nad_c : b1288"
+    ],
+    "28": [
+        "EAR160y h_c + nadph_c + tpalm2eACP_c --> nadp_c + palmACP_c : b1288",
+        "EAR160x h_c + nadh_c + tpalm2eACP_c --> nad_c + palmACP_c : b1288"
+    ],
+    "29": [
+        "EAR100y h_c + nadph_c + tdec2eACP_c --> dcaACP_c + nadp_c : b1288",
+        "EAR100x h_c + nadh_c + tdec2eACP_c --> dcaACP_c + nad_c : b1288"
+    ],
+    "30": [
+        "EAR60y h_c + nadph_c + thex2eACP_c --> hexACP_c + nadp_c : b1288",
+        "EAR60x h_c + nadh_c + thex2eACP_c --> hexACP_c + nad_c : b1288"
+    ],
+    "31": [
+        "2DGULRGx 2dhguln_c + h_c + nadh_c --> glcn_c + nad_c : b3553",
+        "2DGULRGy 2dhguln_c + h_c + nadph_c --> glcn_c + nadp_c : b3553"
+    ],
+    "32": [
+        "DHPTDNR dhptdn_c + 3.0 h_c + nadph_c --> nadp_c + thptdn_c : b0578",
+        "DHPTDNRN dhptdn_c + 3.0 h_c + nadh_c --> nad_c + thptdn_c : b0578"
+    ],
+    "33": [
+        "QUINDHyi nadp_c + quin_c --> 3dhq_c + 2.0 h_c + nadph_c : b1692",
+        "QUINDH nad_c + quin_c --> 3dhq_c + 2.0 h_c + nadh_c : b1692"
+    ],
+    "num_same_enzyme_rule": 22,
+    "num_different_enzyme_rule": 11,
+    "num_found_different_reaction_rules": 27
+}

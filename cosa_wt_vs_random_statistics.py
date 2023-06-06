@@ -3,13 +3,13 @@ from helper import ensure_folder_existence
 from statistics import mean, stdev
 from cosa_get_suffix import cosa_get_suffix
 
-def create_wt_vs_random_statistics(anaerobic: bool) -> None:
+def create_wt_vs_random_statistics(anaerobic: bool, c_source: str="") -> None:
     report = ""
 
     str_to_float = lambda x: float(x.replace(",", "."))
     list_to_float = lambda x: [str_to_float(y) for y in x]
 
-    data_path = f"./cosa/results_{'anaerobic' if anaerobic else 'aerobic'}/"
+    data_path = f"./cosa/results_{'anaerobic' if anaerobic else 'aerobic'}{c_source}/"
 
     str_to_float = lambda x: float(x.replace(",", "."))
     list_to_float = lambda x: [str_to_float(y) for y in x]
@@ -22,10 +22,11 @@ def create_wt_vs_random_statistics(anaerobic: bool) -> None:
 
     table_paths = [
         f"{data_path}optmdf_table_STANDARDCONC.csv",
-        f"{data_path}optmdf_table_VIVOCONC.csv",
         f"{data_path}optsubmdf_table_STANDARDCONC.csv",
-        f"{data_path}optsubmdf_table_VIVOCONC.csv",
     ]
+    if c_source == "":
+        table_paths.append(f"{data_path}optmdf_table_VIVOCONC.csv")
+        table_paths.append("{data_path}optsubmdf_table_VIVOCONC.csv")
 
     for table_path in table_paths:
         table = pandas.read_csv(
@@ -86,12 +87,13 @@ def create_wt_vs_random_statistics(anaerobic: bool) -> None:
         report += f"{title}\n"
         report += f"{table}\n"
 
-        suffix = cosa_get_suffix(anaerobic, False)
+        suffix = cosa_get_suffix(anaerobic, False, c_source=c_source.replace("_", ""))
         with open(f"./cosa/results{suffix}/wt_vs_random_statistics.txt", "w", encoding="utf-8") as f:
             f.write(report)
 
 print("AEROBIC")
-create_wt_vs_random_statistics(anaerobic=False)
+# create_wt_vs_random_statistics(anaerobic=False)
+create_wt_vs_random_statistics(anaerobic=False, c_source="_acetate")
 print("================")
 print("ANAEROBIC")
 print("================")

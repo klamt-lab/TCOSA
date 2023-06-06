@@ -1,8 +1,12 @@
+"""The module contains the main function for the random specificity sampling as shown in TCOSA's publication."""
+# IMPORTS #
+# External
 import cobra
 import copy
 import os
 import numpy
 from typing import List
+# Internal
 from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
 from cosa_get_suffix import cosa_get_suffix
 from fba import get_fba_base_problem, perform_fba_flux_maximization
@@ -13,18 +17,34 @@ from cosa_create_table import create_cosa_tables
 from cosa_load_model_data import (
     MIN_OPTMDF, load_model_data
 )
-from cosa_random_sampling_figures import create_cosa_figures, create_total_cosa_figure, create_total_cosa_figure_optsubmdf_only
+from cosa_random_sampling_figures import create_cosa_figures, create_total_cosa_figure
 from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
 from cosa_add_promiscuity_constraints import cosa_add_promiscuity_constraints
 
 
-def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: int, num_randomfixed_random: int, step_size: float=0.05, step_number: float=9):
+# PUBLIC FUNCTIONS #
+def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: int, num_randomfixed_random: int, c_source: str="glucose", step_size: float=0.05, step_number: float=9, fixed_nadx_change: int=0):
+    """Performs a TCOSA random specificity sampling (and calculates all main specificities) with the given settings.
+
+    Specificities that were already succesfully calculated are not calculated again.
+
+    Args:
+        anaerobic (bool): Is it anaerobic (no oxygen)? Then, this argument is True.
+        expanded (bool): Is is a 2-cofactor (False) or 3-cofactor (True) model?
+        num_randoms_random (int): Number of random specificities with random number NAD and NADP reactions.
+        num_randomfixed_random (int): Number of random specificities with original number NAD and NADP reactions.
+        c_source (str, optional): Either 'glucose' or 'acetate'. Defaults to "glucose".
+        step_size (float, optional): The growth rate step size (going down). Defaults to 0.05.
+        step_number (float, optional): Unused legacy argument. Defaults to 9.
+        fixed_nadx_change (int, optional): Fixed NAD-NADP dG0 difference for the hypothetical 3rd cofactor. Defaults to 0.
+        In TCOSA's publications, the effects with +30 and -30 kJ/mol are shown.
+    """
     all_base_ids, cobra_model, concentration_values_free, concentration_values_paper,\
     standardconc_dG0_values, paperconc_dG0_values,\
     num_nad_and_nadp_reactions, num_nad_base_ids, num_nadp_base_ids,\
-    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=expanded)
+    ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction_ids = load_model_data(anaerobic=anaerobic, expanded=expanded, c_source=c_source)
 
-    suffix = cosa_get_suffix(anaerobic, expanded)
+    suffix = cosa_get_suffix(anaerobic, expanded, c_source, fixed_nadx_change)
     ensure_folder_existence("./cosa")
     ensure_folder_existence(f"./cosa/results{suffix}")
     ensure_folder_existence(f"./cosa/results{suffix}/runs")
@@ -104,13 +124,38 @@ def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: in
     print(nadx_scenarios)
     original_used_growth = used_growth
 
-    for concentration_scenario in ("STANDARDCONC", "VIVOCONC"):
+    if (anaerobic) or (c_source == "acetate") or (expanded):
+        concentration_scenarios = ("STANDARDCONC",)
+    else:
+        concentration_scenarios = ("STANDARDCONC", "VIVOCONC",)
+
+
+    for concentration_scenario in concentration_scenarios:
         if concentration_scenario == "STANDARDCONC":
             dG0_values = copy.deepcopy(standardconc_dG0_values)
             used_concentration_values = concentration_values_free
         elif concentration_scenario == "VIVOCONC":
             dG0_values = copy.deepcopy(paperconc_dG0_values)
             used_concentration_values = concentration_values_paper
+
+        if fixed_nadx_change != 0:
+            if not expanded:
+                input("WARNING: WRONG CONFUGURATION!")
+            reaction_ids = [x.id for x in cobra_model.reactions]
+            for key in reaction_ids:
+                if not "_NADZ_TCOSA" in key:
+                    continue
+                if key not in dG0_values.keys():
+                    continue
+                if (dG0_values[key]["dG0"] == +100.0) or (dG0_values[key]["dG0"] == -100.0):
+                    continue
+                cobra_reaction_metabolites = cobra_model.reactions.get_by_id(key).metabolites
+                try:
+                    num_nadz = cobra_reaction_metabolites[cobra_model.metabolites.get_by_id("nadz_tcosa_c")]
+                    # num_nadzh = cobra_reaction_metabolites[cobra_model.reactions.get_by_id("nadzh_tcosa_c")]
+                    dG0_values[key]["dG0"] += num_nadz * fixed_nadx_change
+                except KeyError:
+                    continue
 
         for nadx_scenario in nadx_scenarios:
             print("~~~")
@@ -234,14 +279,5 @@ def cosa_random_sampling(anaerobic: bool, expanded: bool, num_randoms_random: in
                     full_optsubmdf_results,
                 )
 
-    create_cosa_tables(data_path=f"cosa/results{suffix}/runs", output_path=f"cosa/results{suffix}")
-    create_cosa_figures(data_path=f"./cosa/results{suffix}/", figures_path=f"./cosa/results{suffix}/figures/", anaerobic=anaerobic)
-
-
-
-cosa_random_sampling(anaerobic=False, expanded=False, num_randoms_random=500, num_randomfixed_random=500)
-cosa_random_sampling(anaerobic=True, expanded=False, num_randoms_random=500, num_randomfixed_random=500)
-cosa_random_sampling(anaerobic=False, expanded=True, num_randoms_random=1, num_randomfixed_random=1)
-cosa_random_sampling(anaerobic=True, expanded=True, num_randoms_random=1, num_randomfixed_random=1)
-create_total_cosa_figure()
-# create_total_cosa_figure_optsubmdf_only()
+    create_cosa_tables(data_path=f"cosa/results{suffix}/runs", output_path=f"cosa/results{suffix}", concentration_scenarios=concentration_scenarios)
+    create_cosa_figures(data_path=f"./cosa/results{suffix}/", figures_path=f"./cosa/results{suffix}/figures/", anaerobic=anaerobic, concentration_scenarios=concentration_scenarios)

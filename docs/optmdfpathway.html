@@ -1,0 +1,1486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>optmdfpathway API documentation</title>
+<meta name="description" content="Functions for creating OptMDFpathway problems, including MDF, SubMDF and bottleneck-finding routines …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>optmdfpathway</code></h1>
+</header>
+<section id="section-intro">
+<p>Functions for creating OptMDFpathway problems, including MDF, SubMDF and bottleneck-finding routines.</p>
+<p>For more about it, see its publication:
+Hädicke, Oliver, et al. "OptMDFpathway: Identification of metabolic pathways with maximal thermodynamic driving force and its application
+for analyzing the endogenous CO2 fixation potential of Escherichia coli." PLoS computational biology 14.9 (2018): e1006492.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/usr/bin/env python3
+&#34;&#34;&#34;Functions for creating OptMDFpathway problems, including MDF, SubMDF and bottleneck-finding routines.
+
+For more about it, see its publication:
+Hädicke, Oliver, et al. &#34;OptMDFpathway: Identification of metabolic pathways with maximal thermodynamic driving force and its application
+for analyzing the endogenous CO2 fixation potential of Escherichia coli.&#34; PLoS computational biology 14.9 (2018): e1006492.
+&#34;&#34;&#34;
+
+## IMPORTS ##
+# External
+import cobra
+import copy
+import concurrent.futures
+import pulp
+import ray
+from math import exp, log
+from typing import Any, List, Dict
+# Internal
+from fba import get_fba_base_problem
+from optimization import perform_optimization_with_given_objective, perform_variable_maximization, perform_variable_minimization, solve_current_problem
+
+
+## CONSTANTS ##
+M = 10_000
+STANDARD_R = 8.314e-3  # kJ⋅K⁻1⋅mol⁻1 (standard value is in J⋅K⁻1⋅mol⁻1)
+STANDARD_T = 298.15  # K
+
+
+## PUBLIC FUNCTIONS ##
+def get_optmdfpathway_base_problem(cobra_model: cobra.Model, dG0_values: Dict[str, Dict[str, float]],
+                                   metabolite_concentration_values: Dict[str, Dict[str, float]],
+                                   ratio_constraint_data: List[Dict[str, Any]],
+                                   R: float, T: float,
+                                   extra_constraints: List[Dict[str, float]],
+                                   sub_network_ids: List[str]=[],
+                                   add_optmdf_bottleneck_analysis: bool=False) -&gt; pulp.LpProblem:
+    &#34;&#34;&#34;Returns an OptMDFpathway &#39;base problem&#39;, i.e., all constraints but no objective.
+
+    The resulting (Opt)MDF variable is called &#39;var_B&#39;, the (Opt)SubMDF &#39;var_B2&#39;.
+
+    Args:
+        cobra_model (cobra.Model): The cobrapy model from which the base problem is built up from.
+        dG0_values (Dict[str, Dict[str, float]]): A dictionary containing the dG0 values. The keys
+        are the reaction IDs, the values another dictionary where, under the key &#39;dG0&#39;, the dG0 values are given.
+        metabolite_concentration_values (Dict[str, Dict[str, float]]): A dictionary containing the metabolite concentration
+        values. The keys are the metabolite IDs, the values another dictionary with a &#39;min&#39; and a &#39;max&#39; value.
+        ratio_constraint_data (List[Dict[str, Any]]): [Can be empty] A list of metabolite concentration ratios. It is a list
+        of dictionaries where every dictionary described the ratio constraint. Each dictionary contains the keys
+        &#39;c_i&#39; (a metabolite ID,) &#39;c_j&#39; (another ID), &#39;h_min&#39; (the minimal ratio) and &#39;h_max&#39; (maximal ratio) such that
+        c_i / c_j &lt;= h_max AND c_i / c_j &gt;= h_min.
+        R (float): The gas constant. You can use this module&#39;s STANDARD_R.
+        T (float): The temperature. You can use this module&#39;s STANADRD_T.
+        extra_constraints (List[Dict[str, float]]): Additional linear constraints as described in the optimization module.
+        sub_network_ids (List[str], optional): If given as list of reaction IDs, these reactions get extra constraints
+        such that a SubMDF for these reactions can be calculated. The SubMDF will be added as a variable called &#39;var_B2&#39;. Defaults to [].
+        add_optmdf_bottleneck_analysis (bool, optional): If True, adds constaints such that a subsequent minimization of the newly created
+        variable &#39;zb_sum_var&#39; can be performed with a previously given minimal value for &#39;var_B&#39; and/or &#39;var_B2&#39;. If the given (Sub)MDF cannot
+        be reached, minimizing zb_sum_var returns the lowest number of dG0 &#39;deletions&#39; (i.e., &#39;bottleneck deletions&#39;) such that
+        the given (Sub)MDF can be reached. Defaults to False.
+
+    Returns:
+        pulp.LpProblem: The OptMDFpathway base problem.
+    &#34;&#34;&#34;
+    # Concentrations in M
+    # T in K
+    # R in kJ⋅K⁻1⋅mol⁻1 (standard value is in J⋅K⁻1⋅mol⁻1)
+    # Get FBA base
+    base_problem = get_fba_base_problem(
+        cobra_model=cobra_model,
+        extra_constraints=extra_constraints,
+    )
+    fba_base_variables = base_problem.variablesDict()
+
+    # Min/max concentrations
+    concentration_vars: Dict[str, pulp.LpVariable] = {}
+    for metabolite in cobra_model.metabolites:
+        if metabolite.id in metabolite_concentration_values.keys():
+            id_key = metabolite.id
+        else:
+            id_key = &#34;DEFAULT&#34;
+
+        min_concentration = log(metabolite_concentration_values[id_key][&#34;min&#34;])
+        max_concentration = log(metabolite_concentration_values[id_key][&#34;max&#34;])
+
+        concentration_vars[metabolite.id] = pulp.LpVariable(
+            name=&#34;x_&#34;+metabolite.id,
+            lowBound=min_concentration,
+            upBound=max_concentration,
+            cat=pulp.LpContinuous,
+        )
+
+    # Concentration ratios
+    ratio_counter = 0
+    for ratio_constraint in ratio_constraint_data:
+        # c_i / c_j &lt;= h_max AND c_i / c_j &gt;= h_min
+        # &lt;=&gt; x_i - x_j &lt;= ln(h_max) AND x_i - x_j &gt;= ln(h_min)
+        # &lt;=&gt; (A) x_i - x_j - ln(h_max) &lt;= 0 AND (B) -x_i + x_j - ln(h_min) &lt;= 0
+        c_i_id = ratio_constraint[&#34;c_i&#34;]
+        c_j_id = ratio_constraint[&#34;c_j&#34;]
+
+        ln_h_min = log(ratio_constraint[&#34;h_min&#34;])
+        ln_h_max = log(ratio_constraint[&#34;h_max&#34;])
+
+        # (A) x_i - x_j - ln(h_max) &lt;= 0
+        max_ratio_constraint: pulp.LpConstraint = concentration_vars[c_i_id] - concentration_vars[c_j_id] - ln_h_max &lt;= 0
+        # (B) -x_i + x_j - ln(h_min) &lt;= 0
+        min_ratio_constraint: pulp.LpConstraint = -concentration_vars[c_i_id] + concentration_vars[c_j_id] - ln_h_min &lt;= 0
+
+        base_problem += max_ratio_constraint
+        base_problem += min_ratio_constraint
+
+        ratio_counter += 1
+
+    # df variables (f_r)
+    var_B = pulp.LpVariable(
+        name=&#34;var_B&#34;,
+        lowBound=-float(&#34;inf&#34;),
+        upBound=float(&#34;inf&#34;),
+        cat=pulp.LpContinuous,
+    )
+
+    has_subnetwork = len(sub_network_ids) &gt; 0
+    if has_subnetwork:
+        var_B2 = pulp.LpVariable(
+            name=&#34;var_B2&#34;,
+            lowBound=-float(&#34;inf&#34;),
+            upBound=float(&#34;inf&#34;),
+            cat=pulp.LpContinuous,
+        )
+
+    zb_sum: pulp.LpAffineExpression = 0.0
+    for reaction in cobra_model.reactions:
+        if reaction.id not in dG0_values.keys():
+            continue
+
+        current_f_variable = pulp.LpVariable(
+            name=f&#34;f_var_{reaction.id}&#34;,
+            lowBound=-float(&#34;inf&#34;),
+            upBound=float(&#34;inf&#34;),
+            cat=pulp.LpContinuous,
+        )
+
+        # f_r = -(ΔG&#39;0_r + RT * S^(t)_.,r * x)
+        # &lt;=&gt; -ΔG&#39;0_r - - f_r RT * S^(t)_.,r * x = 0
+        dG0_value = dG0_values[reaction.id][&#34;dG0&#34;]
+        dG0_randomfixed_variable = pulp.LpVariable(
+            name=f&#34;dG0_{reaction.id}&#34;,
+            cat=pulp.LpContinuous,
+        )
+        dG0_randomfixed_variable.setInitialValue(dG0_value)
+        dG0_randomfixed_variable.fixValue()
+
+        # e.g.,
+        #     RT * ln(([S]*[T])/([A]²*[B]))
+        # &lt;=&gt; RT*ln([S]) + RT*ln([T]) - 2*RT*ln([A]) - RT*ln([B])
+        reaction_f_expression = -current_f_variable
+        for metabolite in reaction.metabolites:
+            stoichiometry = reaction.metabolites[metabolite]
+            reaction_f_expression -= stoichiometry * R * T * concentration_vars[metabolite.id]
+        reaction_f_expression -= dG0_randomfixed_variable
+        reaction_f_constraint: pulp.LpConstraint = reaction_f_expression == 0
+
+        base_problem += reaction_f_constraint
+
+        # OptMDFpathway binary variable introduction
+        current_z_variable = pulp.LpVariable(
+            name=f&#34;z_var_{reaction.id}&#34;,
+            cat=pulp.LpBinary,
+        )
+
+        if add_optmdf_bottleneck_analysis:
+            current_zb_variable = pulp.LpVariable(
+                name=f&#34;zb_var_{reaction.id}&#34;,
+                cat=pulp.LpBinary,
+                lowBound=0.0,
+                upBound=1.0,
+            )
+
+        # Find flux variable
+        current_flux_variable = fba_base_variables[reaction.id]
+
+        # z_r = 0 -&gt; v_r = 0
+        # In Big M form: v_r &lt;= M*z_r &lt;=&gt; v_r - M*z_r &lt;= 0
+        z_zero_constraint: pulp.LpConstraint = current_flux_variable - M*current_z_variable &lt;= 0
+        # z_r = 1 -&gt; f_r &gt;= B == f_r - B &gt;= 0
+        # In Big M form: f_r + (1-z_i)*M &gt;= B
+        z_one_constraint: pulp.LpConstraint = 0.0
+        if (not add_optmdf_bottleneck_analysis):
+            z_one_constraint = var_B &lt;= current_f_variable + (1-current_z_variable)*M
+        else:
+            z_one_constraint = var_B &lt;= current_f_variable + (1-current_z_variable)*M + current_zb_variable*5_000
+            zb_sum += current_zb_variable
+
+        base_problem += z_zero_constraint
+        base_problem += z_one_constraint
+
+        if has_subnetwork:
+            if reaction.id in sub_network_ids:
+                z_one_constraint_2: pulp.LpConstraint = var_B2 &lt;= current_f_variable + (1-current_z_variable)*M
+                base_problem += z_one_constraint_2
+
+    if add_optmdf_bottleneck_analysis:
+        zb_sum_var = pulp.LpVariable(
+            name=f&#34;zb_sum_var&#34;,
+            lowBound=-float(&#34;inf&#34;),
+            upBound=float(&#34;inf&#34;),
+            cat=pulp.LpContinuous,
+        )
+        base_problem += zb_sum_var == zb_sum
+
+    return base_problem
+
+
+def get_thermodynamic_bottlenecks(cobra_model: cobra.Model,
+                                  optmdfpathway_base_problem: pulp.LpProblem,
+                                  optmdfpathway_result: Dict[str, Dict[str, float]],
+                                  **kwargs) -&gt; List[str]:
+    &#34;&#34;&#34;[summary]
+
+    Args:
+        cobra_model (cobra.Model): [description]
+        optmdfpathway_base_problem (pulp.LpProblem): [description]
+        original_max_mdf (float): [description]
+
+    Returns:
+        List[str]: [description]
+    &#34;&#34;&#34;
+    epsilon = 1e-3
+    optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+
+    original_max_mdf = optmdfpathway_result[&#34;values&#34;][&#34;var_B&#34;]
+    optmdfpathway_base_variables[&#34;var_B&#34;].bounds(original_max_mdf, 10e9)
+
+    checked_ids = []
+    optmdfs = {}
+    thermodynamic_bottleneck_ids: List[str] = []
+    for reaction in cobra_model.reactions:
+        if abs(optmdfpathway_result[&#34;values&#34;][reaction.id]) &lt; 1e-6:
+            continue
+
+        f_var_name = f&#34;f_var_{reaction.id}&#34;
+
+        if f_var_name not in optmdfpathway_result[&#34;values&#34;].keys():
+            continue
+
+        if abs(optmdfpathway_result[&#34;values&#34;][f_var_name] - original_max_mdf) &gt; 0.5:
+            continue
+
+        # Test result
+        try:
+            current_dG0_variable = optmdfpathway_base_variables[f&#34;dG0_{reaction.id}&#34;]
+        except KeyError:
+            continue
+
+        original_dG0 = current_dG0_variable.lowBound
+        current_dG0_variable.bounds(original_dG0-500, original_dG0-500)
+        bottleneck_problem_result = perform_variable_maximization(optmdfpathway_base_problem, &#34;var_B&#34;, optmdfpathway_base_variables, **kwargs)
+        current_dG0_variable.bounds(original_dG0, original_dG0)
+
+        if bottleneck_problem_result[&#34;status&#34;] != &#34;Optimal&#34;:
+            # print(bottleneck_problem_result[&#34;status&#34;])
+            # print(&#34;ERROR in OptMDFpathway with &#34;, reaction.id)
+            continue
+        checked_ids.append(reaction.id)
+        new_optmdf = bottleneck_problem_result[&#34;values&#34;][&#34;var_B&#34;]
+        if new_optmdf &gt; (original_max_mdf + epsilon):
+            optmdfs[reaction.id] = new_optmdf
+            thermodynamic_bottleneck_ids.append(reaction.id)
+
+    reactions: List[cobra.Reaction] = [cobra_model.reactions.get_by_id(x) for x in thermodynamic_bottleneck_ids]
+    metabolite_data: Dict[str, List[str]] = {}
+    bottleneck_report = f&#34;===BOTTLENECK REPORT===\n&#34;
+    bottleneck_report += f&#34;&gt;Number of bottleneck reactions: {len(reactions)}\n&#34;
+    bottleneck_report += f&#34;&gt;Original OptMDF: {original_max_mdf} kJ/mol\n&#34;
+    counter = 0
+    for reaction in reactions:
+        current_dG0_variable = optmdfpathway_base_variables[f&#34;dG0_{reaction.id}&#34;]
+        bottleneck_report += f&#34;&gt;Bottleneck reaction no. {counter+1}:\n&#34;
+        bottleneck_report += f&#34; *ID: {reaction.id}\n&#34;
+        bottleneck_report += f&#34; *ΔG&#39;°: {round(current_dG0_variable.lowBound, 4)} kJ/mol\n&#34;
+        bottleneck_report += f&#34; *Reached OptMDF without this bottleneck: {round(optmdfs[reaction.id], 4)} kJ/mol\n&#34;
+        bottleneck_report += f&#34; *Reaction string: {reaction.reaction}\n&#34;
+        metabolite_ids = [x.id for x in reaction.metabolites]
+
+        for metabolite_id in metabolite_ids:
+            if metabolite_id not in metabolite_data.keys():
+                metabolite_data[metabolite_id] = []
+            metabolite_data[metabolite_id].append(reaction.id)
+        counter += 1
+
+    counter = 1
+    bottleneck_report += f&#34;&gt;Reaction-connecting metabolites:\n&#34;
+    for metabolite_id in metabolite_data.keys():
+        reaction_ids = metabolite_data[metabolite_id]
+        if len(reaction_ids) &gt; 1:
+            bottleneck_report += f&#34; *Metabolite no. {counter}: {metabolite_id}\n&#34;
+            bottleneck_report += f&#34;  in reactions: &#34;
+            bottleneck_report += &#34;, &#34;.join(reaction_ids)
+            bottleneck_report += &#34;\n&#34;
+            counter += 1
+
+    reaction_clusters = []
+    for reaction_ids in metabolite_data.values():
+        cluster_expanded = False
+        cluster_index = 0
+        for reaction_cluster in reaction_clusters:
+            if len(set(reaction_cluster).intersection(set(reaction_ids))) &gt; 0:
+                reaction_cluster_expanded = list(set(reaction_cluster + reaction_ids))
+                reaction_clusters[cluster_index] = reaction_cluster_expanded
+                cluster_expanded = True
+            cluster_index += 1
+        if not cluster_expanded:
+            reaction_clusters.append(copy.deepcopy(reaction_ids))
+
+        new_clusters = []
+        for reaction_cluster_1 in reaction_clusters:
+            new_cluster = copy.deepcopy(reaction_cluster_1)
+            for reaction_cluster_2 in reaction_clusters:
+                if len(set(reaction_cluster_1).intersection(set(reaction_cluster_2))) &gt; 1:
+                    new_cluster += set(new_cluster + reaction_cluster_2)
+            new_clusters.append(sorted(list(set(new_cluster))))
+        reaction_clusters = copy.deepcopy(new_clusters)
+
+    reaction_clusters = list(set([tuple(x) for x in reaction_clusters]))
+
+    bottleneck_report += &#34;&gt;Metabolite-connected reaction clusters:\n&#34;
+    counter = 1
+    for cluster in reaction_clusters:
+        bottleneck_report += f&#34;*Cluster no. {counter}:\n&#34;
+        bottleneck_report += &#34; &#34; + &#34;, &#34;.join(cluster) + &#34;\n&#34;
+        counter += 1
+
+    #######
+    if thermodynamic_bottleneck_ids == []:
+        print(&#34;Searching cluster...&#34;)
+        full_cluster = copy.deepcopy(checked_ids)
+
+        original_dG0s = {}
+        print(full_cluster)
+        for reaction_id in full_cluster:
+            current_dG0_variable = optmdfpathway_base_variables[f&#34;dG0_{reaction_id}&#34;]
+            original_dG0s[reaction_id] = current_dG0_variable.lowBound
+            current_dG0_variable.bounds(original_dG0s[reaction_id]-500, original_dG0s[reaction_id]-500)
+            print(reaction_id)
+
+        # Check all
+        bottleneck_problem_result = perform_variable_maximization(optmdfpathway_base_problem, &#34;var_B&#34;, optmdfpathway_base_variables, **kwargs)
+        new_optmdf = bottleneck_problem_result[&#34;values&#34;][&#34;var_B&#34;]
+        print(new_optmdf)
+        if not (new_optmdf &gt; (original_max_mdf + epsilon)):
+            print(original_max_mdf)
+            print(new_optmdf)
+            print(&#34;!ERROR 1!&#34;)
+
+        # Check each reaction
+        final_cluster = []
+        for reaction_id in full_cluster:
+            current_dG0_variable.bounds(original_dG0s[reaction_id], original_dG0s[reaction_id])
+            bottleneck_problem_result = perform_variable_maximization(optmdfpathway_base_problem, &#34;var_B&#34;, optmdfpathway_base_variables, **kwargs)
+            new_optmdf = bottleneck_problem_result[&#34;values&#34;][&#34;var_B&#34;]
+            if bottleneck_problem_result[&#34;status&#34;] != &#34;Optimal&#34;:
+                print(&#34;!ERROR 2!&#34;)
+                break
+            if not (new_optmdf &gt; (original_max_mdf + epsilon)):
+                final_cluster.append(reaction_id)
+            current_dG0_variable.bounds(original_dG0s[reaction_id]-500, original_dG0s[reaction_id]-500)
+
+        thermodynamic_bottleneck_ids = final_cluster
+    #######
+
+    #######
+    optmdfpathway_base_variables[&#34;var_B&#34;].bounds(-10e9, 10e9)
+
+    return thermodynamic_bottleneck_ids, bottleneck_report
+
+
+def perform_optmdfpathway_mdf_maximization(optmdfpathway_base_problem: pulp.LpProblem, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Performs an OptMDFpathway MDF optimization for the given OptMDFpathway base problem.&#34;&#34;&#34;
+    results = perform_variable_maximization(
+        base_problem=optmdfpathway_base_problem,
+        variable_id=&#34;var_B&#34;,
+        **kwargs,
+    )
+    return results
+
+
+def add_differential_reactions_constraints(optmdfpathway_base_problem: pulp.LpProblem,
+                                           in_vivo_solution: Dict[str, int]) -&gt; pulp.LpProblem:#
+    &#34;&#34;&#34;Legacy function. Not usable.&#34;&#34;&#34;
+    pass
+    &#34;&#34;&#34;
+    optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+
+    error_sum = 0.0
+    for reaction_id in in_vivo_solution.keys():
+        reaction_error_var = pulp.LpVariable(
+            name=f&#34;z_error_{reaction_id}&#34;,
+            cat=pulp.LpBinary,
+        )
+        try:
+            current_z_variable = optmdfpathway_base_variables[f&#34;z_var_{reaction_id}&#34;]
+        except KeyError:
+            print(&#34;&gt;&#34;, reaction_id)
+            continue
+        current_flux_variable = optmdfpathway_base_variables[f&#34;f_var_{reaction_id}&#34;]
+        # if in_vivo_solution[reaction_id] == 0:
+        #     optmdfpathway_base_problem += reaction_error_var == z_var
+        # else:
+        #     optmdfpathway_base_problem += reaction_error_var == 1.0 - z_var
+        # error_sum += reaction_error_var
+        ####
+        current_z2_variable = pulp.LpVariable(
+            name=f&#34;z2_var_{reaction_id}&#34;,
+            cat=pulp.LpBinary,
+        )
+
+        current_error_variable = pulp.LpVariable(
+            name=f&#34;g_var_{reaction_id}&#34;,
+            lowBound=-float(&#34;inf&#34;),
+            upBound=float(&#34;inf&#34;),
+            cat=pulp.LpContinuous,
+        )
+        z2_zero_constraint: pulp.LpConstraint = current_z2_variable - M*current_flux_variable &lt;= 0
+        if in_vivo_solution[reaction_id] == 0:
+            error_z_z2_constraint: pulp.LpConstraint = current_error_variable - current_z_variable + current_z2_variable * M &lt;= M
+            error_z2_constraint_1: pulp.LpConstraint = -current_error_variable + current_z_variable + current_z2_variable * M &lt;= M
+        else:
+            error_z_z2_constraint: pulp.LpConstraint = current_error_variable - (1.0-current_z_variable) + current_z2_variable * M &lt;= M
+            error_z2_constraint_1: pulp.LpConstraint = -current_error_variable + (1.0-current_z_variable) + current_z2_variable * M &lt;= M
+        error_z2_constraint_2: pulp.LpConstraint = current_error_variable - current_z2_variable * M &lt;= 0
+        error_z2_constraint_3: pulp.LpConstraint = -current_error_variable - current_z2_variable * M &lt;= 0
+
+        optmdfpathway_base_problem += z2_zero_constraint
+        optmdfpathway_base_problem += error_z_z2_constraint
+        optmdfpathway_base_problem += error_z2_constraint_1
+        optmdfpathway_base_problem += error_z2_constraint_2
+        optmdfpathway_base_problem += error_z2_constraint_3
+
+        error_sum += current_error_variable
+        ####
+
+    error_sum_var = pulp.LpVariable(
+        name=f&#34;reaction_error_sum&#34;,
+        cat=pulp.LpContinuous,
+    )
+    optmdfpathway_base_problem += error_sum_var == error_sum
+
+    return optmdfpathway_base_problem
+    &#34;&#34;&#34;
+
+
+def get_z_variable_status(optmdfpathway_solution: Dict[str, Any], necessary_id_part: str=&#34;&#34;) -&gt; Dict[str, int]:
+    &#34;&#34;&#34;Legacy function. Not used.&#34;&#34;&#34;
+    pass
+    &#34;&#34;&#34;
+    z_variable_status: Dict[str, int] = {}
+    for var_id in optmdfpathway_solution[&#34;values&#34;].keys():
+        if var_id.startswith(&#34;z_var_&#34;):
+            if not necessary_id_part in var_id:
+                continue
+            z_float = optmdfpathway_solution[&#34;values&#34;][var_id]
+            if z_float &lt; 1e-5:
+                z_int = 0
+            elif z_float &gt; 0.99:
+                z_int = 1
+            else:
+                print(f&#34;ERROR in get_z_variable_status():&#34;
+                      f&#34;Value {z_float} for {var_id} is no reasonable binary value&#34;)
+                raise Exception
+            z_variable_status[var_id] = z_int
+
+    return z_variable_status
+    &#34;&#34;&#34;
+
+
+def add_differential_concentration_constraints(cobra_model: cobra.Model,
+                                               optmdfpathway_base_problem: pulp.LpProblem,
+                                               in_vivo_solution: Dict[str, float],
+                                               **kwargs) -&gt; pulp.LpProblem:
+    &#34;&#34;&#34;Legacy function. Not used.&#34;&#34;&#34;
+    pass
+    &#34;&#34;&#34;
+    optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+
+    solve_current_problem(optmdfpathway_base_problem)
+
+    error_sum = 0.0
+    for metabolite in cobra_model.metabolites:
+        if len(metabolite.reactions) == 0:
+            continue
+
+        if metabolite.id not in in_vivo_solution.keys():
+            continue
+
+        x_var_id = f&#34;x_{metabolite.id}&#34;
+        try:
+            optmdfpathway_base_variables[x_var_id]
+        except KeyError:
+            continue
+
+        error_variable = pulp.LpVariable(
+            name=f&#34;error_{metabolite.id}&#34;,
+            cat=pulp.LpContinuous,
+        )
+        optmdfpathway_base_problem += -error_variable &lt;= log(in_vivo_solution[metabolite.id]) - optmdfpathway_base_variables[x_var_id]
+        optmdfpathway_base_problem += log(in_vivo_solution[metabolite.id]) - optmdfpathway_base_variables[x_var_id] &lt;= error_variable
+
+        error_sum += 1.0 * error_variable
+
+    error_sum_var = pulp.LpVariable(
+        name=f&#34;error_sum&#34;,
+        cat=pulp.LpContinuous,
+    )
+    optmdfpathway_base_problem += error_sum_var == error_sum
+
+    return optmdfpathway_base_problem
+    &#34;&#34;&#34;
+
+
+def perform_concentration_variability_analysis(cobra_model: cobra.Model,
+                                               optmdfpathway_base_problem: pulp.LpProblem,
+                                               min_mdf: float,
+                                               selected_metabolites: List[str]=[],
+                                               **kwargs) -&gt; Dict[str, Dict[str, float]]:
+    &#34;&#34;&#34;Performs a non-threaded concentration variability analysis in the given problem.
+
+    Args:
+        cobra_model (cobra.Model): The cobrapy model to find the metabolite IDs.
+        optmdfpathway_base_problem (pulp.LpProblem): The base problem created by get_optmdfpathway_base_problem().
+        min_mdf (float): The minimal MDF that must be reached.
+
+    Returns:
+        Dict[str, Dict[str, float]]: A dictionary with the metabolite IDs as keys, and another dictionary as value with
+        the &#39;min&#39; and &#39;max&#39; concentration values.
+    &#34;&#34;&#34;
+    optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+    var_B = optmdfpathway_base_variables[&#34;var_B&#34;]
+    optmdfpathway_base_problem += var_B &gt;= min_mdf
+
+    solve_current_problem(optmdfpathway_base_problem)
+
+    concentration_bounds: Dict[str, Dict[str, float]] = {}
+    for metabolite in cobra_model.metabolites:
+        if len(metabolite.reactions) == 0:
+            continue
+        if selected_metabolites != []:
+            if metabolite.id not in selected_metabolites:
+                continue
+
+        x_var_id = f&#34;x_{metabolite.id}&#34;
+        try:
+            optmdfpathway_base_variables[x_var_id]
+        except KeyError:
+            print(&#34;KEYERROR&#34;)
+            continue
+
+        concentration_bounds[metabolite.id] = {}
+
+        # Minimization
+        min_result = perform_variable_minimization(
+            base_problem=optmdfpathway_base_problem,
+            variable_id=x_var_id,
+            **kwargs
+        )
+        if min_result[&#34;status&#34;] == &#34;Optimal&#34;:
+            min_value = min_result[&#34;values&#34;][x_var_id]
+        else:
+            min_value = float(&#34;NaN&#34;)
+        concentration_bounds[metabolite.id][&#34;min&#34;] = exp(min_value)
+
+        # Maximization
+        max_result = perform_variable_maximization(
+            base_problem=optmdfpathway_base_problem,
+            variable_id=x_var_id,
+            **kwargs
+        )
+        if max_result[&#34;status&#34;] == &#34;Optimal&#34;:
+            max_value = max_result[&#34;values&#34;][x_var_id]
+        else:
+            max_value = float(&#34;NaN&#34;)
+        concentration_bounds[metabolite.id][&#34;max&#34;] = exp(max_value)
+
+    return concentration_bounds
+
+
+def _mt_perform_concentration_variability_analysis_multi(metabolite: cobra.Metabolite, base_problem_dict: Dict[Any, Any]):
+    &#34;&#34;&#34;Multithreading subfunction of perform_concentration_variability_analysis_multi().&#34;&#34;&#34;
+    variables_dict, optmdfpathway_base_problem = pulp.LpProblem.from_dict(base_problem_dict)
+
+    x_var_id = f&#34;x_{metabolite.id}&#34;
+    try:
+        variables_dict[x_var_id]
+    except KeyError:
+        return (metabolite.id, &#34;NO_VARIABLE&#34;, &#34;NO_VARIABLE&#34;)
+
+    # Minimization
+    min_result = perform_variable_minimization(
+        base_problem=optmdfpathway_base_problem,
+        variable_id=x_var_id
+    )
+    if min_result[&#34;status&#34;] == &#34;Optimal&#34;:
+        min_value = exp(min_result[&#34;values&#34;][x_var_id])
+    else:
+        min_value = float(&#34;NaN&#34;)
+
+    # Maximization
+    max_result = perform_variable_maximization(
+        base_problem=optmdfpathway_base_problem,
+        variable_id=x_var_id
+    )
+    if max_result[&#34;status&#34;] == &#34;Optimal&#34;:
+        max_value = exp(max_result[&#34;values&#34;][x_var_id])
+    else:
+        max_value = float(&#34;NaN&#34;)
+
+    range = abs(min_value - max_value)
+
+    return (metabolite.id, min_value, max_value, range)
+
+
+@ray.remote
+def _ray_perform_concentration_variability_analysis_multi(metabolites: List[cobra.Metabolite], base_problem_dict: Dict[Any, Any]):
+    &#34;&#34;&#34;Ray subfunction of perform_concentration_variability_analysis_multi()&#34;&#34;&#34;
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        futures = [executor.submit(_mt_perform_concentration_variability_analysis_multi, metabolite, base_problem_dict) for metabolite in metabolites]
+        results = [future.result() for future in futures]
+
+    return results
+
+
+def perform_concentration_variability_analysis_multi(cobra_model: cobra.Model,
+                                                     optmdfpathway_base_problem: pulp.LpProblem,
+                                                     min_mdf: float) -&gt; Dict[str, Dict[str, float]]:
+    &#34;&#34;&#34;Performs a multi-threaded concentration variability analysis in the given problem.
+
+    Args:
+        cobra_model (cobra.Model): The cobrapy model to find the metabolite IDs.
+        optmdfpathway_base_problem (pulp.LpProblem): The base problem created by get_optmdfpathway_base_problem().
+        min_mdf (float): The minimal MDF that must be reached.
+
+    Returns:
+        Dict[str, Dict[str, float]]: A dictionary with the metabolite IDs as keys, and another dictionary as value with
+        the &#39;min&#39; and &#39;max&#39; concentration values.
+    &#34;&#34;&#34;
+    optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+    optmdfpathway_base_variables[&#34;var_B&#34;].bounds(min_mdf, 10e9)
+
+    solve_current_problem(optmdfpathway_base_problem)
+    base_problem_dict = optmdfpathway_base_problem.to_dict()
+
+    batch_size = 10
+    loop_values = []
+    start_value = 0
+    while start_value &lt; len(cobra_model.metabolites):
+        loop_values.append(start_value)
+        start_value += batch_size
+    futures = [_ray_perform_concentration_variability_analysis_multi.remote(cobra_model.metabolites[loop_value:loop_value+batch_size], base_problem_dict)
+               for loop_value in loop_values]
+    results = ray.get(futures)
+
+    out_results = []
+    for result in results:
+        out_results += result
+
+    optmdfpathway_base_variables[&#34;var_B&#34;].bounds(-10e9, 10e9)
+
+    return out_results</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="optmdfpathway.add_differential_concentration_constraints"><code class="name flex">
+<span>def <span class="ident">add_differential_concentration_constraints</span></span>(<span>cobra_model: cobra.core.model.Model, optmdfpathway_base_problem: pulp.pulp.LpProblem, in_vivo_solution: Dict[str, float], **kwargs) ‑> pulp.pulp.LpProblem</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Legacy function. Not used.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_differential_concentration_constraints(cobra_model: cobra.Model,
+                                               optmdfpathway_base_problem: pulp.LpProblem,
+                                               in_vivo_solution: Dict[str, float],
+                                               **kwargs) -&gt; pulp.LpProblem:
+    &#34;&#34;&#34;Legacy function. Not used.&#34;&#34;&#34;
+    pass
+    &#34;&#34;&#34;
+    optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+
+    solve_current_problem(optmdfpathway_base_problem)
+
+    error_sum = 0.0
+    for metabolite in cobra_model.metabolites:
+        if len(metabolite.reactions) == 0:
+            continue
+
+        if metabolite.id not in in_vivo_solution.keys():
+            continue
+
+        x_var_id = f&#34;x_{metabolite.id}&#34;
+        try:
+            optmdfpathway_base_variables[x_var_id]
+        except KeyError:
+            continue
+
+        error_variable = pulp.LpVariable(
+            name=f&#34;error_{metabolite.id}&#34;,
+            cat=pulp.LpContinuous,
+        )
+        optmdfpathway_base_problem += -error_variable &lt;= log(in_vivo_solution[metabolite.id]) - optmdfpathway_base_variables[x_var_id]
+        optmdfpathway_base_problem += log(in_vivo_solution[metabolite.id]) - optmdfpathway_base_variables[x_var_id] &lt;= error_variable
+
+        error_sum += 1.0 * error_variable
+
+    error_sum_var = pulp.LpVariable(
+        name=f&#34;error_sum&#34;,
+        cat=pulp.LpContinuous,
+    )
+    optmdfpathway_base_problem += error_sum_var == error_sum
+
+    return optmdfpathway_base_problem
+    &#34;&#34;&#34;</code></pre>
+</details>
+</dd>
+<dt id="optmdfpathway.add_differential_reactions_constraints"><code class="name flex">
+<span>def <span class="ident">add_differential_reactions_constraints</span></span>(<span>optmdfpathway_base_problem: pulp.pulp.LpProblem, in_vivo_solution: Dict[str, int]) ‑> pulp.pulp.LpProblem</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Legacy function. Not usable.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_differential_reactions_constraints(optmdfpathway_base_problem: pulp.LpProblem,
+                                           in_vivo_solution: Dict[str, int]) -&gt; pulp.LpProblem:#
+    &#34;&#34;&#34;Legacy function. Not usable.&#34;&#34;&#34;
+    pass
+    &#34;&#34;&#34;
+    optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+
+    error_sum = 0.0
+    for reaction_id in in_vivo_solution.keys():
+        reaction_error_var = pulp.LpVariable(
+            name=f&#34;z_error_{reaction_id}&#34;,
+            cat=pulp.LpBinary,
+        )
+        try:
+            current_z_variable = optmdfpathway_base_variables[f&#34;z_var_{reaction_id}&#34;]
+        except KeyError:
+            print(&#34;&gt;&#34;, reaction_id)
+            continue
+        current_flux_variable = optmdfpathway_base_variables[f&#34;f_var_{reaction_id}&#34;]
+        # if in_vivo_solution[reaction_id] == 0:
+        #     optmdfpathway_base_problem += reaction_error_var == z_var
+        # else:
+        #     optmdfpathway_base_problem += reaction_error_var == 1.0 - z_var
+        # error_sum += reaction_error_var
+        ####
+        current_z2_variable = pulp.LpVariable(
+            name=f&#34;z2_var_{reaction_id}&#34;,
+            cat=pulp.LpBinary,
+        )
+
+        current_error_variable = pulp.LpVariable(
+            name=f&#34;g_var_{reaction_id}&#34;,
+            lowBound=-float(&#34;inf&#34;),
+            upBound=float(&#34;inf&#34;),
+            cat=pulp.LpContinuous,
+        )
+        z2_zero_constraint: pulp.LpConstraint = current_z2_variable - M*current_flux_variable &lt;= 0
+        if in_vivo_solution[reaction_id] == 0:
+            error_z_z2_constraint: pulp.LpConstraint = current_error_variable - current_z_variable + current_z2_variable * M &lt;= M
+            error_z2_constraint_1: pulp.LpConstraint = -current_error_variable + current_z_variable + current_z2_variable * M &lt;= M
+        else:
+            error_z_z2_constraint: pulp.LpConstraint = current_error_variable - (1.0-current_z_variable) + current_z2_variable * M &lt;= M
+            error_z2_constraint_1: pulp.LpConstraint = -current_error_variable + (1.0-current_z_variable) + current_z2_variable * M &lt;= M
+        error_z2_constraint_2: pulp.LpConstraint = current_error_variable - current_z2_variable * M &lt;= 0
+        error_z2_constraint_3: pulp.LpConstraint = -current_error_variable - current_z2_variable * M &lt;= 0
+
+        optmdfpathway_base_problem += z2_zero_constraint
+        optmdfpathway_base_problem += error_z_z2_constraint
+        optmdfpathway_base_problem += error_z2_constraint_1
+        optmdfpathway_base_problem += error_z2_constraint_2
+        optmdfpathway_base_problem += error_z2_constraint_3
+
+        error_sum += current_error_variable
+        ####
+
+    error_sum_var = pulp.LpVariable(
+        name=f&#34;reaction_error_sum&#34;,
+        cat=pulp.LpContinuous,
+    )
+    optmdfpathway_base_problem += error_sum_var == error_sum
+
+    return optmdfpathway_base_problem
+    &#34;&#34;&#34;</code></pre>
+</details>
+</dd>
+<dt id="optmdfpathway.get_optmdfpathway_base_problem"><code class="name flex">
+<span>def <span class="ident">get_optmdfpathway_base_problem</span></span>(<span>cobra_model: cobra.core.model.Model, dG0_values: Dict[str, Dict[str, float]], metabolite_concentration_values: Dict[str, Dict[str, float]], ratio_constraint_data: List[Dict[str, Any]], R: float, T: float, extra_constraints: List[Dict[str, float]], sub_network_ids: List[str] = [], add_optmdf_bottleneck_analysis: bool = False) ‑> pulp.pulp.LpProblem</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns an OptMDFpathway 'base problem', i.e., all constraints but no objective.</p>
+<p>The resulting (Opt)MDF variable is called 'var_B', the (Opt)SubMDF 'var_B2'.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>cobra_model</code></strong> :&ensp;<code>cobra.Model</code></dt>
+<dd>The cobrapy model from which the base problem is built up from.</dd>
+<dt><strong><code>dG0_values</code></strong> :&ensp;<code>Dict[str, Dict[str, float]]</code></dt>
+<dd>A dictionary containing the dG0 values. The keys</dd>
+<dt>are the reaction IDs, the values another dictionary where, under the key 'dG0', the dG0 values are given.</dt>
+<dt><strong><code>metabolite_concentration_values</code></strong> :&ensp;<code>Dict[str, Dict[str, float]]</code></dt>
+<dd>A dictionary containing the metabolite concentration</dd>
+<dt>values. The keys are the metabolite IDs, the values another dictionary with a 'min' and a 'max' value.</dt>
+<dt><strong><code>ratio_constraint_data</code></strong> :&ensp;<code>List[Dict[str, Any]]</code></dt>
+<dd>[Can be empty] A list of metabolite concentration ratios. It is a list</dd>
+<dt>of dictionaries where every dictionary described the ratio constraint. Each dictionary contains the keys</dt>
+<dt>'c_i' (a metabolite ID,) 'c_j' (another ID), 'h_min' (the minimal ratio) and 'h_max' (maximal ratio) such that</dt>
+<dt>c_i / c_j &lt;= h_max AND c_i / c_j &gt;= h_min.</dt>
+<dt><strong><code>R</code></strong> :&ensp;<code>float</code></dt>
+<dd>The gas constant. You can use this module's STANDARD_R.</dd>
+<dt><strong><code>T</code></strong> :&ensp;<code>float</code></dt>
+<dd>The temperature. You can use this module's STANADRD_T.</dd>
+<dt><strong><code>extra_constraints</code></strong> :&ensp;<code>List[Dict[str, float]]</code></dt>
+<dd>Additional linear constraints as described in the optimization module.</dd>
+<dt><strong><code>sub_network_ids</code></strong> :&ensp;<code>List[str]</code>, optional</dt>
+<dd>If given as list of reaction IDs, these reactions get extra constraints</dd>
+<dt>such that a SubMDF for these reactions can be calculated. The SubMDF will be added as a variable called 'var_B2'. Defaults to [].</dt>
+<dt><strong><code>add_optmdf_bottleneck_analysis</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>If True, adds constaints such that a subsequent minimization of the newly created</dd>
+</dl>
+<p>variable 'zb_sum_var' can be performed with a previously given minimal value for 'var_B' and/or 'var_B2'. If the given (Sub)MDF cannot
+be reached, minimizing zb_sum_var returns the lowest number of dG0 'deletions' (i.e., 'bottleneck deletions') such that
+the given (Sub)MDF can be reached. Defaults to False.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pulp.LpProblem</code></dt>
+<dd>The OptMDFpathway base problem.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_optmdfpathway_base_problem(cobra_model: cobra.Model, dG0_values: Dict[str, Dict[str, float]],
+                                   metabolite_concentration_values: Dict[str, Dict[str, float]],
+                                   ratio_constraint_data: List[Dict[str, Any]],
+                                   R: float, T: float,
+                                   extra_constraints: List[Dict[str, float]],
+                                   sub_network_ids: List[str]=[],
+                                   add_optmdf_bottleneck_analysis: bool=False) -&gt; pulp.LpProblem:
+    &#34;&#34;&#34;Returns an OptMDFpathway &#39;base problem&#39;, i.e., all constraints but no objective.
+
+    The resulting (Opt)MDF variable is called &#39;var_B&#39;, the (Opt)SubMDF &#39;var_B2&#39;.
+
+    Args:
+        cobra_model (cobra.Model): The cobrapy model from which the base problem is built up from.
+        dG0_values (Dict[str, Dict[str, float]]): A dictionary containing the dG0 values. The keys
+        are the reaction IDs, the values another dictionary where, under the key &#39;dG0&#39;, the dG0 values are given.
+        metabolite_concentration_values (Dict[str, Dict[str, float]]): A dictionary containing the metabolite concentration
+        values. The keys are the metabolite IDs, the values another dictionary with a &#39;min&#39; and a &#39;max&#39; value.
+        ratio_constraint_data (List[Dict[str, Any]]): [Can be empty] A list of metabolite concentration ratios. It is a list
+        of dictionaries where every dictionary described the ratio constraint. Each dictionary contains the keys
+        &#39;c_i&#39; (a metabolite ID,) &#39;c_j&#39; (another ID), &#39;h_min&#39; (the minimal ratio) and &#39;h_max&#39; (maximal ratio) such that
+        c_i / c_j &lt;= h_max AND c_i / c_j &gt;= h_min.
+        R (float): The gas constant. You can use this module&#39;s STANDARD_R.
+        T (float): The temperature. You can use this module&#39;s STANADRD_T.
+        extra_constraints (List[Dict[str, float]]): Additional linear constraints as described in the optimization module.
+        sub_network_ids (List[str], optional): If given as list of reaction IDs, these reactions get extra constraints
+        such that a SubMDF for these reactions can be calculated. The SubMDF will be added as a variable called &#39;var_B2&#39;. Defaults to [].
+        add_optmdf_bottleneck_analysis (bool, optional): If True, adds constaints such that a subsequent minimization of the newly created
+        variable &#39;zb_sum_var&#39; can be performed with a previously given minimal value for &#39;var_B&#39; and/or &#39;var_B2&#39;. If the given (Sub)MDF cannot
+        be reached, minimizing zb_sum_var returns the lowest number of dG0 &#39;deletions&#39; (i.e., &#39;bottleneck deletions&#39;) such that
+        the given (Sub)MDF can be reached. Defaults to False.
+
+    Returns:
+        pulp.LpProblem: The OptMDFpathway base problem.
+    &#34;&#34;&#34;
+    # Concentrations in M
+    # T in K
+    # R in kJ⋅K⁻1⋅mol⁻1 (standard value is in J⋅K⁻1⋅mol⁻1)
+    # Get FBA base
+    base_problem = get_fba_base_problem(
+        cobra_model=cobra_model,
+        extra_constraints=extra_constraints,
+    )
+    fba_base_variables = base_problem.variablesDict()
+
+    # Min/max concentrations
+    concentration_vars: Dict[str, pulp.LpVariable] = {}
+    for metabolite in cobra_model.metabolites:
+        if metabolite.id in metabolite_concentration_values.keys():
+            id_key = metabolite.id
+        else:
+            id_key = &#34;DEFAULT&#34;
+
+        min_concentration = log(metabolite_concentration_values[id_key][&#34;min&#34;])
+        max_concentration = log(metabolite_concentration_values[id_key][&#34;max&#34;])
+
+        concentration_vars[metabolite.id] = pulp.LpVariable(
+            name=&#34;x_&#34;+metabolite.id,
+            lowBound=min_concentration,
+            upBound=max_concentration,
+            cat=pulp.LpContinuous,
+        )
+
+    # Concentration ratios
+    ratio_counter = 0
+    for ratio_constraint in ratio_constraint_data:
+        # c_i / c_j &lt;= h_max AND c_i / c_j &gt;= h_min
+        # &lt;=&gt; x_i - x_j &lt;= ln(h_max) AND x_i - x_j &gt;= ln(h_min)
+        # &lt;=&gt; (A) x_i - x_j - ln(h_max) &lt;= 0 AND (B) -x_i + x_j - ln(h_min) &lt;= 0
+        c_i_id = ratio_constraint[&#34;c_i&#34;]
+        c_j_id = ratio_constraint[&#34;c_j&#34;]
+
+        ln_h_min = log(ratio_constraint[&#34;h_min&#34;])
+        ln_h_max = log(ratio_constraint[&#34;h_max&#34;])
+
+        # (A) x_i - x_j - ln(h_max) &lt;= 0
+        max_ratio_constraint: pulp.LpConstraint = concentration_vars[c_i_id] - concentration_vars[c_j_id] - ln_h_max &lt;= 0
+        # (B) -x_i + x_j - ln(h_min) &lt;= 0
+        min_ratio_constraint: pulp.LpConstraint = -concentration_vars[c_i_id] + concentration_vars[c_j_id] - ln_h_min &lt;= 0
+
+        base_problem += max_ratio_constraint
+        base_problem += min_ratio_constraint
+
+        ratio_counter += 1
+
+    # df variables (f_r)
+    var_B = pulp.LpVariable(
+        name=&#34;var_B&#34;,
+        lowBound=-float(&#34;inf&#34;),
+        upBound=float(&#34;inf&#34;),
+        cat=pulp.LpContinuous,
+    )
+
+    has_subnetwork = len(sub_network_ids) &gt; 0
+    if has_subnetwork:
+        var_B2 = pulp.LpVariable(
+            name=&#34;var_B2&#34;,
+            lowBound=-float(&#34;inf&#34;),
+            upBound=float(&#34;inf&#34;),
+            cat=pulp.LpContinuous,
+        )
+
+    zb_sum: pulp.LpAffineExpression = 0.0
+    for reaction in cobra_model.reactions:
+        if reaction.id not in dG0_values.keys():
+            continue
+
+        current_f_variable = pulp.LpVariable(
+            name=f&#34;f_var_{reaction.id}&#34;,
+            lowBound=-float(&#34;inf&#34;),
+            upBound=float(&#34;inf&#34;),
+            cat=pulp.LpContinuous,
+        )
+
+        # f_r = -(ΔG&#39;0_r + RT * S^(t)_.,r * x)
+        # &lt;=&gt; -ΔG&#39;0_r - - f_r RT * S^(t)_.,r * x = 0
+        dG0_value = dG0_values[reaction.id][&#34;dG0&#34;]
+        dG0_randomfixed_variable = pulp.LpVariable(
+            name=f&#34;dG0_{reaction.id}&#34;,
+            cat=pulp.LpContinuous,
+        )
+        dG0_randomfixed_variable.setInitialValue(dG0_value)
+        dG0_randomfixed_variable.fixValue()
+
+        # e.g.,
+        #     RT * ln(([S]*[T])/([A]²*[B]))
+        # &lt;=&gt; RT*ln([S]) + RT*ln([T]) - 2*RT*ln([A]) - RT*ln([B])
+        reaction_f_expression = -current_f_variable
+        for metabolite in reaction.metabolites:
+            stoichiometry = reaction.metabolites[metabolite]
+            reaction_f_expression -= stoichiometry * R * T * concentration_vars[metabolite.id]
+        reaction_f_expression -= dG0_randomfixed_variable
+        reaction_f_constraint: pulp.LpConstraint = reaction_f_expression == 0
+
+        base_problem += reaction_f_constraint
+
+        # OptMDFpathway binary variable introduction
+        current_z_variable = pulp.LpVariable(
+            name=f&#34;z_var_{reaction.id}&#34;,
+            cat=pulp.LpBinary,
+        )
+
+        if add_optmdf_bottleneck_analysis:
+            current_zb_variable = pulp.LpVariable(
+                name=f&#34;zb_var_{reaction.id}&#34;,
+                cat=pulp.LpBinary,
+                lowBound=0.0,
+                upBound=1.0,
+            )
+
+        # Find flux variable
+        current_flux_variable = fba_base_variables[reaction.id]
+
+        # z_r = 0 -&gt; v_r = 0
+        # In Big M form: v_r &lt;= M*z_r &lt;=&gt; v_r - M*z_r &lt;= 0
+        z_zero_constraint: pulp.LpConstraint = current_flux_variable - M*current_z_variable &lt;= 0
+        # z_r = 1 -&gt; f_r &gt;= B == f_r - B &gt;= 0
+        # In Big M form: f_r + (1-z_i)*M &gt;= B
+        z_one_constraint: pulp.LpConstraint = 0.0
+        if (not add_optmdf_bottleneck_analysis):
+            z_one_constraint = var_B &lt;= current_f_variable + (1-current_z_variable)*M
+        else:
+            z_one_constraint = var_B &lt;= current_f_variable + (1-current_z_variable)*M + current_zb_variable*5_000
+            zb_sum += current_zb_variable
+
+        base_problem += z_zero_constraint
+        base_problem += z_one_constraint
+
+        if has_subnetwork:
+            if reaction.id in sub_network_ids:
+                z_one_constraint_2: pulp.LpConstraint = var_B2 &lt;= current_f_variable + (1-current_z_variable)*M
+                base_problem += z_one_constraint_2
+
+    if add_optmdf_bottleneck_analysis:
+        zb_sum_var = pulp.LpVariable(
+            name=f&#34;zb_sum_var&#34;,
+            lowBound=-float(&#34;inf&#34;),
+            upBound=float(&#34;inf&#34;),
+            cat=pulp.LpContinuous,
+        )
+        base_problem += zb_sum_var == zb_sum
+
+    return base_problem</code></pre>
+</details>
+</dd>
+<dt id="optmdfpathway.get_thermodynamic_bottlenecks"><code class="name flex">
+<span>def <span class="ident">get_thermodynamic_bottlenecks</span></span>(<span>cobra_model: cobra.core.model.Model, optmdfpathway_base_problem: pulp.pulp.LpProblem, optmdfpathway_result: Dict[str, Dict[str, float]], **kwargs) ‑> List[str]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>[summary]</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>cobra_model</code></strong> :&ensp;<code>cobra.Model</code></dt>
+<dd>[description]</dd>
+<dt><strong><code>optmdfpathway_base_problem</code></strong> :&ensp;<code>pulp.LpProblem</code></dt>
+<dd>[description]</dd>
+<dt><strong><code>original_max_mdf</code></strong> :&ensp;<code>float</code></dt>
+<dd>[description]</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>List[str]</code></dt>
+<dd>[description]</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_thermodynamic_bottlenecks(cobra_model: cobra.Model,
+                                  optmdfpathway_base_problem: pulp.LpProblem,
+                                  optmdfpathway_result: Dict[str, Dict[str, float]],
+                                  **kwargs) -&gt; List[str]:
+    &#34;&#34;&#34;[summary]
+
+    Args:
+        cobra_model (cobra.Model): [description]
+        optmdfpathway_base_problem (pulp.LpProblem): [description]
+        original_max_mdf (float): [description]
+
+    Returns:
+        List[str]: [description]
+    &#34;&#34;&#34;
+    epsilon = 1e-3
+    optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+
+    original_max_mdf = optmdfpathway_result[&#34;values&#34;][&#34;var_B&#34;]
+    optmdfpathway_base_variables[&#34;var_B&#34;].bounds(original_max_mdf, 10e9)
+
+    checked_ids = []
+    optmdfs = {}
+    thermodynamic_bottleneck_ids: List[str] = []
+    for reaction in cobra_model.reactions:
+        if abs(optmdfpathway_result[&#34;values&#34;][reaction.id]) &lt; 1e-6:
+            continue
+
+        f_var_name = f&#34;f_var_{reaction.id}&#34;
+
+        if f_var_name not in optmdfpathway_result[&#34;values&#34;].keys():
+            continue
+
+        if abs(optmdfpathway_result[&#34;values&#34;][f_var_name] - original_max_mdf) &gt; 0.5:
+            continue
+
+        # Test result
+        try:
+            current_dG0_variable = optmdfpathway_base_variables[f&#34;dG0_{reaction.id}&#34;]
+        except KeyError:
+            continue
+
+        original_dG0 = current_dG0_variable.lowBound
+        current_dG0_variable.bounds(original_dG0-500, original_dG0-500)
+        bottleneck_problem_result = perform_variable_maximization(optmdfpathway_base_problem, &#34;var_B&#34;, optmdfpathway_base_variables, **kwargs)
+        current_dG0_variable.bounds(original_dG0, original_dG0)
+
+        if bottleneck_problem_result[&#34;status&#34;] != &#34;Optimal&#34;:
+            # print(bottleneck_problem_result[&#34;status&#34;])
+            # print(&#34;ERROR in OptMDFpathway with &#34;, reaction.id)
+            continue
+        checked_ids.append(reaction.id)
+        new_optmdf = bottleneck_problem_result[&#34;values&#34;][&#34;var_B&#34;]
+        if new_optmdf &gt; (original_max_mdf + epsilon):
+            optmdfs[reaction.id] = new_optmdf
+            thermodynamic_bottleneck_ids.append(reaction.id)
+
+    reactions: List[cobra.Reaction] = [cobra_model.reactions.get_by_id(x) for x in thermodynamic_bottleneck_ids]
+    metabolite_data: Dict[str, List[str]] = {}
+    bottleneck_report = f&#34;===BOTTLENECK REPORT===\n&#34;
+    bottleneck_report += f&#34;&gt;Number of bottleneck reactions: {len(reactions)}\n&#34;
+    bottleneck_report += f&#34;&gt;Original OptMDF: {original_max_mdf} kJ/mol\n&#34;
+    counter = 0
+    for reaction in reactions:
+        current_dG0_variable = optmdfpathway_base_variables[f&#34;dG0_{reaction.id}&#34;]
+        bottleneck_report += f&#34;&gt;Bottleneck reaction no. {counter+1}:\n&#34;
+        bottleneck_report += f&#34; *ID: {reaction.id}\n&#34;
+        bottleneck_report += f&#34; *ΔG&#39;°: {round(current_dG0_variable.lowBound, 4)} kJ/mol\n&#34;
+        bottleneck_report += f&#34; *Reached OptMDF without this bottleneck: {round(optmdfs[reaction.id], 4)} kJ/mol\n&#34;
+        bottleneck_report += f&#34; *Reaction string: {reaction.reaction}\n&#34;
+        metabolite_ids = [x.id for x in reaction.metabolites]
+
+        for metabolite_id in metabolite_ids:
+            if metabolite_id not in metabolite_data.keys():
+                metabolite_data[metabolite_id] = []
+            metabolite_data[metabolite_id].append(reaction.id)
+        counter += 1
+
+    counter = 1
+    bottleneck_report += f&#34;&gt;Reaction-connecting metabolites:\n&#34;
+    for metabolite_id in metabolite_data.keys():
+        reaction_ids = metabolite_data[metabolite_id]
+        if len(reaction_ids) &gt; 1:
+            bottleneck_report += f&#34; *Metabolite no. {counter}: {metabolite_id}\n&#34;
+            bottleneck_report += f&#34;  in reactions: &#34;
+            bottleneck_report += &#34;, &#34;.join(reaction_ids)
+            bottleneck_report += &#34;\n&#34;
+            counter += 1
+
+    reaction_clusters = []
+    for reaction_ids in metabolite_data.values():
+        cluster_expanded = False
+        cluster_index = 0
+        for reaction_cluster in reaction_clusters:
+            if len(set(reaction_cluster).intersection(set(reaction_ids))) &gt; 0:
+                reaction_cluster_expanded = list(set(reaction_cluster + reaction_ids))
+                reaction_clusters[cluster_index] = reaction_cluster_expanded
+                cluster_expanded = True
+            cluster_index += 1
+        if not cluster_expanded:
+            reaction_clusters.append(copy.deepcopy(reaction_ids))
+
+        new_clusters = []
+        for reaction_cluster_1 in reaction_clusters:
+            new_cluster = copy.deepcopy(reaction_cluster_1)
+            for reaction_cluster_2 in reaction_clusters:
+                if len(set(reaction_cluster_1).intersection(set(reaction_cluster_2))) &gt; 1:
+                    new_cluster += set(new_cluster + reaction_cluster_2)
+            new_clusters.append(sorted(list(set(new_cluster))))
+        reaction_clusters = copy.deepcopy(new_clusters)
+
+    reaction_clusters = list(set([tuple(x) for x in reaction_clusters]))
+
+    bottleneck_report += &#34;&gt;Metabolite-connected reaction clusters:\n&#34;
+    counter = 1
+    for cluster in reaction_clusters:
+        bottleneck_report += f&#34;*Cluster no. {counter}:\n&#34;
+        bottleneck_report += &#34; &#34; + &#34;, &#34;.join(cluster) + &#34;\n&#34;
+        counter += 1
+
+    #######
+    if thermodynamic_bottleneck_ids == []:
+        print(&#34;Searching cluster...&#34;)
+        full_cluster = copy.deepcopy(checked_ids)
+
+        original_dG0s = {}
+        print(full_cluster)
+        for reaction_id in full_cluster:
+            current_dG0_variable = optmdfpathway_base_variables[f&#34;dG0_{reaction_id}&#34;]
+            original_dG0s[reaction_id] = current_dG0_variable.lowBound
+            current_dG0_variable.bounds(original_dG0s[reaction_id]-500, original_dG0s[reaction_id]-500)
+            print(reaction_id)
+
+        # Check all
+        bottleneck_problem_result = perform_variable_maximization(optmdfpathway_base_problem, &#34;var_B&#34;, optmdfpathway_base_variables, **kwargs)
+        new_optmdf = bottleneck_problem_result[&#34;values&#34;][&#34;var_B&#34;]
+        print(new_optmdf)
+        if not (new_optmdf &gt; (original_max_mdf + epsilon)):
+            print(original_max_mdf)
+            print(new_optmdf)
+            print(&#34;!ERROR 1!&#34;)
+
+        # Check each reaction
+        final_cluster = []
+        for reaction_id in full_cluster:
+            current_dG0_variable.bounds(original_dG0s[reaction_id], original_dG0s[reaction_id])
+            bottleneck_problem_result = perform_variable_maximization(optmdfpathway_base_problem, &#34;var_B&#34;, optmdfpathway_base_variables, **kwargs)
+            new_optmdf = bottleneck_problem_result[&#34;values&#34;][&#34;var_B&#34;]
+            if bottleneck_problem_result[&#34;status&#34;] != &#34;Optimal&#34;:
+                print(&#34;!ERROR 2!&#34;)
+                break
+            if not (new_optmdf &gt; (original_max_mdf + epsilon)):
+                final_cluster.append(reaction_id)
+            current_dG0_variable.bounds(original_dG0s[reaction_id]-500, original_dG0s[reaction_id]-500)
+
+        thermodynamic_bottleneck_ids = final_cluster
+    #######
+
+    #######
+    optmdfpathway_base_variables[&#34;var_B&#34;].bounds(-10e9, 10e9)
+
+    return thermodynamic_bottleneck_ids, bottleneck_report</code></pre>
+</details>
+</dd>
+<dt id="optmdfpathway.get_z_variable_status"><code class="name flex">
+<span>def <span class="ident">get_z_variable_status</span></span>(<span>optmdfpathway_solution: Dict[str, Any], necessary_id_part: str = '') ‑> Dict[str, int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Legacy function. Not used.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_z_variable_status(optmdfpathway_solution: Dict[str, Any], necessary_id_part: str=&#34;&#34;) -&gt; Dict[str, int]:
+    &#34;&#34;&#34;Legacy function. Not used.&#34;&#34;&#34;
+    pass
+    &#34;&#34;&#34;
+    z_variable_status: Dict[str, int] = {}
+    for var_id in optmdfpathway_solution[&#34;values&#34;].keys():
+        if var_id.startswith(&#34;z_var_&#34;):
+            if not necessary_id_part in var_id:
+                continue
+            z_float = optmdfpathway_solution[&#34;values&#34;][var_id]
+            if z_float &lt; 1e-5:
+                z_int = 0
+            elif z_float &gt; 0.99:
+                z_int = 1
+            else:
+                print(f&#34;ERROR in get_z_variable_status():&#34;
+                      f&#34;Value {z_float} for {var_id} is no reasonable binary value&#34;)
+                raise Exception
+            z_variable_status[var_id] = z_int
+
+    return z_variable_status
+    &#34;&#34;&#34;</code></pre>
+</details>
+</dd>
+<dt id="optmdfpathway.perform_concentration_variability_analysis"><code class="name flex">
+<span>def <span class="ident">perform_concentration_variability_analysis</span></span>(<span>cobra_model: cobra.core.model.Model, optmdfpathway_base_problem: pulp.pulp.LpProblem, min_mdf: float, selected_metabolites: List[str] = [], **kwargs) ‑> Dict[str, Dict[str, float]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Performs a non-threaded concentration variability analysis in the given problem.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>cobra_model</code></strong> :&ensp;<code>cobra.Model</code></dt>
+<dd>The cobrapy model to find the metabolite IDs.</dd>
+<dt><strong><code>optmdfpathway_base_problem</code></strong> :&ensp;<code>pulp.LpProblem</code></dt>
+<dd>The base problem created by get_optmdfpathway_base_problem().</dd>
+<dt><strong><code>min_mdf</code></strong> :&ensp;<code>float</code></dt>
+<dd>The minimal MDF that must be reached.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Dict[str, Dict[str, float]]</code></dt>
+<dd>A dictionary with the metabolite IDs as keys, and another dictionary as value with</dd>
+</dl>
+<p>the 'min' and 'max' concentration values.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def perform_concentration_variability_analysis(cobra_model: cobra.Model,
+                                               optmdfpathway_base_problem: pulp.LpProblem,
+                                               min_mdf: float,
+                                               selected_metabolites: List[str]=[],
+                                               **kwargs) -&gt; Dict[str, Dict[str, float]]:
+    &#34;&#34;&#34;Performs a non-threaded concentration variability analysis in the given problem.
+
+    Args:
+        cobra_model (cobra.Model): The cobrapy model to find the metabolite IDs.
+        optmdfpathway_base_problem (pulp.LpProblem): The base problem created by get_optmdfpathway_base_problem().
+        min_mdf (float): The minimal MDF that must be reached.
+
+    Returns:
+        Dict[str, Dict[str, float]]: A dictionary with the metabolite IDs as keys, and another dictionary as value with
+        the &#39;min&#39; and &#39;max&#39; concentration values.
+    &#34;&#34;&#34;
+    optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+    var_B = optmdfpathway_base_variables[&#34;var_B&#34;]
+    optmdfpathway_base_problem += var_B &gt;= min_mdf
+
+    solve_current_problem(optmdfpathway_base_problem)
+
+    concentration_bounds: Dict[str, Dict[str, float]] = {}
+    for metabolite in cobra_model.metabolites:
+        if len(metabolite.reactions) == 0:
+            continue
+        if selected_metabolites != []:
+            if metabolite.id not in selected_metabolites:
+                continue
+
+        x_var_id = f&#34;x_{metabolite.id}&#34;
+        try:
+            optmdfpathway_base_variables[x_var_id]
+        except KeyError:
+            print(&#34;KEYERROR&#34;)
+            continue
+
+        concentration_bounds[metabolite.id] = {}
+
+        # Minimization
+        min_result = perform_variable_minimization(
+            base_problem=optmdfpathway_base_problem,
+            variable_id=x_var_id,
+            **kwargs
+        )
+        if min_result[&#34;status&#34;] == &#34;Optimal&#34;:
+            min_value = min_result[&#34;values&#34;][x_var_id]
+        else:
+            min_value = float(&#34;NaN&#34;)
+        concentration_bounds[metabolite.id][&#34;min&#34;] = exp(min_value)
+
+        # Maximization
+        max_result = perform_variable_maximization(
+            base_problem=optmdfpathway_base_problem,
+            variable_id=x_var_id,
+            **kwargs
+        )
+        if max_result[&#34;status&#34;] == &#34;Optimal&#34;:
+            max_value = max_result[&#34;values&#34;][x_var_id]
+        else:
+            max_value = float(&#34;NaN&#34;)
+        concentration_bounds[metabolite.id][&#34;max&#34;] = exp(max_value)
+
+    return concentration_bounds</code></pre>
+</details>
+</dd>
+<dt id="optmdfpathway.perform_concentration_variability_analysis_multi"><code class="name flex">
+<span>def <span class="ident">perform_concentration_variability_analysis_multi</span></span>(<span>cobra_model: cobra.core.model.Model, optmdfpathway_base_problem: pulp.pulp.LpProblem, min_mdf: float) ‑> Dict[str, Dict[str, float]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Performs a multi-threaded concentration variability analysis in the given problem.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>cobra_model</code></strong> :&ensp;<code>cobra.Model</code></dt>
+<dd>The cobrapy model to find the metabolite IDs.</dd>
+<dt><strong><code>optmdfpathway_base_problem</code></strong> :&ensp;<code>pulp.LpProblem</code></dt>
+<dd>The base problem created by get_optmdfpathway_base_problem().</dd>
+<dt><strong><code>min_mdf</code></strong> :&ensp;<code>float</code></dt>
+<dd>The minimal MDF that must be reached.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Dict[str, Dict[str, float]]</code></dt>
+<dd>A dictionary with the metabolite IDs as keys, and another dictionary as value with</dd>
+</dl>
+<p>the 'min' and 'max' concentration values.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def perform_concentration_variability_analysis_multi(cobra_model: cobra.Model,
+                                                     optmdfpathway_base_problem: pulp.LpProblem,
+                                                     min_mdf: float) -&gt; Dict[str, Dict[str, float]]:
+    &#34;&#34;&#34;Performs a multi-threaded concentration variability analysis in the given problem.
+
+    Args:
+        cobra_model (cobra.Model): The cobrapy model to find the metabolite IDs.
+        optmdfpathway_base_problem (pulp.LpProblem): The base problem created by get_optmdfpathway_base_problem().
+        min_mdf (float): The minimal MDF that must be reached.
+
+    Returns:
+        Dict[str, Dict[str, float]]: A dictionary with the metabolite IDs as keys, and another dictionary as value with
+        the &#39;min&#39; and &#39;max&#39; concentration values.
+    &#34;&#34;&#34;
+    optmdfpathway_base_variables: Dict[str, pulp.LpVariable] = optmdfpathway_base_problem.variablesDict()
+    optmdfpathway_base_variables[&#34;var_B&#34;].bounds(min_mdf, 10e9)
+
+    solve_current_problem(optmdfpathway_base_problem)
+    base_problem_dict = optmdfpathway_base_problem.to_dict()
+
+    batch_size = 10
+    loop_values = []
+    start_value = 0
+    while start_value &lt; len(cobra_model.metabolites):
+        loop_values.append(start_value)
+        start_value += batch_size
+    futures = [_ray_perform_concentration_variability_analysis_multi.remote(cobra_model.metabolites[loop_value:loop_value+batch_size], base_problem_dict)
+               for loop_value in loop_values]
+    results = ray.get(futures)
+
+    out_results = []
+    for result in results:
+        out_results += result
+
+    optmdfpathway_base_variables[&#34;var_B&#34;].bounds(-10e9, 10e9)
+
+    return out_results</code></pre>
+</details>
+</dd>
+<dt id="optmdfpathway.perform_optmdfpathway_mdf_maximization"><code class="name flex">
+<span>def <span class="ident">perform_optmdfpathway_mdf_maximization</span></span>(<span>optmdfpathway_base_problem: pulp.pulp.LpProblem, **kwargs) ‑> Dict[str, Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Performs an OptMDFpathway MDF optimization for the given OptMDFpathway base problem.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def perform_optmdfpathway_mdf_maximization(optmdfpathway_base_problem: pulp.LpProblem, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Performs an OptMDFpathway MDF optimization for the given OptMDFpathway base problem.&#34;&#34;&#34;
+    results = perform_variable_maximization(
+        base_problem=optmdfpathway_base_problem,
+        variable_id=&#34;var_B&#34;,
+        **kwargs,
+    )
+    return results</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="optmdfpathway.add_differential_concentration_constraints" href="#optmdfpathway.add_differential_concentration_constraints">add_differential_concentration_constraints</a></code></li>
+<li><code><a title="optmdfpathway.add_differential_reactions_constraints" href="#optmdfpathway.add_differential_reactions_constraints">add_differential_reactions_constraints</a></code></li>
+<li><code><a title="optmdfpathway.get_optmdfpathway_base_problem" href="#optmdfpathway.get_optmdfpathway_base_problem">get_optmdfpathway_base_problem</a></code></li>
+<li><code><a title="optmdfpathway.get_thermodynamic_bottlenecks" href="#optmdfpathway.get_thermodynamic_bottlenecks">get_thermodynamic_bottlenecks</a></code></li>
+<li><code><a title="optmdfpathway.get_z_variable_status" href="#optmdfpathway.get_z_variable_status">get_z_variable_status</a></code></li>
+<li><code><a title="optmdfpathway.perform_concentration_variability_analysis" href="#optmdfpathway.perform_concentration_variability_analysis">perform_concentration_variability_analysis</a></code></li>
+<li><code><a title="optmdfpathway.perform_concentration_variability_analysis_multi" href="#optmdfpathway.perform_concentration_variability_analysis_multi">perform_concentration_variability_analysis_multi</a></code></li>
+<li><code><a title="optmdfpathway.perform_optmdfpathway_mdf_maximization" href="#optmdfpathway.perform_optmdfpathway_mdf_maximization">perform_optmdfpathway_mdf_maximization</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

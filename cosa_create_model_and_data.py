@@ -1,12 +1,19 @@
+"""Here, starting with the previouly cleaned iML1515 model, the TCOSA-adapted iML1515_TCOSA is generated.
+
+In the course of this process, the model gets all TCOSA reaction duplications.
+"""
+
 import cobra
 import copy
 from helper import ensure_folder_existence, json_write, pickle_write
 
 ensure_folder_existence("./cosa")
 
+# Load model
 original_cobra_model: cobra.Model = cobra.io.read_sbml_model("resources/iML1515_irreversible_cleaned.xml")
 original_cobra_model.solver = "cplex"
 
+# Deactivate POR5 as in the original OptMDFpathway publication (it has no biological equivalent)
 original_cobra_model.reactions.get_by_id("POR5_FWD").lower_bound = 0
 original_cobra_model.reactions.get_by_id("POR5_FWD").upper_bound = 0
 original_cobra_model.reactions.get_by_id("POR5_REV").lower_bound = 0
@@ -114,6 +121,7 @@ changed_cobra_model.add_reactions([nadk, natrhd, thd2pp, nadppps, single_cofacto
 
 changed_cobra_model_expanded = copy.deepcopy(changed_cobra_model)
 
+# Create TCOSA reaction duplications
 reaction_ids = [x.id for x in original_cobra_model.reactions]
 reactions_to_remove = []
 dG0s_to_remove = []
@@ -173,6 +181,7 @@ for reaction_id in reaction_ids:
             current_copy += 1
 
         reactions_to_remove.append(reaction_id)
+
 print(changed_cobra_model.reactions.get_by_id("Single_Cofactor_Pseudoreaction"))
 changed_cobra_model.remove_reactions(reactions=reactions_to_remove)
 changed_cobra_model_expanded.remove_reactions(reactions=reactions_to_remove)

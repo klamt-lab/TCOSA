@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""[summary]"""
+"""This script is a wrapper for the ΔG'° determination with the eQuilibrator API.
+
+This wrapper intends to work for BiGG-styled cobrapy metabolic models.
+"""
 
 ## IMPORTS ##
 # External
@@ -63,6 +66,26 @@ def get_model_dG0_values(cobra_model: cobra.Model,
         ionic_strengths: Dict[str, float],
         potential_differences: Dict[Tuple[str, str], float]
     ) -> Dict[str, Dict[str, float]]:
+    """Cobrapy model wrapper for the ΔG'° determination of reactions using the eQuilibrator-API.
+
+    Reactions are identified according to all annotations (in the cobrapy reaction's annotation member variable)
+    given in this modules global USED_IDENTIFIERS list.
+
+    Args:
+        cobra_model (cobra.Model): The cobra model for which, for each reaction, dG0 values are determined.
+        inner_to_outer_compartments (List[str]): A list with compartment IDs going from inner (e.g., in E. coli,
+        the cytosol or 'c' in iML1515) to outer (e.g., the extracellular component or 'e' in iML1515). Used
+        for the dG0 calculation in multi-compartmental reactions.
+        phs (Dict[str, float]): A dictionary with compartment IDs as keys and the compartment pHs as values.
+        pmgs (Dict[str, float]): A dictionary with compartment IDs as keys and the compartment pMgs as values.
+        ionic_strengths (Dict[str, float]): A dictionary with compartment IDs as keys and the ionic strengths as values.
+        potential_differences (Dict[Tuple[str, str], float]): A dictionary containing tuples with 2 elements describing
+        the ID of an innter and outer compartment, and the potential difference between ghem.
+
+    Returns:
+        Dict[str, Dict[str, float]]: A dictionary with the reaction IDs as keys, and dictionaries as values which,
+        in turn, contain the dG0 of a reaction under the key 'dG0' and the calculated uncertainty as 'uncertainty'.
+    """
     reaction_dG0s: Dict[str, Dict[str, float]] = {}
     single_compartment_cc_reactions: List[Reaction] = []
     single_compartment_reaction_ids: List[str] = []

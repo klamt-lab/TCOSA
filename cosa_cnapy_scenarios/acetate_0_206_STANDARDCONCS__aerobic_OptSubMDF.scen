@@ -1,0 +1,1314 @@
+{
+    "NTRIR2x": [
+        NaN,
+        NaN
+    ],
+    "RPI": [
+        -0.1512634809994041,
+        -0.1512634809994041
+    ],
+    "NADHXD": [
+        NaN,
+        NaN
+    ],
+    "FUMtex": [
+        NaN,
+        NaN
+    ],
+    "RPE": [
+        NaN,
+        NaN
+    ],
+    "HACD2": [
+        NaN,
+        NaN
+    ],
+    "CSNtex": [
+        NaN,
+        NaN
+    ],
+    "FRD2": [
+        0.0,
+        NaN
+    ],
+    "E4PD": [
+        NaN,
+        NaN
+    ],
+    "CS": [
+        NaN,
+        7.122815669582726
+    ],
+    "FALDH2": [
+        NaN,
+        NaN
+    ],
+    "NADH5": [
+        NaN,
+        NaN
+    ],
+    "ICL": [
+        NaN,
+        2.2321507893385895
+    ],
+    "EAR121y": [
+        NaN,
+        NaN
+    ],
+    "3SLAR": [
+        NaN,
+        NaN
+    ],
+    "3OAR40": [
+        NaN,
+        NaN
+    ],
+    "FUMt2_3pp": [
+        NaN,
+        0.0
+    ],
+    "G6PDH2r": [
+        NaN,
+        NaN
+    ],
+    "PDH": [
+        NaN,
+        NaN
+    ],
+    "DHDPRy": [
+        NaN,
+        NaN
+    ],
+    "ATHRDHr": [
+        NaN,
+        NaN
+    ],
+    "TDPDRR": [
+        NaN,
+        NaN
+    ],
+    "PFK": [
+        NaN,
+        0.0
+    ],
+    "3OAR180": [
+        NaN,
+        NaN
+    ],
+    "EAR60x": [
+        NaN,
+        NaN
+    ],
+    "EAR80x": [
+        NaN,
+        NaN
+    ],
+    "GHBDHx": [
+        NaN,
+        NaN
+    ],
+    "PYK6": [
+        NaN,
+        0.005377112999999999
+    ],
+    "POX": [
+        0.0,
+        0.0
+    ],
+    "DHPTDNRN": [
+        NaN,
+        NaN
+    ],
+    "3OAR80": [
+        NaN,
+        NaN
+    ],
+    "GLYOX3": [
+        NaN,
+        NaN
+    ],
+    "SULR": [
+        NaN,
+        NaN
+    ],
+    "LALDO2x": [
+        NaN,
+        NaN
+    ],
+    "KARA2": [
+        NaN,
+        NaN
+    ],
+    "ACALD": [
+        NaN,
+        NaN
+    ],
+    "DURADx": [
+        NaN,
+        NaN
+    ],
+    "ME2": [
+        NaN,
+        NaN
+    ],
+    "TKT1": [
+        NaN,
+        NaN
+    ],
+    "LSERDHr": [
+        NaN,
+        NaN
+    ],
+    "IPMD": [
+        NaN,
+        NaN
+    ],
+    "GLTPD": [
+        NaN,
+        NaN
+    ],
+    "DHFR": [
+        NaN,
+        NaN
+    ],
+    "EAR120x": [
+        NaN,
+        NaN
+    ],
+    "13PPDH2": [
+        NaN,
+        NaN
+    ],
+    "BETALDHx": [
+        NaN,
+        NaN
+    ],
+    "3HCINNMH": [
+        NaN,
+        NaN
+    ],
+    "EAR140x": [
+        NaN,
+        NaN
+    ],
+    "SELGTHR2": [
+        NaN,
+        NaN
+    ],
+    "EAR80y": [
+        NaN,
+        NaN
+    ],
+    "ALCD2x": [
+        NaN,
+        NaN
+    ],
+    "GMPR": [
+        NaN,
+        NaN
+    ],
+    "EAR180y": [
+        NaN,
+        NaN
+    ],
+    "3HPADHi": [
+        NaN,
+        NaN
+    ],
+    "ACALDtex": [
+        NaN,
+        NaN
+    ],
+    "OMPHHXy": [
+        NaN,
+        NaN
+    ],
+    "EX_o2_e": [
+        NaN,
+        NaN
+    ],
+    "FEENTERR4": [
+        NaN,
+        NaN
+    ],
+    "NHFRBO": [
+        NaN,
+        NaN
+    ],
+    "FE3DCITR5": [
+        NaN,
+        NaN
+    ],
+    "GLYCLTDx": [
+        NaN,
+        NaN
+    ],
+    "EGMEACPR": [
+        NaN,
+        NaN
+    ],
+    "GLUDy": [
+        NaN,
+        NaN
+    ],
+    "BETALDHy": [
+        NaN,
+        NaN
+    ],
+    "GLYK": [
+        NaN,
+        NaN
+    ],
+    "EX_h_e": [
+        NaN,
+        NaN
+    ],
+    "EAR141x": [
+        NaN,
+        NaN
+    ],
+    "3OAR161": [
+        NaN,
+        NaN
+    ],
+    "PPDOy": [
+        NaN,
+        NaN
+    ],
+    "PGI": [
+        NaN,
+        NaN
+    ],
+    "EX_h2_e": [
+        NaN,
+        NaN
+    ],
+    "EX_glyc_e": [
+        NaN,
+        NaN
+    ],
+    "GLUSy": [
+        NaN,
+        NaN
+    ],
+    "GGGABADr": [
+        NaN,
+        NaN
+    ],
+    "SGSAD": [
+        NaN,
+        NaN
+    ],
+    "XAND": [
+        NaN,
+        NaN
+    ],
+    "LDH_D2": [
+        NaN,
+        NaN
+    ],
+    "SHK3Dr": [
+        NaN,
+        NaN
+    ],
+    "PPND": [
+        NaN,
+        NaN
+    ],
+    "MDH": [
+        NaN,
+        NaN
+    ],
+    "3OAR120": [
+        NaN,
+        NaN
+    ],
+    "OPHHXy": [
+        NaN,
+        NaN
+    ],
+    "EPMEACPR": [
+        NaN,
+        NaN
+    ],
+    "NADHPO": [
+        NaN,
+        NaN
+    ],
+    "3OAR181": [
+        NaN,
+        NaN
+    ],
+    "SUCOAS": [
+        NaN,
+        -4.55615924432213
+    ],
+    "AKGDH": [
+        NaN,
+        NaN
+    ],
+    "FUM": [
+        7.116295771081365,
+        NaN
+    ],
+    "DXPRIi": [
+        NaN,
+        NaN
+    ],
+    "EAR161x": [
+        NaN,
+        NaN
+    ],
+    "APPLDHr": [
+        NaN,
+        NaN
+    ],
+    "ARHGDx": [
+        NaN,
+        NaN
+    ],
+    "NADPHQR4": [
+        NaN,
+        NaN
+    ],
+    "DHCIND": [
+        NaN,
+        NaN
+    ],
+    "AHGDx": [
+        NaN,
+        NaN
+    ],
+    "MTHFD": [
+        NaN,
+        NaN
+    ],
+    "NODOx": [
+        NaN,
+        NaN
+    ],
+    "PDX5PO2": [
+        NaN,
+        NaN
+    ],
+    "ALR4x": [
+        NaN,
+        NaN
+    ],
+    "GLUTRR": [
+        NaN,
+        NaN
+    ],
+    "SUCDi": [
+        6.969959426583181,
+        6.969959426583181
+    ],
+    "HPYRRx": [
+        NaN,
+        NaN
+    ],
+    "FHL": [
+        NaN,
+        NaN
+    ],
+    "2DGULRGx": [
+        NaN,
+        NaN
+    ],
+    "PPPNDO": [
+        NaN,
+        NaN
+    ],
+    "HACD4": [
+        NaN,
+        NaN
+    ],
+    "TAGURr": [
+        NaN,
+        NaN
+    ],
+    "OXCOAHDH": [
+        NaN,
+        NaN
+    ],
+    "KARA1": [
+        NaN,
+        NaN
+    ],
+    "TALA": [
+        NaN,
+        0.00448771640172365
+    ],
+    "DMPPS": [
+        NaN,
+        NaN
+    ],
+    "AGPR": [
+        NaN,
+        NaN
+    ],
+    "TRSARr": [
+        NaN,
+        NaN
+    ],
+    "FADRx2": [
+        NaN,
+        NaN
+    ],
+    "NADH9": [
+        NaN,
+        NaN
+    ],
+    "ALDD4": [
+        NaN,
+        NaN
+    ],
+    "DHMPTR": [
+        NaN,
+        NaN
+    ],
+    "HADPCOADH3": [
+        NaN,
+        NaN
+    ],
+    "PYROX": [
+        NaN,
+        NaN
+    ],
+    "OGMEACPR": [
+        NaN,
+        NaN
+    ],
+    "3OAR60": [
+        NaN,
+        NaN
+    ],
+    "UACMAMO": [
+        NaN,
+        NaN
+    ],
+    "3OAR140": [
+        NaN,
+        NaN
+    ],
+    "NADHHR": [
+        NaN,
+        NaN
+    ],
+    "2DGULRx": [
+        NaN,
+        NaN
+    ],
+    "GALCTLO": [
+        NaN,
+        NaN
+    ],
+    "EAR180x": [
+        NaN,
+        NaN
+    ],
+    "HACD7": [
+        NaN,
+        NaN
+    ],
+    "CSNt2pp": [
+        NaN,
+        NaN
+    ],
+    "MDH2": [
+        NaN,
+        0.0
+    ],
+    "DKGLCNR2y": [
+        NaN,
+        NaN
+    ],
+    "UDPGD": [
+        NaN,
+        NaN
+    ],
+    "IDOND": [
+        NaN,
+        NaN
+    ],
+    "PYK2": [
+        NaN,
+        0.0
+    ],
+    "HACD5": [
+        NaN,
+        NaN
+    ],
+    "EAR60y": [
+        NaN,
+        NaN
+    ],
+    "NMNAT": [
+        NaN,
+        NaN
+    ],
+    "EAR40y": [
+        NaN,
+        NaN
+    ],
+    "EX_lac__D_e": [
+        NaN,
+        NaN
+    ],
+    "GCALDD": [
+        NaN,
+        NaN
+    ],
+    "LALDO3": [
+        NaN,
+        NaN
+    ],
+    "DSERDHr": [
+        NaN,
+        NaN
+    ],
+    "3OAR141": [
+        NaN,
+        NaN
+    ],
+    "HACD1": [
+        NaN,
+        NaN
+    ],
+    "GAPD": [
+        NaN,
+        NaN
+    ],
+    "EDD": [
+        0.0,
+        0.0
+    ],
+    "DKGLCNR2x": [
+        NaN,
+        NaN
+    ],
+    "FUMt2_2pp": [
+        NaN,
+        0.0
+    ],
+    "PFK_3": [
+        0.0,
+        0.0
+    ],
+    "HACD3": [
+        NaN,
+        NaN
+    ],
+    "ALDD19xr": [
+        NaN,
+        NaN
+    ],
+    "LCARS": [
+        NaN,
+        NaN
+    ],
+    "FBA": [
+        NaN,
+        NaN
+    ],
+    "LDH_D": [
+        NaN,
+        NaN
+    ],
+    "MOADSUx": [
+        NaN,
+        NaN
+    ],
+    "CS1tex": [
+        NaN,
+        NaN
+    ],
+    "ALR2": [
+        NaN,
+        NaN
+    ],
+    "GTHOr": [
+        NaN,
+        NaN
+    ],
+    "ENO": [
+        -0.8418856154185691,
+        -0.8418856154185691
+    ],
+    "PYK4": [
+        NaN,
+        0.03719611650000023
+    ],
+    "NADS1": [
+        NaN,
+        NaN
+    ],
+    "3OAR160": [
+        NaN,
+        NaN
+    ],
+    "NADPHXD": [
+        NaN,
+        NaN
+    ],
+    "SUCCt2_3pp": [
+        NaN,
+        NaN
+    ],
+    "2DGULRGy": [
+        NaN,
+        NaN
+    ],
+    "G3PD2": [
+        NaN,
+        NaN
+    ],
+    "NADPHQR2": [
+        NaN,
+        NaN
+    ],
+    "NADTRHD": [
+        0.8167287535997527,
+        1.152978299945748
+    ],
+    "PPCDC": [
+        NaN,
+        0.00013850700000023197
+    ],
+    "ADK1": [
+        NaN,
+        NaN
+    ],
+    "SUCCt1pp": [
+        NaN,
+        1000.0
+    ],
+    "EX_for_e": [
+        NaN,
+        NaN
+    ],
+    "NADH16pp": [
+        NaN,
+        NaN
+    ],
+    "NADH18pp": [
+        NaN,
+        NaN
+    ],
+    "MANAO": [
+        NaN,
+        NaN
+    ],
+    "THZPSN3": [
+        NaN,
+        NaN
+    ],
+    "DHBD": [
+        NaN,
+        NaN
+    ],
+    "UAPGR": [
+        NaN,
+        NaN
+    ],
+    "ALCD19": [
+        NaN,
+        NaN
+    ],
+    "FLVRx": [
+        NaN,
+        NaN
+    ],
+    "PGMT": [
+        NaN,
+        NaN
+    ],
+    "CINNDO": [
+        NaN,
+        NaN
+    ],
+    "LIPOS": [
+        NaN,
+        NaN
+    ],
+    "IPDPS": [
+        NaN,
+        NaN
+    ],
+    "3OAR100": [
+        NaN,
+        NaN
+    ],
+    "PGK": [
+        NaN,
+        NaN
+    ],
+    "EAR140y": [
+        NaN,
+        NaN
+    ],
+    "EAR100x": [
+        NaN,
+        NaN
+    ],
+    "OMMBLHX3": [
+        NaN,
+        NaN
+    ],
+    "EAR160x": [
+        NaN,
+        NaN
+    ],
+    "CHOLID": [
+        NaN,
+        NaN
+    ],
+    "SBTPD": [
+        NaN,
+        NaN
+    ],
+    "HXAND": [
+        NaN,
+        NaN
+    ],
+    "FMNRx": [
+        NaN,
+        NaN
+    ],
+    "CHOLD": [
+        NaN,
+        NaN
+    ],
+    "PTAr": [
+        -10.125314033922237,
+        NaN
+    ],
+    "ATPM": [
+        6.86,
+        NaN
+    ],
+    "PGL": [
+        NaN,
+        0.25674124168003093
+    ],
+    "HACD6": [
+        NaN,
+        NaN
+    ],
+    "G3PD5": [
+        NaN,
+        0.0
+    ],
+    "PDX5PS": [
+        NaN,
+        NaN
+    ],
+    "EAR181y": [
+        NaN,
+        NaN
+    ],
+    "P5CD": [
+        NaN,
+        NaN
+    ],
+    "OPHHX3": [
+        NaN,
+        NaN
+    ],
+    "GLYCL": [
+        NaN,
+        NaN
+    ],
+    "HACD8": [
+        NaN,
+        NaN
+    ],
+    "GOFUCR": [
+        NaN,
+        NaN
+    ],
+    "PYK3": [
+        NaN,
+        0.5634820274993078
+    ],
+    "PPCSCT": [
+        0.0,
+        NaN
+    ],
+    "EX_glc__D_e": [
+        NaN,
+        NaN
+    ],
+    "PERD": [
+        NaN,
+        NaN
+    ],
+    "APRAUR": [
+        NaN,
+        NaN
+    ],
+    "F6PA": [
+        NaN,
+        NaN
+    ],
+    "CDGR": [
+        NaN,
+        NaN
+    ],
+    "5DKGR": [
+        NaN,
+        NaN
+    ],
+    "SHCHD2": [
+        NaN,
+        NaN
+    ],
+    "ABUTD": [
+        NaN,
+        NaN
+    ],
+    "GLYCLTDy": [
+        NaN,
+        NaN
+    ],
+    "MTHFR2": [
+        NaN,
+        NaN
+    ],
+    "THD2pp": [
+        NaN,
+        NaN
+    ],
+    "ACONTb": [
+        NaN,
+        NaN
+    ],
+    "NADPHQR3": [
+        NaN,
+        NaN
+    ],
+    "NADN": [
+        NaN,
+        NaN
+    ],
+    "QUINDHyi": [
+        NaN,
+        NaN
+    ],
+    "NADPHHR": [
+        NaN,
+        NaN
+    ],
+    "EAR160y": [
+        NaN,
+        NaN
+    ],
+    "PACCOAE": [
+        NaN,
+        NaN
+    ],
+    "PCNO": [
+        NaN,
+        NaN
+    ],
+    "OMMBLHXy": [
+        NaN,
+        NaN
+    ],
+    "ASAD": [
+        NaN,
+        NaN
+    ],
+    "EAR161y": [
+        NaN,
+        NaN
+    ],
+    "P5CR": [
+        NaN,
+        NaN
+    ],
+    "EX_succ_e": [
+        NaN,
+        NaN
+    ],
+    "ALR2x": [
+        NaN,
+        NaN
+    ],
+    "PPC": [
+        NaN,
+        NaN
+    ],
+    "PGCD": [
+        NaN,
+        NaN
+    ],
+    "OPMEACPR": [
+        NaN,
+        NaN
+    ],
+    "ME1": [
+        NaN,
+        NaN
+    ],
+    "EX_ac_e": [
+        -10.0,
+        NaN
+    ],
+    "FBA3": [
+        NaN,
+        NaN
+    ],
+    "FE3DHBZS3R": [
+        NaN,
+        NaN
+    ],
+    "BSORx": [
+        NaN,
+        NaN
+    ],
+    "HPYRRy": [
+        NaN,
+        NaN
+    ],
+    "ACKr": [
+        NaN,
+        NaN
+    ],
+    "POAACR": [
+        NaN,
+        NaN
+    ],
+    "FLDR2": [
+        NaN,
+        NaN
+    ],
+    "PGLYCP": [
+        NaN,
+        NaN
+    ],
+    "TYRL": [
+        NaN,
+        NaN
+    ],
+    "M1PD": [
+        NaN,
+        NaN
+    ],
+    "NADPPPS": [
+        NaN,
+        0.0
+    ],
+    "TRDR": [
+        NaN,
+        NaN
+    ],
+    "MALS": [
+        2.2322882688390444,
+        2.2322882688390444
+    ],
+    "ACALDtpp": [
+        NaN,
+        NaN
+    ],
+    "IDOND2": [
+        NaN,
+        NaN
+    ],
+    "2DGULRy": [
+        NaN,
+        NaN
+    ],
+    "EAR181x": [
+        NaN,
+        NaN
+    ],
+    "EAR121x": [
+        NaN,
+        NaN
+    ],
+    "CURR": [
+        NaN,
+        NaN
+    ],
+    "THRD": [
+        NaN,
+        NaN
+    ],
+    "TPI": [
+        NaN,
+        NaN
+    ],
+    "GLCptspp": [
+        NaN,
+        NaN
+    ],
+    "MSAR": [
+        NaN,
+        NaN
+    ],
+    "DHPPD": [
+        NaN,
+        NaN
+    ],
+    "NADHHS": [
+        NaN,
+        NaN
+    ],
+    "ICDHyr": [
+        NaN,
+        NaN
+    ],
+    "LCADi": [
+        NaN,
+        NaN
+    ],
+    "HISTD": [
+        NaN,
+        NaN
+    ],
+    "ACONTa": [
+        NaN,
+        NaN
+    ],
+    "SSALy": [
+        NaN,
+        NaN
+    ],
+    "SELGTHR3": [
+        NaN,
+        NaN
+    ],
+    "DHCURR": [
+        NaN,
+        NaN
+    ],
+    "SUCCt2_2pp": [
+        NaN,
+        0.5559960873556211
+    ],
+    "URDGLYCD": [
+        NaN,
+        NaN
+    ],
+    "NODOy": [
+        NaN,
+        NaN
+    ],
+    "ALDD2y": [
+        NaN,
+        NaN
+    ],
+    "NADDP": [
+        NaN,
+        NaN
+    ],
+    "NADPHHS": [
+        NaN,
+        NaN
+    ],
+    "EAR40x": [
+        NaN,
+        NaN
+    ],
+    "ATPS4rpp": [
+        33.018492951111554,
+        NaN
+    ],
+    "HSDy": [
+        NaN,
+        NaN
+    ],
+    "PPCK": [
+        1.6182876314169676,
+        1.6182876314169676
+    ],
+    "3OAR121": [
+        NaN,
+        NaN
+    ],
+    "SSALx": [
+        NaN,
+        NaN
+    ],
+    "3HPPPNH": [
+        NaN,
+        NaN
+    ],
+    "IMPD": [
+        NaN,
+        NaN
+    ],
+    "PFK_2": [
+        NaN,
+        NaN
+    ],
+    "NADH10": [
+        NaN,
+        NaN
+    ],
+    "EX_co2_e": [
+        NaN,
+        NaN
+    ],
+    "DPR": [
+        NaN,
+        NaN
+    ],
+    "FLVR": [
+        NaN,
+        NaN
+    ],
+    "ALDD3y": [
+        NaN,
+        NaN
+    ],
+    "EX_h2o_e": [
+        NaN,
+        NaN
+    ],
+    "FUMt1pp": [
+        NaN,
+        NaN
+    ],
+    "FMNRx2": [
+        NaN,
+        NaN
+    ],
+    "AMPMS2": [
+        NaN,
+        NaN
+    ],
+    "UDPGDC": [
+        NaN,
+        NaN
+    ],
+    "LCARSyi": [
+        NaN,
+        NaN
+    ],
+    "DOGULNR": [
+        NaN,
+        NaN
+    ],
+    "GLCt2pp": [
+        NaN,
+        0.0
+    ],
+    "GND": [
+        NaN,
+        NaN
+    ],
+    "FADRx": [
+        NaN,
+        NaN
+    ],
+    "EAR100y": [
+        NaN,
+        NaN
+    ],
+    "HEX1": [
+        NaN,
+        NaN
+    ],
+    "MGSA": [
+        NaN,
+        0.0
+    ],
+    "NADH17pp": [
+        NaN,
+        NaN
+    ],
+    "DHPTDNR": [
+        NaN,
+        NaN
+    ],
+    "5DGLCNR": [
+        NaN,
+        NaN
+    ],
+    "EAR120y": [
+        NaN,
+        NaN
+    ],
+    "QUINDH": [
+        NaN,
+        NaN
+    ],
+    "DKGLCNR1": [
+        NaN,
+        NaN
+    ],
+    "PPS": [
+        NaN,
+        0.0
+    ],
+    "NADK": [
+        NaN,
+        9.18585e-05
+    ],
+    "BIOMASS_Ec_iML1515_core_75p37M": [
+        NaN,
+        0.2055
+    ],
+    "GLYCDx": [
+        NaN,
+        NaN
+    ],
+    "MALDDH": [
+        NaN,
+        NaN
+    ],
+    "TKT2": [
+        NaN,
+        -0.11890449199926069
+    ],
+    "FBP": [
+        NaN,
+        0.1788604869992035
+    ],
+    "MDH3": [
+        NaN,
+        0.0
+    ],
+    "EX_etoh_e": [
+        NaN,
+        NaN
+    ],
+    "PGM": [
+        NaN,
+        NaN
+    ],
+    "EAR141y": [
+        NaN,
+        NaN
+    ],
+    "G5SD": [
+        NaN,
+        NaN
+    ],
+    "PYK": [
+        NaN,
+        0.0
+    ],
+    "CSND": [
+        0.0,
+        0.0
+    ],
+    "EDA": [
+        0.0,
+        0.0
+    ],
+    "BSORy": [
+        NaN,
+        NaN
+    ],
+    "PFL": [
+        NaN,
+        0.02809198392154144
+    ],
+    "CYTBO3_4pp": [
+        22.16643734769494,
+        NaN
+    ]
+}

@@ -1,16 +1,35 @@
+"""Loads the TCOSA-prepared iML1515 model and its associated thermodynamic as well as biochemical data.
+
+This central script also contains the logic for the determination of the bottlenecks in the TCOSA-prepared
+iML1515 model. For this, keep in mind that since the selection of the minimal set of bottlenecks
+might not be unique (there might be multiple equally good solutions), this part is commented out here
+and a strict pre-calculated set of bottlenecks is used.
+However, if you want to run this bottleneck analysis, comment out the multi-line comment around the lines
+with '--- END OF BOTTLENECK IDENTIFICATION ---' up to '--- END OF BOTTLENECK IDENTIFICATION ---', which is
+exactly the code that was used for the strict set of bottlenecks.
+In addition, there is also another out-commented block for testing the set of bottlencks, starting
+from the line with '--- START OF BOTTLNECK TEST ---' up to '--- END OF BOTTLNECK TEST ---'.
+"""
+
+# IMPORTS #
+# External
 import cobra
+import copy
+# Internal
 from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
 from helper import json_load, json_write, pickle_load
 from optmdfpathway import STANDARD_R, STANDARD_T, get_optmdfpathway_base_problem, get_thermodynamic_bottlenecks
 from optimization import perform_variable_maximization, perform_variable_minimization
 from fba import perform_fba_flux_maximization, get_fba_base_problem
-import copy
 from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
 
+# CONSTANTS #
 MIN_OPTMDF = 0.1
 LOW_DG0 = -100
 
-def load_model_data(anaerobic: bool, expanded: bool):
+
+# PUBLIC FUNCTIONS #
+def load_model_data(anaerobic: bool, expanded: bool, c_source: str="glucose"):
     biomass_reaction_id = "BIOMASS_Ec_iML1515_core_75p37M"
 
     #### LOAD AND SET UP MODEL ####
@@ -23,13 +42,20 @@ def load_model_data(anaerobic: bool, expanded: bool):
 
     cobra_model.solver = "cplex"
 
-    print(">Set aerobicity of model")
+    print(">Set aerobicity and C source of model")
+    cobra_model.reactions.get_by_id("EX_glc__D_e_REV").upper_bound = 0.0
     if anaerobic:
         cobra_model.reactions.get_by_id("EX_o2_e_REV").lower_bound = 0.0
         cobra_model.reactions.get_by_id("EX_o2_e_REV").upper_bound = 0.0
-        cobra_model.reactions.get_by_id("EX_glc__D_e_REV").upper_bound = 20.0
+        if c_source == "glucose":
+            cobra_model.reactions.get_by_id("EX_glc__D_e_REV").upper_bound = 20.0
+        elif c_source == "acetate":
+            cobra_model.reactions.get_by_id("EX_ac_e_REV").upper_bound = 20.0
     else:
-        cobra_model.reactions.get_by_id("EX_glc__D_e_REV").upper_bound = 10.0
+        if c_source == "glucose":
+            cobra_model.reactions.get_by_id("EX_glc__D_e_REV").upper_bound = 10.0
+        elif c_source == "acetate":
+            cobra_model.reactions.get_by_id("EX_ac_e_REV").upper_bound = 10.0
     #### END OF LOAD AND SET UP MODEL ####
 
     ### CALCULATION OF USED GROWTH ###
@@ -120,6 +146,7 @@ def load_model_data(anaerobic: bool, expanded: bool):
         concentration_values_paper[key] = {}
         concentration_values_paper[key]["min"] = paper_concentration_data[key]["lb"] / 1
         concentration_values_paper[key]["max"] = paper_concentration_data[key]["ub"] * 1
+    json_write("./resources/in_vivo_concentration_data/final_concentration_values_paper.json", concentration_values_paper)
 
     print(">Set standard concentration ranges")
     concentration_values_free = {
@@ -189,17 +216,9 @@ def load_model_data(anaerobic: bool, expanded: bool):
 
 
     #### NEW dG0 DATA HANDLING ####
-    #### NEW dG0 DATA HANDLING ####
     print("=SET UP dG0 DATA=")
     print(">Load precomputed eQuilibrator dG0 values")
     dG0_values = json_load("./resources/dG0_iML1515_irreversible_cleaned.json")
-
-    ### print(">Delete precomputed multi-compartmental dG0 values")
-    ### dG0_value_ids = list(dG0_values.keys())
-    ### for dG0_value_id in dG0_value_ids:
-    ###     if dG0_values[dG0_value_id]["num_compartments"] > 1:
-    ###         del(dG0_values[dG0_value_id])
-    ###
 
     ###
 
@@ -254,7 +273,6 @@ def load_model_data(anaerobic: bool, expanded: bool):
             dG0_values[reaction.id]["dG0"] = set_dG0
             dG0_values[reaction.id]["uncertainty"] = 0.0
             dG0_values[reaction.id]["num_compartments"] = 1
-            # zeroed_reaction_ids.append(reaction.id)
 
         if ("BIOMASS" not in reaction.id.upper()) and (reaction.id not in dG0_values) and (not reaction.id.startswith("EX_")):
             dG0_values[reaction.id] = {}
@@ -278,23 +296,6 @@ def load_model_data(anaerobic: bool, expanded: bool):
     with open("kept_multicompartmentals.txt", "w") as f:
         f.write(kept_multicompartmentals)
 
-    ### print(">Delete newly set multi-compartmental dG0 values")
-    ### for reaction in cobra_model.reactions:
-    ###     reaction: cobra.Reaction = reaction
-    ###     if (reaction.id not in dG0_values):
-    ###         continue
-    ###     compartments = []
-    ###     for metabolite in reaction.metabolites.keys():
-    ###         compartments.append(metabolite.compartment)
-    ###     compartments = set(compartments)
-    ###     if len(compartments) > 1:
-    ###         if reaction.id.endswith("_TCOSA"):
-    ###             print("-", dG0_values[reaction.id], reaction.id, reaction.reaction, compartments)
-    ###             continue
-    ###         print(reaction.id)
-    ###         # if dG0_values[reaction.id] != LOW_DG0:
-    ###         #     print("-",reaction.id, reaction.reaction, compartments)
-    ###         dG0_values[reaction.id]["dG0"] = LOW_DG0
     del(dG0_values["H2tex_FWD"])
     del(dG0_values["H2tex_REV"])
     del(dG0_values["H2Otex_FWD"])
@@ -302,7 +303,6 @@ def load_model_data(anaerobic: bool, expanded: bool):
     dG0_values["Single_Cofactor_Pseudoreaction"] = {}
     dG0_values["Single_Cofactor_Pseudoreaction"]["dG0"] = LOW_DG0
     dG0_values["Single_Cofactor_Pseudoreaction"]["uncertainty"] = 0
-    ### END OF NEW dG0 HANDLING
     ### END OF NEW dG0 HANDLING
 
     ### CALCULATION AND SETTING OF BOTTLENECKS ###
@@ -318,7 +318,8 @@ def load_model_data(anaerobic: bool, expanded: bool):
             used_concentrations = concentration_values_paper
 
         """
-        ###TTTT
+        ###
+        ### --- START OF BOTTLENECK IDENTIFICATION ---
         max_dG0_changes = {}
         for nadx_scenario in tested_nadx_scenarios:
             print(f"===NADX scenario: {nadx_scenario}===")
@@ -446,116 +447,155 @@ def load_model_data(anaerobic: bool, expanded: bool):
                 set_dG0 = LOW_DG0 if newkey not in reverted_reaction_ids else -LOW_DG0
                 comment = "" if newkey not in added_reaction_ids else " # added for consistency"
                 print(f'{prefix}_dG0_values["{newkey}"]["dG0"] = {set_dG0}{comment}')
-        input("X")
-        # END OF OPTMDF ANALYSIS *FOR* THE DETERMINATION OF BOTTLENECKS
-        #TTTT
+        input("Press any key to continue...")
+        ### --- END OF BOTTLENECK IDENTIFICATION ---
+        ###
         """
-
 
         print(f"===TEST OF COMBINED SINGLE_COFACTOR/WILDTYPE BOTTLENECK 'REMOVALS' WITH {concentration_scenario}===")
         print("Set up dG0 fixed bottleneck 'removals' (done for consistency between runs with different solvers)")
-        if concentration_scenario == "STANDARDCONC":
+        if c_source == "glucose":
+            ###GLUCOSE###
+            if concentration_scenario == "STANDARDCONC":
+                standardconc_dG0_values = copy.deepcopy(dG0_values)
+
+                if not anaerobic: # aerobic
+                    standardconc_dG0_values["KDOCT2"]["dG0"] = -100
+                    standardconc_dG0_values["MECDPS"]["dG0"] = -100
+                    standardconc_dG0_values["DHPPDA2"]["dG0"] = -100
+                    standardconc_dG0_values["ATPPRT"]["dG0"] = -100
+                    standardconc_dG0_values["IG3PS"]["dG0"] = -100
+                    standardconc_dG0_values["MCTP1App"]["dG0"] = -100
+                    standardconc_dG0_values["MALCOAMT"]["dG0"] = -100
+                    standardconc_dG0_values["AIRC3_REV"]["dG0"] = -100
+                    standardconc_dG0_values["AIRC3_FWD"]["dG0"] = 100 # added for consistency
+                    standardconc_dG0_values["SHCHD2_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
+                    standardconc_dG0_values["SHCHD2_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
+
+                    if expanded:
+                        standardconc_dG0_values["SHCHD2_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
+                else: # anaerobic
+                    standardconc_dG0_values["KDOCT2"]["dG0"] = -100
+                    standardconc_dG0_values["MECDPS"]["dG0"] = -100
+                    standardconc_dG0_values["DHPPDA2"]["dG0"] = -100
+                    standardconc_dG0_values["ATPPRT"]["dG0"] = -100
+                    standardconc_dG0_values["IG3PS"]["dG0"] = -100
+                    standardconc_dG0_values["MCTP1App"]["dG0"] = -100
+                    standardconc_dG0_values["MALCOAMT"]["dG0"] = -100
+                    standardconc_dG0_values["AIRC3_REV"]["dG0"] = -100
+                    standardconc_dG0_values["AIRC3_FWD"]["dG0"] = 100 # added for consistency
+                    standardconc_dG0_values["SHCHD2_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
+                    standardconc_dG0_values["SHCHD2_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
+
+                    if expanded:
+                        standardconc_dG0_values["SHCHD2_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
+                test_used_dG0 = copy.deepcopy(standardconc_dG0_values)
+            ###GLUCOSE###
+            elif concentration_scenario == "PAPERCONC":
+                paperconc_dG0_values = copy.deepcopy(dG0_values)
+
+                if not anaerobic: # aerobic
+                    paperconc_dG0_values["KDOCT2"]["dG0"] = -100
+                    paperconc_dG0_values["MECDPS"]["dG0"] = -100
+                    paperconc_dG0_values["DHPPDA2"]["dG0"] = -100
+                    paperconc_dG0_values["ATPPRT"]["dG0"] = -100
+                    paperconc_dG0_values["IG3PS"]["dG0"] = -100
+                    paperconc_dG0_values["MCTP1App"]["dG0"] = -100
+                    paperconc_dG0_values["MALCOAMT"]["dG0"] = -100
+                    paperconc_dG0_values["AIRC3_REV"]["dG0"] = -100
+                    paperconc_dG0_values["AIRC3_FWD"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["SHCHD2_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
+                    paperconc_dG0_values["SHCHD2_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
+                    paperconc_dG0_values["ASAD_REV_VARIANT_NAD_TCOSA"]["dG0"] = -100
+                    paperconc_dG0_values["ASAD_FWD_VARIANT_NAD_TCOSA"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["ASAD_REV_ORIGINAL_NADP_TCOSA"]["dG0"] = -100 # added for consistency
+                    paperconc_dG0_values["ASAD_FWD_ORIGINAL_NADP_TCOSA"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["GLUDy_REV_VARIANT_NAD_TCOSA"]["dG0"] = -100
+                    paperconc_dG0_values["GLUDy_FWD_VARIANT_NAD_TCOSA"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["GLUDy_REV_ORIGINAL_NADP_TCOSA"]["dG0"] = -100 # added for consistency
+                    paperconc_dG0_values["GLUDy_FWD_ORIGINAL_NADP_TCOSA"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["CBMKr_FWD"]["dG0"] = -100
+                    paperconc_dG0_values["CBMKr_REV"]["dG0"] = 100 # added for consistency
+
+                    if expanded:
+                        paperconc_dG0_values["SHCHD2_NADZ_TCOSA"]["dG0"] = -100
+                        paperconc_dG0_values["ASAD_REV_NADZ_TCOSA"]["dG0"] = -100
+                        paperconc_dG0_values["ASAD_FWD_NADZ_TCOSA"]["dG0"] = 100
+                        paperconc_dG0_values["GLUDy_REV_NADZ_TCOSA"]["dG0"] = -100
+                        paperconc_dG0_values["GLUDy_FWD_NADZ_TCOSA"]["dG0"] = 100
+                else: # anaerobic
+                    paperconc_dG0_values["KDOCT2"]["dG0"] = -100
+                    paperconc_dG0_values["MECDPS"]["dG0"] = -100
+                    paperconc_dG0_values["DHPPDA2"]["dG0"] = -100
+                    paperconc_dG0_values["ATPPRT"]["dG0"] = -100
+                    paperconc_dG0_values["IG3PS"]["dG0"] = -100
+                    paperconc_dG0_values["MCTP1App"]["dG0"] = -100
+                    paperconc_dG0_values["MALCOAMT"]["dG0"] = -100
+                    paperconc_dG0_values["AIRC3_REV"]["dG0"] = -100
+                    paperconc_dG0_values["AIRC3_FWD"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["ASPK_FWD"]["dG0"] = -100
+                    paperconc_dG0_values["ASPK_REV"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["ATPS4rpp_REV"]["dG0"] = -100
+                    paperconc_dG0_values["ATPS4rpp_FWD"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["SHCHD2_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
+                    paperconc_dG0_values["SHCHD2_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
+                    paperconc_dG0_values["PTAr_FWD"]["dG0"] = -100
+                    paperconc_dG0_values["PTAr_REV"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["ACACT2r_FWD"]["dG0"] = -100
+                    paperconc_dG0_values["ACACT2r_REV"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["ACACT4r_FWD"]["dG0"] = -100
+                    paperconc_dG0_values["ACACT4r_REV"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["ACACT6r_FWD"]["dG0"] = -100
+                    paperconc_dG0_values["ACACT6r_REV"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["ACACT1r_FWD"]["dG0"] = -100
+                    paperconc_dG0_values["ACACT1r_REV"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["GAPD_FWD_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
+                    paperconc_dG0_values["GAPD_REV_ORIGINAL_NAD_TCOSA"]["dG0"] = 100 # added for consistency
+                    paperconc_dG0_values["GAPD_FWD_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
+                    paperconc_dG0_values["GAPD_REV_VARIANT_NADP_TCOSA"]["dG0"] = 100 # added for consistency
+
+                    if expanded:
+                        pass # This data is not useful (in vivo data is just under aerobicity)
+                test_used_dG0 = copy.deepcopy(paperconc_dG0_values)
+        elif c_source == "acetate":
             standardconc_dG0_values = copy.deepcopy(dG0_values)
 
-            if not anaerobic: # aerobic
-                standardconc_dG0_values["KDOCT2"]["dG0"] = -100
-                standardconc_dG0_values["MECDPS"]["dG0"] = -100
-                standardconc_dG0_values["DHPPDA2"]["dG0"] = -100
-                standardconc_dG0_values["ATPPRT"]["dG0"] = -100
-                standardconc_dG0_values["IG3PS"]["dG0"] = -100
-                standardconc_dG0_values["MCTP1App"]["dG0"] = -100
-                standardconc_dG0_values["MALCOAMT"]["dG0"] = -100
-                standardconc_dG0_values["AIRC3_REV"]["dG0"] = -100
-                standardconc_dG0_values["AIRC3_FWD"]["dG0"] = 100 # added for consistency
-                standardconc_dG0_values["SHCHD2_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
-                standardconc_dG0_values["SHCHD2_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
+            ###ACETATE###
+            if concentration_scenario == "STANDARDCONC":
+                if not anaerobic: # aerobic
+                    standardconc_dG0_values["KDOCT2"]["dG0"] = -100
+                    standardconc_dG0_values["MECDPS"]["dG0"] = -100
+                    standardconc_dG0_values["DHPPDA2"]["dG0"] = -100
+                    standardconc_dG0_values["ATPPRT"]["dG0"] = -100
+                    standardconc_dG0_values["IG3PS"]["dG0"] = -100
+                    standardconc_dG0_values["MCTP1App"]["dG0"] = -100
+                    standardconc_dG0_values["MALCOAMT"]["dG0"] = -100
+                    standardconc_dG0_values["AIRC3_REV"]["dG0"] = -100
+                    standardconc_dG0_values["AIRC3_FWD"]["dG0"] = 100 # added for consistency
+                    standardconc_dG0_values["SHCHD2_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
+                    standardconc_dG0_values["SHCHD2_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
+                    if expanded:
+                        pass
+                else:
+                    pass
+                    if expanded:
+                        pass
+            elif concentration_scenario == "PAPERCONC":
+                paperconc_dG0_values = copy.deepcopy(dG0_values)
 
-                if expanded:
-                    standardconc_dG0_values["SHCHD2_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-            else: # anaerobic
-                standardconc_dG0_values["KDOCT2"]["dG0"] = -100
-                standardconc_dG0_values["MECDPS"]["dG0"] = -100
-                standardconc_dG0_values["DHPPDA2"]["dG0"] = -100
-                standardconc_dG0_values["ATPPRT"]["dG0"] = -100
-                standardconc_dG0_values["IG3PS"]["dG0"] = -100
-                standardconc_dG0_values["MCTP1App"]["dG0"] = -100
-                standardconc_dG0_values["MALCOAMT"]["dG0"] = -100
-                standardconc_dG0_values["AIRC3_REV"]["dG0"] = -100
-                standardconc_dG0_values["AIRC3_FWD"]["dG0"] = 100 # added for consistency
-                standardconc_dG0_values["SHCHD2_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
-                standardconc_dG0_values["SHCHD2_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
+                if not anaerobic: # aerobic
+                    pass
 
-                if expanded:
-                    standardconc_dG0_values["SHCHD2_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-            test_used_dG0 = copy.deepcopy(standardconc_dG0_values)
-        elif concentration_scenario == "PAPERCONC":
-            paperconc_dG0_values = copy.deepcopy(dG0_values)
-
-            if not anaerobic: # aerobic
-                paperconc_dG0_values["KDOCT2"]["dG0"] = -100
-                paperconc_dG0_values["MECDPS"]["dG0"] = -100
-                paperconc_dG0_values["DHPPDA2"]["dG0"] = -100
-                paperconc_dG0_values["ATPPRT"]["dG0"] = -100
-                paperconc_dG0_values["IG3PS"]["dG0"] = -100
-                paperconc_dG0_values["MCTP1App"]["dG0"] = -100
-                paperconc_dG0_values["MALCOAMT"]["dG0"] = -100
-                paperconc_dG0_values["AIRC3_REV"]["dG0"] = -100
-                paperconc_dG0_values["AIRC3_FWD"]["dG0"] = 100 # added for consistency
-                paperconc_dG0_values["SHCHD2_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
-                paperconc_dG0_values["SHCHD2_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
-                paperconc_dG0_values["ASAD_REV_VARIANT_NAD_TCOSA"]["dG0"] = -100
-                paperconc_dG0_values["ASAD_FWD_VARIANT_NAD_TCOSA"]["dG0"] = 100 # added for consistency
-                paperconc_dG0_values["ASAD_REV_ORIGINAL_NADP_TCOSA"]["dG0"] = -100 # added for consistency
-                paperconc_dG0_values["ASAD_FWD_ORIGINAL_NADP_TCOSA"]["dG0"] = 100 # added for consistency
-                paperconc_dG0_values["GLUDy_REV_VARIANT_NAD_TCOSA"]["dG0"] = -100
-                paperconc_dG0_values["GLUDy_FWD_VARIANT_NAD_TCOSA"]["dG0"] = 100 # added for consistency
-                paperconc_dG0_values["GLUDy_REV_ORIGINAL_NADP_TCOSA"]["dG0"] = -100 # added for consistency
-                paperconc_dG0_values["GLUDy_FWD_ORIGINAL_NADP_TCOSA"]["dG0"] = 100 # added for consistency
-
-                if expanded:
-                    paperconc_dG0_values["SHCHD2_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["ASAD_FWD_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["ASAD_REV_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["GLUDy_FWD_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["GLUDy_REV_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-            else: # anaerobic
-                paperconc_dG0_values["KDOCT2"]["dG0"] = -100
-                paperconc_dG0_values["MECDPS"]["dG0"] = -100
-                paperconc_dG0_values["DHPPDA2"]["dG0"] = -100
-                paperconc_dG0_values["ATPPRT"]["dG0"] = -100
-                paperconc_dG0_values["IG3PS"]["dG0"] = -100
-                paperconc_dG0_values["MCTP1App"]["dG0"] = -100
-                paperconc_dG0_values["MALCOAMT"]["dG0"] = -100
-                paperconc_dG0_values["PTAr_FWD"]["dG0"] = -100
-                paperconc_dG0_values["PTAr_REV"]["dG0"] = 100 # added for consistency
-                paperconc_dG0_values["AIRC3_REV"]["dG0"] = -100
-                paperconc_dG0_values["AIRC3_FWD"]["dG0"] = 100 # added for consistency
-                paperconc_dG0_values["SHCHD2_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
-                paperconc_dG0_values["SHCHD2_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
-                paperconc_dG0_values["GAPD_FWD_ORIGINAL_NAD_TCOSA"]["dG0"] = -100
-                paperconc_dG0_values["GAPD_REV_ORIGINAL_NAD_TCOSA"]["dG0"] = 100 # added for consistency
-                paperconc_dG0_values["GAPD_FWD_VARIANT_NADP_TCOSA"]["dG0"] = -100 # added for consistency
-                paperconc_dG0_values["GAPD_REV_VARIANT_NADP_TCOSA"]["dG0"] = 100 # added for consistency
-                paperconc_dG0_values["ACACT2r_FWD"]["dG0"] = -100
-                paperconc_dG0_values["ACACT2r_REV"]["dG0"] = 100 # added for consistency
-                paperconc_dG0_values["ACACT4r_FWD"]["dG0"] = -100
-                paperconc_dG0_values["ACACT4r_REV"]["dG0"] = 100 # added for consistency
-                paperconc_dG0_values["ACACT6r_FWD"]["dG0"] = -100
-                paperconc_dG0_values["ACACT6r_REV"]["dG0"] = 100 # added for consistency
-                paperconc_dG0_values["ACACT1r_FWD"]["dG0"] = -100
-                paperconc_dG0_values["ACACT1r_REV"]["dG0"] = 100 # added for consistency
-
-                if expanded:
-                    paperconc_dG0_values["SHCHD2_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["ASAD_FWD_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["ASAD_REV_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["GAPD_FWD_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-                    paperconc_dG0_values["GAPD_REV_NADZ_TCOSA"]["dG0"] = -100 # added for consistency
-            test_used_dG0 = copy.deepcopy(paperconc_dG0_values)
+                    if expanded:
+                        pass
+                else:
+                    pass
+                    if expanded:
+                        pass
 
         """
-        #FFFF
-        ### START OF FINAL TEST ###
+        ###
+        ### --- START OF BOTTLNECK TEST ---
         print("=TEST OPTMDFPATHWAYs AFTER BOTTLENECK MITIGATION=")
         for nadx_scenario in tested_nadx_scenarios:
             print(f"===NADX scenario: {nadx_scenario}===")
@@ -593,9 +633,9 @@ def load_model_data(anaerobic: bool, expanded: bool):
             )
             print("Status:", optmdfpathway_result["status"])
             print("OptMDF (var_B):", optmdfpathway_result["values"]["var_B"], "kJ/mol")
-        input("X")
-        ### END OF FINAL TEST ###
-        #FFFF
+        input("Press any key to continue...")
+        ### --- END OF BOTTLENECK TEST ---
+        ###
         """
 
 
@@ -625,24 +665,7 @@ def load_model_data(anaerobic: bool, expanded: bool):
 
 
 if __name__ == "__main__":
-    print("AEROBIC - NOT EXPANDED")
-    # load_model_data(anaerobic=False, expanded=True)
-    print("=============")
+    load_model_data(anaerobic=False, expanded=False)
     load_model_data(anaerobic=True, expanded=False)
-    # print("~~~~~~~")
-    # print("~~~~~~~")
-    # print("~~~~~~~")
-    # print("~~~~~~~")
-    # print("~~~~~~~")
-    # print("ANAEROBIC - NOT EXPANDED")
-    # load_model_data(anaerobic=True, expanded=False)
-    # print("======")
-    # print("======")
-    # print("======")
-    # print("======")
-    # print("AEROBIC - EXPANDED")
-    # load_model_data(anaerobic=False, expanded=True)
-    # print("=====")
-    # print("=====")
-    # print("ANAEROBIC - EXPANDED")
-    # load_model_data(anaerobic=True, expanded=True)
+    load_model_data(anaerobic=False, expanded=False, c_source="acetate")
+    print("=============")

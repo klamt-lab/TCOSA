@@ -4,9 +4,10 @@ from matplotlib.lines import Line2D
 import pandas
 from helper import ensure_folder_existence
 from statistics import mean, stdev
+from typing import Tuple
 
 
-def create_cosa_figures(data_path: str, figures_path: str, anaerobic: bool) -> None:
+def create_cosa_figures(data_path: str, figures_path: str, anaerobic: bool, concentration_scenarios: Tuple[str]) -> None:
     ensure_folder_existence(figures_path)
 
     str_to_float = lambda x: float(x.replace(",", "."))
@@ -17,12 +18,14 @@ def create_cosa_figures(data_path: str, figures_path: str, anaerobic: bool) -> N
     in_vivo_id = "WILDTYPE"
     only_one_id = "SINGLE_COFACTOR"
 
-    table_paths = [
-        f"{data_path}optmdf_table_STANDARDCONC.csv",
-        f"{data_path}optmdf_table_VIVOCONC.csv",
-        f"{data_path}optsubmdf_table_STANDARDCONC.csv",
-        f"{data_path}optsubmdf_table_VIVOCONC.csv",
-    ]
+    table_paths = []
+    if "STANDARDCONC" in concentration_scenarios:
+        table_paths.append(f"{data_path}optmdf_table_STANDARDCONC.csv")
+        table_paths.append(f"{data_path}optsubmdf_table_STANDARDCONC.csv")
+    elif "VIVOCONC" in concentration_scenarios:
+        table_paths.append(f"{data_path}optmdf_table_VIVOCONC.csv",)
+        table_paths.append(f"{data_path}optsubmdf_table_VIVOCONC.csv",)
+
     for table_path in table_paths:
         table = pandas.read_csv(
             table_path,
@@ -427,21 +430,21 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                 if (aerobicity == "aerobic") and (target == "OptMDF"):
                     ax_x = 0
                     ax_y = 0
-                    title = "A Aerobic, OptMDF"
+                    title = "A Aerobic, MDF"
                 elif (aerobicity == "anaerobic") and (target == "OptMDF"):
                     ax_x = 1
                     ax_y = 0
-                    title = "C Anaerobic, OptMDF"
+                    title = "C Anaerobic, MDF"
                 elif (aerobicity == "aerobic") and (target == "OptSubMDF"):
                     ax_x = 0
                     ax_y = 1
-                    title = "B Aerobic, OptSubMDF"
+                    title = "B Aerobic, SubMDF"
                 elif (aerobicity == "anaerobic") and (target == "OptSubMDF"):
                     ax_x = 1
                     ax_y = 1
-                    title = "D Anaerobic, OptSubMDF"
+                    title = "D Anaerobic, SubMDF"
 
-                ylabel = f"{target} [kJ/mol]"
+                ylabel = f"{target.replace('Opt', '')} [kJ/mol]"
 
                 table = pandas.read_csv(
                     table_path,
@@ -751,6 +754,8 @@ def create_total_dG0_sampling_figures() -> None:
 
 
 def create_total_cosa_figure() -> None:
+    """Creates the 'full' random specificity comparison figure under glucose and aerobicity as well as anaerobicity.
+    """
     str_to_float = lambda x: float(x.replace(",", "."))
     list_to_float = lambda x: [str_to_float(y) for y in x]
 
@@ -763,7 +768,7 @@ def create_total_cosa_figure() -> None:
     OPTMDF_ANAEROBIC = 2
     OPTSUBMDF_ANAEROBIC = 3
 
-    for concentration in ("STANDARDCONC", "VIVOCONC"):
+    for concentration in ("STANDARDCONC",):
         table_paths = [
             f"./cosa/results_aerobic/optmdf_table_{concentration}.csv",
             f"./cosa/results_aerobic/optsubmdf_table_{concentration}.csv",
@@ -781,19 +786,19 @@ def create_total_cosa_figure() -> None:
                 first = True
                 ax_x = 0
                 ax_y = 0
-                title = "A Aerobic, OptMDF"
+                title = "A Aerobic, MDF"
             elif current_table == OPTSUBMDF_AEROBIC:
                 ax_x = 0
                 ax_y = 1
-                title = "B Aerobic, OptSubMDF"
+                title = "B Aerobic, SubMDF"
             elif current_table == OPTMDF_ANAEROBIC:
                 ax_x = 1
                 ax_y = 0
-                title = "C Anaerobic, OptMDF"
+                title = "C Anaerobic, MDF"
             elif current_table == OPTSUBMDF_ANAEROBIC:
                 ax_x = 1
                 ax_y = 1
-                title = "D Anaerobic, OptSubMDF"
+                title = "D Anaerobic, SubMDF"
             current_table += 1
 
             table = pandas.read_csv(
@@ -803,9 +808,9 @@ def create_total_cosa_figure() -> None:
 
             ylabel = ""
             if "optsubmdf_" in table_path:
-                ylabel += "OptSubMDF"
+                ylabel += "SubMDF"
             else:
-                ylabel += "OptMDF"
+                ylabel += "MDF"
             ylabel += " [kJ/mol]"
 
             headers = list(table.keys())
@@ -870,7 +875,7 @@ def create_total_cosa_figure() -> None:
                 axs[ax_x, ax_y].set_xlabel(r"Growth rate [$\mathrm{h^{-1}}$]")
                 axs[ax_x, ax_y].set_ylabel(ylabel)
                 axs[ax_x, ax_y].set_xlim(min(temp_growth_rates), max(temp_growth_rates))
-                if "OptMDF" in ylabel:
+                if "SubMDF" not in ylabel:
                     axs[ax_x, ax_y].set_ylim(0.0, max(list_to_float(values))+.25)
                 else:
                     axs[ax_x, ax_y].set_ylim(0.0, 30.0)
@@ -880,126 +885,4 @@ def create_total_cosa_figure() -> None:
         # plt.ylabel(ylabel)
         #
         plt.savefig(f"./cosa/full_random_sampling_figure_{concentration}.png", bbox_inches='tight', pad_inches=0.05)
-        plt.close()
-
-
-def create_total_cosa_figure_optsubmdf_only() -> None:
-    str_to_float = lambda x: float(x.replace(",", "."))
-    list_to_float = lambda x: [str_to_float(y) for y in x]
-
-    growth_rate_id = "µ [1/h]"
-    best_id = "FLEXIBLE"
-    in_vivo_id = "WILDTYPE"
-    only_one_id = "SINGLE_COFACTOR"
-    OPTSUBMDF_AEROBIC = 0
-    OPTSUBMDF_ANAEROBIC = 1
-
-    for concentration in ("STANDARDCONC", "VIVOCONC"):
-        table_paths = [
-            f"./cosa/results_aerobic/optsubmdf_table_{concentration}.csv",
-            f"./cosa/results_anaerobic/optsubmdf_table_{concentration}.csv",
-        ]
-
-        fig, axs = plt.subplots(nrows=1, dpi=500, figsize=(15, 5)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
-
-        current_table = 0
-        for table_path in table_paths:
-            first = False
-            if current_table == OPTSUBMDF_AEROBIC:
-                first = True
-                ax_y = 0
-                title = "A Aerobic, OptSubMDF"
-            elif current_table == OPTSUBMDF_ANAEROBIC:
-                ax_y = 1
-                title = "B Anaerobic, OptSubMDF"
-            current_table += 1
-
-            table = pandas.read_csv(
-                table_path,
-                sep="\t",
-            )
-
-            ylabel = ""
-            if "optsubmdf_" in table_path:
-                ylabel += "OptSubMDF"
-            else:
-                ylabel += "OptMDF"
-            ylabel += " [kJ/mol]"
-
-            headers = list(table.keys())
-            del(headers[headers.index(best_id)])
-            del(headers[headers.index(only_one_id)])
-            del(headers[headers.index(in_vivo_id)])
-            headers += [only_one_id, in_vivo_id, best_id]
-
-            growth_rates = list_to_float(table[growth_rate_id])
-            is_first_random = True
-            for header in headers:
-                if header == growth_rate_id:
-                    continue
-                elif header == best_id:
-                    label = "Flexible specificity"
-                    linestyle = "--"
-                    color = "yellowgreen"
-                    linewidth = 2.0
-                elif header == in_vivo_id:
-                    label = "Wild-type specificity"
-                    linestyle = "-"
-                    color = "black"
-                    linewidth = 2.0
-                elif header == only_one_id:
-                    label = "Single cofactor pool"
-                    linestyle = "-"
-                    color = "red"
-                    linewidth = 2.0
-                else:
-                    if is_first_random:
-                        label = "Random specificities"
-                        is_first_random = False
-                    else:
-                        label = ""
-                    linestyle = "-"
-                    color = "paleturquoise"
-                    linewidth = 1.0
-
-                if not first:
-                    label = None
-
-                values = [x for x in table[header]]
-                temp_growth_rates = copy.deepcopy(growth_rates)
-                if not "anaerobic" in table_path:
-                    current_index = 0
-                    for _ in temp_growth_rates:
-                        if temp_growth_rates[current_index] < 0.4:
-                            temp_growth_rates[current_index] = None
-                            values[current_index] = None
-                        current_index += 1
-                temp_growth_rates = [x for x in temp_growth_rates if x is not None]
-                values = [x for x in values if x is not None]
-
-                axs[ax_y].plot(
-                    temp_growth_rates, # x
-                    list_to_float(values), # y
-                    label=label,
-                    linestyle=linestyle,
-                    color=color,
-                    linewidth=linewidth,
-                )
-                axs[ax_y].set_title(title, loc="left", fontweight="bold")
-                axs[ax_y].set_xlabel(r"Growth rate [$\mathrm{h^{-1}}$]")
-                axs[ax_y].set_ylabel(ylabel)
-                axs[ax_y].set_xlim(min(temp_growth_rates), max(temp_growth_rates))
-                axs[ax_y].set_ylim(0, 30.0)
-        # fig.legend(loc="upper center", ncol=2)
-        legend = [
-            Line2D([0], [0], color="paleturquoise", linestyle="-", linewidth=2.0, label="Random specificities"),
-            Line2D([0], [0], color="red", linestyle="-", linewidth=2.0, label="Single cofactor pool"),
-            Line2D([0], [0], color="black", linestyle="-", linewidth=2.0, label="Wild-type specificity"),
-            Line2D([0], [0], color="yellowgreen", linestyle="--", linewidth=2.0, label="Flexible specificity"),
-        ]
-        plt.legend(handles=legend, bbox_to_anchor=(-0.2, 1.152), ncol=4, loc='upper center')
-        # plt.xlabel("Growth rate [1/h]")
-        # plt.ylabel(ylabel)
-        #
-        plt.savefig(f"./cosa/full_random_sampling_figure_optsubmdf_only_{concentration}.png", bbox_inches='tight', pad_inches=0.05)
         plt.close()

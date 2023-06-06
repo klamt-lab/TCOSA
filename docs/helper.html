@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>helper API documentation</title>
+<meta name="description" content="Generic helper functions, primarily for I/O tasks such as pickle and JSON file handlings." />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>helper</code></h1>
+</header>
+<section id="section-intro">
+<p>Generic helper functions, primarily for I/O tasks such as pickle and JSON file handlings.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/usr/bin/env python3
+&#34;&#34;&#34;Generic helper functions, primarily for I/O tasks such as pickle and JSON file handlings.&#34;&#34;&#34;
+
+## IMPORTS ##
+# External
+import json
+import matplotlib.pyplot as plt
+import os
+import pickle
+import zipfile
+from typing import Any, List
+from zipfile import ZipFile
+
+
+def json_load(path: str) -&gt; Any:
+    &#34;&#34;&#34;Loads the given JSON file and returns it as json_data (a list
+    or a dictionary).
+
+    Arguments
+    ----------
+    * path: str ~ The path of the JSON file
+    &#34;&#34;&#34;
+    with open(path) as f:
+        json_data = json.load(f)
+    return json_data
+
+
+def json_write(path: str, json_data: Any) -&gt; None:
+    &#34;&#34;&#34;Writes a JSON file at the given path with the given dictionary as content.
+
+    Arguments
+    ----------
+    * path: str ~  The path of the JSON file that shall be written
+    * json_data: Any ~ The dictionary or list which shalll be the content of
+      the created JSON file
+    &#34;&#34;&#34;
+    json_output = json.dumps(json_data, indent=4)
+    with open(path, &#34;w+&#34;, encoding=&#34;utf-8&#34;) as f:
+        f.write(json_output)
+
+
+def json_zip_load(path: str) -&gt; Any:
+    &#34;&#34;&#34;Loads the given zipped JSON file and returns it as json_data (a list
+    or a dictionary).
+
+    Arguments
+    ----------
+    * path: str ~ The path of the JSON file without &#34;.zip&#34; at the end
+    &#34;&#34;&#34;
+    old_wd = os.getcwd()
+    folder = os.path.dirname(path)
+    filename = os.path.basename(path)
+    os.chdir(folder)
+
+    with ZipFile(filename+&#34;.zip&#34;, &#39;r&#39;) as zip:
+        zip.extractall()
+
+    with open(filename) as f:
+        json_data = json.load(f)
+
+    os.remove(filename)
+    os.chdir(old_wd)
+
+    return json_data
+
+
+def json_zip_write(path: str, json_data: Any, zip_method: int=zipfile.ZIP_LZMA) -&gt; None:
+    &#34;&#34;&#34;Writes a zipped JSON file at the given path with the given dictionary as content.
+
+    Arguments
+    ----------
+    * path: str ~  The path of the JSON file that shall be written without &#34;.zip&#34; at the end
+    * json_data: Any ~ The dictionary or list which shalll be the content of
+      the created JSON file
+    &#34;&#34;&#34;
+    json_output = json.dumps(json_data, indent=4)
+    with open(path, &#34;w+&#34;, encoding=&#34;utf-8&#34;) as f:
+        f.write(json_output)
+
+    old_wd = os.getcwd()
+    folder = os.path.dirname(path)
+    filename = os.path.basename(path)
+    os.chdir(folder)
+    with ZipFile(filename+&#34;.zip&#34;, &#39;w&#39;, zip_method) as zip:
+        zip.write(filename)
+    os.chdir(old_wd)
+
+    os.remove(path)
+
+
+def ensure_folder_existence(folder: str) -&gt; None:
+    &#34;&#34;&#34;Checks if the given folder exists. If not, the folder is created.
+
+    Argument
+    ----------
+    * folder: str ~ The folder whose existence shall be enforced.
+    &#34;&#34;&#34;
+    if os.path.isdir(folder):
+        return
+    os.makedirs(folder)
+
+
+def ensure_json_existence(path: str) -&gt; None:
+    if os.path.isfile(path):
+        return
+    with open(path, &#34;w&#34;) as f:
+        f.write(&#34;{}&#34;)
+
+
+def get_files(path: str) -&gt; List[str]:
+    &#34;&#34;&#34;Returns the names of the files in the given folder as a list of strings.
+
+    Arguments
+    ----------
+    * path: str ~ The path to the folder of which the file names shall be returned
+    &#34;&#34;&#34;
+    files: List[str] = []
+    for (_, _, filenames) in os.walk(path):
+        files.extend(filenames)
+    return files
+
+
+def pickle_load(path: str) -&gt; Any:
+    &#34;&#34;&#34;Returns the value of the given pickle file.
+    Arguments
+    ----------
+    * path: str ~ The path to the pickle file.
+    &#34;&#34;&#34;
+    pickle_file = open(path, &#39;rb&#39;)
+    pickled_object = pickle.load(pickle_file)
+    pickle_file.close()
+    return pickled_object
+
+
+def pickle_write(path: str, pickled_object: Any) -&gt; None:
+    &#34;&#34;&#34;Writes the given object as pickled file with the given path
+    Arguments
+    ----------
+    * path: str ~ The path of the pickled file that shall be created
+    * pickled_object: Any ~ The object which shall be saved in the pickle file
+    &#34;&#34;&#34;
+    pickle_file = open(path, &#39;wb&#39;)
+    pickle.dump(pickled_object, pickle_file)
+    pickle_file.close()
+
+
+def standardize_folder(folder: str) -&gt; str:
+    &#34;&#34;&#34;Returns for the given folder path is returned in a more standardized way.
+
+    I.e., folder paths with potential \\ are replaced with /. In addition, if
+    a path does not end with / will get an added /.
+
+    Argument
+    ----------
+    * folder: str ~ The folder path that shall be standardized.
+    &#34;&#34;&#34;
+    # Standardize for \ or / as path separator character.
+    folder = folder.replace(&#34;\\&#34;, &#34;/&#34;)
+
+    # If the last character is not a path separator, it is
+    # added so that all standardized folder path strings
+    # contain it.
+    if folder[-1] != &#34;/&#34;:
+        folder += &#34;/&#34;
+
+    return folder</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="helper.ensure_folder_existence"><code class="name flex">
+<span>def <span class="ident">ensure_folder_existence</span></span>(<span>folder: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if the given folder exists. If not, the folder is created.</p>
+<h2 id="argument">Argument</h2>
+<ul>
+<li>folder: str ~ The folder whose existence shall be enforced.</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ensure_folder_existence(folder: str) -&gt; None:
+    &#34;&#34;&#34;Checks if the given folder exists. If not, the folder is created.
+
+    Argument
+    ----------
+    * folder: str ~ The folder whose existence shall be enforced.
+    &#34;&#34;&#34;
+    if os.path.isdir(folder):
+        return
+    os.makedirs(folder)</code></pre>
+</details>
+</dd>
+<dt id="helper.ensure_json_existence"><code class="name flex">
+<span>def <span class="ident">ensure_json_existence</span></span>(<span>path: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ensure_json_existence(path: str) -&gt; None:
+    if os.path.isfile(path):
+        return
+    with open(path, &#34;w&#34;) as f:
+        f.write(&#34;{}&#34;)</code></pre>
+</details>
+</dd>
+<dt id="helper.get_files"><code class="name flex">
+<span>def <span class="ident">get_files</span></span>(<span>path: str) ‑> List[str]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the names of the files in the given folder as a list of strings.</p>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li>path: str ~ The path to the folder of which the file names shall be returned</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_files(path: str) -&gt; List[str]:
+    &#34;&#34;&#34;Returns the names of the files in the given folder as a list of strings.
+
+    Arguments
+    ----------
+    * path: str ~ The path to the folder of which the file names shall be returned
+    &#34;&#34;&#34;
+    files: List[str] = []
+    for (_, _, filenames) in os.walk(path):
+        files.extend(filenames)
+    return files</code></pre>
+</details>
+</dd>
+<dt id="helper.json_load"><code class="name flex">
+<span>def <span class="ident">json_load</span></span>(<span>path: str) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Loads the given JSON file and returns it as json_data (a list
+or a dictionary).</p>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li>path: str ~ The path of the JSON file</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def json_load(path: str) -&gt; Any:
+    &#34;&#34;&#34;Loads the given JSON file and returns it as json_data (a list
+    or a dictionary).
+
+    Arguments
+    ----------
+    * path: str ~ The path of the JSON file
+    &#34;&#34;&#34;
+    with open(path) as f:
+        json_data = json.load(f)
+    return json_data</code></pre>
+</details>
+</dd>
+<dt id="helper.json_write"><code class="name flex">
+<span>def <span class="ident">json_write</span></span>(<span>path: str, json_data: Any) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Writes a JSON file at the given path with the given dictionary as content.</p>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li>path: str ~
+The path of the JSON file that shall be written</li>
+<li>json_data: Any ~ The dictionary or list which shalll be the content of
+the created JSON file</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def json_write(path: str, json_data: Any) -&gt; None:
+    &#34;&#34;&#34;Writes a JSON file at the given path with the given dictionary as content.
+
+    Arguments
+    ----------
+    * path: str ~  The path of the JSON file that shall be written
+    * json_data: Any ~ The dictionary or list which shalll be the content of
+      the created JSON file
+    &#34;&#34;&#34;
+    json_output = json.dumps(json_data, indent=4)
+    with open(path, &#34;w+&#34;, encoding=&#34;utf-8&#34;) as f:
+        f.write(json_output)</code></pre>
+</details>
+</dd>
+<dt id="helper.json_zip_load"><code class="name flex">
+<span>def <span class="ident">json_zip_load</span></span>(<span>path: str) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Loads the given zipped JSON file and returns it as json_data (a list
+or a dictionary).</p>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li>path: str ~ The path of the JSON file without ".zip" at the end</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def json_zip_load(path: str) -&gt; Any:
+    &#34;&#34;&#34;Loads the given zipped JSON file and returns it as json_data (a list
+    or a dictionary).
+
+    Arguments
+    ----------
+    * path: str ~ The path of the JSON file without &#34;.zip&#34; at the end
+    &#34;&#34;&#34;
+    old_wd = os.getcwd()
+    folder = os.path.dirname(path)
+    filename = os.path.basename(path)
+    os.chdir(folder)
+
+    with ZipFile(filename+&#34;.zip&#34;, &#39;r&#39;) as zip:
+        zip.extractall()
+
+    with open(filename) as f:
+        json_data = json.load(f)
+
+    os.remove(filename)
+    os.chdir(old_wd)
+
+    return json_data</code></pre>
+</details>
+</dd>
+<dt id="helper.json_zip_write"><code class="name flex">
+<span>def <span class="ident">json_zip_write</span></span>(<span>path: str, json_data: Any, zip_method: int = 14) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Writes a zipped JSON file at the given path with the given dictionary as content.</p>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li>path: str ~
+The path of the JSON file that shall be written without ".zip" at the end</li>
+<li>json_data: Any ~ The dictionary or list which shalll be the content of
+the created JSON file</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def json_zip_write(path: str, json_data: Any, zip_method: int=zipfile.ZIP_LZMA) -&gt; None:
+    &#34;&#34;&#34;Writes a zipped JSON file at the given path with the given dictionary as content.
+
+    Arguments
+    ----------
+    * path: str ~  The path of the JSON file that shall be written without &#34;.zip&#34; at the end
+    * json_data: Any ~ The dictionary or list which shalll be the content of
+      the created JSON file
+    &#34;&#34;&#34;
+    json_output = json.dumps(json_data, indent=4)
+    with open(path, &#34;w+&#34;, encoding=&#34;utf-8&#34;) as f:
+        f.write(json_output)
+
+    old_wd = os.getcwd()
+    folder = os.path.dirname(path)
+    filename = os.path.basename(path)
+    os.chdir(folder)
+    with ZipFile(filename+&#34;.zip&#34;, &#39;w&#39;, zip_method) as zip:
+        zip.write(filename)
+    os.chdir(old_wd)
+
+    os.remove(path)</code></pre>
+</details>
+</dd>
+<dt id="helper.pickle_load"><code class="name flex">
+<span>def <span class="ident">pickle_load</span></span>(<span>path: str) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the value of the given pickle file.
+Arguments</p>
+<hr>
+<ul>
+<li>path: str ~ The path to the pickle file.</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pickle_load(path: str) -&gt; Any:
+    &#34;&#34;&#34;Returns the value of the given pickle file.
+    Arguments
+    ----------
+    * path: str ~ The path to the pickle file.
+    &#34;&#34;&#34;
+    pickle_file = open(path, &#39;rb&#39;)
+    pickled_object = pickle.load(pickle_file)
+    pickle_file.close()
+    return pickled_object</code></pre>
+</details>
+</dd>
+<dt id="helper.pickle_write"><code class="name flex">
+<span>def <span class="ident">pickle_write</span></span>(<span>path: str, pickled_object: Any) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Writes the given object as pickled file with the given path
+Arguments</p>
+<hr>
+<ul>
+<li>path: str ~ The path of the pickled file that shall be created</li>
+<li>pickled_object: Any ~ The object which shall be saved in the pickle file</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pickle_write(path: str, pickled_object: Any) -&gt; None:
+    &#34;&#34;&#34;Writes the given object as pickled file with the given path
+    Arguments
+    ----------
+    * path: str ~ The path of the pickled file that shall be created
+    * pickled_object: Any ~ The object which shall be saved in the pickle file
+    &#34;&#34;&#34;
+    pickle_file = open(path, &#39;wb&#39;)
+    pickle.dump(pickled_object, pickle_file)
+    pickle_file.close()</code></pre>
+</details>
+</dd>
+<dt id="helper.standardize_folder"><code class="name flex">
+<span>def <span class="ident">standardize_folder</span></span>(<span>folder: str) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns for the given folder path is returned in a more standardized way.</p>
+<p>I.e., folder paths with potential \ are replaced with /. In addition, if
+a path does not end with / will get an added /.</p>
+<h2 id="argument">Argument</h2>
+<ul>
+<li>folder: str ~ The folder path that shall be standardized.</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def standardize_folder(folder: str) -&gt; str:
+    &#34;&#34;&#34;Returns for the given folder path is returned in a more standardized way.
+
+    I.e., folder paths with potential \\ are replaced with /. In addition, if
+    a path does not end with / will get an added /.
+
+    Argument
+    ----------
+    * folder: str ~ The folder path that shall be standardized.
+    &#34;&#34;&#34;
+    # Standardize for \ or / as path separator character.
+    folder = folder.replace(&#34;\\&#34;, &#34;/&#34;)
+
+    # If the last character is not a path separator, it is
+    # added so that all standardized folder path strings
+    # contain it.
+    if folder[-1] != &#34;/&#34;:
+        folder += &#34;/&#34;
+
+    return folder</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="helper.ensure_folder_existence" href="#helper.ensure_folder_existence">ensure_folder_existence</a></code></li>
+<li><code><a title="helper.ensure_json_existence" href="#helper.ensure_json_existence">ensure_json_existence</a></code></li>
+<li><code><a title="helper.get_files" href="#helper.get_files">get_files</a></code></li>
+<li><code><a title="helper.json_load" href="#helper.json_load">json_load</a></code></li>
+<li><code><a title="helper.json_write" href="#helper.json_write">json_write</a></code></li>
+<li><code><a title="helper.json_zip_load" href="#helper.json_zip_load">json_zip_load</a></code></li>
+<li><code><a title="helper.json_zip_write" href="#helper.json_zip_write">json_zip_write</a></code></li>
+<li><code><a title="helper.pickle_load" href="#helper.pickle_load">pickle_load</a></code></li>
+<li><code><a title="helper.pickle_write" href="#helper.pickle_write">pickle_write</a></code></li>
+<li><code><a title="helper.standardize_folder" href="#helper.standardize_folder">standardize_folder</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

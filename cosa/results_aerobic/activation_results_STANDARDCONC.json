@@ -1,0 +1,80 @@
+{
+    "PYK": {
+        "0,868": {
+            "OptMDF": -0.002496,
+            "OptSubMDF": 0.0
+        },
+        "0,818": {
+            "OptMDF": -0.0,
+            "OptSubMDF": 0.0
+        },
+        "0,768": {
+            "OptMDF": -0.0,
+            "OptSubMDF": -0.0
+        },
+        "0,718": {
+            "OptMDF": 0.0,
+            "OptSubMDF": -0.0
+        },
+        "0,668": {
+            "OptMDF": -0.0,
+            "OptSubMDF": -0.0
+        },
+        "0,618": {
+            "OptMDF": 0.0,
+            "OptSubMDF": -0.0
+        },
+        "0,568": {
+            "OptMDF": 0.0,
+            "OptSubMDF": 0.0
+        },
+        "0,518": {
+            "OptMDF": -0.0,
+            "OptSubMDF": -0.0
+        },
+        "0,468": {
+            "OptMDF": 0.0,
+            "OptSubMDF": 0.0
+        },
+        "0,418": {
+            "OptMDF": 0.0,
+            "OptSubMDF": -0.0
+        },
+        "0,368": {
+            "OptMDF": 0.0,
+            "OptSubMDF": 0.0
+        },
+        "0,318": {
+            "OptMDF": 0.0,
+            "OptSubMDF": 0.0
+        },
+        "0,268": {
+            "OptMDF": 0.0,
+            "OptSubMDF": 0.0
+        },
+        "0,218": {
+            "OptMDF": 0.0,
+            "OptSubMDF": -0.0
+        },
+        "0,168": {
+            "OptMDF": 0.0,
+            "OptSubMDF": 0.0
+        },
+        "0,118": {
+            "OptMDF": 0.0,
+            "OptSubMDF": 0.0
+        },
+        "0,068": {
+            "OptMDF": -0.0,
+            "OptSubMDF": 0.0
+        },
+        "0,05": {
+            "OptMDF": -0.0,
+            "OptSubMDF": -0.0
+        },
+        "0,03": {
+            "OptMDF": 0.0,
+            "OptSubMDF": -0.0
+        }
+    }
+}

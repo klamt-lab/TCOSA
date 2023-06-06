@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""[summary]"""
+"""Generic functions for performing optimizations, i.e., maximizations and/or optimizations.
+
+Basically, these are pulp wrappers.
+"""
 
 ## IMPORTS ##
 import ray
@@ -8,19 +11,32 @@ from typing import Any, Dict, List, Tuple
 
 
 ## CONSTANTS ##
-SOLVER = "CPLEX_PY"
-TIMELIMIT = 180
+SOLVER = "CPLEX_PY"  # Can be whatever pulp supports.
+TIMELIMIT = 180  # In seconds
 IS_VERBOSE = True
 WARMSTART = False
 
 
 ## PUBLIC FUNCTIONS ##
 def set_timelimit(timelimit: int):
+    """Sets the solver timelimit to the given value."""
     global TIMELIMIT
     TIMELIMIT = timelimit
 
 
 def add_objective(base_problem: pulp.LpProblem, objective: List[Tuple[float, str]], direction: str, variables_dict=None) -> pulp.LpProblem:
+    """Adds the given objective to the given pulp problem
+
+    Args:
+        base_problem (pulp.LpProblem): The pulp problem.
+        objective (List[Tuple[float, str]]): The objective in the form of tuples where element 0 is the coefficient of the
+        objective functions and element 1 the variable's ID.
+        direction (str): The objective's direction, i.e., 'min' or 'max'.
+        variables_dict (_type_, optional): Optional already calculated variablesDict from pulp. Defaults to None.
+
+    Returns:
+        pulp.LpProblem: _description_
+    """
     if variables_dict is None:
         base_problem_variables: Dict[str,
                                      pulp.LpVariable] = base_problem.variablesDict()
@@ -51,20 +67,25 @@ def add_objective(base_problem: pulp.LpProblem, objective: List[Tuple[float, str
 
 
 def init_ray_multiprocessing(num_cpus=16, ignore_reinit_error=True, **kwargs):
+    """Initialize ray with the given settings."""
     ray.init(num_cpus=num_cpus, ignore_reinit_error=ignore_reinit_error, **kwargs)
 
 
 def perform_optimization(base_problem: pulp.LpProblem, objective: List[Tuple[float, str]],
                          direction: str, variables_dict=None, **kwargs) -> Dict[str, Any]:
-    """[summary]
+    """Performs the given optimization.
 
     Args:
-        base_problem (pulp.LpProblem): [description]
-        objective (List[Tuple[float, str]]): [description]
-        direction (str): [description]
+        base_problem (pulp.LpProblem): The pulp problem.
+        objective (List[Tuple[float, str]]): The objective in the form of tuples where element 0 is the coefficient of the
+        objective functions and element 1 the variable's ID.
+        direction (str): The objective's direction, i.e., 'min' or 'max'.
+        variables_dict (_type_, optional): Optional already calculated variablesDict from pulp. Defaults to None.
 
     Returns:
-        Dict[str, Any]: [description]
+        Dict[str, Any]: Returns a dict with 'status' as key (there, the solver status is the value) as well as
+        'objective_value' (its namesake) and 'values' (another dictionary with all variable IDs as keys and their
+        solution values as values).
     """
     if variables_dict is None:
         base_problem_variables: Dict[str,
@@ -93,13 +114,16 @@ def perform_optimization(base_problem: pulp.LpProblem, objective: List[Tuple[flo
 
 
 def perform_optimization_with_given_objective(base_problem: pulp.LpProblem, variables_dict=None, **kwargs) -> Dict[str, Any]:
-    """[summary]
+    """Performs optimization with pre-added objective.
 
     Args:
-        base_problem (pulp.LpProblem): [description]
+        base_problem (pulp.LpProblem): The pulp problem.
+        variables_dict (_type_, optional): Optional already calculated variablesDict from pulp. Defaults to None.
 
     Returns:
-        Dict[str, Any]: [description]
+        Dict[str, Any]: Returns a dict with 'status' as key (there, the solver status is the value) as well as
+        'objective_value' (its namesake) and 'values' (another dictionary with all variable IDs as keys and their
+        solution values as values).
     """
     return perform_optimization(
         base_problem=base_problem,
@@ -118,16 +142,18 @@ def perform_stepwise_variable_optimization(
     variables_dict=None,
     **kwargs
 ) -> Dict[str, Any]:
-    """[summary]
+    """The same as perform_optimization(), but only performs simplex phase I by trying to go closer to the objective with the given step sizes.
 
     Args:
-        base_problem (pulp.LpProblem): [description]
-        optimized_variable_id (str): [description]
-        start_value (float, optional): [description]. Defaults to 0.0.
-        step_sizes (List[float], optional): [description]. Defaults to [0.5, 0.2, 0.1, 0.05, 0.01].
+        base_problem (pulp.LpProblem): The pulp problem.
+        optimized_variable_id (str): The optimized variable ID.
+        start_value (float, optional): The initial value for the optimized variable. Defaults to 0.0.
+        step_sizes (List[float], optional): The phase I approximation step sizes. Defaults to [0.5, 0.2, 0.1, 0.05, 0.01].
 
     Returns:
-        Dict[str, Any]: [description]
+        Dict[str, Any]: Returns a dict with 'status' as key (there, the solver status is the value) as well as
+        'objective_value' (its namesake) and 'values' (another dictionary with all variable IDs as keys and their
+        solution values as values).
     """
     if variables_dict is None:
         base_problem_variables = base_problem.variablesDict()
@@ -158,15 +184,7 @@ def perform_stepwise_variable_optimization(
 
 
 def perform_variable_maximization(base_problem: pulp.LpProblem, variable_id: str, variables_dict=None, **kwargs) -> Dict[str, Any]:
-    """[summary]
-
-    Args:
-        base_problem (pulp.LpProblem): [description]
-        variable_id (str): [description]
-
-    Returns:
-        Dict[str, Any]: [description]
-    """
+    """Maximizes the given variable with perform_optimization(...)."""
     return perform_optimization(
         base_problem=base_problem,
         objective=[(1.0, variable_id)],
@@ -177,15 +195,7 @@ def perform_variable_maximization(base_problem: pulp.LpProblem, variable_id: str
 
 
 def perform_variable_minimization(base_problem: pulp.LpProblem, variable_id: str, variables_dict=None, **kwargs) -> Dict[str, Any]:
-    """[summary]
-
-    Args:
-        base_problem (pulp.LpProblem): [description]
-        variable_id (str): [description]
-
-    Returns:
-        Dict[str, Any]: [description]
-    """
+    """Minimizes the given variable with perform_optimization(...)."""
     return perform_optimization(
         base_problem=base_problem,
         objective=[(1.0, variable_id)],
@@ -196,6 +206,14 @@ def perform_variable_minimization(base_problem: pulp.LpProblem, variable_id: str
 
 
 def solve_current_problem(base_problem: pulp.LpProblem) -> pulp.LpProblem:
+    """Solves the given problem using pulp.
+
+    Args:
+        base_problem (pulp.LpProblem): The pulp problem.
+
+    Returns:
+        pulp.LpProblem: The solved pulp problem.
+    """
     # solver = pulp.getSolver(SOLVER, msg=IS_VERBOSE,
     #                        warmStart=WARMSTART, timeLimit=TIMELIMIT)
     # base_problem.solve(solver)

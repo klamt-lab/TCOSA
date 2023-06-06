@@ -1,7 +1,15 @@
+"""This script finds the dG0 values using the equilibrator-API wrapper from the equilibrator submodule.
+
+Here, all relevant thermodynamic settings are also given.
+"""
+
+# IMPORT SECTION #
+# External imports
 import cobra
+from typing import Dict, List, Tuple
+# Internal imports
 from equilibrator import get_model_dG0_values
 from helper import json_write
-from typing import Dict, List, Tuple
 
 ## User variables
 inner_to_outer_compartments: List[str] = [
@@ -29,6 +37,7 @@ potential_differences: Dict[Tuple[str, str], float] = {  # In V
     ("p", "e"): -0.15,
 }
 
+# Load iML1515 and perform the dG0 determination
 cobra_model = cobra.io.read_sbml_model("resources/iML1515_irreversible_cleaned.xml")
 dG0_values = get_model_dG0_values(
     cobra_model,

@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>fba API documentation</title>
+<meta name="description" content="This module contains all base functions for creating an FBA pulp problem from a cobrapy model …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>fba</code></h1>
+</header>
+<section id="section-intro">
+<p>This module contains all base functions for creating an FBA pulp problem from a cobrapy model.</p>
+<p>In addition, it contains functions for maximization and minimization FBA tasks.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/usr/bin/env python3
+&#34;&#34;&#34;This module contains all base functions for creating an FBA pulp problem from a cobrapy model.
+
+In addition, it contains functions for maximization and minimization FBA tasks.
+&#34;&#34;&#34;
+
+## IMPORTS ##
+# External
+import cobra
+import pulp
+from typing import Any, Dict, List
+# Internal
+from optimization import perform_variable_maximization, perform_variable_minimization
+
+
+## CONSTANTS ##
+MAX_FLUX = 1_000  # The standard maximal flux
+&#34;&#34;&#34;The standard maximal flux in mmol/(gDW*h).&#34;&#34;&#34;
+
+
+## PUBLIC FUNCTIONS ##
+def add_extra_constraints(problem: pulp.LpProblem, extra_constraints: List[Dict[str, float]], variables_dict=None) -&gt; pulp.LpProblem:
+    &#34;&#34;&#34;Adds additional linear constraints to the pulp LpProblem.
+
+    Args:
+        problem (pulp.LpProblem): The pulp LpProblem to which the additional linear constraints are added.
+        extra_constraints (List[Dict[str, float]]): A dictionary describing the additional linear constraints. As keys,
+        it contains the names of the affected variables and &#39;lb&#39; (the expression&#39;s lower bound) and/or &#39;ub&#39; (upper bound).
+        The dictionary&#39;s values are the linear coefficients of the variable and for &#39;lb&#39; or &#39;ub&#39;, its respective value.
+        variables_dict (_type_, optional): In order to save time to call problem.variablesDict(), its result
+        can be send beforehand. Defaults to None.
+
+    Returns:
+        pulp.LpProblem: The LpProblem with the added additional linear constraints.
+    &#34;&#34;&#34;
+    if variables_dict is None:
+        variables_dict = problem.variablesDict()
+
+    # Set extra constraint expressions
+    current_extra_constraint = 0
+    for constraint in extra_constraints:
+        expression = pulp.LpAffineExpression(name=str(current_extra_constraint))
+        lb = None
+        ub = None
+        for key in constraint.keys():
+            # Lower bound
+            if key == &#34;lb&#34;:
+                lb = constraint[key]
+            # Upper bound
+            elif key == &#34;ub&#34;:
+                ub = constraint[key]
+            # If the key is (hopefully) a valid variable ID
+            else:
+                expression += constraint[key] * variables_dict[key]
+        # Add lower bound if given
+        if lb is not None:
+            lb_constraint: pulp.LpConstraint = lb &lt;= expression
+            lb_constraint.name = f&#34;lb_{current_extra_constraint}&#34;
+            problem += lb_constraint
+        # Add upper bound if given
+        if ub is not None:
+            ub_constraint: pulp.LpConstraint = expression &lt;= ub
+            ub_constraint.name = f&#34;ob_{current_extra_constraint}&#34;
+            problem += ub_constraint
+        current_extra_constraint += 1
+
+    return problem
+
+
+def get_fba_base_problem(cobra_model: cobra.Model, extra_constraints: List[Dict[str, float]], name: str=&#34;Flux_Balance_Analysis&#34;) -&gt; pulp.LpProblem:
+    &#34;&#34;&#34;Returns an FBA &#39;base problem&#39;, i.e., N*v=0 with N as stoichiometric matrix and v as the reaction flux vector with upper and lower flux bounds.
+
+    Note that the typical FBA objective is missing and has to be added afterwards using pulp or this module&#39;s optimization functions.
+
+    Args:
+        cobra_model (cobra.Model): The cobrapy model from which the stoichiometric matrix and the flux bounds are build up.
+        extra_constraints (List[Dict[str, float]]): [Optional] Additional linear constraints. See the comment to this module&#39;s add_extra_constraints(...) for more.
+        name (str, optional): [Optional] An internal name for the returned pulp LpProblem. Defaults to &#34;Flux_Balance_Analysis&#34;.
+
+    Returns:
+        pulp.LpProblem: A pulp LpProblem describing the FBA &#39;base problem&#39;.
+    &#34;&#34;&#34;
+    # Set problem instance
+    problem = pulp.LpProblem(name=name, sense=pulp.LpMinimize)
+
+    # Add reaction flux variables and set lower and upper fluxes for them
+    flux_variables: Dict[str, pulp.LpVariable] = {}
+    metabolite_expressions: Dict[str, List[pulp.LpAffineExpression]] = {}
+    for reaction in cobra_model.reactions:
+        lowBound = max(-MAX_FLUX, reaction.lower_bound)
+        lowBound = min(lowBound, MAX_FLUX)
+        upBound = min(MAX_FLUX, reaction.upper_bound)
+        upBound = max(-MAX_FLUX, upBound)
+
+        flux_variables[reaction.id] =  pulp.LpVariable(
+            name=reaction.id,
+            lowBound=lowBound,
+            upBound=upBound,
+            cat=pulp.LpContinuous,
+        )
+
+        for metabolite in reaction.metabolites.keys():
+            stoichiometry = reaction.metabolites[metabolite]
+            if metabolite.id not in metabolite_expressions.keys():
+                metabolite_expressions[metabolite.id] = []
+            metabolite_expressions[metabolite.id] += stoichiometry * flux_variables[reaction.id]
+
+    # Set steady-state expressions
+    for metabolite_id in metabolite_expressions.keys():
+        constraint: pulp.LpConstraint = metabolite_expressions[metabolite_id] == 0
+        constraint.name = metabolite_id
+        problem += constraint
+
+    # Add additional linear constraints
+    problem = add_extra_constraints(problem, extra_constraints, flux_variables)
+
+    return problem
+
+
+def perform_fba_flux_maximization(base_problem: pulp.LpProblem, reaction_id: str, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Maximizes the flux of the given reaction in the given FBA base problem.
+
+    The base problem is expected to have been created with this module&#39;s get_fba_base_problem().
+
+    Args:
+        base_problem (pulp.LpProblem): The FBA base problem.
+        reaction_id (str): The ID of the reaction whose flux shall be maximized.
+
+    Returns:
+        Dict[str, Any]: The optimization results as given in perform_variable_maximization(...).
+    &#34;&#34;&#34;
+    return perform_variable_maximization(
+        base_problem=base_problem,
+        variable_id=reaction_id,
+        **kwargs,
+    )
+
+
+def perform_fba_flux_minimization(base_problem: pulp.LpProblem, reaction_id: str, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Minimizes the flux of the given reaction in the given FBA base problem.
+
+    The base problem is expected to have been created with this module&#39;s get_fba_base_problem().
+
+    Args:
+        base_problem (pulp.LpProblem): The FBA base problem.
+        reaction_id (str): The ID of the reaction whose flux shall be minimized.
+
+    Returns:
+        Dict[str, Any]: The optimization results as given in perform_variable_maximization(...).
+    &#34;&#34;&#34;
+    return perform_variable_minimization(
+        base_problem=base_problem,
+        variable_id=reaction_id,
+        **kwargs,
+    )</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-variables">Global variables</h2>
+<dl>
+<dt id="fba.MAX_FLUX"><code class="name">var <span class="ident">MAX_FLUX</span></code></dt>
+<dd>
+<div class="desc"><p>The standard maximal flux in mmol/(gDW*h).</p></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="fba.add_extra_constraints"><code class="name flex">
+<span>def <span class="ident">add_extra_constraints</span></span>(<span>problem: pulp.pulp.LpProblem, extra_constraints: List[Dict[str, float]], variables_dict=None) ‑> pulp.pulp.LpProblem</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Adds additional linear constraints to the pulp LpProblem.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>problem</code></strong> :&ensp;<code>pulp.LpProblem</code></dt>
+<dd>The pulp LpProblem to which the additional linear constraints are added.</dd>
+<dt><strong><code>extra_constraints</code></strong> :&ensp;<code>List[Dict[str, float]]</code></dt>
+<dd>A dictionary describing the additional linear constraints. As keys,</dd>
+<dt>it contains the names of the affected variables and 'lb' (the expression's lower bound) and/or 'ub' (upper bound).</dt>
+<dt>The dictionary's values are the linear coefficients of the variable and for 'lb' or 'ub', its respective value.</dt>
+<dt><strong><code>variables_dict</code></strong> :&ensp;<code>_type_</code>, optional</dt>
+<dd>In order to save time to call problem.variablesDict(), its result</dd>
+</dl>
+<p>can be send beforehand. Defaults to None.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pulp.LpProblem</code></dt>
+<dd>The LpProblem with the added additional linear constraints.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_extra_constraints(problem: pulp.LpProblem, extra_constraints: List[Dict[str, float]], variables_dict=None) -&gt; pulp.LpProblem:
+    &#34;&#34;&#34;Adds additional linear constraints to the pulp LpProblem.
+
+    Args:
+        problem (pulp.LpProblem): The pulp LpProblem to which the additional linear constraints are added.
+        extra_constraints (List[Dict[str, float]]): A dictionary describing the additional linear constraints. As keys,
+        it contains the names of the affected variables and &#39;lb&#39; (the expression&#39;s lower bound) and/or &#39;ub&#39; (upper bound).
+        The dictionary&#39;s values are the linear coefficients of the variable and for &#39;lb&#39; or &#39;ub&#39;, its respective value.
+        variables_dict (_type_, optional): In order to save time to call problem.variablesDict(), its result
+        can be send beforehand. Defaults to None.
+
+    Returns:
+        pulp.LpProblem: The LpProblem with the added additional linear constraints.
+    &#34;&#34;&#34;
+    if variables_dict is None:
+        variables_dict = problem.variablesDict()
+
+    # Set extra constraint expressions
+    current_extra_constraint = 0
+    for constraint in extra_constraints:
+        expression = pulp.LpAffineExpression(name=str(current_extra_constraint))
+        lb = None
+        ub = None
+        for key in constraint.keys():
+            # Lower bound
+            if key == &#34;lb&#34;:
+                lb = constraint[key]
+            # Upper bound
+            elif key == &#34;ub&#34;:
+                ub = constraint[key]
+            # If the key is (hopefully) a valid variable ID
+            else:
+                expression += constraint[key] * variables_dict[key]
+        # Add lower bound if given
+        if lb is not None:
+            lb_constraint: pulp.LpConstraint = lb &lt;= expression
+            lb_constraint.name = f&#34;lb_{current_extra_constraint}&#34;
+            problem += lb_constraint
+        # Add upper bound if given
+        if ub is not None:
+            ub_constraint: pulp.LpConstraint = expression &lt;= ub
+            ub_constraint.name = f&#34;ob_{current_extra_constraint}&#34;
+            problem += ub_constraint
+        current_extra_constraint += 1
+
+    return problem</code></pre>
+</details>
+</dd>
+<dt id="fba.get_fba_base_problem"><code class="name flex">
+<span>def <span class="ident">get_fba_base_problem</span></span>(<span>cobra_model: cobra.core.model.Model, extra_constraints: List[Dict[str, float]], name: str = 'Flux_Balance_Analysis') ‑> pulp.pulp.LpProblem</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns an FBA 'base problem', i.e., N*v=0 with N as stoichiometric matrix and v as the reaction flux vector with upper and lower flux bounds.</p>
+<p>Note that the typical FBA objective is missing and has to be added afterwards using pulp or this module's optimization functions.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>cobra_model</code></strong> :&ensp;<code>cobra.Model</code></dt>
+<dd>The cobrapy model from which the stoichiometric matrix and the flux bounds are build up.</dd>
+<dt><strong><code>extra_constraints</code></strong> :&ensp;<code>List[Dict[str, float]]</code></dt>
+<dd>[Optional] Additional linear constraints. See the comment to this module's add_extra_constraints(&hellip;) for more.</dd>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>[Optional] An internal name for the returned pulp LpProblem. Defaults to "Flux_Balance_Analysis".</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pulp.LpProblem</code></dt>
+<dd>A pulp LpProblem describing the FBA 'base problem'.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_fba_base_problem(cobra_model: cobra.Model, extra_constraints: List[Dict[str, float]], name: str=&#34;Flux_Balance_Analysis&#34;) -&gt; pulp.LpProblem:
+    &#34;&#34;&#34;Returns an FBA &#39;base problem&#39;, i.e., N*v=0 with N as stoichiometric matrix and v as the reaction flux vector with upper and lower flux bounds.
+
+    Note that the typical FBA objective is missing and has to be added afterwards using pulp or this module&#39;s optimization functions.
+
+    Args:
+        cobra_model (cobra.Model): The cobrapy model from which the stoichiometric matrix and the flux bounds are build up.
+        extra_constraints (List[Dict[str, float]]): [Optional] Additional linear constraints. See the comment to this module&#39;s add_extra_constraints(...) for more.
+        name (str, optional): [Optional] An internal name for the returned pulp LpProblem. Defaults to &#34;Flux_Balance_Analysis&#34;.
+
+    Returns:
+        pulp.LpProblem: A pulp LpProblem describing the FBA &#39;base problem&#39;.
+    &#34;&#34;&#34;
+    # Set problem instance
+    problem = pulp.LpProblem(name=name, sense=pulp.LpMinimize)
+
+    # Add reaction flux variables and set lower and upper fluxes for them
+    flux_variables: Dict[str, pulp.LpVariable] = {}
+    metabolite_expressions: Dict[str, List[pulp.LpAffineExpression]] = {}
+    for reaction in cobra_model.reactions:
+        lowBound = max(-MAX_FLUX, reaction.lower_bound)
+        lowBound = min(lowBound, MAX_FLUX)
+        upBound = min(MAX_FLUX, reaction.upper_bound)
+        upBound = max(-MAX_FLUX, upBound)
+
+        flux_variables[reaction.id] =  pulp.LpVariable(
+            name=reaction.id,
+            lowBound=lowBound,
+            upBound=upBound,
+            cat=pulp.LpContinuous,
+        )
+
+        for metabolite in reaction.metabolites.keys():
+            stoichiometry = reaction.metabolites[metabolite]
+            if metabolite.id not in metabolite_expressions.keys():
+                metabolite_expressions[metabolite.id] = []
+            metabolite_expressions[metabolite.id] += stoichiometry * flux_variables[reaction.id]
+
+    # Set steady-state expressions
+    for metabolite_id in metabolite_expressions.keys():
+        constraint: pulp.LpConstraint = metabolite_expressions[metabolite_id] == 0
+        constraint.name = metabolite_id
+        problem += constraint
+
+    # Add additional linear constraints
+    problem = add_extra_constraints(problem, extra_constraints, flux_variables)
+
+    return problem</code></pre>
+</details>
+</dd>
+<dt id="fba.perform_fba_flux_maximization"><code class="name flex">
+<span>def <span class="ident">perform_fba_flux_maximization</span></span>(<span>base_problem: pulp.pulp.LpProblem, reaction_id: str, **kwargs) ‑> Dict[str, Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Maximizes the flux of the given reaction in the given FBA base problem.</p>
+<p>The base problem is expected to have been created with this module's get_fba_base_problem().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>base_problem</code></strong> :&ensp;<code>pulp.LpProblem</code></dt>
+<dd>The FBA base problem.</dd>
+<dt><strong><code>reaction_id</code></strong> :&ensp;<code>str</code></dt>
+<dd>The ID of the reaction whose flux shall be maximized.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Dict[str, Any]</code></dt>
+<dd>The optimization results as given in perform_variable_maximization(&hellip;).</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def perform_fba_flux_maximization(base_problem: pulp.LpProblem, reaction_id: str, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Maximizes the flux of the given reaction in the given FBA base problem.
+
+    The base problem is expected to have been created with this module&#39;s get_fba_base_problem().
+
+    Args:
+        base_problem (pulp.LpProblem): The FBA base problem.
+        reaction_id (str): The ID of the reaction whose flux shall be maximized.
+
+    Returns:
+        Dict[str, Any]: The optimization results as given in perform_variable_maximization(...).
+    &#34;&#34;&#34;
+    return perform_variable_maximization(
+        base_problem=base_problem,
+        variable_id=reaction_id,
+        **kwargs,
+    )</code></pre>
+</details>
+</dd>
+<dt id="fba.perform_fba_flux_minimization"><code class="name flex">
+<span>def <span class="ident">perform_fba_flux_minimization</span></span>(<span>base_problem: pulp.pulp.LpProblem, reaction_id: str, **kwargs) ‑> Dict[str, Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Minimizes the flux of the given reaction in the given FBA base problem.</p>
+<p>The base problem is expected to have been created with this module's get_fba_base_problem().</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>base_problem</code></strong> :&ensp;<code>pulp.LpProblem</code></dt>
+<dd>The FBA base problem.</dd>
+<dt><strong><code>reaction_id</code></strong> :&ensp;<code>str</code></dt>
+<dd>The ID of the reaction whose flux shall be minimized.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Dict[str, Any]</code></dt>
+<dd>The optimization results as given in perform_variable_maximization(&hellip;).</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def perform_fba_flux_minimization(base_problem: pulp.LpProblem, reaction_id: str, **kwargs) -&gt; Dict[str, Any]:
+    &#34;&#34;&#34;Minimizes the flux of the given reaction in the given FBA base problem.
+
+    The base problem is expected to have been created with this module&#39;s get_fba_base_problem().
+
+    Args:
+        base_problem (pulp.LpProblem): The FBA base problem.
+        reaction_id (str): The ID of the reaction whose flux shall be minimized.
+
+    Returns:
+        Dict[str, Any]: The optimization results as given in perform_variable_maximization(...).
+    &#34;&#34;&#34;
+    return perform_variable_minimization(
+        base_problem=base_problem,
+        variable_id=reaction_id,
+        **kwargs,
+    )</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-variables">Global variables</a></h3>
+<ul class="">
+<li><code><a title="fba.MAX_FLUX" href="#fba.MAX_FLUX">MAX_FLUX</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="fba.add_extra_constraints" href="#fba.add_extra_constraints">add_extra_constraints</a></code></li>
+<li><code><a title="fba.get_fba_base_problem" href="#fba.get_fba_base_problem">get_fba_base_problem</a></code></li>
+<li><code><a title="fba.perform_fba_flux_maximization" href="#fba.perform_fba_flux_maximization">perform_fba_flux_maximization</a></code></li>
+<li><code><a title="fba.perform_fba_flux_minimization" href="#fba.perform_fba_flux_minimization">perform_fba_flux_minimization</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
