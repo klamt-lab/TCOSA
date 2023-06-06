@@ -133,6 +133,44 @@ ratio_constraint_data, nad_base_ids, nadp_base_ids, used_growth, zeroed_reaction
 wb = openpyxl.Workbook()
 current_sheet = 0
 
+########################
+# START OF COVER SHEET #
+########################
+
+ws = wb.create_sheet("Index")
+cell = ws.cell(1, 1)
+cell.value = "Supplementary Table 3"
+cell.font = bold
+cell = ws.cell(2, 1)
+cell.value = "of Network-wide Thermodynamic Constraints Shape NAD(P)H Cofactor Specificity of Biochemical Reactions by Pavlos Stephanos Bekiaris¹ & Steffen Klamt¹*"
+cell.font = italic
+cell = ws.cell(3, 1)
+cell.value = "¹Max Planck Institute for Dynamics of Complex Technical Systems, Magdeburg, Sandtorstr. 1, Germany"
+cell.font = italic
+cell = ws.cell(4, 1)
+cell.value = "*Corresponding author: klamt@mpi-magdeburg.mpg.de"
+cell.font = italic
+
+cell = ws.cell(6, 1)
+cell.value = "INDEX:"
+cell.font = bold
+
+cell = ws.cell(7, 1)
+cell.value = "Sheet A: We compare the fluxes of a (loopleess) Flux Variability Analysis (FVA) with a thermodynamic FVA under the given growth rate and MDF aerobically and anaerobically, all under standard concentration ranges and with the wild-type specificity"
+cell = ws.cell(8, 1)
+cell.value = "Sheet B: The same as A, but under the given *Sub*MDF"
+cell = ws.cell(9, 1)
+cell.value = "Sheet C: We compare the concentration ranges calculated via a Concentration Variability Analysis (CVA) with the measured in vivo data from Bennet et al., 2009 (https://doi.org/10.1038/nchembio.186) under the given growth rate and MDF aerobically, all under standard concentration ranges and with the wild-type specificity"
+cell = ws.cell(10, 1)
+cell.value = "Sheet D: The same as C, but under the given *Sub*MDF"
+
+cell = ws.cell(12, 1)
+cell.value = "All (Sub)MDF are in kJ/mol, all growth rates (µ) in 1/h and all concentrations in M"
+
+########################
+# END OF COVER SHEET   #
+########################
+
 sheet_to_letter = {
     0: "A",
     1: "B",
@@ -145,7 +183,7 @@ sheet_to_letter = {
     8: "I",
 }
 
-for concentrations in ("STANDARDCONCS", "PAPERCONCS"):
+for concentrations in ("STANDARDCONCS",): #"PAPERCONCS"):
     original_cobra_model_aerobic = copy.deepcopy(cobra_model_aerobic)
     original_cobra_model_anaerobic = copy.deepcopy(cobra_model_anaerobic)
 
@@ -153,18 +191,18 @@ for concentrations in ("STANDARDCONCS", "PAPERCONCS"):
     cobra_model_anaerobic = copy.deepcopy(original_cobra_model_anaerobic)
 
     condition_models = {
-        "Wild-type, aerobic": cosa_get_model_with_nadx_scenario(nadx_scenario="WILDTYPE", cobra_model=cobra_model_aerobic),
-        "Wild-type, anaerobic": cosa_get_model_with_nadx_scenario(nadx_scenario="WILDTYPE", cobra_model=cobra_model_anaerobic),
+        "Wild-type, aerobic, µ=0.818": cosa_get_model_with_nadx_scenario(nadx_scenario="WILDTYPE", cobra_model=cobra_model_aerobic),
+        "Wild-type, anaerobic, µ=0.321": cosa_get_model_with_nadx_scenario(nadx_scenario="WILDTYPE", cobra_model=cobra_model_anaerobic),
     }
 
     json_tuples = [
         (
-            "Wild-type, aerobic",
+            "Wild-type, aerobic, µ=0.818",
             json_load(f"cosa/variability__aerobic_TEST_0_818_{concentrations}_WILDTYPE.json"),
             json_load(f"cosa/variability_STOICHIOMETRIC__aerobic_TEST_0_818_WILDTYPE.json"),
         ),
         (
-            "Wild-type, anaerobic",
+            "Wild-type, anaerobic, µ=0.321",
             json_load(f"cosa/variability__anaerobic_TEST_0_321_{concentrations}_WILDTYPE.json"),
             json_load(f"cosa/variability_STOICHIOMETRIC__anaerobic_TEST_0_321_WILDTYPE.json"),
         ),
@@ -205,8 +243,8 @@ for concentrations in ("STANDARDCONCS", "PAPERCONCS"):
         ws = wb.create_sheet(sheet_to_letter[current_sheet]+"_"+target.replace("Opt", "")+"_FVAs_"+concentrations_string)
         current_sheet += 1
 
-        cell = ws.cell(3, 1)
-        cell.value = "µ: 0.818"
+        cell = ws.cell(1, 1)
+        cell.value = f"Comparison of flux ranges from (loopless) Flux Variability Analysis (FVA) and Thermodynamic Flux Variability Analysis at given {target} (TFVA), and maximal driving force for each central carbon metabolism and NAD(P)(H)-dependent reaction, all under standard concentration ranges"
 
         targetdata = json_metadata[target]
         varnames = list(targetdata.keys())
@@ -229,11 +267,11 @@ for concentrations in ("STANDARDCONCS", "PAPERCONCS"):
         f_vars = f_vars_core + f_vars_noncore
 
 
-        cell = ws.cell(3, 1)
+        cell = ws.cell(4, 1)
         cell.value = "Reaction ID"
         cell.font = italic
 
-        cell = ws.cell(3, 2)
+        cell = ws.cell(4, 2)
         cell.value = "Reaction string"
         cell.font = italic
 
@@ -247,47 +285,47 @@ for concentrations in ("STANDARDCONCS", "PAPERCONCS"):
         n_column = 3
         for header in headers:
             headers_to_column[header] = n_column
-            cell = ws.cell(1, n_column)
+            cell = ws.cell(2, n_column)
             cell.value = header
             cell.font = bold
             cell.border = border
-            cell = ws.cell(3, n_column)
+            cell = ws.cell(4, n_column)
             cell.value = "min FVA"
             cell.border = border
             cell.font = italic
-            cell = ws.cell(3, n_column+1)
+            cell = ws.cell(4, n_column+1)
             cell.value = "max FVA"
             cell.font = italic
-            cell = ws.cell(3, n_column+2)
+            cell = ws.cell(4, n_column+2)
             cell.value = "min TFVA"
             cell.font = italic
-            cell = ws.cell(3, n_column+3)
+            cell = ws.cell(4, n_column+3)
             cell.value = "max TFVA"
             cell.font = italic
-            cell = ws.cell(3, n_column+4)
+            cell = ws.cell(4, n_column+4)
             cell.value = "max df"
             cell.font = italic
 
-            cell = ws.cell(2, n_column)
+            cell = ws.cell(3, n_column)
             cell.value = "MDF:"
             if target == "OptMDF":
                 cell.font = bold
             cell.border = border
-            cell = ws.cell(2, n_column+1)
+            cell = ws.cell(3, n_column+1)
             cell.value = targetdata["var_B"][header]["max"]
 
-            cell = ws.cell(2, n_column+2)
+            cell = ws.cell(3, n_column+2)
             cell.value = "SubMDF:"
             if target == "OptSubMDF":
                 cell.font = bold
-            cell = ws.cell(2, n_column+3)
+            cell = ws.cell(3, n_column+3)
             cell.value = targetdata["var_B2"][header]["max"]
 
-            if ("STANDARD" in concentrations) and (target == "OptMDF"):
+            if ("STANDARD" in concentrations) and (target == "OptMDF") and ("aerobic" in json_tuple[0]):
                 standard_optmdf_mdf = targetdata["var_B"][header]["max"]
                 standard_optmdf_submdf = targetdata["var_B2"][header]["max"]
 
-            if ("STANDARD" in concentrations) and (target == "OptSubMDF"):
+            if ("STANDARD" in concentrations) and (target == "OptSubMDF") and ("aerobic" in json_tuple[0]):
                 standard_optsubmdf_mdf = targetdata["var_B"][header]["max"]
                 standard_optsubmdf_submdf = targetdata["var_B2"][header]["max"]
 
@@ -297,45 +335,55 @@ for concentrations in ("STANDARDCONCS", "PAPERCONCS"):
 
         max_width = 5
         max_width_str = 5
-        current_line = 4
+        current_line = 5
 
-        cell = ws.cell(1, n_column)
+        cell = ws.cell(2, n_column)
         cell.value = "LEGEND:"
         cell.font = bold
 
-        cell = ws.cell(2, n_column)
+        cell = ws.cell(3, n_column)
         cell.value = "Blocked in model"
         cell.fill = fill_black
         cell.font = white_font
 
 
-        cell = ws.cell(3, n_column)
+        cell = ws.cell(4, n_column)
         cell.value = "Can always run"
         cell.fill = fill_green
 
 
-        cell = ws.cell(2, n_column+1)
+        cell = ws.cell(3, n_column+1)
         cell.value = "Blocked in TFVA only"
         cell.fill = fill_light_red
 
 
-        cell = ws.cell(3, n_column+1)
+        cell = ws.cell(4, n_column+1)
         cell.value = "Blocked already in FVA"
         cell.fill = fill_dark_red
 
-        cell = ws.cell(2, n_column+2)
+        cell = ws.cell(3, n_column+2)
         cell.value = "Essential in TFVA only"
         cell.fill = fill_light_blue
 
-        cell = ws.cell(3, n_column+2)
+        cell = ws.cell(4, n_column+2)
         cell.value = "Essential already in FVA"
         cell.fill = fill_dark_blue
 
 
-        cell = ws.cell(2, n_column+3)
+        cell = ws.cell(3, n_column+3)
         cell.value = "Bold text: Bottleneck in at least one condition"
         cell.font = bold
 
+        ws.column_dimensions['C'].width = 10
+        ws.column_dimensions['D'].width = 10
+        ws.column_dimensions['E'].width = 10
+        ws.column_dimensions['F'].width = 10
+        ws.column_dimensions['G'].width = 10
+        ws.column_dimensions['H'].width = 10
+        ws.column_dimensions['I'].width = 10
+        ws.column_dimensions['J'].width = 10
+        ws.column_dimensions['K'].width = 10
+        ws.column_dimensions['L'].width = 10
         ws.column_dimensions['M'].width = 18
         ws.column_dimensions['N'].width = 18
         ws.column_dimensions['O'].width = 23
@@ -422,13 +470,18 @@ for concentrations in ("STANDARDCONCS", "PAPERCONCS"):
                     cell.font = bold
 
             current_line += 1
-        ws.freeze_panes = "A4"
+        ws.freeze_panes = "A5"
 
         ##########################
         ### END OF FVA SHEET   ###
         ##########################
 
 invivodata = json_load("resources/in_vivo_concentration_data/final_concentration_values_paper.json")
+invivodata["nad_tcosa_c"] =   { "min": 2.32e-3, "max":  2.8e-3 }
+invivodata["nadh_tcosa_c"] =  { "min": 5.45e-5, "max": 1.27e-4 }
+invivodata["nadp_tcosa_c"] =  { "min": 1.4e-7, "max": 3.11e-5 }
+invivodata["nadph_tcosa_c"] = { "min": 1.1e-4, "max": 1.34e-4 }
+
 invivo_met_ids = list(invivodata.keys())
 invivo_min_concs = {
     met_id: invivodata[met_id]["min"]
@@ -448,6 +501,7 @@ for target in ("OptMDF", "OptSubMDF"):
 
     cvadata = json_load(f"cosa/results_aerobic/cva_{target.upper()}_STANDARDCONC.json")
     cva_met_ids = list(cvadata.keys())
+    cva_met_ids.sort()
     tabledata = {
         met_id: cvadata[met_id]["0,818"]
         for met_id in cva_met_ids
@@ -461,7 +515,7 @@ for target in ("OptMDF", "OptSubMDF"):
         for met_id in cva_met_ids
     }
 
-    ws.freeze_panes = "A3"
+    ws.freeze_panes = "A4"
 
     if target == "OptMDF":
         written_mdf = standard_optmdf_mdf
@@ -471,91 +525,108 @@ for target in ("OptMDF", "OptSubMDF"):
         written_submdf = standard_optsubmdf_submdf
 
     cell = ws.cell(1, 1)
-    cell.value = "MDF:"
-    cell = ws.cell(1, 2)
-    cell.value = written_mdf
-    cell = ws.cell(1, 3)
-    cell.value = "SubMDF:"
-    cell = ws.cell(1, 4)
-    cell.value = written_submdf
-    cell = ws.cell(1, 5)
-    cell.value = "µ:"
-    cell = ws.cell(1, 6)
-    cell.value = 0.818
+    cell.value = f"Comparison of aerobic concentration ranges from Concentration Variability Analysis at given {target} (CVA) under standard concentration ranges and measured in vivo data from Bennet et al. (2009), https://doi.org/10.1038/nchembio.186"
 
     cell = ws.cell(2, 1)
+    cell.value = "MDF:"
+    cell = ws.cell(2, 2)
+    cell.value = written_mdf
+    cell = ws.cell(2, 3)
+    cell.value = "SubMDF:"
+    cell = ws.cell(2, 4)
+    cell.value = written_submdf
+    cell = ws.cell(2, 5)
+    cell.value = "µ:"
+    cell = ws.cell(2, 6)
+    cell.value = 0.818
+
+    cell = ws.cell(3, 1)
     cell.value = "Metabolite ID"
     cell.font = italic
-    cell = ws.cell(2, 2)
+    cell = ws.cell(3, 2)
+    cell.value = "Metabolite Name"
+    cell.font = italic
+    cell = ws.cell(3, 3)
     cell.value = "Min CVA conc."
     cell.font = italic
-    cell = ws.cell(2, 3)
+    cell = ws.cell(3, 4)
     cell.value = "Max CVA conc."
     cell.font = italic
-    cell = ws.cell(2, 4)
+    cell = ws.cell(3, 5)
     cell.value = "Min in vivo conc."
     cell.font = italic
-    cell = ws.cell(2, 5)
+    cell = ws.cell(3, 6)
     cell.value = "Max in vivo conc."
     cell.font = italic
 
-    cell = ws.cell(1, 7)
+    cell = ws.cell(2, 7)
     cell.value = "LEGEND:"
     cell.font = bold
 
-    cell = ws.cell(2, 7)
+    cell = ws.cell(3, 7)
     cell.value = "CVA range not in measured range"
     cell.fill = fill_light_red
 
-    cell = ws.cell(2, 8)
+    cell = ws.cell(3, 8)
     cell.value = "CVA range in measured range"
     cell.fill = fill_green
 
-    cell = ws.cell(2, 9)
-    cell.value = "CVA data only"
-    cell.fill = fill_grey
+    # cell = ws.cell(3, 9)
+    # cell.value = "CVA data only"
+    # cell.fill = fill_grey
 
-    current_line = 3
+    current_line = 4
     for cva_met_id in cva_met_ids:
         cva_min_conc = cva_min_concs[cva_met_id]
         cva_max_conc = cva_max_concs[cva_met_id]
 
-        if cva_met_id[2:] in invivo_met_ids:
-            invivo_min_conc = invivo_min_concs[cva_met_id[2:]]
-            invivo_max_conc = invivo_max_concs[cva_met_id[2:]]
+        converted_met_id = cva_met_id[2:]  # No "x_" var prefix
+
+        if converted_met_id in invivo_met_ids:
+            invivo_min_conc = invivo_min_concs[converted_met_id]
+            invivo_max_conc = invivo_max_concs[converted_met_id]
 
             if ((cva_min_conc >= invivo_min_conc) and (cva_max_conc <= invivo_max_conc)) or ((cva_min_conc <= invivo_min_conc) and (cva_max_conc >= invivo_max_conc)) or ((cva_min_conc <= invivo_min_conc) and (cva_max_conc >= invivo_min_conc)) or ((invivo_min_conc <= invivo_max_conc) and (cva_max_conc >= invivo_max_conc)):
                 cell_filler = fill_green
             else:
                 cell_filler = fill_light_red
-        else:
+        elif converted_met_id == "nad_tcosa_c":
             invivo_min_conc = "N/A"
             invivo_max_conc = "N/A"
             cell_filler = fill_grey
 
         cell = ws.cell(current_line, 1)
-        cell.value = cva_met_id[2:]
+        cell.value = converted_met_id
         cell.fill = cell_filler
 
         cell = ws.cell(current_line, 2)
-        cell.value = cva_min_conc
+        cell.value = cobra_model_aerobic.metabolites.get_by_id(converted_met_id).name
         cell.fill = cell_filler
 
         cell = ws.cell(current_line, 3)
-        cell.value = cva_max_conc
+        cell.value = cva_min_conc
         cell.fill = cell_filler
 
         cell = ws.cell(current_line, 4)
-        cell.value = invivo_min_conc
+        cell.value = cva_max_conc
         cell.fill = cell_filler
 
         cell = ws.cell(current_line, 5)
+        cell.value = invivo_min_conc
+        cell.fill = cell_filler
+
+        cell = ws.cell(current_line, 6)
         cell.value = invivo_max_conc
         cell.fill = cell_filler
 
         current_line += 1
 
     ws.column_dimensions['A'].width = 18
+    ws.column_dimensions['B'].width = 30
+    ws.column_dimensions['C'].width = 16
+    ws.column_dimensions['D'].width = 16
+    ws.column_dimensions['E'].width = 16
+    ws.column_dimensions['F'].width = 16
     ws.column_dimensions['G'].width = 25
     ws.column_dimensions['H'].width = 25
     ws.column_dimensions['I'].width = 15
