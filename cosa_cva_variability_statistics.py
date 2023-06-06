@@ -1,3 +1,5 @@
+"""This module produces a text file with some CVA variability statistics."""
+
 from helper import json_load
 
 top = 15
@@ -5,7 +7,7 @@ used_mu = "0,818"
 
 for aerobicity in ("aerobic",):
     for target in ("OPTMDF", "OPTSUBMDF"):
-        txtpath = f"cva_vars_{aerobicity}_{target}_{used_mu}_STANDARDCONC.txt"
+        txtpath = f"./cosa/cva_vars_{aerobicity}_{target}_{used_mu}_STANDARDCONC.txt"
         jsondata = json_load(f"./cosa/results_{aerobicity}/cva_{target}_STANDARDCONC.json")
 
         num_not_max_var = 0
@@ -47,4 +49,3 @@ for aerobicity in ("aerobic",):
 
         with open(txtpath, "w", encoding="utf-8") as f:
             f.write(txt)
-

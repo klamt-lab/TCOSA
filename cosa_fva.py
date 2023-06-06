@@ -1,3 +1,5 @@
+"""Performs a thermodynamic FVA under the given settings. See 'cosa_fva_aerobic' and 'cosa_fva_anaerobic' for its application."""
+
 import cobra
 import copy
 import os

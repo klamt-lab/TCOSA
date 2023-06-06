@@ -1,15 +1,15 @@
-from tkinter.messagebox import NO
-import matplotlib.pyplot as plt
+"""This module contains the function for the Concentration Variability Analysis (CVA)."""
+
+# IMPORT SECTION #
+# External
 import cobra
 import copy
+import matplotlib.pyplot as plt
 import os
 import pulp
 from math import exp
-from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
-from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
-from cosa_get_suffix import cosa_get_suffix
-from helper import json_load, json_write, json_zip_load
-from typing import List
+from typing import Dict, List
+# Internal
 from optmdfpathway import (
     STANDARD_R, STANDARD_T, get_optmdfpathway_base_problem,
     add_differential_reactions_constraints, get_z_variable_status,
@@ -18,11 +18,24 @@ from optimization import perform_variable_minimization, perform_variable_maximiz
 from cosa_load_model_data import (
     MIN_OPTMDF, load_model_data
 )
-from typing import Dict
-from helper import ensure_folder_existence
+from cosa_get_all_tcosa_reaction_ids import get_all_tcosa_reaction_ids
+from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
+from cosa_get_suffix import cosa_get_suffix
+from helper import ensure_folder_existence, json_load, json_write, json_zip_load
 
 
+# PUBLIC FUNCTIONS SECTION #
 def cosa_cva(metabolites: List[str], anaerobic: bool, expanded: bool, growth_epsilon: float = 0.01) -> None:
+    """Performs a concentration variability analysis (CVA).
+
+    As a results, it writes JSON files with the CVA results in the 'cosa' subfolder'
+
+    ### Arguments
+    * metabolites: List[str] ~ List of metabolite IDs for all metabolites for which a CVA shall be performed.
+    * anaerobic: bool ~ Whether or not anaerobicity is the case.
+    * expanded: bool ~ Whether (True) 3 or 2 (False) redox cofactors are used.
+    * growth_epsilon: float = 0.01 ~ The numeric stability factor to go below µ.
+    """
     suffix = cosa_get_suffix(anaerobic, expanded)
     figures_path = f"./cosa/results{suffix}/figures/"
     ensure_folder_existence(figures_path)

@@ -1,11 +1,16 @@
+"""This modules creates the Supplementary Table 3."""
+
+# IMPORT SECTION #
+# External
 import copy
 import math
 import openpyxl
-from helper import json_load
+# Internal
 from cosa_load_model_data import load_model_data
 from cosa_get_model_with_nadx_scenario import cosa_get_model_with_nadx_scenario
+from helper import json_load
 
-
+# LOGIC SECTION #
 core_ids = [
     "EX_glc__D_e",
     "GLCptspp",

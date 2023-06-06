@@ -68,5 +68,15 @@ import cosa_fva_aerobic
 import cosa_fva_anaerobic
 import cosa_fva_statistics
 
+# Perform stoichiometric FVAs
+import cosa_stoichiometric_fva_aerobic
+import cosa_stoichiometric_fva_anaerobic
+
 # Test full switch of NAD and NADP in a source-code selected solution
 import cosa_switch_test
+
+# Perform Concentration Variability Analyses
+import cosa_cva
+
+# Create Supplementary Table 3
+import cosa_fva_excel_comparison_files
