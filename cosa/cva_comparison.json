@@ -1436,5 +1436,137 @@
             "defective_mus": [],
             "min_differences": []
         }
+    },
+    "nad_tcosa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "nadh_tcosa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": false,
+            "defective_mus": [
+                "0,868",
+                "0,818",
+                "0,768",
+                "0,718",
+                "0,668",
+                "0,618",
+                "0,568",
+                "0,518",
+                "0,468",
+                "0,418",
+                "0,368",
+                "0,318",
+                "0,268",
+                "0,218",
+                "0,168",
+                "0,118",
+                "0,068",
+                "0,05"
+            ],
+            "min_differences": [
+                5.256006633025602e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153411e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05,
+                4.595791666153432e-05
+            ]
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": false,
+            "is_partly_inside_at_least_once": false,
+            "defective_mus": [
+                "0,868",
+                "0,818",
+                "0,768",
+                "0,718",
+                "0,668",
+                "0,618",
+                "0,568",
+                "0,518",
+                "0,468",
+                "0,418",
+                "0,368",
+                "0,318",
+                "0,268",
+                "0,218",
+                "0,168",
+                "0,118",
+                "0,068",
+                "0,05"
+            ],
+            "min_differences": [
+                4.5997627531043405e-05,
+                4.523948525756911e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05,
+                5.3500000000000006e-05
+            ]
+        }
+    },
+    "nadp_tcosa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
+    },
+    "nadph_tcosa_c": {
+        "OPTMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        },
+        "OPTSUBMDF": {
+            "is_partly_inside_everywhere": true,
+            "is_partly_inside_at_least_once": true,
+            "defective_mus": [],
+            "min_differences": []
+        }
     }
 }

@@ -7,6 +7,22 @@ from helper import json_load, json_write
 
 
 paper_data = json_load("resources/in_vivo_concentration_data/final_concentration_values_paper.json")
+paper_data["nad_tcosa_c"] = {
+    "min": 2.32e-3,
+    "max": 2.8e-3,
+}
+paper_data["nadh_tcosa_c"] = {
+    "min": 5.45e-5,
+    "max": 1.27e-4,
+}
+paper_data["nadp_tcosa_c"] = {
+    "min": 1.4e-7,
+    "max": 3.11e-5,
+}
+paper_data["nadph_tcosa_c"] = {
+    "min": 1.1e-4,
+    "max": 1.34e-4,
+}
 comparison = {}
 for target in ("OPTMDF", "OPTSUBMDF"):
     cva_data = json_load(f"cosa/results_aerobic/cva_{target}_STANDARDCONC.json")

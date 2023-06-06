@@ -1,0 +1,82 @@
+{
+    "OPTMDF": {
+        "max_absolute_min_difference": 0.07239999999999999,
+        "max_abs_min_log10_difference": 1.068721513064376,
+        "adp_c": {
+            "name": "ADP",
+            "min_cva": 1.0000000000000004e-06,
+            "max_cva": 8.765956264771173e-05,
+            "min_measurement": 0.000437,
+            "max_measurement": 0.000704,
+            "min_difference": 0.00034934043735228824,
+            "min_log10_difference": 0.6976821374350424
+        },
+        "glu__L_c": {
+            "name": "glutamate",
+            "min_cva": 0.001604717737114385,
+            "max_cva": 0.02,
+            "min_measurement": 0.0924,
+            "max_measurement": 0.0998,
+            "min_difference": 0.07239999999999999,
+            "min_log10_difference": 0.6646419755561255
+        },
+        "pep_c": {
+            "name": "phosphoenolpyruvate",
+            "min_cva": 1.0000000000000004e-06,
+            "max_cva": 1.2463251036262684e-05,
+            "min_measurement": 0.000146,
+            "max_measurement": 0.000231,
+            "min_difference": 0.00013353674896373732,
+            "min_log10_difference": 1.068721513064376
+        },
+        "nadh_tcosa_c": {
+            "name": "NADH",
+            "min_cva": 1.0000000000000004e-06,
+            "max_cva": 8.542083338465686e-06,
+            "min_measurement": 5.45e-05,
+            "max_measurement": 0.000127,
+            "min_difference": 4.595791666153432e-05,
+            "min_log10_difference": 0.8048326980915714
+        }
+    },
+    "OPTSUBMDF": {
+        "max_absolute_min_difference": 0.08710414484225579,
+        "max_abs_min_log10_difference": 1.24173587263073,
+        "3pg_c": {
+            "name": "3-phosphoglycerate",
+            "min_cva": 5.500726811128712e-06,
+            "max_cva": 0.00030138484441201365,
+            "min_measurement": 0.00151,
+            "max_measurement": 0.00158,
+            "min_difference": 0.0012086151555879864,
+            "min_log10_difference": 0.6998555379135021
+        },
+        "akg_c": {
+            "name": "alpha-ketoglutarate",
+            "min_cva": 1.0000000000000004e-06,
+            "max_cva": 5.479000407769235e-05,
+            "min_measurement": 0.000312,
+            "max_measurement": 0.000631,
+            "min_difference": 0.0002572099959223076,
+            "min_log10_difference": 0.7554532612617906
+        },
+        "glu__L_c": {
+            "name": "glutamate",
+            "min_cva": 9.553681988856925e-06,
+            "max_cva": 0.005295855157744216,
+            "min_measurement": 0.0924,
+            "max_measurement": 0.0998,
+            "min_difference": 0.08710414484225579,
+            "min_log10_difference": 1.24173587263073
+        },
+        "nadh_tcosa_c": {
+            "name": "NADH",
+            "min_cva": 1.0000000000000004e-06,
+            "max_cva": 9.260514742430894e-06,
+            "min_measurement": 5.45e-05,
+            "max_measurement": 0.000127,
+            "min_difference": 4.523948525756911e-05,
+            "min_log10_difference": 0.769761374818871
+        }
+    }
+}
