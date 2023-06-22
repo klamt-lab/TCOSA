@@ -786,19 +786,19 @@ def create_total_cosa_figure() -> None:
                 first = True
                 ax_x = 0
                 ax_y = 0
-                title = "A Aerobic, MDF"
+                title = "A Aerob, MDF"
             elif current_table == OPTSUBMDF_AEROBIC:
                 ax_x = 0
                 ax_y = 1
-                title = "B Aerobic, SubMDF"
+                title = "B Aerob, SubMDF"
             elif current_table == OPTMDF_ANAEROBIC:
                 ax_x = 1
                 ax_y = 0
-                title = "C Anaerobic, MDF"
+                title = "C Anaerob, MDF"
             elif current_table == OPTSUBMDF_ANAEROBIC:
                 ax_x = 1
                 ax_y = 1
-                title = "D Anaerobic, SubMDF"
+                title = "D Anaerob, SubMDF"
             current_table += 1
 
             table = pandas.read_csv(
@@ -825,23 +825,23 @@ def create_total_cosa_figure() -> None:
                 if header == growth_rate_id:
                     continue
                 elif header == best_id:
-                    label = "Flexible specificity"
+                    label = "Flexible Spezifität"
                     linestyle = "--"
                     color = "yellowgreen"
                     linewidth = 2.0
                 elif header == in_vivo_id:
-                    label = "Wild-type specificity"
+                    label = "Wildtyp-Spezifität"
                     linestyle = "-"
                     color = "black"
                     linewidth = 2.0
                 elif header == only_one_id:
-                    label = "Single cofactor pool"
+                    label = "Einzelcofaktor-Spezifität"
                     linestyle = "-"
                     color = "red"
                     linewidth = 2.0
                 else:
                     if is_first_random:
-                        label = "Random specificities"
+                        label = "Zufällige Spezifitäten"
                         is_first_random = False
                     else:
                         label = ""
@@ -872,7 +872,7 @@ def create_total_cosa_figure() -> None:
                     linewidth=linewidth,
                 )
                 axs[ax_x, ax_y].set_title(title, loc="left", fontweight="bold")
-                axs[ax_x, ax_y].set_xlabel(r"Growth rate [$\mathrm{h^{-1}}$]")
+                axs[ax_x, ax_y].set_xlabel(r"Wachstumsrate [$\mathrm{h^{-1}}$]")
                 axs[ax_x, ax_y].set_ylabel(ylabel)
                 axs[ax_x, ax_y].set_xlim(min(temp_growth_rates), max(temp_growth_rates))
                 if "SubMDF" not in ylabel:

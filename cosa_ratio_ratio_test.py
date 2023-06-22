@@ -228,17 +228,17 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
     concentrations = ("STANDARDCONC",) #"VIVOCONC")
     for concentration in concentrations:
         figurenames_to_plots = {
-            ("Aerobic", "OptMDF", "A", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (0, 0),
-            ("Aerobic", "OptSubMDF", "B", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (0, 1),
-            ("Anaerobic", "OptMDF", "C", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (1, 0),
-            ("Anaerobic", "OptSubMDF", "D", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (1, 1),
+            ("Aerob", "OptMDF", "A", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (0, 0),
+            ("Aerob", "OptSubMDF", "B", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (0, 1),
+            ("Anaerob", "OptMDF", "C", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (1, 0),
+            ("Anaerob", "OptSubMDF", "D", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (1, 1),
         }
         first = True
 
         fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(19, 10)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
         fig.tight_layout(pad=3.75)
         for figurename_tuple in figurenames_to_plots.keys():
-            if figurename_tuple[0] == "Aerobic":
+            if figurename_tuple[0] == "Aerob":
                 ratio_ratio_test_data = ratio_ratio_test_data_aerobic
                 is_aerobic = True
             else:
@@ -246,8 +246,8 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 is_aerobic = False
 
             if first:
-                min_label = "Minimal ratio"
-                max_label = "Maximal ratio"
+                min_label = "Minimales Verhältnis"
+                max_label = "Maximales Verhältnis"
                 first = False
             else:
                 min_label = None
@@ -304,19 +304,19 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 )
             elif figurename_tuple[2] == "D":
                 axs[axs_index].set_ylim(-.04, 1.0)
-            axs[axs_index].set_xlabel("Growth rate [1/h]", fontsize=16)
+            axs[axs_index].set_xlabel("Wachstumsrate [1/h]", fontsize=16)
             # axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=16)
             axs[axs_index].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=12)
             axs[axs_index].tick_params(labelsize=13)
-        fig.legend(loc=(0.235, 0.9525), ncol=2, fontsize=18)
+        fig.legend(loc=(0.16, 0.9525), ncol=2, fontsize=17)
         # fig.subplots_adjust(right=1.25)
 
         fig.savefig(f"./cosa/full_ratio_ratio_test_figure_{concentration}.png", bbox_inches='tight', pad_inches=0.05)
         plt.close()
 
 
-cosa_ratio_ratio_test(anaerobic=False, expanded=False)
-cosa_ratio_ratio_test(anaerobic=True, expanded=False)
-cosa_ratio_ratio_test(anaerobic=False, expanded=False, c_source="acetate")
+# cosa_ratio_ratio_test(anaerobic=False, expanded=False)
+# cosa_ratio_ratio_test(anaerobic=True, expanded=False)
+# cosa_ratio_ratio_test(anaerobic=False, expanded=False, c_source="acetate")
 
 cosa_create_full_ratio_ratio_test_figure_four_panels()

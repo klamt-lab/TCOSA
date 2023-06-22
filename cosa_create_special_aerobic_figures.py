@@ -59,23 +59,23 @@ def create_in_vivo_concentrations_figure():
         if header == growth_rate_id:
             continue
         elif header == best_id:
-            label = "Flexible specificity"
+            label = "Flexible Spezifität"
             linestyle = "--"
             color = "yellowgreen"
             linewidth = 2.0
         elif header == in_vivo_id:
-            label = "Wild-type specificity"
+            label = "Wildtyp-Spezifität"
             linestyle = "-"
             color = "black"
             linewidth = 2.0
         elif header == only_one_id:
-            label = "Single cofactor pool"
+            label = "Einzelcofaktor-Spezifität"
             linestyle = "-"
             color = "red"
             linewidth = 2.0
         else:
             if is_first_random:
-                label = "Random specificities"
+                label = "Zufällige Spezifitäten"
                 is_first_random = False
             else:
                 label = ""
@@ -93,7 +93,7 @@ def create_in_vivo_concentrations_figure():
         )
     axs[0].legend(loc="lower left", fontsize=16)
     axs[0].set_title("A", loc="left", fontweight="bold", fontsize=18)
-    axs[0].set_xlabel("Growth rate [1/h]", fontsize=14)
+    axs[0].set_xlabel("Wachstumsrate [1/h]", fontsize=14)
     axs[0].set_ylabel("SubMDF [kJ/mol]", fontsize=14)
     axs[0].set_xlim(min(growth_rates[:-1]), max(growth_rates[:-1]))
     axs[0].tick_params(labelsize=14)
@@ -105,8 +105,8 @@ def create_in_vivo_concentrations_figure():
     # 1: Ratio ratio figure
     ratio_ratio_test_data = ratio_ratio_test_data_aerobic
 
-    min_label = "Minimal ratio"
-    max_label = "Maximal ratio"
+    min_label = "Minimales Verhältnis"
+    max_label = "Maximales Verhältnis"
 
     figurename = figurename_tuple[1]
     plotted_growth_rates = [float(x) for x in ratio_ratio_test_data[figurename]["plotted_growth_rates"][:-1]]
@@ -128,7 +128,7 @@ def create_in_vivo_concentrations_figure():
     )
     axs[1].legend(loc="upper center", ncol=2, fontsize=16)
     axs[1].set_title("B", loc="left", fontweight="bold", fontsize=18)
-    axs[1].set_xlabel("Growth rate [1/h]", fontsize=15)
+    axs[1].set_xlabel("Wachstumsrate [1/h]", fontsize=15)
     # axs[1].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=15)
     axs[1].set_ylabel(r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$", fontsize=14)
     axs[1].tick_params(labelsize=14)
@@ -190,23 +190,23 @@ def create_acetate_figure():
             if header == growth_rate_id:
                 continue
             elif header == best_id:
-                label = "Flexible specificity"
+                label = "Flexible Spezifität"
                 linestyle = "--"
                 color = "yellowgreen"
                 linewidth = 2.0
             elif header == in_vivo_id:
-                label = "Wild-type specificity"
+                label = "Wildtyp-Spezifität"
                 linestyle = "-"
                 color = "black"
                 linewidth = 2.0
             elif header == only_one_id:
-                label = "Single cofactor pool"
+                label = "Einzelcofaktor-Spezifität"
                 linestyle = "-"
                 color = "red"
                 linewidth = 2.0
             else:
                 if is_first_random:
-                    label = "Random specificities"
+                    label = "Zufällige Spezifitäten"
                     is_first_random = False
                 else:
                     label = ""
@@ -223,8 +223,8 @@ def create_acetate_figure():
                 linewidth=linewidth,
             )
         axs[xpos, 0].legend(loc="lower left", fontsize=14)
-        axs[xpos, 0].set_title("C Sampling with SubMDF" if "SUB" in target else "A Sampling with MDF", loc="left", fontweight="bold", fontsize=18)
-        axs[xpos, 0].set_xlabel("Growth rate [1/h]", fontsize=14)
+        axs[xpos, 0].set_title("C SubMDF" if "SUB" in target else "A MDF", loc="left", fontweight="bold", fontsize=18)
+        axs[xpos, 0].set_xlabel("Wachstumsrate [1/h]", fontsize=14)
         axs[xpos, 0].set_ylabel(f"{target.replace('OPT', '').replace('SUB', 'Sub')} [kJ/mol]", fontsize=14)
         axs[xpos, 0].set_xlim(min(growth_rates[:-1]), max(growth_rates[:-1]))
         axs[xpos, 0].tick_params(labelsize=14)
@@ -236,8 +236,8 @@ def create_acetate_figure():
         # 1: Ratio ratio figures
         ratio_ratio_test_data = ratio_ratio_test_data_aerobic
 
-        min_label = "Minimal ratio"
-        max_label = "Maximal ratio"
+        min_label = "Minimales Verhältnis"
+        max_label = "Maximales Verhältnis"
 
         figurename = figurename_tuple[1]
         plotted_growth_rates = [float(x) for x in ratio_ratio_test_data[figurename]["plotted_growth_rates"][:-1]]
@@ -257,9 +257,9 @@ def create_acetate_figure():
             label=max_label,
             linewidth=1.0,
         )
-        axs[xpos, 1].legend(loc="upper center", ncol=2, fontsize=15)
-        axs[xpos, 1].set_title("D Ratios with SubMDF" if "SUB" in target else "B Ratios with MDF", loc="left", fontweight="bold", fontsize=18)
-        axs[xpos, 1].set_xlabel("Growth rate [1/h]", fontsize=15)
+        axs[xpos, 1].legend(loc="upper center", fontsize=15)
+        axs[xpos, 1].set_title("D Verhältnisse beim SubMDF" if "SUB" in target else "B Verhältnisse beim MDF", loc="left", fontweight="bold", fontsize=18)
+        axs[xpos, 1].set_xlabel("Wachstumsrate [1/h]", fontsize=15)
         axs[xpos, 1].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=13)
         axs[xpos, 1].tick_params(labelsize=14)
         axs[xpos, 1].set_ylim(-.0001 if "SUB" in target else -0.005, 0.0015 if "SUB" in target else 0.09)
