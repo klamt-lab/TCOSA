@@ -430,19 +430,19 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                 if (aerobicity == "aerobic") and (target == "OptMDF"):
                     ax_x = 0
                     ax_y = 0
-                    title = "A Aerobic, MDF"
+                    title = "A Aerob, MDF"
                 elif (aerobicity == "anaerobic") and (target == "OptMDF"):
                     ax_x = 1
                     ax_y = 0
-                    title = "C Anaerobic, MDF"
+                    title = "C Anaerob, MDF"
                 elif (aerobicity == "aerobic") and (target == "OptSubMDF"):
                     ax_x = 0
                     ax_y = 1
-                    title = "B Aerobic, SubMDF"
+                    title = "B Aerob, SubMDF"
                 elif (aerobicity == "anaerobic") and (target == "OptSubMDF"):
                     ax_x = 1
                     ax_y = 1
-                    title = "D Anaerobic, SubMDF"
+                    title = "D Anaerob, SubMDF"
 
                 ylabel = f"{target.replace('Opt', '')} [kJ/mol]"
 
@@ -497,24 +497,24 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                     if header == growth_rate_id:
                         continue
                     elif header == best_id:
-                        label = "Flexible specificity"
+                        label = "Flexible Spezifität"
                         linestyle = "-"
                         color = "yellowgreen"
                         linewidth = 2.0
                     elif header == in_vivo_id:
-                        label = "Wild-type specificity"
+                        label = "Wildtyp-Spezifität"
                         linestyle = "-"
                         color = "black"
                         linewidth = 2.0
                     elif header == only_one_id:
-                        label = "Single cofactor pool"
+                        label = "Einzelcofaktor-Spezifität"
                         linestyle = "-"
                         color = "red"
                         linewidth = 2.0
                     else:
                         if in_vivo_id in header:
                             if is_first_random_wildtype:
-                                label = "Random ΔG'° - wild-type specificity"
+                                label = "Zufälliger ΔG'° - Wildtyp-Spezifität"
                                 is_first_random_wildtype = False
                                 y_data = means_wildtype
                                 yerr_data = stdevs_wildtype
@@ -525,7 +525,7 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                             linewidth = 2.0
                         elif only_one_id in header:
                             if is_first_random_single_cofactor:
-                                label = "Random ΔG'° - single cofactor pool"
+                                label = "Zufälliger ΔG'° - Einzelcofaktor-Spezifität"
                                 is_first_random_single_cofactor = False
                                 y_data = means_single_cofactor
                                 yerr_data = stdevs_single_cofactor
@@ -536,7 +536,7 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                             linewidth = 2.0
                         elif best_id in header:
                             if is_first_random_flexible:
-                                label = "Random ΔG'° - flexible specificity"
+                                label = "Zufälliger ΔG'° - Flexible Spezifität"
                                 is_first_random_flexible = False
                                 y_data = means_flexible
                                 yerr_data = stdevs_flexible
@@ -565,18 +565,18 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                             capsize=3.0,
                         )
                     axs[ax_x, ax_y].set_ylabel(ylabel)
-                    axs[ax_x, ax_y].set_xlabel(r"Growth rate [$\mathrm{h^{-1}}$]")
+                    axs[ax_x, ax_y].set_xlabel(r"Wachstumsrate [$\mathrm{h^{-1}}$]")
                     axs[ax_x, ax_y].set_xlim(min(growth_rates)-.004, max(growth_rates)+.004) ####
                     axs[ax_x, ax_y].set_title(title, loc="left", fontweight="bold")
             # fig.legend(loc="upper center")
             # plt.legend(loc='upper center')
         legend = [
-            Line2D([0], [0], color="red", linestyle="-", linewidth=2.0, label="Original ΔG'°: single cofactor pool"),
-            Line2D([0], [0], color="black", linestyle="-", linewidth=2.0, label="Original ΔG'°: wild-type specificity"),
-            Line2D([0], [0], color="yellowgreen", linestyle="-", linewidth=2.0, label="Original ΔG'°: flexible specificity"),
-            Line2D([0], [0], color="orangered", linestyle="--", linewidth=2.0, label="Random ΔG'°: single cofactor pool"),
-            Line2D([0], [0], color="dimgray", linestyle="--", linewidth=2.0, label="Random ΔG'°: wild-type specificity"),
-            Line2D([0], [0], color="lawngreen", linestyle="--", linewidth=2.0, label="Random ΔG'°: flexible specificity"),
+            Line2D([0], [0], color="red", linestyle="-", linewidth=2.0, label="Originale ΔG'°: Einzelcofaktor-Spezifität"),
+            Line2D([0], [0], color="black", linestyle="-", linewidth=2.0, label="Originale ΔG'°: Wildtyp-Spezifität"),
+            Line2D([0], [0], color="yellowgreen", linestyle="-", linewidth=2.0, label="Originale ΔG'°: Flexible Spezifität"),
+            Line2D([0], [0], color="orangered", linestyle="--", linewidth=2.0, label="Zufällige ΔG'°: Einzelcofaktor-Spezifität"),
+            Line2D([0], [0], color="dimgray", linestyle="--", linewidth=2.0, label="Zufällige ΔG'°: Wildtyp-Spezifität"),
+            Line2D([0], [0], color="lawngreen", linestyle="--", linewidth=2.0, label="Zufällige ΔG'°: Flexible Spezifität"),
         ]
         plt.legend(handles=legend, bbox_to_anchor=(0.0, 2.5), ncol=2, loc='upper center')
         plt.savefig(f"./cosa/total_dG0_sampling_figure_change_range_{change_range}_{concentrations}.png", bbox_inches='tight', pad_inches=0.05)
