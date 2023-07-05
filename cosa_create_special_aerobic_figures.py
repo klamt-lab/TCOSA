@@ -92,7 +92,7 @@ def create_in_vivo_concentrations_figure():
             linewidth=linewidth,
         )
     axs[0].legend(loc="lower left", fontsize=16)
-    axs[0].set_title("A", loc="left", fontweight="bold", fontsize=18)
+    axs[0].set_title("a", loc="left", fontweight="bold", fontsize=18)
     axs[0].set_xlabel("Growth rate [1/h]", fontsize=14)
     axs[0].set_ylabel("SubMDF [kJ/mol]", fontsize=14)
     axs[0].set_xlim(min(growth_rates[:-1]), max(growth_rates[:-1]))
@@ -127,10 +127,10 @@ def create_in_vivo_concentrations_figure():
         linewidth=1.0,
     )
     axs[1].legend(loc="upper center", ncol=2, fontsize=16)
-    axs[1].set_title("B", loc="left", fontweight="bold", fontsize=18)
+    axs[1].set_title("b", loc="left", fontweight="bold", fontsize=18)
     axs[1].set_xlabel("Growth rate [1/h]", fontsize=15)
     # axs[1].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=15)
-    axs[1].set_ylabel(r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$", fontsize=14)
+    axs[1].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=14)
     axs[1].tick_params(labelsize=14)
 
     axs[1].set_ylim(-.00003, 0.0006)
@@ -140,6 +140,8 @@ def create_in_vivo_concentrations_figure():
     # fig.subplots_adjust(right=1.1)
 
     fig.savefig(output_path, bbox_inches='tight', pad_inches=pad_inches)
+    fig.savefig("./cosa/FigureS2.png", bbox_inches='tight', pad_inches=pad_inches)
+    fig.savefig("./cosa/FigureS2.pdf", bbox_inches='tight', pad_inches=pad_inches)
     plt.close()
 
 
@@ -223,7 +225,7 @@ def create_acetate_figure():
                 linewidth=linewidth,
             )
         axs[xpos, 0].legend(loc="lower left", fontsize=14)
-        axs[xpos, 0].set_title("C Sampling with SubMDF" if "SUB" in target else "A Sampling with MDF", loc="left", fontweight="bold", fontsize=18)
+        axs[xpos, 0].set_title("c  Sampling with SubMDF" if "SUB" in target else "a  Sampling with MDF", loc="left", fontweight="bold", fontsize=18)
         axs[xpos, 0].set_xlabel("Growth rate [1/h]", fontsize=14)
         axs[xpos, 0].set_ylabel(f"{target.replace('OPT', '').replace('SUB', 'Sub')} [kJ/mol]", fontsize=14)
         axs[xpos, 0].set_xlim(min(growth_rates[:-1]), max(growth_rates[:-1]))
@@ -258,7 +260,7 @@ def create_acetate_figure():
             linewidth=1.0,
         )
         axs[xpos, 1].legend(loc="upper center", ncol=2, fontsize=15)
-        axs[xpos, 1].set_title("D Ratios with SubMDF" if "SUB" in target else "B Ratios with MDF", loc="left", fontweight="bold", fontsize=18)
+        axs[xpos, 1].set_title("d  Ratios with SubMDF" if "SUB" in target else "b  Ratios with MDF", loc="left", fontweight="bold", fontsize=18)
         axs[xpos, 1].set_xlabel("Growth rate [1/h]", fontsize=15)
         axs[xpos, 1].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=13)
         axs[xpos, 1].tick_params(labelsize=14)
@@ -269,6 +271,7 @@ def create_acetate_figure():
         # fig.subplots_adjust(right=1.1)
 
     fig.savefig(output_path, bbox_inches='tight', pad_inches=pad_inches)
+    fig.savefig("./cosa/Figure6.pdf", bbox_inches='tight', pad_inches=pad_inches)
     plt.close()
 
 

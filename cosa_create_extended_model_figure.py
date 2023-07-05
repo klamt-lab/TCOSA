@@ -49,14 +49,14 @@ for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
 
                 if aerobicity == "aerobic":
                     axs_row = 0
-                    title = "A Aerobic"
+                    title = "a  Aerobic"
                     label_optmdf_two = "MDF with 2 cofactors (all $\mathrm{ΔE'°}$ at -320 mV)"
                     label_optsubmdf_three = "SubMDF with 3 cofactors" + legend_addition
                     label_optmdf_three = "MDF with 3 cofactors" + legend_addition
                     label_optsubmdf_two = "SubMDF with 2 cofactors (all $\mathrm{ΔE'°}$ at -320 mV)"
                 else:
                     axs_row = 1
-                    title = "B Anaerobic"
+                    title = "b  Anaerobic"
                     label_optmdf_two = None
                     label_optsubmdf_three = None
                     label_optmdf_three = None
@@ -119,4 +119,5 @@ for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
 
     fig.legend(loc="upper center", bbox_to_anchor=(0.5, 1.18), ncol=2)
     fig.savefig(f"cosa/expanded_comparison_{concentration_ranges}.png", bbox_inches='tight', pad_inches=0.0)
+    fig.savefig(f"cosa/Figure5.pdf", bbox_inches='tight', pad_inches=0.0)
     plt.close()

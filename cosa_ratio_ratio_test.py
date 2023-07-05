@@ -228,10 +228,10 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
     concentrations = ("STANDARDCONC",) #"VIVOCONC")
     for concentration in concentrations:
         figurenames_to_plots = {
-            ("Aerobic", "OptMDF", "A", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (0, 0),
-            ("Aerobic", "OptSubMDF", "B", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (0, 1),
-            ("Anaerobic", "OptMDF", "C", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (1, 0),
-            ("Anaerobic", "OptSubMDF", "D", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (1, 1),
+            ("Aerobic", "OptMDF", "a ", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (0, 0),
+            ("Aerobic", "OptSubMDF", "b ", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (0, 1),
+            ("Anaerobic", "OptMDF", "c ", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (1, 0),
+            ("Anaerobic", "OptSubMDF", "d ", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (1, 1),
         }
         first = True
 
@@ -285,24 +285,24 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
             )
             import matplotlib
             axs[axs_index].set_title(title, loc="left", fontweight="bold", fontsize=17)
-            if figurename_tuple[2] == "A":
+            if figurename_tuple[2] == "a ":
                 axs[axs_index].set_xlim(0.025, 0.895)
                 axs[axs_index].set_ylim(-.000003, 0.00006)
                 axs[axs_index].yaxis.set_major_formatter(
                     matplotlib.ticker.FuncFormatter(lambda x, p: '{:.0E}'.format(x))
                 )
-            elif figurename_tuple[2] == "B":
+            elif figurename_tuple[2] == "b ":
                 axs[axs_index].set_xlim(0.025, 0.895)
                 axs[axs_index].set_ylim(-.0000004, 0.000005)
                 axs[axs_index].yaxis.set_major_formatter(
                     matplotlib.ticker.FuncFormatter(lambda x, p: '{:.0E}'.format(x))
                 )
-            elif figurename_tuple[2] == "C":
+            elif figurename_tuple[2] == "c ":
                 axs[axs_index].set_ylim(-.003, 0.05)
                 axs[axs_index].yaxis.set_major_formatter(
                     matplotlib.ticker.FuncFormatter(lambda x, p: round(x, 2))
                 )
-            elif figurename_tuple[2] == "D":
+            elif figurename_tuple[2] == "d ":
                 axs[axs_index].set_ylim(-.04, 1.0)
             axs[axs_index].set_xlabel("Growth rate [1/h]", fontsize=16)
             # axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=16)
@@ -312,6 +312,7 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
         # fig.subplots_adjust(right=1.25)
 
         fig.savefig(f"./cosa/full_ratio_ratio_test_figure_{concentration}.png", bbox_inches='tight', pad_inches=0.05)
+        fig.savefig(f"./cosa/Figure4.pdf", bbox_inches='tight', pad_inches=0.05)
         plt.close()
 
 

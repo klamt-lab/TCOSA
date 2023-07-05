@@ -430,19 +430,19 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                 if (aerobicity == "aerobic") and (target == "OptMDF"):
                     ax_x = 0
                     ax_y = 0
-                    title = "A Aerobic, MDF"
+                    title = "a  Aerobic, MDF"
                 elif (aerobicity == "anaerobic") and (target == "OptMDF"):
                     ax_x = 1
                     ax_y = 0
-                    title = "C Anaerobic, MDF"
+                    title = "c  Anaerobic, MDF"
                 elif (aerobicity == "aerobic") and (target == "OptSubMDF"):
                     ax_x = 0
                     ax_y = 1
-                    title = "B Aerobic, SubMDF"
+                    title = "b  Aerobic, SubMDF"
                 elif (aerobicity == "anaerobic") and (target == "OptSubMDF"):
                     ax_x = 1
                     ax_y = 1
-                    title = "D Anaerobic, SubMDF"
+                    title = "d  Anaerobic, SubMDF"
 
                 ylabel = f"{target.replace('Opt', '')} [kJ/mol]"
 
@@ -580,6 +580,8 @@ def create_total_dG0_sampling_figure(change_range) -> None:
         ]
         plt.legend(handles=legend, bbox_to_anchor=(0.0, 2.5), ncol=2, loc='upper center')
         plt.savefig(f"./cosa/total_dG0_sampling_figure_change_range_{change_range}_{concentrations}.png", bbox_inches='tight', pad_inches=0.05)
+        plt.savefig(f"./cosa/FigureS1.png", bbox_inches='tight', pad_inches=0.05)
+        plt.savefig(f"./cosa/FigureS1.pdf", bbox_inches='tight', pad_inches=0.05)
         plt.close()
 
 
@@ -786,19 +788,19 @@ def create_total_cosa_figure() -> None:
                 first = True
                 ax_x = 0
                 ax_y = 0
-                title = "A Aerobic, MDF"
+                title = "a  Aerobic, MDF"
             elif current_table == OPTSUBMDF_AEROBIC:
                 ax_x = 0
                 ax_y = 1
-                title = "B Aerobic, SubMDF"
+                title = "b  Aerobic, SubMDF"
             elif current_table == OPTMDF_ANAEROBIC:
                 ax_x = 1
                 ax_y = 0
-                title = "C Anaerobic, MDF"
+                title = "c  Anaerobic, MDF"
             elif current_table == OPTSUBMDF_ANAEROBIC:
                 ax_x = 1
                 ax_y = 1
-                title = "D Anaerobic, SubMDF"
+                title = "d  Anaerobic, SubMDF"
             current_table += 1
 
             table = pandas.read_csv(
@@ -885,4 +887,5 @@ def create_total_cosa_figure() -> None:
         # plt.ylabel(ylabel)
         #
         plt.savefig(f"./cosa/full_random_sampling_figure_{concentration}.png", bbox_inches='tight', pad_inches=0.05)
+        plt.savefig(f"./cosa/Figure3.pdf", bbox_inches='tight', pad_inches=0.05)
         plt.close()
