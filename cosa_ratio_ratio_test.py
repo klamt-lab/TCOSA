@@ -235,8 +235,10 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
         }
         first = True
 
-        fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(19, 10)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
-        fig.tight_layout(pad=3.75)
+        cm = 1/2.54
+        fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(18*cm, 9.5*cm))
+        # fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(19, 10)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+        fig.tight_layout(pad=1.4)
         for figurename_tuple in figurenames_to_plots.keys():
             if figurename_tuple[0] == "Aerobic":
                 ratio_ratio_test_data = ratio_ratio_test_data_aerobic
@@ -274,17 +276,19 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 min_ratios[::-1], # y
                 "bo",
                 label=min_label,
-                linewidth=1.0,
+                linewidth=.25,
+                markersize=2.5,
             )
             axs[axs_index].plot(
                 plotted_growth_rates[::-1], # x
                 max_ratios[::-1], # y
                 "ro",
                 label=max_label,
-                linewidth=1.0,
+                linewidth=.25,
+                markersize=2.5,
             )
             import matplotlib
-            axs[axs_index].set_title(title, loc="left", fontweight="bold", fontsize=17)
+            axs[axs_index].set_title(title, loc="left", fontweight="bold", fontsize=7)
             if figurename_tuple[2] == "a ":
                 axs[axs_index].set_xlim(0.025, 0.895)
                 axs[axs_index].set_ylim(-.000003, 0.00006)
@@ -304,11 +308,11 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 )
             elif figurename_tuple[2] == "d ":
                 axs[axs_index].set_ylim(-.04, 1.0)
-            axs[axs_index].set_xlabel("Growth rate [1/h]", fontsize=16)
+            axs[axs_index].set_xlabel("Growth rate [1/h]", fontsize=7)
             # axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=16)
-            axs[axs_index].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=12)
-            axs[axs_index].tick_params(labelsize=13)
-        fig.legend(loc=(0.235, 0.9525), ncol=2, fontsize=18)
+            axs[axs_index].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=6)
+            axs[axs_index].tick_params(axis="both", labelsize=6)
+        fig.legend(loc=(0.235, 0.9525), ncol=2, fontsize=7)
         # fig.subplots_adjust(right=1.25)
 
         fig.savefig(f"./cosa/full_ratio_ratio_test_figure_{concentration}.png", bbox_inches='tight', pad_inches=0.05)

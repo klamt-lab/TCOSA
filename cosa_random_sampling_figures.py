@@ -412,12 +412,14 @@ def create_total_dG0_sampling_figure(change_range) -> None:
     only_one_id = "SINGLE_COFACTOR"
 
     for concentrations in ("STANDARDCONC",): #"VIVOCONC"):
-        fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(13, 10)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+        cm = 1/2.54
+        # fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(13, 10)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+        fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(18*cm, 13.85*cm)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
         for target in ("OptMDF", "OptSubMDF"):
             table_path_aerobic = f"./cosa/results_aerobic/dG0_sampling_range{change_range}/{target.lower()}_table_{concentrations}.csv"
             table_path_anaerobic = f"./cosa/results_anaerobic/dG0_sampling_range{change_range}/{target.lower()}_table_{concentrations}.csv"
 
-            # fig.tight_layout(pad=10.0)
+            fig.tight_layout(pad=0.525)
 
             current_table = 0
             for aerobicity in ("aerobic", "anaerobic"):
@@ -500,17 +502,17 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                         label = "Flexible specificity"
                         linestyle = "-"
                         color = "yellowgreen"
-                        linewidth = 2.0
+                        linewidth = 1.1
                     elif header == in_vivo_id:
                         label = "Wild-type specificity"
                         linestyle = "-"
                         color = "black"
-                        linewidth = 2.0
+                        linewidth = 1.1
                     elif header == only_one_id:
                         label = "Single cofactor pool"
                         linestyle = "-"
                         color = "red"
-                        linewidth = 2.0
+                        linewidth = 1.1
                     else:
                         if in_vivo_id in header:
                             if is_first_random_wildtype:
@@ -522,7 +524,7 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                                 continue
                             color = "dimgray"
                             linestyle = "--"
-                            linewidth = 2.0
+                            linewidth = 1.1
                         elif only_one_id in header:
                             if is_first_random_single_cofactor:
                                 label = "Random ΔG'° - single cofactor pool"
@@ -533,7 +535,7 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                                 continue
                             color = "orangered"
                             linestyle = "--"
-                            linewidth = 2.0
+                            linewidth = 1.1
                         elif best_id in header:
                             if is_first_random_flexible:
                                 label = "Random ΔG'° - flexible specificity"
@@ -544,7 +546,7 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                                 continue
                             color = "lawngreen"
                             linestyle = "--"
-                            linewidth = 2.0
+                            linewidth = 1.1
                     if current_table > 1:
                         label = None
                     axs[ax_x, ax_y].plot(
@@ -562,12 +564,13 @@ def create_total_dG0_sampling_figure(change_range) -> None:
                             yerr=yerr_data,
                             linestyle="None",
                             color=color,
-                            capsize=3.0,
+                            capsize=2.0,
                         )
-                    axs[ax_x, ax_y].set_ylabel(ylabel)
-                    axs[ax_x, ax_y].set_xlabel(r"Growth rate [$\mathrm{h^{-1}}$]")
+                    axs[ax_x, ax_y].set_ylabel(ylabel, fontsize=7)
+                    axs[ax_x, ax_y].set_xlabel(r"Growth rate [$\mathrm{h^{-1}}$]", fontsize=7)
                     axs[ax_x, ax_y].set_xlim(min(growth_rates)-.004, max(growth_rates)+.004) ####
-                    axs[ax_x, ax_y].set_title(title, loc="left", fontweight="bold")
+                    axs[ax_x, ax_y].set_title(title, loc="left", fontweight="bold", fontsize=7)
+                    axs[ax_x, ax_y].tick_params(axis='both', labelsize=7)
             # fig.legend(loc="upper center")
             # plt.legend(loc='upper center')
         legend = [
@@ -578,10 +581,10 @@ def create_total_dG0_sampling_figure(change_range) -> None:
             Line2D([0], [0], color="dimgray", linestyle="--", linewidth=2.0, label="Random ΔG'°: wild-type specificity"),
             Line2D([0], [0], color="lawngreen", linestyle="--", linewidth=2.0, label="Random ΔG'°: flexible specificity"),
         ]
-        plt.legend(handles=legend, bbox_to_anchor=(0.0, 2.5), ncol=2, loc='upper center')
+        plt.legend(handles=legend, bbox_to_anchor=(0.0, 2.6), ncol=2, loc='upper center', fontsize=7)
         plt.savefig(f"./cosa/total_dG0_sampling_figure_change_range_{change_range}_{concentrations}.png", bbox_inches='tight', pad_inches=0.05)
-        plt.savefig(f"./cosa/FigureS1.png", bbox_inches='tight', pad_inches=0.05)
-        plt.savefig(f"./cosa/FigureS1.pdf", bbox_inches='tight', pad_inches=0.05)
+        plt.savefig(f"./cosa/FigureS1.png", bbox_inches='tight', pad_inches=0.01)
+        plt.savefig(f"./cosa/FigureS1.pdf", bbox_inches='tight', pad_inches=0.01)
         plt.close()
 
 
@@ -778,8 +781,10 @@ def create_total_cosa_figure() -> None:
             f"./cosa/results_anaerobic/optsubmdf_table_{concentration}.csv",
         ]
 
-        fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(13, 10)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
-        # fig.tight_layout(pad=7.0)
+        cm = 1/2.54
+        fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(18*cm, 13.84*cm)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+        # fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(13, 10)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+        fig.tight_layout(pad=1.6)
 
         current_table = 0
         for table_path in table_paths:
@@ -830,17 +835,17 @@ def create_total_cosa_figure() -> None:
                     label = "Flexible specificity"
                     linestyle = "--"
                     color = "yellowgreen"
-                    linewidth = 2.0
+                    linewidth = 1.5
                 elif header == in_vivo_id:
                     label = "Wild-type specificity"
                     linestyle = "-"
                     color = "black"
-                    linewidth = 2.0
+                    linewidth = 1.5
                 elif header == only_one_id:
                     label = "Single cofactor pool"
                     linestyle = "-"
                     color = "red"
-                    linewidth = 2.0
+                    linewidth = 1.5
                 else:
                     if is_first_random:
                         label = "Random specificities"
@@ -849,7 +854,7 @@ def create_total_cosa_figure() -> None:
                         label = ""
                     linestyle = "-"
                     color = "paleturquoise"
-                    linewidth = 1.0
+                    linewidth = 0.75
 
                 if not first:
                     label = None
@@ -873,15 +878,16 @@ def create_total_cosa_figure() -> None:
                     color=color,
                     linewidth=linewidth,
                 )
-                axs[ax_x, ax_y].set_title(title, loc="left", fontweight="bold")
-                axs[ax_x, ax_y].set_xlabel(r"Growth rate [$\mathrm{h^{-1}}$]")
-                axs[ax_x, ax_y].set_ylabel(ylabel)
+                axs[ax_x, ax_y].tick_params(axis='both', labelsize=7)
+                axs[ax_x, ax_y].set_title(title, loc="left", fontweight="bold", fontsize=7)
+                axs[ax_x, ax_y].set_xlabel(r"Growth rate [$\mathrm{h^{-1}}$]", fontsize=7)
+                axs[ax_x, ax_y].set_ylabel(ylabel, fontsize=7)
                 axs[ax_x, ax_y].set_xlim(min(temp_growth_rates), max(temp_growth_rates))
                 if "SubMDF" not in ylabel:
                     axs[ax_x, ax_y].set_ylim(0.0, max(list_to_float(values))+.25)
                 else:
                     axs[ax_x, ax_y].set_ylim(0.0, 30.0)
-        fig.legend(loc="upper center")
+        fig.legend(loc="upper center", fontsize=7, bbox_to_anchor=(0.5, 1.1))
         # plt.legend(loc="lower left")
         # plt.xlabel("Growth rate [1/h]")
         # plt.ylabel(ylabel)

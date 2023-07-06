@@ -24,7 +24,9 @@ def _get_data_list(file_path: str):
 
 # LOGIC #
 for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
-    fig, axs = plt.subplots(nrows=1, ncols=2, dpi=500, figsize=(11, 4)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+    cm = 1/2.54
+    fig, axs = plt.subplots(nrows=1, ncols=2, dpi=500, figsize=(18*cm, 6.55*cm)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+    # fig, axs = plt.subplots(nrows=1, ncols=2, dpi=500, figsize=(11, 4)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
 
     for run in (0, 1, 2):
         for aerobicity in ("aerobic", "anaerobic"):
@@ -76,7 +78,7 @@ for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
                         label=label_optmdf_two,
                         linestyle="-",
                         color="salmon",
-                        linewidth=2.0,
+                        linewidth=1.0,
                     )
                 if run == 0:
                     axs[axs_row].plot(
@@ -85,7 +87,7 @@ for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
                         label=label_optmdf_three,
                         linestyle=linestyle,
                         color="red",
-                        linewidth=2.0,
+                        linewidth=1.0,
                     )
                 if run == 1:
                     if change_state == 0:
@@ -95,7 +97,7 @@ for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
                             label=label_optsubmdf_two,
                             linestyle="-",
                             color="deepskyblue",
-                            linewidth=2.0,
+                            linewidth=1.0,
                         )
                     axs[axs_row].plot(
                         growth_rates, # x
@@ -103,21 +105,22 @@ for concentration_ranges in ("STANDARDCONC",): #"VIVOCONC"):
                         label=label_optsubmdf_three,
                         linestyle=linestyle,
                         color="blue",
-                        linewidth=2.0,
+                        linewidth=1.0,
                     )
 
                 anaerobic = aerobicity == "anaerobic"
-                axs[axs_row].set_title(title, loc="left", fontweight="bold")
-                axs[axs_row].set_xlabel("Growth rate [1/h]")
-                axs[axs_row].set_ylabel(r"(Sub)MDF [kJ/mol]")
+                axs[axs_row].set_title(title, loc="left", fontweight="bold", fontsize=7)
+                axs[axs_row].set_xlabel("Growth rate [1/h]", fontsize=7)
+                axs[axs_row].set_ylabel(r"(Sub)MDF [kJ/mol]", fontsize=7)
                 axs[axs_row].set_xlim(min(growth_rates), max(growth_rates))
+                axs[axs_row].tick_params(axis='both', labelsize=7)
 
                 if axs_row == 0:
                     axs[axs_row].set_ylim(0.0, 50)
                 else:
                     axs[axs_row].set_ylim(0.0, 40)
 
-    fig.legend(loc="upper center", bbox_to_anchor=(0.5, 1.18), ncol=2)
+    fig.legend(loc="upper center", bbox_to_anchor=(0.5, 1.18), ncol=2, fontsize=6.25)
     fig.savefig(f"cosa/expanded_comparison_{concentration_ranges}.png", bbox_inches='tight', pad_inches=0.0)
     fig.savefig(f"cosa/Figure5.pdf", bbox_inches='tight', pad_inches=0.0)
     plt.close()
