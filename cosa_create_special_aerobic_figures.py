@@ -21,7 +21,7 @@ def create_in_vivo_concentrations_figure():
     concentration = "VIVOCONC"
     output_path = "./cosa/in_vivo_concentrations_figure.png"
     table_path = f"cosa/results_aerobic/optsubmdf_table_{concentration}.csv"
-    pad = 0.98
+    pad = 1.6
 
     target = "OPTSUBMDF"
 
@@ -29,7 +29,7 @@ def create_in_vivo_concentrations_figure():
 
     cm = 1/2.54
     # fig, axs = plt.subplots(nrows=1, ncols=2, dpi=500, figsize=(18, 6)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
-    fig, axs = plt.subplots(nrows=1, ncols=2, dpi=500, figsize=(18*cm, 6*cm)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+    fig, axs = plt.subplots(nrows=2, ncols=1, dpi=500, figsize=(10*cm, 12.5*cm)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
     fig.tight_layout(pad=pad)
 
     ########################################################
