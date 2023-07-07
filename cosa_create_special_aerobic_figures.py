@@ -154,7 +154,7 @@ def create_acetate_figure():
     ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic_acetate/ratio_ratio_test_data.json")
     concentration = "STANDARDCONC"
     output_path = "./cosa/acetate_figure.png"
-    pad = 1.7
+    pad = 1.724
 
     cm = 1/2.54
     fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(18*cm, 14.14*cm)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
@@ -231,7 +231,7 @@ def create_acetate_figure():
                 linewidth=linewidth,
             )
         axs[xpos, 0].legend(loc="lower left", fontsize=7)
-        axs[xpos, 0].set_title("c  Sampling with SubMDF" if "SUB" in target else "a  Sampling with MDF", loc="left", fontweight="bold", fontsize=7)
+        axs[xpos, 0].set_title("c" if "SUB" in target else "a", loc="left", fontweight="bold", fontsize=7)
         axs[xpos, 0].set_xlabel("Growth rate [1/h]", fontsize=7)
         axs[xpos, 0].set_ylabel(f"{target.replace('OPT', '').replace('SUB', 'Sub')} [kJ/mol]", fontsize=7)
         axs[xpos, 0].set_xlim(min(growth_rates[:-1]), max(growth_rates[:-1]))
@@ -268,11 +268,11 @@ def create_acetate_figure():
             markersize=3,
         )
         axs[xpos, 1].legend(loc="upper center", ncol=2, fontsize=7)
-        axs[xpos, 1].set_title("d  Ratios with SubMDF" if "SUB" in target else "b  Ratios with MDF", loc="left", fontweight="bold", fontsize=7)
+        axs[xpos, 1].set_title("d" if "SUB" in target else "b", loc="left", fontweight="bold", fontsize=7)
         axs[xpos, 1].set_xlabel("Growth rate [1/h]", fontsize=7)
         axs[xpos, 1].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=7)
         axs[xpos, 1].tick_params(labelsize=7)
-        axs[xpos, 1].set_ylim(-.0001 if "SUB" in target else -0.005, 0.0015 if "SUB" in target else 0.09)
+        axs[xpos, 1].set_ylim(-.00001 if "SUB" in target else -0.0025, 0.0003 if "SUB" in target else 0.06)
         axs[xpos, 1].set_xlim(0.045, 0.21)
         axs[xpos, 1].tick_params(axis="both", labelsize=7)
         pad_inches = 0.05

@@ -27,7 +27,7 @@ from helper import ensure_folder_existence
 
 
 # PUBLIC FUNCTIONS SECTION #
-def cosa_ratio_ratio_test(anaerobic: bool, expanded: bool, growth_epsilon: float = 0.01, c_source: str="glucose") -> None:
+def cosa_ratio_ratio_test(anaerobic: bool, expanded: bool, growth_epsilon: float = 0.009, c_source: str="glucose") -> None:
     """Perform (NAD/NADH) / (NADP/NADPH) ratio of ratios variability analysis under the given settings.
 
     Args:
@@ -255,7 +255,7 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 min_label = None
                 max_label = None
 
-            title = f"{figurename_tuple[2]} {figurename_tuple[0]}, {figurename_tuple[1].replace('Opt', '')}"
+            title = f"{figurename_tuple[2]} {figurename_tuple[0]} (under {figurename_tuple[1].replace('Opt', '')})"
 
             figurename = figurename_tuple[3]
             if is_aerobic:
@@ -312,7 +312,7 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
             # axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=16)
             axs[axs_index].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=6)
             axs[axs_index].tick_params(axis="both", labelsize=6)
-        fig.legend(loc=(0.235, 0.9525), ncol=2, fontsize=7)
+        fig.legend(loc=(0.27325, 0.9525), ncol=2, fontsize=7)
         # fig.subplots_adjust(right=1.25)
 
         fig.savefig(f"./cosa/full_ratio_ratio_test_figure_{concentration}.png", bbox_inches='tight', pad_inches=0.05)
