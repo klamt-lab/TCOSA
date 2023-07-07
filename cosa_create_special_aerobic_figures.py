@@ -21,13 +21,15 @@ def create_in_vivo_concentrations_figure():
     concentration = "VIVOCONC"
     output_path = "./cosa/in_vivo_concentrations_figure.png"
     table_path = f"cosa/results_aerobic/optsubmdf_table_{concentration}.csv"
-    pad = 4.99
+    pad = 1.6
 
     target = "OPTSUBMDF"
 
     figurename_tuple = ("aerobic", f"2C_NADH_to_NAD___to___NADPH_to_nadp_{target}_{concentration}.jpg")
 
-    fig, axs = plt.subplots(nrows=1, ncols=2, dpi=500, figsize=(18, 6)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+    cm = 1/2.54
+    # fig, axs = plt.subplots(nrows=1, ncols=2, dpi=500, figsize=(18, 6)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+    fig, axs = plt.subplots(nrows=2, ncols=1, dpi=500, figsize=(10*cm, 12.5*cm)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
     fig.tight_layout(pad=pad)
 
     ########################################################
@@ -62,17 +64,17 @@ def create_in_vivo_concentrations_figure():
             label = "Flexible specificity"
             linestyle = "--"
             color = "yellowgreen"
-            linewidth = 2.0
+            linewidth = 1.1
         elif header == in_vivo_id:
             label = "Wild-type specificity"
             linestyle = "-"
             color = "black"
-            linewidth = 2.0
+            linewidth = 1.1
         elif header == only_one_id:
             label = "Single cofactor pool"
             linestyle = "-"
             color = "red"
-            linewidth = 2.0
+            linewidth = 1.1
         else:
             if is_first_random:
                 label = "Random specificities"
@@ -81,7 +83,7 @@ def create_in_vivo_concentrations_figure():
                 label = ""
             linestyle = "-"
             color = "paleturquoise"
-            linewidth = 1.0
+            linewidth = 0.6
 
         axs[0].plot(
             growth_rates[:-1], # x
@@ -91,12 +93,12 @@ def create_in_vivo_concentrations_figure():
             color=color,
             linewidth=linewidth,
         )
-    axs[0].legend(loc="lower left", fontsize=16)
-    axs[0].set_title("A", loc="left", fontweight="bold", fontsize=18)
-    axs[0].set_xlabel("Growth rate [1/h]", fontsize=14)
-    axs[0].set_ylabel("SubMDF [kJ/mol]", fontsize=14)
+    axs[0].legend(loc="lower left", fontsize=7)
+    axs[0].set_title("a", loc="left", fontweight="bold", fontsize=7)
+    axs[0].set_xlabel("Growth rate [1/h]", fontsize=7)
+    axs[0].set_ylabel("SubMDF [kJ/mol]", fontsize=7)
     axs[0].set_xlim(min(growth_rates[:-1]), max(growth_rates[:-1]))
-    axs[0].tick_params(labelsize=14)
+    axs[0].tick_params(axis="both", labelsize=6)
 
 
     ########################################################
@@ -118,6 +120,7 @@ def create_in_vivo_concentrations_figure():
         "bo",
         label=min_label,
         linewidth=1.0,
+        markersize=2.75,
     )
     axs[1].plot(
         plotted_growth_rates[::-1], # x
@@ -125,13 +128,14 @@ def create_in_vivo_concentrations_figure():
         "ro",
         label=max_label,
         linewidth=1.0,
+        markersize=2.75,
     )
-    axs[1].legend(loc="upper center", ncol=2, fontsize=16)
-    axs[1].set_title("B", loc="left", fontweight="bold", fontsize=18)
-    axs[1].set_xlabel("Growth rate [1/h]", fontsize=15)
+    axs[1].legend(loc="upper center", ncol=2, fontsize=7)
+    axs[1].set_title("b", loc="left", fontweight="bold", fontsize=7)
+    axs[1].set_xlabel("Growth rate [1/h]", fontsize=7)
     # axs[1].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=15)
-    axs[1].set_ylabel(r"$\mathrm{([NADH]/[NAD^{+}])/([NADPH]/[NADP^{+}])}$", fontsize=14)
-    axs[1].tick_params(labelsize=14)
+    axs[1].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=7)
+    axs[1].tick_params(labelsize=6)
 
     axs[1].set_ylim(-.00003, 0.0006)
     axs[1].set_xlim(0.025, 0.89)
@@ -140,6 +144,8 @@ def create_in_vivo_concentrations_figure():
     # fig.subplots_adjust(right=1.1)
 
     fig.savefig(output_path, bbox_inches='tight', pad_inches=pad_inches)
+    fig.savefig("./cosa/FigureS2.png", bbox_inches='tight', pad_inches=pad_inches)
+    fig.savefig("./cosa/FigureS2.pdf", bbox_inches='tight', pad_inches=pad_inches)
     plt.close()
 
 
@@ -148,9 +154,11 @@ def create_acetate_figure():
     ratio_ratio_test_data_aerobic = json_load("cosa/results_aerobic_acetate/ratio_ratio_test_data.json")
     concentration = "STANDARDCONC"
     output_path = "./cosa/acetate_figure.png"
-    pad = 5.25
+    pad = 1.724
 
-    fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(14, 11)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+    cm = 1/2.54
+    fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(18*cm, 14.14*cm)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+    # fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(14, 11)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
     fig.tight_layout(pad=pad)
 
     for target in ("OPTSUBMDF", "OPTMDF"):
@@ -193,17 +201,17 @@ def create_acetate_figure():
                 label = "Flexible specificity"
                 linestyle = "--"
                 color = "yellowgreen"
-                linewidth = 2.0
+                linewidth = 1.0
             elif header == in_vivo_id:
                 label = "Wild-type specificity"
                 linestyle = "-"
                 color = "black"
-                linewidth = 2.0
+                linewidth = 1.0
             elif header == only_one_id:
                 label = "Single cofactor pool"
                 linestyle = "-"
                 color = "red"
-                linewidth = 2.0
+                linewidth = 1.0
             else:
                 if is_first_random:
                     label = "Random specificities"
@@ -212,7 +220,7 @@ def create_acetate_figure():
                     label = ""
                 linestyle = "-"
                 color = "paleturquoise"
-                linewidth = 1.0
+                linewidth = .6
 
             axs[xpos, 0].plot(
                 growth_rates[:-1], # x
@@ -222,12 +230,12 @@ def create_acetate_figure():
                 color=color,
                 linewidth=linewidth,
             )
-        axs[xpos, 0].legend(loc="lower left", fontsize=14)
-        axs[xpos, 0].set_title("C Sampling with SubMDF" if "SUB" in target else "A Sampling with MDF", loc="left", fontweight="bold", fontsize=18)
-        axs[xpos, 0].set_xlabel("Growth rate [1/h]", fontsize=14)
-        axs[xpos, 0].set_ylabel(f"{target.replace('OPT', '').replace('SUB', 'Sub')} [kJ/mol]", fontsize=14)
+        axs[xpos, 0].legend(loc="lower left", fontsize=7)
+        axs[xpos, 0].set_title("c" if "SUB" in target else "a", loc="left", fontweight="bold", fontsize=7)
+        axs[xpos, 0].set_xlabel("Growth rate [1/h]", fontsize=7)
+        axs[xpos, 0].set_ylabel(f"{target.replace('OPT', '').replace('SUB', 'Sub')} [kJ/mol]", fontsize=7)
         axs[xpos, 0].set_xlim(min(growth_rates[:-1]), max(growth_rates[:-1]))
-        axs[xpos, 0].tick_params(labelsize=14)
+        axs[xpos, 0].tick_params(axis="both", labelsize=7)
 
 
         ########################################################
@@ -249,6 +257,7 @@ def create_acetate_figure():
             "bo",
             label=min_label,
             linewidth=1.0,
+            markersize=3,
         )
         axs[xpos, 1].plot(
             plotted_growth_rates[::-1], # x
@@ -256,19 +265,22 @@ def create_acetate_figure():
             "ro",
             label=max_label,
             linewidth=1.0,
+            markersize=3,
         )
-        axs[xpos, 1].legend(loc="upper center", ncol=2, fontsize=15)
-        axs[xpos, 1].set_title("D Ratios with SubMDF" if "SUB" in target else "B Ratios with MDF", loc="left", fontweight="bold", fontsize=18)
-        axs[xpos, 1].set_xlabel("Growth rate [1/h]", fontsize=15)
-        axs[xpos, 1].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=13)
-        axs[xpos, 1].tick_params(labelsize=14)
-        axs[xpos, 1].set_ylim(-.0001 if "SUB" in target else -0.005, 0.0015 if "SUB" in target else 0.09)
+        axs[xpos, 1].legend(loc="upper center", ncol=2, fontsize=7)
+        axs[xpos, 1].set_title("d" if "SUB" in target else "b", loc="left", fontweight="bold", fontsize=7)
+        axs[xpos, 1].set_xlabel("Growth rate [1/h]", fontsize=7)
+        axs[xpos, 1].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=7)
+        axs[xpos, 1].tick_params(labelsize=7)
+        axs[xpos, 1].set_ylim(-.00001 if "SUB" in target else -0.0025, 0.0003 if "SUB" in target else 0.06)
         axs[xpos, 1].set_xlim(0.045, 0.21)
+        axs[xpos, 1].tick_params(axis="both", labelsize=7)
         pad_inches = 0.05
 
         # fig.subplots_adjust(right=1.1)
 
     fig.savefig(output_path, bbox_inches='tight', pad_inches=pad_inches)
+    fig.savefig("./cosa/Figure6.pdf", bbox_inches='tight', pad_inches=pad_inches)
     plt.close()
 
 

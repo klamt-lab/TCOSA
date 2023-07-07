@@ -4925,7 +4925,7 @@
         "num_compartments": 1
     },
     "SHCHD2": {
-        "dG0": -100,
+        "dG0": 2426.762480335391,
         "uncertainty": 13.45689748863328,
         "num_compartments": 1
     },
@@ -5410,7 +5410,7 @@
         "num_compartments": 1
     },
     "KDOCT2": {
-        "dG0": -100,
+        "dG0": 225.43053497877628,
         "uncertainty": 0.3864985495509001,
         "num_compartments": 1
     },
@@ -5440,7 +5440,7 @@
         "num_compartments": 1
     },
     "MECDPS": {
-        "dG0": -100,
+        "dG0": 1809.643662455096,
         "uncertainty": -2.644533211522508,
         "num_compartments": 1
     },
@@ -6150,7 +6150,7 @@
         "num_compartments": 1
     },
     "DHPPDA2": {
-        "dG0": -100,
+        "dG0": 278.1683132940532,
         "uncertainty": -6.264428863588712,
         "num_compartments": 1
     },
@@ -6225,7 +6225,7 @@
         "num_compartments": 1
     },
     "ATPPRT": {
-        "dG0": -100,
+        "dG0": 4125.049208583008,
         "uncertainty": 0.006689011837626729,
         "num_compartments": 1
     },
@@ -7665,7 +7665,7 @@
         "num_compartments": 1
     },
     "IG3PS": {
-        "dG0": -100,
+        "dG0": 233.35642708817005,
         "uncertainty": 2.080794859680966,
         "num_compartments": 1
     },
@@ -8210,7 +8210,7 @@
         "num_compartments": 1
     },
     "MCTP1App": {
-        "dG0": -100,
+        "dG0": 269.73124790895963,
         "uncertainty": 14.222222443372313,
         "num_compartments": 1
     },
@@ -8580,7 +8580,7 @@
         "num_compartments": 1
     },
     "MALCOAMT": {
-        "dG0": -100,
+        "dG0": 55.907439679784375,
         "uncertainty": -1.100013008435301,
         "num_compartments": 1
     },
@@ -9260,12 +9260,12 @@
         "num_compartments": 1
     },
     "AIRC3_FWD": {
-        "dG0": 100,
+        "dG0": -30.080634793413367,
         "uncertainty": 0.6587969077462774,
         "num_compartments": 1
     },
     "AIRC3_REV": {
-        "dG0": -100,
+        "dG0": 30.080634793413367,
         "uncertainty": -0.6587969077462774,
         "num_compartments": 1
     },
@@ -10040,12 +10040,12 @@
         "num_compartments": 1
     },
     "ASAD_FWD": {
-        "dG0": 100,
+        "dG0": -24.31602062172078,
         "uncertainty": -5.10702591327572e-15,
         "num_compartments": 1
     },
     "ASAD_REV": {
-        "dG0": -100,
+        "dG0": 24.316020621721925,
         "uncertainty": 5.098352295895836e-15,
         "num_compartments": 1
     },
@@ -10100,12 +10100,12 @@
         "num_compartments": 1
     },
     "CBMKr_FWD": {
-        "dG0": -100,
+        "dG0": 22.067326498168526,
         "uncertainty": -0.0051121661503961136,
         "num_compartments": 1
     },
     "CBMKr_REV": {
-        "dG0": 100,
+        "dG0": -22.0673264981684,
         "uncertainty": 0.0051121661503961136,
         "num_compartments": 1
     },
@@ -10500,12 +10500,12 @@
         "num_compartments": 1
     },
     "GLUDy_FWD": {
-        "dG0": 100,
+        "dG0": 33.05982373603146,
         "uncertainty": -0.0007128191204790564,
         "num_compartments": 1
     },
     "GLUDy_REV": {
-        "dG0": -100,
+        "dG0": -33.0598237360316,
         "uncertainty": 0.0007128191204792689,
         "num_compartments": 1
     },
@@ -11170,12 +11170,12 @@
         "num_compartments": 1
     },
     "SHCHD2_ORIGINAL_NAD_TCOSA": {
-        "dG0": -100,
+        "dG0": 2426.762480335391,
         "uncertainty": 13.45689748863328,
         "num_compartments": 1
     },
     "SHCHD2_VARIANT_NADP_TCOSA": {
-        "dG0": -100,
+        "dG0": 2426.762480335391,
         "uncertainty": 13.45689748863328,
         "num_compartments": 1
     },
@@ -12730,22 +12730,22 @@
         "num_compartments": 1
     },
     "ASAD_FWD_VARIANT_NAD_TCOSA": {
-        "dG0": 100,
+        "dG0": -24.31602062172078,
         "uncertainty": -5.10702591327572e-15,
         "num_compartments": 1
     },
     "ASAD_FWD_ORIGINAL_NADP_TCOSA": {
-        "dG0": 100,
+        "dG0": -24.31602062172078,
         "uncertainty": -5.10702591327572e-15,
         "num_compartments": 1
     },
     "ASAD_REV_VARIANT_NAD_TCOSA": {
-        "dG0": -100,
+        "dG0": 24.316020621721925,
         "uncertainty": 5.098352295895836e-15,
         "num_compartments": 1
     },
     "ASAD_REV_ORIGINAL_NADP_TCOSA": {
-        "dG0": -100,
+        "dG0": 24.316020621721925,
         "uncertainty": 5.098352295895836e-15,
         "num_compartments": 1
     },
@@ -12950,22 +12950,22 @@
         "num_compartments": 1
     },
     "GLUDy_FWD_VARIANT_NAD_TCOSA": {
-        "dG0": 100,
+        "dG0": 33.05982373603146,
         "uncertainty": -0.0007128191204790564,
         "num_compartments": 1
     },
     "GLUDy_FWD_ORIGINAL_NADP_TCOSA": {
-        "dG0": 100,
+        "dG0": 33.05982373603146,
         "uncertainty": -0.0007128191204790564,
         "num_compartments": 1
     },
     "GLUDy_REV_VARIANT_NAD_TCOSA": {
-        "dG0": -100,
+        "dG0": -33.0598237360316,
         "uncertainty": 0.0007128191204792689,
         "num_compartments": 1
     },
     "GLUDy_REV_ORIGINAL_NADP_TCOSA": {
-        "dG0": -100,
+        "dG0": -33.0598237360316,
         "uncertainty": 0.0007128191204792689,
         "num_compartments": 1
     },

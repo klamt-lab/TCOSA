@@ -27,7 +27,7 @@ from helper import ensure_folder_existence
 
 
 # PUBLIC FUNCTIONS SECTION #
-def cosa_ratio_ratio_test(anaerobic: bool, expanded: bool, growth_epsilon: float = 0.01, c_source: str="glucose") -> None:
+def cosa_ratio_ratio_test(anaerobic: bool, expanded: bool, growth_epsilon: float = 0.009, c_source: str="glucose") -> None:
     """Perform (NAD/NADH) / (NADP/NADPH) ratio of ratios variability analysis under the given settings.
 
     Args:
@@ -228,15 +228,17 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
     concentrations = ("STANDARDCONC",) #"VIVOCONC")
     for concentration in concentrations:
         figurenames_to_plots = {
-            ("Aerobic", "OptMDF", "A", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (0, 0),
-            ("Aerobic", "OptSubMDF", "B", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (0, 1),
-            ("Anaerobic", "OptMDF", "C", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (1, 0),
-            ("Anaerobic", "OptSubMDF", "D", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (1, 1),
+            ("Aerobic", "OptMDF", "a ", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (0, 0),
+            ("Aerobic", "OptSubMDF", "b ", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (0, 1),
+            ("Anaerobic", "OptMDF", "c ", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTMDF_{concentration}.jpg"): (1, 0),
+            ("Anaerobic", "OptSubMDF", "d ", f"2C_NADH_to_NAD___to___NADPH_to_nadp_OPTSUBMDF_{concentration}.jpg"): (1, 1),
         }
         first = True
 
-        fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(19, 10)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
-        fig.tight_layout(pad=3.75)
+        cm = 1/2.54
+        fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(18*cm, 9.5*cm))
+        # fig, axs = plt.subplots(nrows=2, ncols=2, dpi=500, figsize=(19, 10)) #sharex=True, figsize=(50, 25), dpi=120, facecolor="white")
+        fig.tight_layout(pad=1.4)
         for figurename_tuple in figurenames_to_plots.keys():
             if figurename_tuple[0] == "Aerobic":
                 ratio_ratio_test_data = ratio_ratio_test_data_aerobic
@@ -253,7 +255,7 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 min_label = None
                 max_label = None
 
-            title = f"{figurename_tuple[2]} {figurename_tuple[0]}, {figurename_tuple[1].replace('Opt', '')}"
+            title = f"{figurename_tuple[2]} {figurename_tuple[0]} (under {figurename_tuple[1].replace('Opt', '')})"
 
             figurename = figurename_tuple[3]
             if is_aerobic:
@@ -274,44 +276,47 @@ def cosa_create_full_ratio_ratio_test_figure_four_panels():
                 min_ratios[::-1], # y
                 "bo",
                 label=min_label,
-                linewidth=1.0,
+                linewidth=.25,
+                markersize=2.5,
             )
             axs[axs_index].plot(
                 plotted_growth_rates[::-1], # x
                 max_ratios[::-1], # y
                 "ro",
                 label=max_label,
-                linewidth=1.0,
+                linewidth=.25,
+                markersize=2.5,
             )
             import matplotlib
-            axs[axs_index].set_title(title, loc="left", fontweight="bold", fontsize=17)
-            if figurename_tuple[2] == "A":
+            axs[axs_index].set_title(title, loc="left", fontweight="bold", fontsize=7)
+            if figurename_tuple[2] == "a ":
                 axs[axs_index].set_xlim(0.025, 0.895)
                 axs[axs_index].set_ylim(-.000003, 0.00006)
                 axs[axs_index].yaxis.set_major_formatter(
                     matplotlib.ticker.FuncFormatter(lambda x, p: '{:.0E}'.format(x))
                 )
-            elif figurename_tuple[2] == "B":
+            elif figurename_tuple[2] == "b ":
                 axs[axs_index].set_xlim(0.025, 0.895)
                 axs[axs_index].set_ylim(-.0000004, 0.000005)
                 axs[axs_index].yaxis.set_major_formatter(
                     matplotlib.ticker.FuncFormatter(lambda x, p: '{:.0E}'.format(x))
                 )
-            elif figurename_tuple[2] == "C":
+            elif figurename_tuple[2] == "c ":
                 axs[axs_index].set_ylim(-.003, 0.05)
                 axs[axs_index].yaxis.set_major_formatter(
                     matplotlib.ticker.FuncFormatter(lambda x, p: round(x, 2))
                 )
-            elif figurename_tuple[2] == "D":
+            elif figurename_tuple[2] == "d ":
                 axs[axs_index].set_ylim(-.04, 1.0)
-            axs[axs_index].set_xlabel("Growth rate [1/h]", fontsize=16)
+            axs[axs_index].set_xlabel("Growth rate [1/h]", fontsize=7)
             # axs[axs_index].set_ylabel(r"$\mathrm{\frac{[NADH]/[NAD^{+}]}{[NADPH]/[NADP^{+}]}}$", fontsize=16)
-            axs[axs_index].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=12)
-            axs[axs_index].tick_params(labelsize=13)
-        fig.legend(loc=(0.235, 0.9525), ncol=2, fontsize=18)
+            axs[axs_index].set_ylabel(r"$\mathrm{[NADH]/[NAD^{+}] \ / \ [NADPH]/[NADP^{+}]}$", fontsize=6)
+            axs[axs_index].tick_params(axis="both", labelsize=6)
+        fig.legend(loc=(0.27325, 0.9525), ncol=2, fontsize=7)
         # fig.subplots_adjust(right=1.25)
 
         fig.savefig(f"./cosa/full_ratio_ratio_test_figure_{concentration}.png", bbox_inches='tight', pad_inches=0.05)
+        fig.savefig(f"./cosa/Figure4.pdf", bbox_inches='tight', pad_inches=0.05)
         plt.close()
 
 
