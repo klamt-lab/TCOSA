@@ -96,4 +96,4 @@ For all other (TCOSA-related) scripts with a prefix (as given in the previous se
 
 ## The TCOSA publication
 
-* Bekiaris & Klamt (2023), *in submission*.
+* Bekiaris, P.S., Klamt, S. Network-wide thermodynamic constraints shape NAD(P)H cofactor specificity of biochemical reactions. Nat Commun 14, 4660 (2023). https://doi.org/10.1038/s41467-023-40297-8
